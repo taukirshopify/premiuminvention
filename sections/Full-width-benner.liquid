@@ -1,0 +1,52 @@
+<div class="main-icon-section padd-80">
+  <div class="image-wrappper">
+  
+    <img class="desktop" src="{{ section.settings.img-d | img_url:'master' }}" loading="lazy" alt="Desktop">
+    <img class="mobile" src="{{ section.settings.img-m | img_url:'master' }}" loading="lazy" alt="mobile">
+  </div>
+</div>
+
+<style>
+.image-wrappper img{
+  width: 100%;
+}
+
+.image-wrappper img.mobile{
+ display: none;
+}
+
+@media only screen and (max-width: 600px)  {
+  .image-wrappper img.mobile{
+    display: block;
+   }
+
+   .image-wrappper img.desktop{
+    display: none;
+   }
+}
+
+</style>
+{% schema %}
+  {
+    "name": "Full width Benner",
+    "settings": [
+   {
+    "type": "image_picker",
+    "id": "img-d",
+    "label": "Select your Desktop Image"
+   },
+   {
+    "type": "image_picker",
+    "id": "img-m",
+    "label": "Select your Mobile Image"
+   }
+
+    ],
+
+    "presets":[
+      {
+        "name": "Full width Benner"    
+      }
+    ]
+  }
+{% endschema %}

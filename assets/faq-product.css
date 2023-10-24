@@ -1,0 +1,69 @@
+div#shopify-section-faq {
+    padding: 60px 0;
+}
+div#shopify-section-faq h2.section-header, div#shopify-section-faq .section-header.h2 {
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+/*     font-size: 36px; */
+    font-size: 34px;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 55px;
+}
+.faq_section {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 0px 0px !important;
+    border: 1px solid #E5E5E5;
+    margin-bottom: 20px;
+}
+
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item:hover {
+    box-shadow: 0 0 18px #0000001a;
+}
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item h3 {
+    font-size: 15px;
+    padding: 20px 30px;
+    color: #000;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none; 
+    font-family: Work Sans,sans-serif;
+  width:100%
+}
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item p {
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #000;
+    font-weight: 400;
+    text-decoration: none; 
+    font-family: Work Sans,sans-serif;
+}
+.faq-question.open:after{
+  content: "";
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/greaterthenVector.svg?v=1649698352);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    right: 0;
+    transform: rotate(90deg);
+}
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item .faq-question:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/greaterthenVector.svg?v=1649698352);
+    background-repeat: no-repeat;
+    right: 10px;
+}
+.hidden1{
+  display:none;
+}

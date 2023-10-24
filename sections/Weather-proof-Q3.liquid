@@ -1,0 +1,99 @@
+<div id="shopify-q3-weatherproof">
+<div class="main-weatherproof">
+
+<div class="page-width">
+  <div class="weatherproof_inner">
+  <div class="Weather-proof-top">
+   <h2 class="Weather-proof_heading">
+      <span>{{ section.settings.heading_title_1  }}</span>
+    </h2>
+    <p class="prehead">
+      {{ section.settings.prehead_title  }}
+    </p>
+   </div>
+  <div class="weatherproof-bottom">
+  <ul>
+ 
+  {% for block in section.blocks %}
+  <li>
+  <img src="{{block.settings.image | img_url : 'master' }}">
+    
+    </li>
+    {% endfor %}
+  
+  </ul>
+  
+  
+  
+  </div>
+  </div>
+  
+  </div>
+</div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Weather proof q3",
+    "settings": [
+    {
+      "type": "text",
+      "id": "heading_title_1",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "prehead_title",
+      "label": "Paragraph"
+    }
+    ],
+       
+  "blocks": [
+    {
+      "type": "image",
+      "name": {
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "de": "Foto",
+            "en": "Image",
+            "es": "Imagen",
+            "fr": "Image",
+            "it": "Immagine",
+            "ja": "画像",
+            "nl": "Afbeelding",
+            "pt-BR": "Imagem",
+            "zh-CN": "图片",
+            "zh-TW": "圖片"
+          }
+        }
+      
+      ]
+   
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Weather proof q3"
+      }
+    }
+  ]
+  }
+{% endschema %}
+{{ 'Weather-proof-q3.css' | asset_url | stylesheet_tag }}

@@ -1,0 +1,561 @@
+{% assign proHandle=product.handle %}
+{% if section.settings.product == proHandle %}
+
+{% if request.host contains 'ca.' %}
+{% assign cntry='CA'%}
+
+   {% elsif  request.host contains 'uk.'%}
+
+{% assign cntry='UK'%}
+
+        {% elsif  request.host contains 'au.'%}
+{% assign cntry='AU'%}
+         {% elsif  request.host contains 'eu.'%}
+         {% assign cntry='EU'%}
+           {% elsif  request.host contains 'nz.'%}
+           {% assign cntry='NZ'%}
+               {% elsif  request.host contains 'sa.'%}
+               {% assign cntry='SA'%}
+                    {% else %}
+                    {% assign cntry='USA'%}
+                    {% endif %}
+                    
+                    
+                    {% assign prohdnle=product.handle %}
+{% assign pro5handle= product.metafields.custom.prodid %}
+{% assign prod= all_products[pro5handle] %}
+{% assign prodsingle= all_products[prohdnle] %}
+
+<div id="shopify-section-product--tab-select" class="product-tab-select-v3s">
+   <div class="product--slct-tab">
+      <div class="vrinkills" tgt="{% for variantis in variants %}{% if variantis.available %}{{variantis.id}}{% endif%}{% endfor %}"></div>
+      <div class="tab-top-text">
+         <div class="page-width">
+           <div class="main-heading-main">
+            <h2>Live in the <span>FUTURE</span></h2>
+            <h3>Start protecting your home and loved ones TODAY:</h3>
+           </div>
+         </div>
+      </div>
+      <div class=" desktop_view">
+         <div class="tab-top-img">
+            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/product-page-v3new13.png?v=1652962160">
+         </div>
+         <div class="page-width ">
+            <div class="tab--desktop-text">
+               <h5>FOR A LIMITED TIME</span></h5>
+               <h2>See what your <br>V3 found</h2>
+            </div>
+         </div>
+      </div>
+      <div class="mobile_version_tab">
+         <div class="tab-mobile-img">
+            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Group_5509.png?v=1652966007">
+         </div>
+         <div class="page-width">
+            <div class="tab--mobile-text">
+               <h5>FOR A LIMITED TIME</span></h5>
+               <h2>See what your <br>V3 found</h2>
+            </div>
+            <div class="tab-mobile-img2">
+               <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/new_feature10.png?v=1652791284">
+            </div>
+         </div>
+      </div>
+      <div class="page-width">
+        <div class="choose-from-main">
+         <div class="choose--from">
+            <!--h2>Select your camera:</h2-->
+            <ul>
+               <li class="one active">
+                  <span>Select</span>
+                
+                  
+                  WiFi Wireless
+               </li>
+               <li>
+                  <span>Select</span> 
+                 
+                  4G Edition
+               </li>
+            </ul>
+         </div>
+         <div class="tab--selction">
+            <div class="tab--data active wifi">
+               
+               
+{% for block in section.blocks %}
+{% case block.type %}
+{% when 'wifi' %}
+
+   <div class="data-settings">
+
+          {% assign prodsingle=block.settings.product %}
+
+
+
+{% if request.host contains 'ca.' %}
+ <div class="data-settings-img"> <img src="{{ block.settings.image3 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300"></div>
+                 
+
+  {% elsif  request.host contains 'au.'%}
+ <div class="data-settings-img">  <img  src="{{ block.settings.image4 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+                 </div>
+
+
+   {% elsif  request.host contains 'eu.'%}
+ <div class="data-settings-img">  <img src="{{ block.settings.image5 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+                 </div>
+              {% elsif  request.host contains 'nz.'%}
+  <div class="data-settings-img"> <img src="{{ block.settings.image2 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+                 </div>
+
+  {% elsif  request.host contains 'sa.'%}
+ <div class="data-settings-img">  <img src="{{ block.settings.image6 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+                </div> 
+   {% else %}
+ <div class="data-settings-img">  <img  {{ request.host }} src="{{ block.settings.image1 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+                </div> 
+   {%endif%}
+   
+
+        
+          
+                 <div class="data-setting-inner">
+                 <div class="star--rating">
+                     <div class="star--s">
+                        <div class="loox-rating" data-id="{{ prodsingle.id }}" data-rating="{{ prodsingle.metafields.loox.avg_rating }}" data-raters="{{ prodsingle.metafields.loox.num_reviews }}"></div>
+                     </div>
+                     <div class="rating--nmbrs"> {{ block.settings.sub_info_text }} </div>
+                  </div>
+                  <h5> {{block.settings.Heading }}</h5>
+                  <h6>{{block.settings.subhead }}</h6>
+                  <div>
+                    {{block.settings.ruchli}}
+                  
+              </div>
+                  
+                  {% for variantis in prodsingle.variants %}
+                  {% if forloop.first == true  %}
+                  <div class="money-main">
+                  <h2 class="money"><span class="money">{{variantis.price | money }}</span></h2>
+                  <p class="sale---price "><span class="money">{{variantis.compare_at_price | money }}</span>
+                  {% assign amount = 0 %}
+
+           {% assign saving = variantis.compare_at_price | minus: variantis.price %}
+      {% assign amount = saving | at_least: amount %}
+
+            {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
+
+          
+         
+                <span class="money1"> {{ saved_amount }} Off</span>
+                  </p></div>
+                  {% endif %}
+                  {% endfor %}
+                  
+                  <div class="buynow-btn">
+                     <div class="number">
+                        <span class="minus">-</span>
+                        <input type="text" value="1"/>
+                        <span class="plus">+</span>
+                     </div>
+                     <button type="submit" proid="{{ prodsingle.first_available_variant.id }}">{{block.settings.btn}}</button></div>
+                        {% if request.host contains 'ca.' %}
+                        <p class="shipday only-new-v3s">  {{ settings.btxt_ca }}</p>
+                       {% elsif  request.host contains 'au.' %}
+                        <p class="shipday only-new-v3s">   {{ settings.btxt_au }}</p>
+                      {% elsif request.host contains 'eu.' %}
+                       <p class="shipday only-new-v3s">   {{ settings.btxt_eu }}</p>
+                       {% elsif  request.host contains 'nz.'   %} 
+                      <p class="shipday only-new-v3s">  {{ settings.btxt_nz }}</p>
+                    {% elsif request.host contains 'sa.'  %}
+                    <p class="shipday only-new-v3s"> {{ settings.btxt_sa }}</p>
+                    
+                      {% elsif request.host contains 'uk.'  %}
+                    
+                        <p class="shipday only-new-v3s">{{ settings.btxt_uk }}</p>
+                       {% else %}
+                       <p class="shipday only-new-v3s">
+                          {{ settings.btxt_usa }}
+                       </p>
+                    
+                    {% endif %}
+                  
+                  
+                 
+               </div> </div>           
+{% endcase %}
+{% endfor %}
+           
+            </div>
+            <div class="tab--data  g4g">
+               
+               
+{% for block in section.blocks %}
+{% case block.type %}
+{% when '4G' %}
+
+   <div class="data-settings">
+
+          {% assign prodsingle=block.settings.product %}
+
+{% if request.host contains 'ca.' %}
+ <div class="data-settings-img"> <img src="{{ block.settings.image3 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300"></div>
+                 
+
+  {% elsif  request.host contains 'au.'%}
+ <div class="data-settings-img">  <img  src="{{ block.settings.image4 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+                 </div>
+
+
+   {% elsif  request.host contains 'eu.'%}
+ <div class="data-settings-img">  <img src="{{ block.settings.image5 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+                 </div>
+              {% elsif  request.host contains 'nz.'%}
+  <div class="data-settings-img"> <img src="{{ block.settings.image2 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+                 </div>
+
+  {% elsif  request.host contains 'sa.'%}
+ <div class="data-settings-img">  <img src="{{ block.settings.image6 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+                </div> 
+   {% else %}
+ <div class="data-settings-img">  <img src="{{ block.settings.image1 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+                </div> 
+   {%endif%}
+                 <div class="data-setting-inner">
+                 <div class="star--rating">
+                     <div class="star--s">
+                        <div class="loox-rating" data-id="{{ prodsingle.id }}" data-rating="{{ prodsingle.metafields.loox.avg_rating }}" data-raters="{{ prodsingle.metafields.loox.num_reviews }}"></div>
+                     </div>
+                     <div class="rating--nmbrs"> {{ block.settings.sub_info_text }} </div>
+                  </div>
+                  <h5> {{block.settings.Heading }}</h5>
+                  <h6>{{block.settings.subhead }}</h6>
+                  <div>
+                    {{block.settings.ruchli}}
+                  
+              </div>
+                  
+                  {% for variantis in prodsingle.variants %}
+                  {% if forloop.first == true  %}
+                  <div class="money-main">
+                  <h2 class="money"><span class="money">{{variantis.price | money }}</span></h2>
+                  <p class="sale---price "><span class="money">{{variantis.compare_at_price | money }}</span>
+                  {% assign amount = 0 %}
+
+           {% assign saving = variantis.compare_at_price | minus: variantis.price %}
+      {% assign amount = saving | at_least: amount %}
+
+            {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
+
+          
+         
+                <span class="money1"> {{ saved_amount }} Off</span>
+                  </p></div>
+                  {% endif %}
+                  {% endfor %}
+                  
+                  <div class="buynow-btn">
+                     <div class="number">
+                        <span class="minus">-</span>
+                        <input type="text" value="1"/>
+                        <span class="plus">+</span>
+                     </div>
+                     <button type="submit" proid="{{ prodsingle.first_available_variant.id }}">{{block.settings.btn}}</button>
+                  </div>
+                  {% if request.host contains 'ca.' %}
+                        <p class="shipday only-new-v3s">  {{ settings.btxt_ca }}</p>
+                       {% elsif  request.host contains 'au.' %}
+                        <p class="shipday only-new-v3s">   {{ settings.btxt_au }}</p>
+                      {% elsif request.host contains 'eu.' %}
+                       <p class="shipday only-new-v3s">   {{ settings.btxt_eu }}</p>
+                       {% elsif  request.host contains 'nz.'   %} 
+                      <p class="shipday only-new-v3s">  {{ settings.btxt_nz }}</p>
+                    {% elsif request.host contains 'sa.'  %}
+                    <p class="shipday only-new-v3s"> {{ settings.btxt_sa }}</p>
+                    
+                      {% elsif request.host contains 'uk.'  %}
+                    
+                        <p class="shipday only-new-v3s">{{ settings.btxt_uk }}</p>
+                       {% else %}
+                       <p class="shipday only-new-v3s">
+                          {{ settings.btxt_usa }}
+                       </p>
+                    
+                    {% endif %}
+                 
+               </div> </div>           
+{% endcase %}
+{% endfor %}
+           
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+  <div class="tab-logo-text">
+  <div class="page-width">
+  <ul>
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'text' %}
+  <li>
+    <div class="li-top">
+      {% if block.settings.image !=blank  %}
+    <div class="icon">
+<img src="{{block.settings.image | img_url : 'master' }}">
+    </div>{% endif %}
+      {% if block.settings.head !=blank  %}
+    <span>{{block.settings.head}}</span>{% endif %}
+    </div>
+        {% if block.settings.des !=blank  %}
+    <p>{{block.settings.des}}</p>{% endif %}
+  </li>
+        {% endcase %}
+        {% endfor %} 
+  </ul>
+  </div>
+  </div>
+  {% endif %}
+{% schema %}
+   {
+    "name": "product--tab-select--v3s",
+     "class":"index-section",
+    "settings": [
+      {
+          "type": "product",
+          "id": "product",
+          "label":"Select product where it will show"
+        }
+    ],
+       "blocks": [
+    {
+      "type": "wifi",
+      "name": "wifi"
+      , 
+    "settings": [
+         
+        {
+          "type": "product",
+          "id": "product",
+          "label":"product"
+        },{
+          "type": "image_picker",
+          "id": "image1",
+          "label":"Default Image"
+        },{
+          "type": "image_picker",
+          "id": "image2",
+          "label":"NZD Image"
+        },{
+          "type": "image_picker",
+          "id": "image3",
+          "label":"CAD Image"
+        },{
+          "type": "image_picker",
+          "id": "image4",
+          "label":"AUD Image"
+        },{
+          "type": "image_picker",
+          "id": "image5",
+          "label":"EUR Image"
+        },{
+          "type": "image_picker",
+          "id": "image6",
+          "label":"ZAR Image"
+        },
+        {
+         "type": "text",
+          "id": "sub_info_text",
+          "label": "Rating "
+        },
+        {
+         "type": "text",
+          "id": "Heading",
+          "label": "Heading "
+        },
+        {
+         "type": "text",
+          "id": "subhead",
+          "label": "Sub heading "
+        },
+      {
+         "type": "richtext",
+          "id": "ruchli",
+          "label": "Description "
+        },
+      {
+         "type": "text",
+          "id": "btn",
+          "label": "button text",
+        "default":"Buy now"
+        }
+      ]
+      
+    },{
+       "type": "4G",
+      "name": "4g", 
+    "settings": [
+         
+        {
+          "type": "product",
+          "id": "product",
+          "label":"product"
+        },{
+          "type": "image_picker",
+          "id": "image1",
+          "label":"Default Image"
+        },{
+          "type": "image_picker",
+          "id": "image2",
+          "label":"NZD Image"
+        },{
+          "type": "image_picker",
+          "id": "image3",
+          "label":"CAD Image"
+        },{
+          "type": "image_picker",
+          "id": "image4",
+          "label":"AUD Image"
+        },{
+          "type": "image_picker",
+          "id": "image5",
+          "label":"EUR Image"
+        },{
+          "type": "image_picker",
+          "id": "image6",
+          "label":"ZAR Image"
+        },
+        {
+         "type": "text",
+          "id": "sub_info_text",
+          "label": "Rating "
+        },
+        {
+         "type": "text",
+          "id": "Heading",
+          "label": "Heading "
+        },
+        {
+         "type": "text",
+          "id": "subhead",
+          "label": "Sub heading "
+        },
+      {
+         "type": "richtext",
+          "id": "ruchli",
+          "label": "Description "
+        },
+      {
+         "type": "text",
+          "id": "btn",
+          "label": "button text",
+        "default":"Buy now"
+        }
+      ]
+      
+    },{
+      "type": "text",
+      "name": {
+        "en": "Logo text section"
+      }, 
+    "settings": [
+         
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label":"Image"
+        },
+        {
+         "type": "text",
+          "id": "head",
+          "label": "Heading "
+        },
+      {
+         "type": "textarea",
+          "id": "des",
+          "label": "Description "
+        }
+      ]
+      
+    }
+  ],
+  "presets": [
+    {
+      "name": "product--tab-select--v3s"
+    }
+  ]
+  }
+{% endschema %}
+
+
+{{ 'product-tab-select-v3s.css' | asset_url | stylesheet_tag }}
+
+<script>
+  	$(document).ready(function() {
+  $('.choose--from ul li').click(function(){
+  
+  if($(this).hasClass('one')){
+  
+
+var getVld=$('select#CurrencySelector option:selected').val()
+    if(getVld=='USD'){
+    
+     $('p.shipday').text('2-4  Days USA Shipping');
+    
+    }else{
+    
+   
+    
+    }
+
+
+
+  $('.choose--from ul li').removeClass('active');
+  $(this).addClass('active');
+   $('.tab--data.wifi').addClass('active');
+  $('.tab--data.active.g4g').removeClass('active');
+  }else{
+  var getVld=$('select#CurrencySelector option:selected').val()
+    if(getVld=='USD'){
+    
+    $('p.shipday').text('8-12 Days USA Shipping');
+    
+    }else{
+    
+    
+    
+    }
+  $('.choose--from ul li').removeClass('active');
+  $(this).addClass('active');
+ 
+  
+  
+  $('.tab--data.active.wifi').removeClass('active');
+  $('.tab--data.g4g').addClass('active');
+  
+  
+  }
+  
+  })
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
+</script>
+
+                                        </div>

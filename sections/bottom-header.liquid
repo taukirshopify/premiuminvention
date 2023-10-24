@@ -1,0 +1,279 @@
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+ 
+<script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+<style>
+  .buy-now-drop-main.padd-80 {
+	height: 100% !important;
+  }
+
+  .v4-price .price__sale {
+	display: flex !important;
+	flex-direction: row-reverse !important;
+}
+
+.v4-price .price__sale .price-item.price-item--sale.price-item--last {
+	margin-right: 10px !important;
+}
+  .price-label span.price-label-custom:not(.active) {
+	display: none;
+}
+  @media only screen and (max-width:768px){
+    .buy-now-drop-main.padd-80 {
+    	padding-top: 0;
+    }
+    .buy-now-drop-main.padd-80 {
+    	height: 100% !important;
+    }
+  }
+</style>
+
+<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{%- liquid
+  assign product = block.settings.product
+
+  if block.settings.media_size == 'large'
+    assign media_width = 0.65
+  elsif block.settings.media_size == 'medium'
+    assign media_width = 0.55
+  elsif block.settings.media_size == 'small'
+    assign media_width = 0.45
+  endif
+-%}
+
+{% comment %} TODO: assign `product.selected_or_first_available_variant` to variable and replace usage to reduce verbosity {% endcomment %}
+
+{%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
+{%- if first_3d_model -%}
+  {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
+  <link
+    id="ModelViewerStyle"
+    rel="stylesheet"
+    href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css"
+    media="print"
+    onload="this.media='all'"
+  >
+  <link
+    id="ModelViewerOverride"
+    rel="stylesheet"
+    href="{{ 'component-model-viewer-ui.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+{%- endif -%}
+<div class="main-bottom-header">
+  <div class="page-width">
+    <div class="bottom-header ctm-flex">
+      <div class="head-service">
+        <p>{{ section.settings.headservice }}</p>
+      </div>
+      <div class="head-btn ctm-flex">
+        {% if linklists[section.settings.headservicemenu].links != blank %}
+        <ul class="inline-list nav-secondary ctm-flex">
+          {% for link in linklists[section.settings.headservicemenu].links %}
+            <li {% if link.active %}class="active"{% endif %}><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <button class="ctn-btn" href="{{ section.settings.headbtnurl }}">{{ section.settings.headbtn }}</button>
+      </div>
+    </div>    
+  </div>
+</div>
+
+<div class="buy-now-drop-main padd-80 hide">
+  <div class="buy-now-drop-tab ctm-flex">
+    <ul class="ctm-flex">
+      {% for block in section.blocks %}
+      {% assign product = all_products[block.settings.product] %}
+          <li data-tag="{{ product.tags | handle }}" class="{% if forloop.first == true %}active{% endif %}">
+          <span>
+          {% if forloop.first == true %}
+            <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="15.5" cy="15" r="14.5" fill="#F9FAFB" stroke="#086FB5"/>
+              <g clip-path="url(#clip0_1185_1251)">
+                <path d="M8 13.4184C8.03741 13.1525 8.06895 12.8858 8.11369 12.621C8.31504 11.4286 8.79291 10.3576 9.53117 9.40533C9.71088 9.17372 9.91002 8.95648 10.1099 8.74184C10.3087 8.52829 10.5955 8.52018 10.7866 8.70827C10.9747 8.89379 10.9762 9.1704 10.7748 9.37841C10.0369 10.14 9.4835 11.0174 9.2022 12.0434C8.56589 14.364 9.02873 16.443 10.6156 18.2572C10.6736 18.3236 10.7378 18.3844 10.7954 18.4508C10.9718 18.654 10.9674 18.9225 10.7866 19.0999C10.5984 19.2843 10.3046 19.2888 10.122 19.0756C9.7945 18.6939 9.45892 18.314 9.17836 17.898C8.52445 16.928 8.16614 15.8422 8.03557 14.6793C8.02457 14.5827 8.01174 14.4865 8 14.3902C8 14.0664 8 13.7422 8 13.4184Z" fill="#086FB5"/>
+                <path d="M23 13.7791C22.9696 15.895 22.2808 17.6177 20.8967 19.0546C20.6851 19.2744 20.4064 19.2928 20.2091 19.1025C20.0121 18.9129 20.0184 18.6356 20.2351 18.4114C21.0588 17.559 21.6361 16.5636 21.888 15.4019C22.3714 13.1742 21.8594 11.1996 20.3323 9.50196C20.2897 9.45475 20.2439 9.41013 20.2021 9.36255C20.0195 9.15565 20.0239 8.88236 20.2116 8.70311C20.3979 8.52535 20.6866 8.52129 20.8655 8.72709C21.1828 9.09184 21.5074 9.45512 21.7791 9.85344C22.4004 10.7637 22.7719 11.7794 22.9223 12.8725C22.9688 13.2115 22.9813 13.5552 22.9996 13.7791H23Z" fill="#086FB5"/>
+                <path d="M13.6978 13.903C13.6993 12.901 14.5083 12.0921 15.5052 12.0955C16.4928 12.0988 17.2971 12.912 17.2952 13.906C17.2934 14.908 16.4847 15.7168 15.4879 15.7135C14.4999 15.7102 13.6963 14.8973 13.6978 13.9034V13.903Z" fill="#086FB5"/>
+                <path d="M20.1948 14.0815C20.1801 15.1393 19.7488 16.2051 18.8932 17.0947C18.7054 17.2898 18.4252 17.2979 18.2378 17.1209C18.0577 16.9509 18.0394 16.6647 18.2173 16.4725C18.6005 16.0587 18.9141 15.6025 19.0828 15.0589C19.4866 13.7551 19.2537 12.5764 18.3819 11.5275C18.3258 11.4596 18.2635 11.3973 18.2077 11.3291C18.0478 11.1332 18.061 10.8581 18.2363 10.6907C18.4186 10.5162 18.697 10.5177 18.8811 10.7032C19.3164 11.1425 19.6509 11.651 19.8786 12.2271C20.091 12.7645 20.1951 13.3255 20.1948 14.0819V14.0815Z" fill="#086FB5"/>
+                <path d="M10.8024 14.083C10.7704 12.9102 11.1203 11.8686 11.8711 10.9662C11.9396 10.8835 12.0137 10.805 12.0878 10.7272C12.2825 10.5225 12.5602 10.5062 12.7527 10.6866C12.9379 10.8603 12.9515 11.145 12.7678 11.346C12.4652 11.6765 12.2099 12.0353 12.0233 12.4458C11.4585 13.6895 11.6965 15.2658 12.6086 16.28C12.6676 16.3453 12.7274 16.4102 12.7832 16.4781C12.9438 16.6735 12.9321 16.949 12.7582 17.1168C12.5774 17.2917 12.2961 17.2928 12.1131 17.108C11.6715 16.661 11.3323 16.145 11.106 15.5568C10.9241 15.0832 10.8145 14.5938 10.802 14.0826L10.8024 14.083Z" fill="#086FB5"/>
+                <path d="M15.032 16.6153H15.9529C15.9551 16.6478 15.9603 16.6898 15.9603 16.7318C15.9606 18.4782 15.961 20.2245 15.9603 21.9708C15.9603 22.3252 15.7219 22.5484 15.4105 22.4912C15.2176 22.4558 15.0772 22.3101 15.0412 22.1043C15.0328 22.0564 15.0328 22.0066 15.0328 21.9579C15.0324 20.2215 15.0328 18.4848 15.0328 16.7484C15.0328 16.7049 15.0328 16.6614 15.0328 16.6157L15.032 16.6153Z" fill="#086FB5"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_1185_1251">
+                  <rect width="15" height="13.9286" fill="white" transform="translate(8 8.57147)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          {% else %}  
+            <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="15.5" cy="15" r="14.5" fill="#F9FAFB" stroke="#086FB5"/>
+                <g clip-path="url(#clip0_1185_1262)">
+                <path d="M11.333 21.9627H10.21C10.21 21.8897 10.21 21.823 10.21 21.7564C10.21 18.8891 10.2088 16.0222 10.2134 13.1549C10.2134 13.0178 10.1794 12.9591 10.0443 12.915C9.04377 12.5879 8.43968 11.615 8.54833 10.5225C8.64314 9.56377 9.47755 8.71998 10.4575 8.59165C11.8755 8.40586 13.0891 9.53945 13.0006 10.967C12.9465 11.8402 12.3487 12.6265 11.5017 12.9121C11.3553 12.9616 11.3305 13.0304 11.3305 13.1662C11.3339 16.0281 11.333 18.8899 11.333 21.7518C11.333 21.8184 11.333 21.8851 11.333 21.9627Z" fill="#086FB5"/>
+                <path d="M21.9285 21.9643H20.8307V11.9298H21.9285V21.9643Z" fill="#086FB5"/>
+                <path d="M18.5981 14.1592H19.6909V21.9622H18.5981V14.1592Z" fill="#086FB5"/>
+                <path d="M17.4595 16.3836V21.9622H16.3457V21.7877C16.3457 20.0452 16.3478 18.3031 16.3423 16.5606C16.3419 16.4113 16.3889 16.3761 16.5286 16.3803C16.8357 16.3899 17.1436 16.3832 17.4595 16.3832V16.3836Z" fill="#086FB5"/>
+                <path d="M15.2286 18.6197V21.9622H14.1114V21.8087C14.1114 20.8001 14.1139 19.7911 14.1085 18.7825C14.1076 18.6491 14.1492 18.6139 14.2771 18.6172C14.5897 18.6252 14.903 18.6197 15.229 18.6197H15.2286Z" fill="#086FB5"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_1185_1262">
+                  <rect width="13.3929" height="13.3929" fill="white" transform="translate(8.53571 8.57141)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          {% endif %}
+          {{ product.tags }}
+        </span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="buy-now-product-list">
+    
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Bottom Header Section",
+    "max_blocks": 2,
+    "settings": [
+      {
+        "type": "text",
+        "id": "headservice",
+        "label": "Add Header Service"
+      },
+      {
+        "type": "text",
+        "id": "headbtn",
+        "label": "Add Header Button Title"
+      },
+      {
+        "type": "url",
+        "id": "headbtnurl",
+        "label": "Add Header Button URL"
+      },
+      {
+        "type": "link_list",
+        "id": "headservicemenu",
+        "label": "Select Menu"
+      },
+       {
+          "type": "product",
+          "id": "product",
+          "label": "t:sections.featured-product.settings.product.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.featured-product.settings.header.content",
+          "info": "t:sections.featured-product.settings.header.info"
+        },
+        {
+          "type": "select",
+          "id": "media_size",
+          "options": [
+            {
+              "value": "small",
+              "label": "t:sections.main-product.settings.media_size.options__1.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.main-product.settings.media_size.options__2.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.main-product.settings.media_size.options__3.label"
+            }
+          ],
+          "default": "medium",
+          "label": "t:sections.main-product.settings.media_size.label",
+          "info": "t:sections.main-product.settings.media_size.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "constrain_to_viewport",
+          "default": true,
+          "label": "t:sections.main-product.settings.constrain_to_viewport.label"
+        },
+        {
+          "type": "select",
+          "id": "media_fit",
+          "options": [
+            {
+              "value": "contain",
+              "label": "t:sections.main-product.settings.media_fit.options__1.label"
+            },
+            {
+              "value": "cover",
+              "label": "t:sections.main-product.settings.media_fit.options__2.label"
+            }
+          ],
+          "default": "contain",
+          "label": "t:sections.main-product.settings.media_fit.label"
+        },
+        {
+          "type": "select",
+          "id": "media_position",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.featured-product.settings.media_position.options__1.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.featured-product.settings.media_position.options__2.label"
+            }
+          ],
+          "default": "left",
+          "label": "t:sections.featured-product.settings.media_position.label",
+          "info": "t:sections.featured-product.settings.media_position.info"
+        }
+    ],
+    "blocks": [
+    {
+      "type": "product",
+      "name": "Main Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "t:sections.featured-product.settings.product.label"
+        },
+        {
+          "type": "select",
+          "id": "picker_type",
+          "options": [
+            {
+              "value": "dropdown",
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.options__1.label"
+            },
+            {
+              "value": "button",
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.options__2.label"
+            }
+          ],
+          "default": "button",
+          "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_dynamic_checkout",
+          "default": true,
+          "label": "t:sections.featured-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
+          "info": "t:sections.featured-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
+        }
+      ]
+    }
+    ],
+    "presets":[
+      {
+        "name": "Bottom Header Section"
+      }
+    ]
+  }
+{% endschema %}

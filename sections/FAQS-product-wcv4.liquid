@@ -1,0 +1,138 @@
+  <script>
+(function() {
+  $('body').on('click', '.shopify_explorer_faq__question', function() {
+    if($(this).hasClass('open')){
+    
+     $(this).removeClass('open');
+      $(this).next('.shopify_explorer_faq__answer').addClass('hiddenac');
+    }else{
+    
+    
+    $('.shopify_explorer_faq__answer').addClass('hiddenac');
+    $('.shopify_explorer_faq__question').removeClass('open');
+      $(this).addClass('open');
+     $(this).next('.shopify_explorer_faq__answer').removeClass('hiddenac');
+    }
+  });
+
+}());
+</script>
+
+<div id="shopify-section-faq" class="{{ section.settings.extra-faq_all }} py-120 sdsdsd" style="background:{{ section.settings.bg-color  }}">
+  <div class="shopify_explorer__content">
+  <div class="page-width">
+     <span class="heading-lable text-white fs-14 fw-medium ls-3 text-uppercase"> {{ section.settings.faq_sec-tag }}</span>
+        {%- unless section.settings.heading_title == blank -%}
+    <h2 class="section-header fs-42 fw-bold text-white mt-4 pb-60 my-text">
+      {{ section.settings.heading_title | escape }}
+    </h2>
+  {%- endunless -%} 
+    <div class="faq_section">
+  {%- assign expand_questions = section.settings.expand_questions -%}
+
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'separator' -%}
+    
+        <h3 class="shopify_explorer_faq__separator h3" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h3>
+     
+      {%- when 'question' -%}
+        <div class=" shopify_explorer_faq__item {% unless expand_questions %}shopify_explorer_faq__item--expandable{% endunless %}" {{ block.shopify_attributes }}>
+          <h3 class="shopify_explorer_faq__question faq-question h5 {% unless expand_questions %}link{% endunless %}">{{ block.settings.title }}</h3>         
+          <div class="shopify_explorer_faq__answer rte faq-answer hiddenac">
+              <span class="bodbot"></span>
+            {{ block.settings.answer }}
+          </div>
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+    </div>
+  </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "FAQs Product",
+    "settings": [
+      {
+          "type": "text",
+          "id": "extra-faq_all",
+          "label": "choose your class"
+        },
+      {
+          "type": "text",
+          "id": "faq_sec-tag",
+          "label": "Tag Line"
+        },
+      {
+        "type": "checkbox",
+        "id": "expand_questions",
+        "label": "Expand all questions by default",
+        "default": false
+      },
+      {
+      "type": "text",
+      "id": "heading_title",
+      "label": {
+        "de": "Überschrift",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+    },
+       {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Background Color"       
+      }
+  ],
+    "blocks": [
+      {
+        "type": "separator",
+        "name": "Section separator",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "name": "Question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+    {
+      "name": "FAQs Product"
+    }
+  ]
+  }
+{% endschema %}
+{{ 'faqs-product-wcv4.css' | asset_url | stylesheet_tag }}
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+

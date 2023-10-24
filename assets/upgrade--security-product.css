@@ -1,0 +1,182 @@
+div#shopify-section-shiipingncare .upgrade_security {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    background: #F8F8F8;
+    text-align: center;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+div#shopify-section-shiipingncare {
+    display: grid;
+    padding-top: 70px;
+}
+.shiipingncare {
+    margin-bottom: 71px;
+}
+
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-bottom {
+    padding: 10px 48px;
+    border: 2px dashed #989898;
+    border-radius: 20px;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top {
+    display: flex;
+    align-items: center;
+}
+/* div#shopify-section-shiipingncare h2.upgrade_heading {
+    font-size: 34px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #000;
+} */
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.upgrade_heading {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0;
+    width: 65%;
+    background: #086FB5;
+    padding: 20px 15px;
+    color: white;
+}
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.prehead {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0;
+    width: 35%;
+    padding: 20px 15px;
+    background: black;
+    color: white;
+}
+div#shopify-section-shiipingncare .shiipingncare ul {
+    display: inline-block;
+    padding-left: 0;
+}
+div#shopify-section-shiipingncare  ul li {
+    width: 32.91%;
+    display: inline-flex;
+    text-align: left;
+    padding: 20px 25px;
+    align-items: center;
+}
+div#shopify-section-shiipingncare  ul img {
+    width: 75px;
+    height: 75px;
+    padding: 22px;
+    float: left;
+    box-shadow: 0px 0px 40px 0px #0000001a;
+    border-radius: 20px;
+    margin-right: 15px;
+    object-fit: contain;
+}
+div#shopify-section-shiipingncare ul p {
+    font-size: 16px;
+    width: auto;
+    display: inline-block;
+    text-align: left;
+    font-weight: 700;
+    line-height: 20px;
+    color: #000;
+}
+div#shopify-section-shiipingncare .upgrade_security button.btn.claim_\$100off {
+    font-family: Work Sans,sans-serif;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 12px 65px;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 30px;
+    background: #086fb5;
+    letter-spacing: 1px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+div#shopify-section-shiipingncare .upgrade_security button.btn.claim_\$100off:hover {
+    background:  #000000!important;
+    color: #fff;
+}
+@media only screen and (min-width: 1350px) {
+  /*div#shopify-section-custom-contact .custpm-header-title {
+    padding-left: 105px;
+    position: relative;
+    left: 25px;
+}*/
+div#shopify-section-shiipingncare .upgrade_security li:nth-child(4) {
+    padding-right: 60px;
+}
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.upgrade_heading, 
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.prehead {
+    padding: 30px 20px;
+
+}
+}
+@media only screen and (min-width: 1450px) {
+div#shopify-section-shiipingncare .upgrade_security li:nth-child(4) {
+    padding-right: 85px;
+}
+}
+@media only screen and (min-width: 1600px) {
+div#shopify-section-shiipingncare .upgrade_security li:nth-child(4) {
+    padding-right: 95px;
+}
+div#shopify-section-shiipingncare {
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+}
+@media only screen and (max-width: 989px) {
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.upgrade_heading, 
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.prehead {
+    font-size: 30px;
+}
+}
+@media only screen and (max-width: 767px) {
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.upgrade_heading, 
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.prehead {
+    font-size: 24px !important;
+    padding: 15px 8px;
+}
+}
+@media only screen and (max-width: 599px) {
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top {
+    display: inline-block;
+    width: 100%;
+}
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.upgrade_heading, 
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.prehead {
+    font-size: 30px!important;
+    padding: 20px 25px;
+    width: 100%;
+    line-height: 35px;
+} 
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-bottom {
+    padding: 10px 15px;
+}
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-bottom ul li p {
+    font-size: 16px;
+    line-height: 18px;
+}
+}
+@media only screen and (max-width: 340px){
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-bottom {
+    padding: 10px 5px;
+}
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.upgrade_heading, 
+div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.prehead {
+    font-size: 27px!important;
+    padding: 20px 20px;
+    line-height: 32px;
+}
+}

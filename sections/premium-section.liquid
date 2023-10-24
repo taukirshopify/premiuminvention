@@ -1,0 +1,73 @@
+<div class="premium-section">
+  <div class="page-width">
+    <div class="premium-section-bd">
+      <div class="premium-section-content ctm-flex">
+        <div class="col-50 premium-image">
+          {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image | img_url: "master" }}" alt="" />
+          {% endif %}
+        </div>
+        <div class="col-50 premium-info">
+          <div class="main-heading">
+            <h2>{{ section.settings.bannertitle }}</h2>
+          </div>
+          {{ section.settings.desc }}
+          <div class="premium-inner ctm-flex">
+            {% for block in section.blocks %}
+              <div class="col-50 premium-inner-column ctm-flex">
+                  {{ block.settings.svgicon }}
+                  <h6>{{ block.settings.svgtitle }}</h6>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Premium Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Select Image"
+      },
+      {
+        "type": "text",
+        "id": "bannertitle",
+        "label": "Add Main Title"
+      },
+      {
+        "type": "textarea",
+        "id": "desc",
+        "label": "Add Description",
+        "info": "Add Content Inside <p> Tag"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "header",
+        "name": "service",
+        "settings":[
+          {
+            "type": "textarea",
+            "id": "svgicon",
+            "label": "Add SVG Content"
+          },
+          {
+            "type": "text",
+            "id": "svgtitle",
+            "label": "Add Title"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Premium Section"    
+      }
+    ]
+  }
+{% endschema %}

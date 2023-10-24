@@ -1,0 +1,105 @@
+div#shopify-section-feature-image-1 {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+div#shopify-section-feature-image-1 .feature-row__item h2 {
+    font-size: 34px;
+    color: #000;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+div#shopify-section-feature-image-1 .feature-row__item {
+    padding: 0 35px;
+}
+body.Wireless.Camera.V4 div#shopify-section-feature-image-1 .feature-row__item:nth-child(2) {
+    padding-right: 0;
+}
+div#shopify-section-feature-image-1 .feature-row__image-wrapper .feature-row__image {
+    border-radius: 20px;
+}
+div#shopify-section-feature-image-1 ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    padding-left: 0;
+    
+}
+div#shopify-section-feature-image-1 ul li {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 18px;
+    gap: 15px;
+    list-style: none;
+}
+div#shopify-section-feature-image-1 .below--txt {
+    border: 1px solid #E5E5E5;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 40px;
+    display: flex;
+}
+div#shopify-section-feature-image-1 .text--side {
+    width: 75%;
+}
+div#shopify-section-feature-image-1 .svg--side {
+    width: 25%;
+    text-align: right;
+}
+div#shopify-section-feature-image-1 .svg--side svg {
+    width: 94px;
+}
+div#shopify-section-feature-image-1 .below--txt .svg--side path {
+    fill: #086fb533;
+}
+div#shopify-section-feature-image-1 .rte-setting {
+    margin-bottom: 29px;
+}
+div#shopify-section-feature-image-1 .below--txt p {
+    margin: 0;
+    color: #000;
+    line-height: 25px;
+    letter-spacing: 0;
+}
+div#shopify-section-feature-image-1 .rte-setting p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #000;
+}
+div#shopify-section-feature-image-1 ul li p {
+    line-height: 24px;
+    margin: 0;
+}
+div#shopify-section-feature-image-1 .below--txt p {
+    font-size: 17px;
+}
+div#shopify-section-feature-image-1 .below--txt p strong {
+    font-family: Work Sans,sans-serif;
+}
+@media only screen and (min-width: 990px){
+div#shopify-section-feature-image-1 {
+    padding-bottom: 100px;
+    position: relative;
+}
+div#shopify-section-feature-image-1:before {
+    position: absolute;
+    content: "";
+    width: 256px;
+    height: 100%;
+    z-index: -11;
+    right: 0;
+    top: 43%;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/animation_new2.png?v=1649774552);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+}
+@media only screen and (min-width: 1200px){
+  body.Wireless.Camera.V3S div#shopify-section-feature-image-1 {
+    padding-top: 70px;
+}
+}

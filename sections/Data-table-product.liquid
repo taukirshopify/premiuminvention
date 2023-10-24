@@ -1,0 +1,154 @@
+<div id="technical_features">
+  <div id="shopify-section-table-data">
+  <div class="page-width">
+      {%- unless section.settings.heading_title == blank -%}
+    <h2 class="section-header">
+      {{ section.settings.heading_title | escape }}
+    </h2>
+  {%- endunless -%}   
+<div class="tblecamera {% if section.settings.custom_class != blank %} {{ section.settings.custom_class }} {%- endif -%}" style="max-width: 900px; margin:auto; padding-top:100px;">
+<table>
+	
+<tr>
+	
+<td>{{section.settings.row1}}</td> 
+<td class="blactoblue">{{section.settings.row2}}</td>
+<td class="blcktobrwn">{{section.settings.row3}}</td>
+
+</tr>
+    {% for block in section.blocks %}
+      {% if forloop.index >5 %}
+        {% else %}
+<tr>
+<td class="headTb">{{block.settings.row1}}</td>
+<td>{{block.settings.row2}}</td>
+<td>{{block.settings.row3}}</td>
+</tr>
+{% endif %}
+{% endfor %}
+
+
+
+</table>
+ {% if section.blocks.size > 5 %}
+   <div class="extra_tr" style="display:none;">
+  <table>
+    {% for block in section.blocks %}
+      {% if forloop.index >5 %}
+<tr>
+<td class="headTb">{{block.settings.row1}}</td>
+<td>{{block.settings.row2}}</td>
+<td>{{block.settings.row3}}</td>
+</tr>
+        {% endif %}
+{% endfor %}
+</table>
+   </div>
+    {% endif %}
+  {% if section.blocks.size > 5 %}
+    <div class="show_more_button">
+      <span class="show_more_toggle show_toggle">Show More</span>
+      <span class="show_less_toggle show_toggle" style="display:none;">Show Less</span>
+    </div>
+    {% endif %}
+</div>
+</div>
+</div>
+</div>
+<script>
+  jQuery('.show_toggle').click(function(){
+    jQuery('.extra_tr').slideToggle();
+    jQuery('.show_toggle').toggle();
+});
+</script>
+{% schema %}
+{
+  "name": {
+    "en": "Table data"
+  },
+  "class": "index-section",
+  "settings": [
+        {
+      "type": "text",
+      "id": "heading_title",
+      "label": {
+        "de": "Überschrift",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+    },
+{
+          "type": "text",
+          "id": "row1",
+          "label": {
+            "en": "Row 1 heading"
+          }
+        },{
+          "type": "text",
+          "id": "row2",
+          "label": {
+            "en": "Row 2 heading"
+          }
+        },
+{
+          "type": "text",
+          "id": "row3",
+          "label": {
+            "en": "Row 3 heading"
+          }
+        },{
+          "type": "text",
+          "id": "custom_class",
+          "label": {
+            "en": "Custom Class For Extra CSS"
+          }
+        }
+],
+  "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "text"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "row1",
+          "label": {
+            "en": "Row 1 heading"
+          }
+        },{
+          "type": "text",
+          "id": "row2",
+          "label": {
+            "en": "Row 2 data"
+          }
+        },{
+          "type": "text",
+          "id": "row3",
+          "label": {
+            "en": "Row 3 data"
+          }
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": {
+        "en": "Table data"
+      }
+    }
+  ]
+}
+{% endschema %}
+{{ 'data-table-product.css' | asset_url | stylesheet_tag }}
+

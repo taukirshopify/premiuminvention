@@ -1,0 +1,38 @@
+/* .Wireless.Camera.V4 div#shopify-section-image-bar-3.only-v4-watch span.section-header-disc {
+    margin-bottom: 50px;
+} */
+.Wireless.Camera.V4 div#shopify-section-image-bar-3.only-v4-watch .image-bar--medium .image-bar__content {
+    height: auto;
+}
+div#shopify-section-image-bar-3.only-v4-watch .video--3{
+  display:none;
+}
+div#shopify-section-image-bar-3.only-v4-watch h4.vido--h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 0;
+}
+
+div#shopify-section-image-bar-3.only-v4-watch h4.vido--h4  span {
+    color: #086FB5;
+    cursor: pointer;
+}
+div#shopify-section-image-bar-3.only-v4-watch h4.vido--h4 span1 {
+    cursor: pointer;
+}
+div#shopify-section-image-bar-3.only-v4-watch video.video-js {
+    min-height: 23.3vw;
+    cursor: pointer;
+}
+/* video::-webkit-media-controls-fullscreen-button  {
+    display: none;
+} */
+@media only screen and (max-width: 767px){
+div#shopify-section-image-bar-3.only-v4-watch video.video-js {
+    min-height: 185px;
+}
+}

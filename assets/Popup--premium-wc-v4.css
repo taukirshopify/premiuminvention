@@ -1,0 +1,202 @@
+.position-relative {
+    position: relative!important;
+}
+.banner-content-bottom {
+    background: linear-gradient(101.36deg,#eef4f5 0%,#e1f3ff 176.83%);
+    padding: 26px 0px;
+}
+
+.position-relative h2.popup_prm_heading-relativ {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: #182127;
+}
+.position-relative p.pop-contrelativ {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #4f5960;
+}
+
+@media (max-width: 576px){
+  .position-relative p.pop-contrelativ{
+    display: none;
+  }
+}
+
+.position-relative .itemcont {
+  border-right: 1px solid rgb(24 33 39 / 10%);
+  list-style: none;
+}
+div#\31 1fe0c6d-295e-4540-a0d2-c721d49989f4 .itemcont {
+  border: none;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+@media all and (max-width: 768px) {
+  .position-relative .feature-item {
+    width: 50%;
+  }
+}
+/* relativ end*/
+.Popup--premium {
+  padding: 0px 0 0px;
+  display: inline-block;
+  width: 100%;
+}
+
+.Popup--premium ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+  flex-direction: row;
+  padding-left: 0;
+  margin: 0;
+}
+.Popup--premium ul li {
+  display: flex;
+  width: 23%;
+  padding: 0 0px;
+  align-items: center;
+  justify-content: space-between;
+}
+.Popup--premium ul li.last-child-popup {
+  width: 31%;
+}
+.Popup--premium ul button.button {
+  background: transparent;
+  padding: 0;
+}
+.Popup--premium ul button.button:hover::after,
+.Popup--premium ul button.button::before,
+.Popup--premium ul button.button::after {
+  box-shadow: none;
+  border: none;
+}
+.Popup--premium ul button.button:hover h2.popup_prm_heading {
+  color: #e1f3ff;
+  text-indent: 5px;
+}
+.Popup--premium ul button.button:hover img {
+  opacity: 0.75;
+}
+.Popup--premium ul li img {
+  height: 28px;
+  width: 30px;
+  margin-right: 8px;
+  object-fit: contain;
+}
+.Popup--premium ul li h2.popup_prm_heading {
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+/* popup */
+.Popup--premium .popup,
+.Popup--premium .popupk,
+.Popup--premium .popupkp,
+.Popup--premium .popupkpn {
+  display: none;
+  position: fixed;
+  padding: 10px 25px 25px;
+  height: fit-content;
+  top: 0;
+  background: #fff;
+  z-index: 999;
+  width: 75%;
+  margin: 4em auto 5%;
+  max-width: 45em;
+  transition: 400ms;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.Popup--premium #popup:after,
+.Popup--premium #popupk:after,
+.Popup--premium #popupkp:after,
+.Popup--premium #popupkpn:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -2;
+}
+
+.Popup--premium #popup:before,
+.Popup--premium #popupk:before,
+.Popup--premium #popupkp:before,
+.Popup--premium #popupkpn:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  z-index: -1;
+  border-radius: 12px;
+}
+div#popup h2.popup_prm_heading,
+div#popupk h2.popup_prm_heading,
+div#popupkp h2.popup_prm_heading,
+div#popupkpn h2.popup_prm_heading {
+  font-size: 20px;
+  width: auto;
+  text-align: left;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+/* Styling buttons & webpage */
+
+.Popup--premium p {
+  margin: 6px 0 0;
+  font-size: 16px;
+  line-height: 23px;
+}
+.Popup--premium .popup a,
+.Popup--premium .popupk a,
+.Popup--premium .popupkp a,
+.Popup--premium .popupkpn a {
+  text-decoration: none;
+  color: #055389;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+.Popup--premium .popup a:hover,
+.Popup--premium .popupk a:hover,
+.Popup--premium .popupkp a:hover,
+.Popup--premium .popupkpn a:hover {
+  color: #086fb5;
+}
+.Popup--premium .popup a img,
+.Popup--premium .popupk a img,
+.Popup--premium .popupkp a img,
+.Popup--premium .popupkpn a img {
+  width: 24px;
+  object-fit: contain;
+}
+
+body.gradient.Wireless.Camera.V4 .upgrad--btn.show--here a.anchor--upgrade {
+    display: none;
+}

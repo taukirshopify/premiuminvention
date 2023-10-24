@@ -1,0 +1,190 @@
+{% comment %} <img src="{{ 'carbon_delivery-parcel.svg' | asset_url }}" style="position:absolute;width:100%"> {% endcomment %}
+
+<div class="wirless_outer_v4 {{ section.settings.extra-class-v3s }}">
+   <div class="page-width">
+      <div class="wirless_v4_inner ">
+        <div class="wirless_v4_right mobile_version"> 
+            <img src="{{ product.metafields.custom.mobile_top_section_image }}" class="wireless_media desktop_view">
+          <h2 class="section-header mobile_view">{{section.settings.title}}</h2>
+         </div>
+         <div class="wirless_v4-left">
+           <img src="{{ product.metafields.custom.mobile_top_section_image }}" class="wireless_media mobile_view">
+            <h2 class="section-header desktop_view">{{section.settings.title}}</h2>
+            <p class="pre-head">{{section.settings.prehead}}</p>
+       <ul class ="icon-banner-q3">
+ 
+  {% for block in section.blocks %}
+  <li>
+  <img src="{{block.settings.image | img_url : 'master' }}">
+    <p>{{block.settings.cta_label  }}</p>
+    </li>
+    {% endfor %}
+  
+  </ul>
+  <div class="template-q3-form">
+        {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+      {%- if form.posted_successfully? -%}
+        <div class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</div>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#ContactForm-email" class="link">
+              {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+   <div class="form-group">
+    <div class="fist-group same-group">
+    <input required type="text" name="contact[FirstNAme]" class="form-control" id="FormControlInput1" placeholder="First Name">
+  </div>
+   <div class="second-group same-group">
+    <input type="text" name="contact[LastNAme]"  class="form-control" id="FormControlInput1" placeholder="Last Name">
+  </div> 
+  </div>
+  <div class="form-group">
+    <div class="fist-group same-group">
+    <input required type="email" class="form-control" name="contact[email]"  id="FormControlInput1" placeholder="Email">
+  </div>
+   <div class="second-group same-group">
+    <input type="number" class="form-control" name="contact[phone]"   id="FormControlInput1" placeholder="Phone">
+  </div> 
+  </div>
+  <div class="form-group">
+    <div class="fist-group same-group">
+    <input type="text" class="form-control"  name="contact[Company-Name]"  id="FormControlInput1" placeholder="Company Name">
+  </div>
+   <div class="second-group same-group">
+    <input type="text" class="form-control" name="contact[JobTitle]"   id="FormControlInput1" placeholder="Job Title">
+  </div> 
+  </div>
+  <div class="form-group">
+<!--     <select class="form-control"  name="contact[Camera-Needed]"   id="FormControlSelect" placeholder="Where is the camera needed?">
+      <option>Where is the camera needed?</option>
+      <option>Where is the camera needed 1?</option>
+      <option>Where is the camera needed 2?</option>
+      <option>Where is the camera needed 3?</option>
+      <option>Where is the camera needed 4?</option>
+      <option>Where is the camera needed 5?</option>
+    </select> -->
+    <input type="text" class="form-control" name="contact[JobTitle]"   id="FormControlInput1" placeholder="Where is the camera needed?">
+  </div>
+  <div class="form-group">
+    <textarea class="form-control"   name="contact[how-we-can-help]"   id="FormControlTextarea1" rows="3" placeholder="How can we help?"></textarea>
+  </div>
+
+       <div class="template-q3-btn"> 
+              <button class="q3-tamplate-btn1" type="submit" onClick="">{{ section.settings.clmtxt }}</button>
+              <p class="q3-tamplate-btn2" onClick="window.location.href = '#shopify-section-video-info';">{{ section.settings.clmtxt1 }}</p>
+       </div>
+     {% endform %}
+    </div>
+           </div>
+           
+
+       
+         <div class="wirless_v4_right" sc="{{ product.metafields.custom.desktop_top_section_image }}">
+            <img src="{{ product.metafields.custom.desktop_top_section_image }}" class="wireless_media">
+         </div>
+      
+      </div>
+   </div>
+</div>
+{% schema %}
+   {
+    "name": "product tamplate q3",
+    "settings": [
+     {
+    "type": "text",
+    "id": "extra-class-v3s",
+    "label": "choose your class"
+   },
+    {
+    "type":"text",
+    "id":"title",
+    "label":"title"
+    }, 
+    {
+      "type":"text",
+      "id":"prehead",
+      "label":"paragarph"
+    },
+    {
+      "type": "text",
+      "id": "clmtxt",
+      "label": "Button Text"
+    },
+    {
+      "type": "text",
+      "id": "clmtxt1",
+      "label": "Button Text2"
+    }
+   ],
+   "presets": [
+       {
+         "name": "product tamplate q3"
+       
+       }
+      ],
+   "blocks": [
+    {
+      "type": "image",
+      "name": {
+        "de": "Foto",
+        "en": "Image with Text",
+        "es": "Imagen",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "de": "Foto",
+            "en": "Image",
+            "es": "Imagen",
+            "fr": "Image",
+            "it": "Immagine",
+            "ja": "画像",
+            "nl": "Afbeelding",
+            "pt-BR": "Imagem",
+            "zh-CN": "图片",
+            "zh-TW": "圖片"
+          }
+        },
+        
+        
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": {
+            "de": "Unterschrift",
+            "en": "Text",
+            "es": "Leyenda",
+            "fr": "Légende",
+            "it": "Didascalia",
+            "ja": "キャプション",
+            "nl": "Bijschrift",
+            "pt-BR": "Legenda",
+            "zh-CN": "字幕",
+            "zh-TW": "說明"
+          }
+        }
+      
+      ]
+   
+    }
+  ]
+      }
+{% endschema %}
+{{ 'product-template-v4.css' | asset_url | stylesheet_tag }}
+{{ 'product-template-q3.css' | asset_url | stylesheet_tag }}

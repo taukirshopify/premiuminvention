@@ -1,0 +1,519 @@
+<div id="shopify-section-product-tab-slider" class="v3s-keyfeature">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700" rel="stylesheet">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+  {%- for block in section.blocks -%}
+{% if block.settings.prodct == product.handle %}
+<section class="chart-area only-product-v3s">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="button-tabs">
+            <ul>
+                           {% if block.settings.heading1 != blank %} 
+              <li class="tgrt-click1">
+                <a href="#" class="data-tabs  first" data-target="tab-1">
+                                  <img src="{{block.settings.icon1 | img_url : 'master'}}"><span> {{block.settings.heading1}}</span>
+            </a>
+              </li>
+                          {% endif %}
+                          
+              {% if block.settings.heading2 != blank %} 
+              <li  class="tgrt-click2">
+                <a href="#" class="data-tabs active   " data-target="tab-2">
+                                  <img src="{{block.settings.icon2 | img_url : 'master'}}"><span> {{block.settings.heading2}}</span>
+            </a>
+              </li>
+                          {% endif %}
+                          
+                          {% if block.settings.heading3 != blank %} 
+              <li  class="tgrt-click3">
+                <a href="#" class="data-tabs  " data-target="tab-3">
+                                  <img src="{{block.settings.icon3 | img_url : 'master'}}"><span> {{block.settings.heading3}}</span>
+            </a>
+              </li>
+                          {% endif %}
+                          
+                          {% if block.settings.heading4 != blank %} 
+              <li  class="tgrt-click4">
+                <a href="#" class="data-tabs  " data-target="tab-4">
+                                  <img src="{{block.settings.icon4 | img_url : 'master'}}"><span> {{block.settings.heading4}}</span>
+            </a>
+              </li>
+                          {% endif %}
+                         {% if block.settings.heading5 != blank %} 
+              <li class="tgrt-click5">
+                <a href="#" class="data-tabs  first" data-target="tab-5">
+                                  <img src="{{block.settings.icon5 | img_url : 'master'}}"><span> {{block.settings.heading5}}</span>
+            </a>
+              </li>
+                          {% endif %}
+                           {% if block.settings.heading6 != blank %} 
+              <li class="tgrt-click6">
+                <a href="#" class="data-tabs last " data-target="tab-6">
+                                  <img src="{{block.settings.icon6 | img_url : 'master'}}"><span> {{block.settings.heading6}}</span>
+            </a>
+              </li>
+                          {% endif %}
+              
+            </ul>
+          </div>
+                  <div class="lower-section">
+          <div class="timeline-area">
+                     <div class="tab-content " uid="1" id="tab-1">
+              <div>
+                            <img class="img1" src="{{block.settings.tabimg1 |img_url : 'master' }}" />
+  {% if block.settings.opt11 != blank %}
+ <img class="img2" src="{{block.settings.img1 |img_url : 'master' }}" style="display:none;"/>
+    {% endif %}
+                <div class="descr"  style="color:{{block.settings.clr1}}">{{block.settings.des1 | strip_html }}</div class="descr">
+                
+  {% if block.settings.opt11 != blank %}
+  <div class="optionnames--all"> 
+     
+            <div class="opt---cls">{{ block.settings.opt11 }}</div>
+            <label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+            <div class="opt---cls">{{ block.settings.opt12 }}</div>
+          </div>
+    {% endif %}
+              </div>
+              
+            </div>
+            <div class="tab-content"  uid="2" id="tab-2">
+              <div>
+                            <img src="{{block.settings.tabimg2 |img_url : 'master' }}" />
+    {% if block.settings.opt21 != blank %}
+ <img class="img2" src="{{block.settings.img21 |img_url : 'master' }}" style="display:none;"/>
+    {% endif %}
+  
+                <div class="descr"  style="color:{{block.settings.clr2}}">{{block.settings.des2 | strip_html }}</div class="descr">
+                
+     
+            {% if block.settings.opt21 != blank %}
+  <div class="optionnames--all"> 
+     
+            <div class="opt---cls">{{ block.settings.opt21 }}</div>
+            <label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+            <div class="opt---cls">{{ block.settings.opt22 }}</div>
+          </div>
+    {% endif %}
+              </div>
+              
+            </div>
+        
+            <div class="tab-content" uid="3" id="tab-3">
+              <div>
+                            <img src="{{block.settings.tabimg3 |img_url : 'master' }}" />
+    {% if block.settings.opt31 != blank %}
+ <img class="img2" src="{{block.settings.img31 |img_url : 'master' }}" style="display:none;"/>
+    {% endif %}
+  
+                <div class="descr"  style="color:{{block.settings.clr3}}">{{block.settings.des3 | strip_html }}</div class="descr">
+                 
+  {% if block.settings.opt31 != blank %}
+  <div class="optionnames--all"> 
+     
+            <div class="opt---cls">{{ block.settings.opt31 }}</div>
+            <label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+            <div class="opt---cls">{{ block.settings.opt32 }}</div>
+          </div>
+    {% endif %}
+  
+              </div>
+              
+            </div>
+          
+
+
+
+          <div class="tab-content" uid="4" id="tab-4">
+              <div>
+                            <img src="{{block.settings.tabimg4 |img_url : 'master' }}" />
+    {% if block.settings.opt41 != blank %}
+ <img class="img2" src="{{block.settings.img41 |img_url : 'master' }}" style="display:none;"/>
+    {% endif %}
+                <div class="descr" style="color:{{block.settings.clr4}}">{{block.settings.des4  | strip_html}}</div class="descr">
+                {% if block.settings.opt41 != blank %}
+  <div class="optionnames--all"> 
+     
+            <div class="opt---cls">{{ block.settings.opt41 }}</div>
+            <label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+            <div class="opt---cls">{{ block.settings.opt42 }}</div>
+          </div>
+    {% endif %}
+              </div>
+              
+            </div>
+
+                  <div class="tab-content" uid="5" id="tab-5">
+              <div>
+                            <img src="{{block.settings.tabimg5 |img_url : 'master' }}" />
+   {% if block.settings.opt51 != blank %}
+ <img class="img2" src="{{block.settings.img51 |img_url : 'master' }}" style="display:none;"/>
+    {% endif %}
+  
+                <div class="descr" style="color:{{block.settings.clr5}}">{{block.settings.des5  | strip_html}}</div class="descr">
+                 
+  {% if block.settings.opt51 != blank %}
+  <div class="optionnames--all"> 
+     
+            <div class="opt---cls">{{ block.settings.opt51 }}</div>
+            <label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+            <div class="opt---cls">{{ block.settings.opt52 }}</div>
+          </div>
+    {% endif %}
+  
+              </div>
+              
+                  </div>
+
+                  <div class="tab-content" uid="6" id="tab-6">
+              <div>
+                            <img src="{{block.settings.tabimg6 |img_url : 'master' }}" />
+    {% if block.settings.opt61 != blank %}
+ <img class="img2" src="{{block.settings.img61 |img_url : 'master' }}" style="display:none;"/>
+    {% endif %}
+                <div class="descr" style="color:{{block.settings.clr6}}">{{block.settings.des6  | strip_html}}</div class="descr">
+
+                               {% if block.settings.opt61 != blank %}
+  <div class="optionnames--all"> 
+     
+            <div class="opt---cls">{{ block.settings.opt61 }}</div>
+            <label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+            <div class="opt---cls">{{ block.settings.opt62 }}</div>
+          </div>
+    {% endif %}
+  
+              </div>
+              
+                    </div>
+                      
+          </div>
+
+
+</div>
+              </div>
+        </div>
+      </div>
+  </section>
+</div>
+{% endif %}
+{% endfor %}
+  <style type="text/css">
+    
+</style>
+{% schema %}
+  {
+    "name": "Key Features product V3S",
+    "settings": [
+      {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "de": "Titel",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      },
+      "default": {
+        "de": "Testimonials",
+        "en": "Testimonials",
+        "es": "Testimonios",
+        "fr": "Témoignages",
+        "it": "Testimonial",
+        "ja": "お客様の声",
+        "nl": "Getuigenissen",
+        "pt-BR": "Depoimentos",
+        "zh-CN": "感言",
+        "zh-TW": "推薦文"
+      }
+    }
+],
+
+"blocks": [
+      {
+        "type": "Tab",
+        "name": "Section Tab",
+        "settings": [
+          {
+            "type": "product",
+            "id": "prodct",
+            "label": "Choose product for which you want to show it?"
+          },{
+            "type": "image_picker",
+            "id": "icon1",
+            "label": "tab 1 Image"
+          },
+            {
+      "type": "text",
+            "id": "heading1",
+            "label": "tab 1 heading"
+          },{
+            "type": "image_picker",
+            "id": "tabimg1",
+            "label": "tab 1 full image"
+          },
+            {
+      "type": "richtext",
+            "id": "des1",
+            "label": "tab 1 Descrition"
+          },
+            {
+      "type": "color",
+            "id": "clr1",
+            "label": "Text Color"
+          },
+            {
+      "type": "text",
+            "id": "opt11",
+            "label": "Option 1"
+          },
+            {
+      "type": "text",
+            "id": "opt12",
+            "label": "Option 2"
+          },
+            {
+      "type": "image_picker",
+            "id": "img1",
+            "label": "2nd image"
+          }
+,{
+            "type": "image_picker",
+            "id": "icon2",
+            "label": "tab 2 Image"
+          },
+            {
+      "type": "text",
+            "id": "heading2",
+            "label": "tab 2 heading"
+          },{
+            "type": "image_picker",
+            "id": "tabimg2",
+            "label": "tab 2 full image"
+          },
+            {
+      "type": "richtext",
+            "id": "des2",
+            "label": "tab 2 Descrition"
+          },
+            {
+      "type": "color",
+            "id": "clr2",
+            "label": "Text Color"
+          },
+            {
+      "type": "text",
+            "id": "opt21",
+            "label": "Option 1"
+          },
+            {
+      "type": "text",
+            "id": "opt22",
+            "label": "Option 2"
+          },
+            {
+      "type": "image_picker",
+            "id": "img21",
+            "label": "2nd image"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon3",
+            "label": "tab 3 Image"
+          },
+            {
+      "type": "text",
+            "id": "heading3",
+            "label": "tab 3 heading"
+          },{
+            "type": "image_picker",
+            "id": "tabimg3",
+            "label": "tab 3 full image"
+          },
+            {
+      "type": "richtext",
+            "id": "des3",
+            "label": "tab 3 Descrition"
+          },
+            {
+      "type": "color",
+            "id": "clr3",
+            "label": "Text Color"
+          },
+            {
+      "type": "text",
+            "id": "opt31",
+            "label": "Option 1"
+          },
+            {
+      "type": "text",
+            "id": "opt32",
+            "label": "Option 2"
+          },
+            {
+      "type": "image_picker",
+            "id": "img31",
+            "label": "2nd image"
+          }
+,{
+            "type": "image_picker",
+            "id": "icon4",
+            "label": "tab 4 Image"
+          },
+            {
+      "type": "text",
+            "id": "heading4",
+            "label": "tab 4 heading"
+          },{
+            "type": "image_picker",
+            "id": "tabimg4",
+            "label": "tab 4 full image"
+          },
+            {
+      "type": "richtext",
+            "id": "des4",
+            "label": "tab 4 Descrition"
+          },
+            {
+      "type": "color",
+            "id": "clr4",
+            "label": "Text Color"
+          },
+            {
+      "type": "text",
+            "id": "opt41",
+            "label": "Option 1"
+          },
+            {
+      "type": "text",
+            "id": "opt42",
+            "label": "Option 2"
+          },
+            {
+      "type": "image_picker",
+            "id": "img41",
+            "label": "2nd image"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon5",
+            "label": "tab 5 Image"
+          },
+            {
+      "type": "text",
+            "id": "heading5",
+            "label": "tab  heading"
+          },{
+            "type": "image_picker",
+            "id": "tabimg5",
+            "label": "tab 5 full image"
+          },
+            {
+      "type": "richtext",
+            "id": "des5",
+            "label": "tab 5 Descrition"
+          },
+            {
+      "type": "color",
+            "id": "clr5",
+            "label": "Text Color"
+          },
+            {
+      "type": "text",
+            "id": "opt51",
+            "label": "Option 1"
+          },
+            {
+      "type": "text",
+            "id": "opt52",
+            "label": "Option 2"
+          },
+            {
+      "type": "image_picker",
+            "id": "img51",
+            "label": "2nd image"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon6",
+            "label": "tab 6 Image"
+          },
+            {
+      "type": "text",
+            "id": "heading6",
+            "label": "tab 6 heading"
+          },{
+            "type": "image_picker",
+            "id": "tabimg6",
+            "label": "tab 6 full image"
+          },
+            {
+      "type": "richtext",
+            "id": "des6",
+            "label": "tab 6 Descrition"
+          },
+            {
+      "type": "color",
+            "id": "clr6",
+            "label": "Text Color"
+          },
+            {
+      "type": "text",
+            "id": "opt61",
+            "label": "Option 1"
+          },
+            {
+      "type": "text",
+            "id": "opt62",
+            "label": "Option 2"
+          },
+            {
+      "type": "image_picker",
+            "id": "img61",
+            "label": "2nd image"
+          }
+
+          
+        ]
+      }
+    ],
+"presets": [
+    {
+      "name": {
+        "en": "Key Feature product V3S"
+      }
+      
+    }
+  ]
+  }
+{% endschema %}
+{{ 'Key--Features-product--v3s.css' | asset_url | stylesheet_tag }}
+

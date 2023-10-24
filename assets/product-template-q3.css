@@ -1,0 +1,273 @@
+.wirless_outer_v4.wirless_extra_q3only {
+    overflow: hidden;
+}
+.template-q3-form .form-status-list {
+  
+    color: #fff;
+}
+.wirless_outer_v4.wirless_extra_q3only:before {
+    background: #000;
+}
+/* .wirless_outer_v4.wirless_extra_q3only:before {
+    background-image: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/q3-banner_1new.png?v=1671732933);
+    background-position: center;
+} */
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left {
+    left: 0;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left h2 {
+    margin-top: 10px;
+    font-size: 40px;
+    line-height: 49px;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left h2.form-status.caption-large.text-body {
+    color: white !important;
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 0
+}
+.template-q3-form ul.form-status-list.caption-large li a.link {
+    color: white;
+}
+.template-q3-form ul.form-status-list.caption-large li {
+    list-style: none;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left p.pre-head {
+    color: white;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4_right {
+    position: unset;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4_right img.wireless_media {
+    height: 810px;
+    left: unset;
+    right: -76px;
+    background-size: contain;
+    top: 70px;
+}
+.wirless_outer_v4.wirless_extra_q3only ul.icon-banner-q3 {
+    display: flex;
+    padding-left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2%;
+/*     padding-top: 20px; */
+}
+.wirless_outer_v4.wirless_extra_q3only ul.icon-banner-q3 li {
+    width: 23%;
+    text-align: center;
+    padding-top: 26px;
+}
+.wirless_outer_v4.wirless_extra_q3only ul.icon-banner-q3 li img {
+    width: 46px;
+    height: 40px;
+    object-fit: contain;
+}
+.wirless_outer_v4.wirless_extra_q3only ul.icon-banner-q3 li p {
+    color: white;
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+/* form css start */
+.template-q3-form {
+    padding-top: 20px;
+}
+.template-q3-form .form-group {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+.template-q3-form .form-group .same-group {
+    width: 100%;
+}
+.template-q3-form .form-group input.form-control, .template-q3-form .form-group select.form-control {
+    width: 100%;
+    min-height: 35px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: none;
+    border: none;
+}
+.template-q3-form .form-group textarea {
+    width: 100%;
+    min-height: 70px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: none;
+    border: none;
+}
+.template-q3-form .template-q3-btn {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.template-q3-form button.q3-tamplate-btn1 {
+    width: 250px;
+    background: #086fb5;
+    border-radius: 35px;
+    padding: 15px 20px;
+    margin: 15px auto 0;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    max-width: 50%;    
+}
+.template-q3-form .q3-tamplate-btn2 {
+    width: 250px;
+    background: #B4CCDC;
+    border-radius: 35px;
+    padding: 15px 20px;
+    margin: 15px auto 0;
+    max-width: 50%;
+    font-weight: 700;
+    font-size: 20px;
+    color: #162229;
+    border: none;
+    cursor: pointer;
+    max-width: 50%;
+     text-align: center;
+}
+/* form css end */
+@media only screen and (min-width: 1450px){
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left {
+    padding-right: 0px;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left h2 {
+    font-size: 44px;
+    line-height: 52px;
+}
+.wirless_outer_v4.wirless_extra_q3only:before {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+}
+}
+@media only screen and (min-width: 1600px){
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4_right img.wireless_media {
+    height: 890px;
+}
+}
+@media only screen and (min-width: 1921px){
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4_right img.wireless_media {
+    position: relative;
+}
+}
+@media only screen and (max-width: 1430px){
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4_right img.wireless_media {
+    height: 700px;
+}
+}
+@media only screen and (max-width: 1199px){
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4_right img.wireless_media {
+    height: 575px;
+}
+}
+@media only screen and (max-width: 1028px){
+.wirless_outer_v4.wirless_extra_q3only  .wirless_v4_inner {
+    display: inline-block;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4_right {
+    display: none;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4_right.mobile_version {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left {
+    width: 100%;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4_right img.wireless_media {
+    position: relative;
+    left: unset;
+    right: unset;
+}
+  .wirless_outer_v4.wirless_extra_q3only .wirless_v4-left h2 {
+    text-align: center;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left p.pre-head {
+    text-align: center;
+}
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1028px) { 
+.wirless_outer_v4.wirless_extra_q3only .mobile_view.section-header {
+    display: inline-block !important;
+    color: white;
+    margin-top: 60px;
+    font-size: 40px;
+    line-height: 49px;
+    font-weight: 700;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4_right img.wireless_media {
+    display: none;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left h2.section-header.desktop_view {
+    display: none;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left {
+    text-align: center;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left img.wireless_media.mobile_view {
+    display: inline-block !important;
+    height: 548px;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left p.pre-head {
+    margin-top: -20px;
+}
+}
+@media only screen and (max-width: 990px){
+/* .wirless_outer_v4.wirless_extra_q3only .wirless_v4-left {
+    width: 52%;
+} */
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4_right img.wireless_media {
+    height: 480px;
+}
+}
+@media only screen and (max-width: 767px){
+.wirless_outer_v4.wirless_extra_q3only ul.icon-banner-q3 {
+    gap: 4%;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left img.wireless_media.mobile_view {
+    max-width: 100%;
+    padding-top: 15px;
+}
+.wirless_outer_v4.wirless_extra_q3only ul.icon-banner-q3 li {
+    width: 48%;
+    padding-top: 15px;
+}
+.wirless_outer_v4.wirless_extra_q3only .mobile_view.section-header {
+    font-size: 25px;
+}
+.wirless_outer_v4.wirless_extra_q3only:before {
+    background: #162229;
+}
+.wirless_outer_v4.wirless_extra_q3only ul.icon-banner-q3 li p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.template-q3-form .template-q3-btn {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 0;
+}
+.template-q3-form .q3-tamplate-btn2, .template-q3-form button.q3-tamplate-btn1 {
+    max-width: 100%;
+}
+.wirless_outer_v4.wirless_extra_q3only .wirless_v4-left {
+    width: 100%;
+}
+}
+@media screen and (min-device-width: 500px) and (max-device-width: 768px) { 
+    .wirless_outer_v4.wirless_extra_q3only .mobile_view.section-header {
+    font-size: 35px;
+}
+}

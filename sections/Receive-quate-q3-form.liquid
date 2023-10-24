@@ -1,0 +1,109 @@
+<div class="Receive-quate-q3-form">
+<div class="page-width">
+<div class="Receive-q3-form_inner  desktop_version">
+<div class="Receive-q3-form-left"> 
+  <h2 class="top_header mt-0">
+{{ section.settings.heading_title | escape }}
+</h2> 
+<div class="template-q3-form pp"> 
+        {%- form 'contact', id: 'ContactFormbelow', class: 'isolate' -%}
+      {%- if form.posted_successfully? -%}
+        <div class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</div>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>Please make sure to properly fill every box</h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#ContactForm-email" class="link">
+              {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+   <div class="form-group">
+    <div class="fist-group same-group">
+    <input required type="text" name="contact[FirstNAme]" class="form-control" id="FormControlInput1" placeholder="First Name" required>
+  </div>
+   <div class="second-group same-group">
+    <input type="text" name="contact[LastNAme]"  class="form-control" id="FormControlInput1" placeholder="Last Name" required>
+  </div> 
+  </div>
+  <div class="form-group">
+    <div class="fist-group same-group">
+    <input required type="email" class="form-control" name="contact[email]"  id="FormControlInput1" placeholder="Email" required>
+  </div>
+   <div class="second-group same-group">
+    <input type="number" class="form-control" name="contact[phone]"   id="FormControlInput1" placeholder="Phone" required>
+  </div> 
+  </div>
+  <div class="form-group">
+    <div class="fist-group same-group">
+    <input type="text" class="form-control" required name="contact[Company-Name]"  id="FormControlInput1" placeholder="Company Name">
+  </div>
+   <div class="second-group same-group">
+    <input type="text" class="form-control"required name="contact[JobTitle]"   id="FormControlInput1" placeholder="Job Title">
+  </div> 
+  </div>
+  <div class="form-group">
+
+    <input type="text" required class="form-control" name="contact[JobTitle]"   id="FormControlInput1" placeholder="Where is the camera needed?">
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" required  name="contact[how-we-can-help]"   id="FormControlTextarea1" rows="3" placeholder="How can we help?"></textarea>
+  </div>
+
+       <div class="template-q3-btn"> 
+              <button class="q3-tamplate-btn1" type="submit" onClick="">{{ section.settings.clmtxt }}</button>
+            
+       </div>
+     {% endform %}
+    </div>
+
+</div>
+<div class="Receive-q3-form_right">
+<img src="{{section.settings.right_image | img_url : 'master' }}">
+  
+</div>
+</div>
+</div>
+</div>
+{% schema %}
+{
+"name": "Receive form q3",
+"settings": [
+{
+"type": "text",
+"id": "heading_title",
+"label": "Top Heading"
+},
+
+{
+"type": "image_picker",
+"id": "right_image",
+"label":" Image"
+},
+{
+"type": "text",
+"id": "clmtxt",
+"label": "Button Text"
+}
+
+],
+"blocks": [
+{
+"type": "image",
+"name": "image",
+"settings": [
+]
+}
+],
+"presets": [
+{
+"name": "Receive form q3"
+
+}
+]
+}
+{% endschema %}
+{{ 'Receive-q3-form.css' | asset_url | stylesheet_tag }}

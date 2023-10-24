@@ -1,0 +1,11 @@
+body.Wireless.Camera.V4 .custom-v4-section .v4-section_inner2 {
+    display: flex;
+    align-items: center;
+}
+body.Wireless.Camera.V4 .custom-v4-section .v4-section_inner2 .v4-section-left {
+    order: 2;
+    -webkit-order: 2;
+}
+body.Wireless.Camera.V4 .custom-v4-section .v4-section_inner2 .v4-section_right img {
+    display: none;
+}

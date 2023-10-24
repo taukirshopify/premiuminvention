@@ -1,0 +1,57 @@
+div#shopify-section-table-data {
+    padding-bottom: 10px;
+    padding-top: 45px;
+    background: #F7F7F7;
+}
+div#shopify-section-table-data h2.section-header {
+/*     font-size: 32px; */
+    font-size: 34px;
+    padding: 36px 0 38px;
+    text-align: left;
+    color: #000;
+    font-weight: 700;
+    margin: 0;
+}
+div#shopify-section-table-data .tblecamera {
+    max-width: 100%!important;
+    padding: 10px 0 0!important;
+    overflow-x:auto
+}
+#shopify-section-table-data .tblecamera td.blactoblue,
+#shopify-section-table-data .tblecamera td.blcktobrwn {
+    color: #fff;
+    padding: 20px 15px;
+}
+#shopify-section-table-data .tblecamera td.blactoblue {
+    background: linear-gradient(262deg,#0c76d0,#131212c7);
+    left: -9px;
+    position: relative;
+}
+div#shopify-section-table-data .tblecamera table {
+    box-shadow: none;
+    background: none;
+    margin-bottom: 28px;
+}
+#shopify-section-table-data .tblecamera td.blcktobrwn {
+    background: linear-gradient(262deg,#949494c7,#363636);
+}
+#shopify-section-table-data .tblecamera td {
+    border: none;
+    font-size: 14px;
+    font-family: Work Sans,sans-serif;
+    color: #000;
+}
+
+#shopify-section-table-data tr:nth-child(even) {
+    background: white;
+}
+#shopify-section-table-data .tblecamera td.headTb {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    width: 239px;
+}
+
+#shopify-section-table-data tr:first-child td:nth-child(1) {
+    visibility: hidden;
+}

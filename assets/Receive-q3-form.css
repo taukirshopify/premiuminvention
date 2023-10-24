@@ -1,0 +1,96 @@
+.Receive-quate-q3-form {
+    background: #000000;
+    margin: 6% 0;
+    position: relative;
+}
+.Receive-quate-q3-form .Receive-q3-form_inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+    align-items: center;
+}
+.Receive-quate-q3-form h2 {
+    color: white;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 0;
+    padding-top: 30px;
+}
+.Receive-quate-q3-form .Receive-q3-form-left {
+    width: 50%;
+}
+.Receive-quate-q3-form .Receive-q3-form_right {
+    width: 46%;
+    min-height: 620px;
+}
+.Receive-quate-q3-form .Receive-q3-form_right img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 375px;
+    min-height: 620px;
+}
+.Receive-quate-q3-form .template-q3-form .form-group input.form-control,
+.Receive-quate-q3-form .template-q3-form .form-group select.form-control{
+    margin-bottom: 13px;
+    min-height: 39px;
+}
+body.Wireless.Camera.Q3 .wifi--grid:before,
+body.Wireless.Camera.Q3 div#shopify-section-wifior4g:before{
+    visibility: hidden;
+}
+@media only screen and (min-width: 1450px){
+.Receive-quate-q3-form .Receive-q3-form_right img {
+    min-width: 650px;
+    object-fit: cover;
+}
+}
+@media only screen and (max-width: 1199px){
+.Receive-quate-q3-form .Receive-q3-form_right img {
+    width: 510px;
+    object-fit: cover;
+}
+}
+@media only screen and (max-width: 1070px){
+.Receive-quate-q3-form .Receive-q3-form_right img {
+    width: 460px;
+    object-fit: cover;
+}
+}
+@media only screen and (max-width: 991px){
+.Receive-quate-q3-form .Receive-q3-form_right img {
+    width: 360px;
+    object-fit: cover;
+}
+}
+@media only screen and (max-width: 767px){
+.Receive-quate-q3-form .Receive-q3-form_right {
+    width: 100%;
+    text-align: center;
+    margin: 25px 0 0;
+    min-height: auto;
+}
+.Receive-quate-q3-form .Receive-q3-form_inner {
+    padding-top: 25px;
+}
+.Receive-quate-q3-form h2{
+      font-size: 28px;
+      line-height: 36px; 
+      padding-top: 15px;
+}
+.Receive-quate-q3-form .Receive-q3-form_right img {
+    width: 100%;
+    min-height: 360px;
+    object-fit: contain;
+    position: relative;
+}
+.Receive-quate-q3-form .Receive-q3-form-left {
+    width: 100%;
+    order: 2;
+    -webkit-order: 2;
+    padding-bottom: 40px;
+}
+}

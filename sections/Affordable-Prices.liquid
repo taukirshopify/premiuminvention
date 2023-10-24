@@ -1,0 +1,82 @@
+<div class="affordable_main">
+   <div class="page-width">
+      <div class="affordable_inner">
+         <div class="affordable_sec1 affordable_same">
+            <div class="affordable_img">
+              <img  class="affordabel__image" src="{{section.settings.image | img_url : 'master' }}">
+            </div >
+            <div class="affordable_off">
+               <h3>{{section.settings.prehead}}</h3>
+               <span class="sub_head">
+        {{ section.settings.sub_info  }}
+  
+            </span>
+            </div >
+         </div >
+         <div class="affordable_sec2 affordable_same">
+            <div class="affordable_text">
+               <h5>{{section.settings.prehead2}}</h5>
+              <h2 class="main_heading">
+      {{ section.settings.heading_title_2 | escape }}
+    </h2>
+            </div > 
+         </div>
+         <div class="affordable_sec3 affordable_same">
+           {%- if section.settings.button_label != blank -%}
+            <div class="affordable_btn">
+               <a{% if section.settings.link %} href="{{section.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button_affordabel  {% if section.settings.button_style_secondary %}button--secondary {% else %}button--primary{% endif %}">{{ section.settings.button_label | escape }}</a>
+              </div>
+            {%- endif -%}
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% schema %}
+   {
+    "name": "Affordable Prices",
+    "settings": [
+    {
+          "type": "image_picker",
+          "id": "image",
+          "label":"Image"
+    },
+    {
+     "type": "text",
+          "id": "prehead",
+          "default": "prehead",
+          "label": "prehead"
+    },
+    {
+      "type": "text",
+      "id": "sub_info",
+      "label": "Sub Info"
+    },
+    {
+     "type": "text",
+          "id": "prehead2",
+          "default": "prehead2",
+          "label": "prehead"
+    },
+     {
+      "type": "text",
+      "id": "heading_title_2",
+      "label": "Top Heading"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Button label",
+      "label": "button text"
+     }
+],
+   "presets": [
+       {
+         "name": "Affordable Prices"
+       
+       }
+      ]
+ }
+{% endschema %}
+{{ 'affordable-prices.css' | asset_url | stylesheet_tag }}
+

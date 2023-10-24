@@ -1,0 +1,82 @@
+<div class="light-vision-section padd-80">
+  <div class="page-width">
+      <div class="main-heading">
+        <h2>{{ section.settings.bannertitle }}</h2>
+        <p>{{ section.settings.subtitle }}</p>
+      </div>
+      <figure class="cd-image-container desktopview">
+		<img src="{{ section.settings.cnimg | img_url: 'master'}}" alt="{{ section.settings.cntitle }}">
+		<span class="cd-image-label" data-type="original">{{ section.settings.cntitle }}</span>
+		<div class="cd-resize-img"> <!-- the resizable image on top -->
+			<img src="{{ section.settings.bnvimg | img_url: 'master'}}" alt="{{ section.settings.bnvtitle }}">
+			<span class="cd-image-label" data-type="modified">{{ section.settings.bnvtitle }}</span>
+		</div>
+		<span class="cd-handle"></span>
+      </figure>
+
+      <figure class="cd-image-container mobileview">
+          <div class="light-vision-mobile-slider">
+            <div class="light-vision-list">
+                <img src="{{ section.settings.mbnvimg | img_url: 'master'}}" alt="{{ section.settings.bnvtitle }}">
+          		<span class="cd-image-label" data-type="original">{{ section.settings.bnvtitle }}</span>
+            </div>
+            <div class="light-vision-list">
+                <img src="{{ section.settings.mcnimg | img_url: 'master'}}" alt="{{ section.settings.cntitle }}">
+          		<span class="cd-image-label" data-type="original">{{ section.settings.cntitle }}</span>
+            </div>
+          </div>
+      </figure>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Light Vision Section",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bannertitle",
+          "label": "Add Main Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Add Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "bnvimg",
+          "label": "Select Night Vision"
+        },
+        {
+          "type": "image_picker",
+          "id": "mbnvimg",
+          "label": "Select Mobile Night Vision"
+        },
+        {
+          "type": "text",
+          "id": "bnvtitle",
+          "label": "Add Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "cnimg",
+          "label": "Select Color Night Vision"
+        },
+        {
+          "type": "image_picker",
+          "id": "mcnimg",
+          "label": "Select Mobile Color Night Vision"
+        },
+        {
+          "type": "text",
+          "id": "cntitle",
+          "label": "Add Description"
+        }
+    ],
+    "presets":[
+      {
+        "name": "Light Vision Section"
+      }
+    ]
+  }
+{% endschema %}

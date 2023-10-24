@@ -1,0 +1,69 @@
+<div class="security-guard-section padd-80">
+  <div class="page-width">
+    <div class="main-heading">
+      <h2>{{ section.settings.bannertitle }}</h2>
+      <p>{{ section.settings.subtitle }}</p>
+    </div>
+    <div class="security-guard-inner ctm-flex">
+      <div class="security-guard-img">
+        {% if section.settings.deskimg != blank %}
+          <img src="{{ section.settings.deskimg | img_url: "master" }}" alt="{{ section.settings.deskimg.alt }}" />
+        {% endif %}
+      </div>
+      <div class="security-guard-info">
+        {% for block in section.blocks %}
+          <div class="security-guard-txt">
+            {{ block.settings.svgicon }}
+            <h5>{{ block.settings.title }}</h5>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Security Guard Section",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "deskimg",
+          "label": "Select Desktop Image"
+        },
+        {
+          "type": "text",
+          "id": "bannertitle",
+          "label": "Add Main Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Add Description"
+        }
+    ],
+    "blocks":[
+      {
+        "type": "header",
+        "name": "service",
+        "settings":[
+          {
+            "type": "textarea",
+            "id": "svgicon",
+            "label": "Add SVG Content"
+          },
+          {
+            "type": "textarea",
+            "id": "title",
+            "label": "Add Title Here"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Security Guard Section"    
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,57 @@
+div#shopify-q3-weatherproof {
+    background: #F1F1F1;
+    padding: 55px 0;
+    margin-top: 6%;
+}
+div#shopify-q3-weatherproof h2 {
+    font-family: Work Sans;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0 0 15px;
+}
+div#shopify-q3-weatherproof p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    max-width: 767px;
+    margin: 0 auto;
+}
+div#shopify-q3-weatherproof .weatherproof-bottom ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    padding: 25px 0 0;
+    list-style: none;
+}
+div#shopify-q3-weatherproof .weatherproof-bottom ul img {
+    background-size: contain;
+}
+@media only screen and (max-width: 767px){
+div#shopify-q3-weatherproof {
+    padding: 20px 0 10px;
+    margin-bottom: 30px;
+}
+div#shopify-q3-weatherproof h2 {
+    font-size: 28px;
+}
+div#shopify-q3-weatherproof .weatherproof-bottom ul img {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 475px;
+    object-fit: contain;
+}
+div#shopify-q3-weatherproof .weatherproof-bottom ul {
+    gap: 0;
+  margin-top: 0;
+}
+div#shopify-q3-weatherproof .weatherproof-bottom ul li {
+    width: 100%;
+}
+}

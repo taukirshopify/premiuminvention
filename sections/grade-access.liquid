@@ -1,0 +1,47 @@
+<div class="grade-access-section padd-80">
+  <div class="page-width">
+    <div class="grade-access-flex">
+      {% for block in section.blocks %}
+        <div class="grade-access-col">
+          {{ block.settings.svgicon }}
+          <h5>{{ block.settings.title }}</h5>
+          <p>{{ block.settings.desc }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Grade Access Section",
+    "settings": [],
+    "blocks":[
+      {
+        "type": "header",
+        "name": "service",
+        "settings":[
+          {
+            "type": "textarea",
+            "id": "svgicon",
+            "label": "Add SVG Content"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Add Title Here"
+          },
+          {
+            "type": "textarea",
+            "id": "desc",
+            "label": "Add Description"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Grade Access Section"    
+      }
+    ]
+  }
+{% endschema %}

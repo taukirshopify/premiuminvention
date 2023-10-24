@@ -1,0 +1,110 @@
+<div class="logobar_main">
+   <div class="page-width">
+      <div class="section-header text-center">
+         <h2>{{ section.settings.heading_title_2 | escape }}</h2>
+      </div>
+     
+     
+      <div class="tabs">
+         <ul id="tabs-nav-logo">
+            <li><a href="#tab-logo1"><img class="logo-bar__image" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Image20220316131001_160x160@2x.png?v=1647547259"></a></li>
+           
+            <li class="tgrt-click-logo2"><a href="#tab-logo2"><img class="logo-bar__image" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Image20220316131004_160x160@2x.png?v=1647547274"></a></li>
+            
+           <li><a href="#tab-logo3"><img class="logo-bar__image" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Image20220316130956_160x160@2x.png?v=1647547292"></a></li>
+         
+        </ul>
+         <!-- END tabs-nav -->
+         <div id="tabs-content-logo">
+            <div id="tab-logo1" class="tab-content-logo">
+               <p>“So I don't own a dog. Sad story, but a true one. It begs the question - how was there dog crap in my fenced yard when I don't own a dog? For years this question bothered me. I'd toss and turn all night long wondering who this mystery dog was, crapping in my yard and not letting me pet him/her. Then I saw these cameras on sale and my first thought was "I hope it's a golden retriever". I installed them easy enough. And in the first night, at 2am, I saw my neighbour Doug throwing his dogs crap into MY yard. Would definitely recommend these cameras, would definitely NOT recommend my neighbour Doug.”</p>
+               <span>John M</span>
+           </div>
+            
+            <div id="tab-logo2" class="tab-content-logo">
+               <p>"After a lot of searching, I bought this kit for my front yard and garage. Package was arrived few weeks ago. Well packed. I have time just installed this weekend. Installation was very easy. Wireless transmitting are life saver. I don't need run video cables or network cables like my old surveillance camera. Image are crystal clear. Night vision bright and far. With this price. I'm super satisfied.”</p>
+                <span>Terry S</span>
+           </div>
+            
+            <div id="tab-logo3" class="tab-content-logo">
+               <p>“Finally hooked everything up, without too much difficulty. Impressed right away from the clarity of cameras, but when darkness fell it was amazing. It looked like the same daytime coverage. I'm impressed, impressed enough to purchase an additional 2 cameras.”</p>
+                <span>Ron M</span>
+           </div>
+             
+            <div id="tabs-left-arrow" class="arrow-to--move">
+              <img class="logo-bar__image" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/logo_left_arrow.png?v=1654707163">
+            </div>
+           
+             <div id="tabs-right-arrow"  class="arrow-to--move">
+               <img class="logo-bar__image" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/logo_right_arrow.png?v=1654707163">
+            </div>
+        </div>
+         <!-- END tabs-content -->
+      </div>
+      <!-- END tabs -->
+   </div>
+</div>
+
+{% schema %}
+  {
+    "name": "logo bar",
+    "settings": [{
+      "type": "text",
+      "id": "heading_title_2",
+      "label": "Top Heading"
+    },
+   {
+ 			"type": "text",
+            "id": "heading1",
+            "label": "tab 1 heading"
+          },
+            {
+ 			"type": "text",
+            "id": "heading2",
+            "label": "tab 2 heading"
+          },
+        {
+ 			"type": "text",
+            "id": "heading3",
+            "label": "tab 3 heading"
+          }
+   ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "text"
+      }, 
+    "settings": [
+         
+            {
+          "type": "image_picker",
+          "id": "image",
+          "label":"tab1 Image"
+        },
+          {
+          "type": "image_picker",
+          "id": "image2",
+          "label":"tab2 Image"
+        },
+           {
+          "type": "image_picker",
+          "id": "image3",
+          "label":"tab3 Image"
+        },
+         {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Text"
+        }
+    ]
+    }
+      ],
+  "presets": [
+    {
+      "name": "logo bar"
+    }
+  ]
+  }
+{% endschema %}
+ {{ 'home-banner-logo.css' | asset_url | stylesheet_tag }}

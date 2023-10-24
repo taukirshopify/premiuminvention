@@ -1,0 +1,59 @@
+.recording-q3-section {
+    padding-top: 70px;
+}
+.recording-q3-section .recording-q3section_inner {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+.recording-q3-section .recording-q3-left,
+.recording-q3-section .recording-q3_right{
+    width: 50%;
+}
+.recording-q3-section .recording-q3section_inner h2.top_header {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.recording-q3-section .recording-q3section_inner p {
+    text-align: center;
+}
+.recording-q3-section .recording-q3_right img {
+    max-width: 374px;
+}
+@media only screen and (min-width: 768px){
+.recording-q3-section .recording-q3_right {
+    padding-top: 68px;
+    text-align: center;
+}  
+}
+@media only screen and (max-width: 990px){
+ .recording-q3-section img {
+    width: 100%;
+} 
+}
+@media only screen and (max-width: 767px){
+.recording-q3-section .recording-q3section_inner {
+    display: inline-block;
+}
+.recording-q3-section .recording-q3-left, .recording-q3-section .recording-q3_right {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.recording-q3-section {
+    padding-top: 30px;
+}
+
+div#shopify-section-video-info.q3page-only h2.section-header {
+    padding-top: 20px;
+    margin-bottom: 8px !important;
+}
+.recording-q3-section .recording-q3section_inner p {
+    margin-bottom: 0 !important;
+}
+.recording-q3-section .recording-q3section_inner h2.top_header {
+    font-size: 28px;
+}
+}

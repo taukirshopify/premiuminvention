@@ -1,0 +1,87 @@
+<!-- watch night /-start-->
+    <section class="nightview pt-120 pb-120" style="background:{{ section.settings.dic-color }}">
+        <div class="page-width">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4 class="fw-bold fs-42 text-white dic-title">
+                        {{ section.settings.dic-title }}
+                    </h4>
+                    <div class="dic-content">
+                         {{ section.settings.dic-cont }}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blackandwhite text-lg-start text-center">
+                        <img src="{{ section.settings.dic-image1 | image_url }}" alt="image" class="img-fluid my-image">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="colornightview text-lg-start text-center">
+                        <img src="{{ section.settings.dic-image2 | image_url }}" alt="image" class="img-fluid my-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- watch night /-end-->
+
+{% schema %}
+{
+  "name": "Double Image Content",
+  "settings": [
+  {
+        "type": "text",
+        "id": "dic-title",
+    "label": "Title"
+ },
+     {
+        "type": "text",
+        "id": "dic-cont",
+        "label": "Content"
+ },
+    {
+       "type": "image_picker",
+         "id": "dic-image1",
+         "label": "Image 1"
+ },
+    {
+       "type": "image_picker",
+         "id": "dic-image2",
+         "label": "Image 2"
+ },
+    {
+       "type": "color",
+         "id": "dic-color",
+         "label": "Color"
+ }
+    
+  ],
+     "presets": [
+  {
+    "name": {
+      "en": "Double Image Content"
+    }
+  }
+]
+}
+{% endschema %}
+
+<style>
+  .dic-title{
+    margin-bottom: 30px;
+    font-size: 42px;
+    line-height: 52px;
+     font-weight: 700!important;
+  }
+  .dic-content {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #EEF4F5;
+}
+
+</style>
+
+{% javascript %}
+{% endjavascript %}

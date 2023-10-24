@@ -1,0 +1,78 @@
+<div class="installation-section padd-b-80">
+  <div class="page-width">
+    <div class="main-heading">
+      <h2>{{ section.settings.bannertitle }}</h2>
+    </div>
+    <div class="main-install-sec">
+      <div class="main-installation">
+        {% for block in section.blocks %}
+          {% if block.type == "mainimage" %}
+          <div class="main-installation-images">
+            {% if block.settings.mainimage != blank %}
+              <img src="{{ block.settings.mainimage | img_url: "master" }}" alt="{{ block.settings.mainimage.alt }}" />
+            {% endif %} 
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="main-installation-content">
+        {% for block in section.blocks %}
+          {% if block.type == "subcontent" %}
+            <div class="main-installation-desc">
+              <div class="install-content">
+              <h5>{{ block.settings.step }}</h5>
+              <p>{{ block.settings.desc }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Installation Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bannertitle",
+        "label": "Add Main Title"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "mainimage",
+        "name": "mainimage",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "mainimage",
+            "label": "Select Image"
+          }
+        ]
+      },
+      {
+        "type": "subcontent",
+        "name": "subcontent",
+        "settings":[
+          {
+            "type": "text",
+            "id": "step",
+            "label": "Add Step"
+          },
+          {
+            "type": "text",
+            "id": "desc",
+            "label": "Add Description"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Installation Section"  
+      }
+    ]
+  }
+{% endschema %}

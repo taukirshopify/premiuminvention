@@ -1,0 +1,113 @@
+<section class="best-security pt-120 pb-120" style="background: #002c49">
+        <div class="page-width">
+            <div class="row gx-xl-5">
+                <div class="col-lg-6">
+                    <div class="security-img overflow-hidden radius-12 mb-5 mb-lg-0">
+                        <img src="{{ section.settings.bsg-img | image_url: width: 700  }}" alt="img" class="img-fluid w-100 my-image">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-header mb-4 pb-1">
+                        <h2 class="section-title fs-42 lh-58 text-white fw-bold">
+                            {{ section.settings.bsg-title }}
+                        </h2>
+                        <div class="fs-18 text-clr-dark6 mt-3">
+                           {{ section.settings.bsg-content }}
+                           
+                        </div>
+                    </div>
+
+                    <div class="securities">
+                       {% for block in section.blocks %}
+           
+                        <div class="single-security">
+                            <div class="icon mb-3">
+                                <img src="{{ block.settings.bl-image | image_url: width: 60  }}" alt="icon" class="img-fluid">
+                            </div>
+                            <p class="fs-18 fw-medium text-white">
+                               {{ block.settings.bl-itemname }}
+                            </p>
+                        </div>
+                       
+          {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% schema %}
+  {
+    "name": "Best Security Guard",
+    "settings": [
+       {
+        "type": "text",
+        "id": "bsg",
+        "label": "Choose your class"
+ },
+      {
+        "type": "image_picker",
+        "id": "bsg-img",
+        "label": "Select Image"
+ },
+       {
+        "type": "color",
+        "id": "bsg-bg",
+        "label": "Background Color "
+ },
+      {
+        "type": "text",
+        "id": "bsg-title",
+        "label": "Header text"
+ },
+       {
+        "type": "richtext",
+        "id": "bsg-content",
+        "label": "Content"
+ }
+    ],    
+     "presets": [
+  {
+    "name": {
+      "en": "Best Security Guard"
+    }
+  }
+],
+    "blocks": [
+  	{
+     "name": "Item",
+     "type": "item",
+     "settings": [
+       {
+         "type": "image_picker",
+         "id": "bl-image",
+         "label": "Image"
+       },
+       {
+         "type": "text",
+         "id": "bl-itemname",
+         "label": "Item Text"
+       }
+     ]
+   }
+]
+  }
+{% endschema %}
+
+<style>
+    .best-security .securities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 15px;
+}
+  .security-img {
+    margin-right: 30px;
+}
+</style>
+
+
+
+{% javascript %}
+{% endjavascript %}

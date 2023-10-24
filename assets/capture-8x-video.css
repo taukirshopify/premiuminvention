@@ -1,0 +1,11 @@
+div#shopify-section-video-info.q3page-only:before {
+  Display : none;
+}
+div#shopify-section-video-info.q3page-only .feature_video .right-info {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+div#shopify-section-video-info.q3page-only .feature_video .left_video .video-section-wrapper {
+    height: auto !important;
+    min-height: auto !important;
+}

@@ -1,0 +1,69 @@
+<div class="main-banner-section">
+  {% if section.settings.btnurl != blank %}
+  <a href="{{ section.settings.btnurl }}">
+     {% endif %}
+  <div class="main-banner-image">
+    {% if section.settings.deskimg != blank %}
+      <img class="deskimg" src="{{ section.settings.deskimg | img_url: "master" }}" alt="{{ section.settings.deskimg.alt }}" />
+    {% endif %}
+    {% if section.settings.mobimg != blank %}
+      <img class="mobimg" src="{{ section.settings.mobimg | img_url: "master" }}" alt="{{ section.settings.mobimg.alt }}" />
+    {% endif %}
+  </div>
+     {% if section.settings.btnurl != blank %}
+  </a>
+   {% endif %}
+  <div class="main-banner-content">
+    <div class="page-width">
+      <div class="main-banner-info">
+        <h2>{{ section.settings.bannertitle }}</h2>
+        <p>{{ section.settings.subtitle }}</p>
+         {% if section.settings.btn != blank %}
+        <a href="{% if section.settings.btnurl != blank %}{{ section.settings.btnurl }} {% endif %}">{{ section.settings.btn }}</a>      
+         {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Main Banner Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "deskimg",
+        "label": "Select Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobimg",
+        "label": "Select Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "bannertitle",
+        "label": "Add Main Title"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Add Description"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Add Button Title"
+      },
+      {
+        "type": "url",
+        "id": "btnurl",
+        "label": "Add Button URL"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Main Banner Section"
+      }
+    ]
+  }
+{% endschema %}

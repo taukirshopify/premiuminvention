@@ -1,0 +1,127 @@
+.banner-all-pages {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    height: 250px;
+    align-items: center;
+    position: relative;
+}
+.banner-all-pages h2.bannerall-pages-heading {
+    color: white;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: -1px;
+    margin: 0;
+}
+.banner-all-pages p{
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 4px;
+  color: #fff;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+.banner-all-pages .banner-all-pages_inner {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-all-pages:before {
+    position: absolute;
+    content: "";
+    width: 390px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/banner_all_animations.png?v=1655208877);
+    background-repeat: no-repeat;
+}
+.banner-all-pages:after {
+    position: absolute;
+    content: "";
+    width: 64%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/banner_all_animations1.png?v=1655208877);
+    background-repeat: no-repeat;
+   background-size: 100%;
+}
+.banner-all-pages.only_guide_banner {
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/image_2022_07_06T17_05_04_246Z.png?v=1657131251);
+    
+}
+.banner-all-pages.only_about_banner {
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/image_2022_07_06T17_04_53_974Z.png?v=1657131251);
+    
+}
+.banner-all-pages.only_contact_banner {
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/image_2022_07_06T17_05_07_468Z.png?v=1657131251);
+    background-size: cover;
+}
+.banner-all-pages.only_faq_banner {
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/image_2022_07_06T17_04_58_916Z.png?v=1657131251);
+    
+}
+.banner-all-pages.only_blog_banner{
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/11.25_2.png?v=1660416251);
+    
+}
+.banner-all-pages.no_faq-page_includ:after,
+.banner-all-pages.no_faq-page_includ:before{
+    display: none;
+}
+.banner-all-pages.only_blog_banner:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(34 34 34 / 91%);
+    display: block;
+}
+@media only screen and (min-width: 1440px){
+.banner-all-pages {
+ background-size: 100% !important;
+}
+}
+@media only screen and (min-width: 1600px){
+ .banner-all-pages:after { 
+  width: 51%;   
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 1099px){
+.banner-all-pages {
+ background-position: center !important;
+}
+}
+@media only screen and (max-width: 989px){
+
+}
+@media only screen and (max-width: 767px){
+.banner-all-pages.only_guide_banner {
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Guide_mobile_banner.png?v=1657625039);
+}
+.banner-all-pages.only_about_banner {
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/about_main_mobile.png?v=1657625038);
+    
+}
+.banner-all-pages.only_contact_banner {
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/contact_banner_mobile.png?v=1657625038);
+    
+}
+.banner-all-pages.only_faq_banner {
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/faq_mobile_banner.png?v=1657625038);
+    
+}
+}
+@media only screen and (max-width: 420px){
+
+}

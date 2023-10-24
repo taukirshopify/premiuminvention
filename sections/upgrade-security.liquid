@@ -1,0 +1,73 @@
+<div class="upgrade-security-section">
+  <div class="page-width">
+    <div class="upgrade-security-list">
+      <div class="upgrade-security-top">
+        <p>{{ section.settings.title }}</p>
+        <h5>{{ section.settings.usdtitle }}</h5>
+      </div>
+      <div class="upgrade-security-bottom">
+        {% for block in section.blocks %}
+          <div class="upgrade-security-info">
+            {{ block.settings.svgicon }}
+            <p>{{ block.settings.desc }}</p>
+          </div>
+        {% endfor %}
+        <div class="upgrade-security-button">
+          {% if section.settings.btn != blank %}
+            <a href="{{ section.settings.btnurl }}">{{ section.settings.btn }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Upgrade Security Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Add Title Here"
+      },
+      {
+        "type": "text",
+        "id": "usdtitle",
+        "label": "Add USD Text"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Add Button Title Here"
+      },
+      {
+        "type": "url",
+        "id": "btnurl",
+        "label": "Add Button URL Here"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "subcontent",
+        "name": "subcontent",
+        "settings":[
+          {
+            "type": "textarea",
+            "id": "svgicon",
+            "label": "Add SVG Content"
+          },
+          {
+            "type": "text",
+            "id": "desc",
+            "label": "Add Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Upgrade Security Section"
+      }
+    ]
+  }
+{% endschema %}

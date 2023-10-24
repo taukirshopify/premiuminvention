@@ -1,0 +1,50 @@
+div#shopify-section-control-every {
+    padding: 20px 0 40px;
+}
+div#shopify-section-control-every h2 {
+    font-family: Work Sans;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding-top: 30px;
+}
+#shopify-section-control-every .control-every-video{
+  max-width: 800px;
+  margin: auto;
+  display: block;
+  position:relative;
+}
+#shopify-section-control-every .control-every-video::after {
+	content: '';
+	border-right: 3px solid #fff;
+	position: absolute;
+	height: 100%;
+	right: 0;
+}
+@media only screen and (max-width: 1024px){
+div#shopify-section-control-every {
+    padding: 40px 0 25px;
+}
+div#shopify-section-control-every h2 {
+    font-size: 30px;
+    width: 100%;
+    padding-top: 0;
+    line-height: 32px;
+}
+}
+@media only screen and (max-width: 767px){
+div#shopify-section-control-every {
+/*     padding: 50px 0 30px; */
+       padding: 25px 0 30px;
+}
+div#shopify-section-control-every h2 {
+    font-size: 29px;
+    line-height: 32px;
+    text-align: left;
+}
+}

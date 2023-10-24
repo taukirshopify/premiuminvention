@@ -1,0 +1,110 @@
+{% if section.settings.product == product.handle %}
+<div class="popup---area" style="display:none;">
+<div class="popup-upgrade-sec">
+    <div class="popup-inner-sec" >
+      <div class="close--icon"><svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"> <line x1="0.353553" y1="0.646447" x2="41.6378" y2="41.9307" stroke="white"/> <line x1="41.6387" y1="1.35355" x2="0.354482" y2="42.6378" stroke="white"/> </svg></div>
+        <h5 class="popup_top_heading desktop-version">FREE</h5>
+        <h2 class="popup_main_heading"> Upgrade your V3 to <span class="v3s-img-popup"> <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/image-19v3s.png?v=1668203287"></span> for <span class="hundred-dall">$100</span>!</h2>
+        <h5 class="popup_top_heading mobile-version">FREE</h5>
+        <div class="popup-img-with-text" >
+       <div class="lower--popup">
+          <p class="offer--end only-desktop">Offer ends in <span class="countdown">11:00:06</span></p>
+        </div> <p class= "desktop-version">Order today and receive the upgraded S model with new & improved features!</p>
+        <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/V3s_Premium_Inventions_Security_Camera_-_Side_View__No_Bracketspng_2.png?v=1668203287"></a>
+      <p class= "mobile-version">Order today and receive the upgraded S model with new & improved features!</p>
+          <p class="offer--end only-mobile">Offer ends in <span class="countdown">11:00:06</span></p>
+        </div>
+        
+        <div class="variations--popup">
+          {% assign newprox=all_products['wireless-camera-v3s'] %}
+          
+                   <ul class="">
+                         {% for variant in newprox.variants %}
+                        {% if forloop.last == true %}
+                     <span>or</span>
+                     {% endif %}
+                      {% if forloop.first == true %}
+                     {% assign urlfist= variant.url %}
+                     {% endif %}
+                           
+                  <li  {% if forloop.first == true %}class="active" {% endif %}tgt="vrnt{{ forloop.index }}" url="{{ variant.url }}" >
+                    {{ variant.title }}
+                  </li>
+               
+            
+              {% endfor %}
+                    </ul>
+          
+        </div>
+                 
+        <div class="price--popup">
+           
+          <div class="product__price_rating"> 
+         <div class="product__price custom lp">        
+ {% assign prodsinglefg= newprox %}
+    {% for variantis in prodsinglefg.variants %}
+     <div class=" vrnt{{ forloop.index }} variantspopup {% if forloop.first == true  %} active{% endif %}">
+           {% assign amount = 0 %}
+
+           {% assign saving = variantis.compare_at_price | minus: variantis.price %}
+      {% assign amount = saving | at_least: amount %}
+          {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
+           <div class="regular--price " diffrnceprice="{{ saved_amount }}" originalclr="{{variantis.price | money }}"><span class="money" >{{variantis.price | money }}</span></div>
+           <div class="sale--price gh  money"><span class="money">{{variantis.compare_at_price | money }}</span>
+
+
+            
+
+          
+         <span class="money1"> {{ saved_amount }} Off</span>
+
+          </div>
+      </div>
+        {% endfor %} 
+          </div>
+       <div class="star--rating">
+        
+          <a href="#looxReviews"><div class="loox-rating" data-id="{{ prodsinglefg.id }}" data-rating="{{ prodsinglefg.metafields.loox.avg_rating }}" data-raters="{{ prodsinglefg.metafields.loox.num_reviews }}"></div></a>
+        <span class="statyc--rating {{ section.settings.extra-class }}">{{section.settings.staticrating}}</span></div>
+           
+    </div>
+          
+        </div>
+        <div class="upgrade-nowbtn">
+
+<a href="{{ urlfist }}" class="upgrade">Upgrade Now</a>
+<a href="" class="notintrst">Not Interested</a>
+
+        </div>
+      </div>
+  </div>
+      </div>
+        {% endif %}
+
+        
+{% schema %}
+ {
+    "name": "Popup Upgrade v3S",
+    "settings": [
+      {
+        "type":"product",
+        "id":"product",
+        "label":"Choose product for which you want to show"
+      }
+    ],
+  "blocks": [ ],
+      "presets": [
+    {
+      "name": {
+        "en": "Popup Upgrade v3S"
+      }
+    }
+  ]
+  }
+{% endschema %}
+{{ 'Popup-upgrade-v3s.css' | asset_url | stylesheet_tag }}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

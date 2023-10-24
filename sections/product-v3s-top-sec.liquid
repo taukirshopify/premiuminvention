@@ -1,0 +1,346 @@
+<div class="product-primary {% if section.settings.custom_class !=blank %} {{ custom_class }}  {% endif %}" id="product-primary" >
+<div class="page-width product-page-width">
+<div class="main-v3s">
+<div class="main-v3s-media">
+<div class="main">
+   <div class="slider-for-main">
+     {% for image in product.images %}
+    <div><img src="{{ image.src | img_url : 'master'}}"></div>
+       {% endfor %}
+  </div>
+  <div class="slider-nav-small">
+  {% for image in product.images %}
+    <div><img src="{{ image.src | img_url : 'master'}}"></div>
+       {% endfor %}
+       </div>
+
+</div>
+  <div class="review-sec desktop-sec">
+<h3>Rated <b>4.5 out of 5</b> based on <b>125 reviews</b></h3>
+<div class="review-info">
+  <div class="star-sec">
+<ul>
+  <li>{% render 'star' %}</li>
+  <li>{% render 'star' %}</li>
+  <li>{% render 'star' %}</li>
+  <li>{% render 'star' %}</li>
+  <li>{% render 'star' %}</li>
+</ul>
+
+<div class="date">{{ "now" | date: "%d/%m/%Y " }}</div></div>
+{% if section.settings.review_des !=blank %}
+    <p>{{ section.settings.review_des }}
+	</p> {% endif %}
+	
+	{% if section.settings.client_name !=blank %}
+  <div class="name">
+ {{ section.settings.client_name }}
+    {% render 'tick' %}
+  </div> {% endif %}
+     <a class="btn"  href="#shopify-section-loox-form">
+      Read more reviews
+    </a>
+  </div>
+</div>
+  </div>
+
+  <div class="main-v3s-info">
+ 
+    <h2 class="section-header">{{ product.title }}</h2>
+    {% for option in product.options_with_values %}
+                   <ul class="custom--variations {{option.name | downcase }}">
+                      {% for value in option.values %}
+                        {% if forloop.last == true %}
+                     {% endif %}
+                      <li class="trgt{{forloop.index}}{% if option.selected_value == value %}  active{% endif %}" numbering="{{forloop.index}}" vlew="{{value}}"> {{ value }}</li>
+                     {% endfor %}
+                    </ul>
+            {% endfor %}
+
+       {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+            {% unless product.has_only_default_variant %}
+
+			{% endunless %}
+                <select name="id" id="ProductSelect-{{ section.id }}" class="prodcut--variant--slction product-form__variants no-js">
+              {% for variant in product.variants %}
+                 {% assign amount = 0 %}
+
+           {% assign saving = variant.compare_at_price | minus: variant.price %}
+      {% assign amount = saving | at_least: amount %}
+          {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
+                {% if variant.available %}
+               {%- assign compare_at_price = variant.compare_at_price -%}
+                  <option diffrceprice="{{ saved_amount }}" class="{% if variant == product.selected_or_first_available_variant %} selected {% endif %} {% if compare_at_price != blank%} comparepro {% endif %}" nmbr="{{forloop.index}}"{% if compare_at_price != blank%} compareprice={{compare_at_price | money}} {% endif %}newprice="{{variant.price | money_with_currency}}" pprice="{{variant.price | money }}" {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                    {{ variant.title }}
+                  </option>
+                {% else %}
+                  
+                  <option diffrceprice="{{ saved_amount }}" {% if compare_at_price != blank%} compareprice={{compare_at_price | money}} {% endif %} class="{% if variant == product.selected_or_first_available_variant %} selected {% endif %} {% if compare_at_price != blank%} comparepro {% endif %} soldout" nmbr="{{forloop.index}}"  pprice="{{variant.price | money }}" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                {% endif %}
+              {%- assign compare_at_price = '' -%}
+              {% endfor %}
+            </select>
+
+         <div class="product__price_rating"> 
+         <div class="product__price custom lp">        
+ {% assign prodsinglefg= product %}
+    {% for variantis in prodsinglefg.variants %}
+      {% if variantis == product.selected_or_first_available_variant %}
+           {% assign amount = 0 %}
+
+           {% assign saving = variantis.compare_at_price | minus: variantis.price %}
+      {% assign amount = saving | at_least: amount %}
+          {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
+           <div class="regular--price " diffrnceprice="{{ saved_amount }}" originalclr="{{variantis.price | money }}"><span class="money" >{{variantis.price | money }}</span></div>
+           <div class="sale--price gh  money"><span class="money">{{variantis.compare_at_price | money }}</span>
+
+
+            
+
+          
+         <span class="money1"> {{ saved_amount }} Off</span>
+
+          </div>
+        {% endif %}
+        {% endfor %} 
+          </div>
+<!--        <div class="star--rating">
+        
+          <a href="#looxReviews"><div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div></a>
+        <span class="statyc--rating {{ section.settings.extra-class }}">{{section.settings.staticrating}}</span></div> -->
+           
+    </div>
+       <div class="add-to-cart-main {% if product.handle == 'wireless-outdoor-camera-v3' or  product.handle == 'wireless-camera-v4' %}desktop--updrage upgrad--btn show--here{% endif %}">    <button type="button" name="add" aria-label="Add to cart" class="btn  product-form__cart-submit" data-add-to-cart="">
+              
+                  {% assign current_variant = product.selected_or_first_available_variant %}
+
+                   <span data-add-to-cart-text>
+                  {% unless current_variant.available %}
+                    {{ 'products.product.sold_out' | t }}
+                  {% else %}
+                   buy now
+                  {% endunless %}
+                </span>
+           </button>
+              
+       </div>
+     {% if request.host contains 'ca.' %}
+        <div class="shipping-top-new">  <p>{{ settings.txt_ca }}</p></div>
+       {% elsif  request.host contains 'au.' %}
+       <div class="shipping-top-new">  <p>{{ settings.txt_au }}</p></div>
+      {% elsif request.host contains 'eu.' %}
+      <div class="shipping-top-new">   <p>{{ settings.txt_eu }}</p></div>
+       {% elsif  request.host contains 'nz.'   %} 
+      <div class="shipping-top-new">  <p>{{ settings.txt_nz }}</p></div>
+    {% elsif request.host contains 'sa.'  %}
+   <div class="shipping-top-new"> <p>{{ settings.txt_sa }}</p></div>
+
+      {% elsif request.host contains 'uk.'  %}
+
+        <div class="shipping-top-new"><p>{{ settings.txt_uk }}</p></div>
+       {% else %}
+       <div class="shipping-top-new">
+          <p>{{ settings.txt_usa }}</p>
+       </div>
+
+    {% endif %}
+           <script>
+             $('.product-form__cart-submit').click(function(e) {
+               console.log('test23')
+                  e.preventDefault();
+                   $('html, body').animate({
+        scrollTop: $(".product--slct-tab").offset().top
+    }, 100);
+    return false;
+
+            });
+           </script>
+          
+          
+            {% endform %}
+
+    <div class="product-bottom-sec">
+      <div class="icon-text-sec">
+          <ul>
+            {% for block in section.blocks %}
+            <li>
+              <div class="icon">
+<img src="{{block.settings.image | img_url : 'master' }}">
+              </div>
+              <p>{{block.settings.des}}</p>
+            </li>{% endfor %} 
+          </ul>
+      </div>
+    
+</div>
+ {% if section.settings.prod_des_title !=blank  %}
+        <div class="prod-des-sec">
+          
+ <ul class="accordion-list">
+    {% if section.settings.prod_des !=blank %}
+   <li class="">
+     
+<h3> <span>{{ section.settings.prod_des_title }}</span> {% render 'arrow' %} </h3>
+  <div class="faq-content answer">
+  <p> {{ section.settings.prod_des }}</p>
+  </div> </li> {% endif %}
+ 
+ </ul>
+  </div>{% endif %}
+
+     <div class="review-sec mob-sec">
+<h3>Rated <b>4.5 out of 5</b> based on <b>125 reviews</b></h3>
+<div class="review-info">
+  <div class="star-sec">
+<ul>
+  <li>{% render 'star' %}</li>
+  <li>{% render 'star' %}</li>
+  <li>{% render 'star' %}</li>
+  <li>{% render 'star' %}</li>
+  <li>{% render 'star' %}</li>
+</ul>
+
+<div class="date">{{ "now" | date: "%d/%m/%Y " }}</div></div>
+{% if section.settings.review_des !=blank %}
+    <p>{{ section.settings.review_des }}
+	</p> {% endif %}
+	
+	{% if section.settings.client_name !=blank %}
+  <div class="name">
+ {{ section.settings.client_name }}
+    {% render 'tick' %}
+  </div> {% endif %}
+    <a class="btn"  href="#shopify-section-loox-form">
+      Read more reviews
+    </a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  
+</div>
+
+<div class="tab-target">
+<ul>
+  <li><a href="#">Features</a></li>
+  <li><a href="#how-it-works">How It Works</a></li>
+  <li><a href="div#shopify-section-table-data">Compare</a></li>
+  <li><a href="#shopify-section-loox-form">Reviews</a></li>
+  <li><a href="#shopify-section-faq">FAQ</a></li>
+  <li><a href="#shopify-section-product--tab-select" class="btn">Buy Now</a></li>
+</ul>
+</div>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+ <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+   $('.slider-for-main').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+     dots:false,
+     adaptiveHeight: true,
+   asNavFor: '.slider-nav-small'
+ });
+ $('.slider-nav-small').slick({
+   slidesToShow: 5,
+   slidesToScroll: 1,
+   asNavFor: '.slider-for-main',
+   dots: true,
+   centerMode: true,
+   focusOnSelect: true
+ });
+
+  $(document).ready(function(){
+  $('.accordion-list > li > .answer').hide();
+    
+  $('.accordion-list > li').click(function() {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active").find(".answer").slideUp();
+    } else {
+      $(".accordion-list > li.active .answer").slideUp();
+      $(".accordion-list > li.active").removeClass("active");
+      $(this).addClass("active").find(".answer").slideDown();
+    }
+    return false;
+  });
+  
+});
+</script>
+<style>
+  .main {
+  display:block;
+  margin:0 auto;
+}
+  
+</style>
+{% schema %}
+  {
+    "name": "Top section V3s",
+    "settings": [
+      {
+          "type": "text",
+          "id": "prod_des_title",
+          "label":"Title"
+        },
+      {
+          "type": "textarea",
+          "id": "prod_des",
+          "label":"Product Description"
+        },
+      {
+          "type": "html",
+          "id": "review_des",
+          "label":"Review"
+        },
+      {
+          "type": "text",
+          "id": "client_name",
+          "label":"Client Name"
+        },
+       {
+          "type": "text",
+          "id": "custom_class",
+          "label":"Custom Class"
+        }
+    ],
+    "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "Icon text section"
+      }, 
+    "settings": [
+         
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label":"Image"
+        },
+        
+      {
+         "type": "text",
+          "id": "des",
+          "label": "Description "
+        }
+      ]
+      
+    }
+  ],
+    "presets": [
+       {
+         "name": "Top section V3s"
+       
+       }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

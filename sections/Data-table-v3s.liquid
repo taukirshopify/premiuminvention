@@ -1,0 +1,139 @@
+<div id="shopify-section-table-data" id="compare-sec">
+  <div class="page-width product-page-width">
+      {%- unless section.settings.heading_title == blank -%}
+        <div class=" main-title">
+    <h2 class="">
+      {{ section.settings.heading_title | escape }}
+    </h2></div>
+  {%- endunless -%}   
+<div class="tblecamera" >
+<table>
+	<thead>
+<tr>
+	
+<th>{{section.settings.row1}}</th> 
+<th class="blactoblue">{{section.settings.row2}}</th>
+<th class="blcktobrwn">{{section.settings.row3}}</th>
+
+</tr></thead>
+  <tbody>
+    {% for block in section.blocks %}
+<tr>
+	
+<td class="headTb">{{block.settings.row1}}</td>
+<td>{{block.settings.row2}}</td>
+<td>{{block.settings.row3}}</td>
+
+</tr>
+
+{% endfor %}</tbody>
+
+
+
+
+</table>
+</div>
+    <div class="show-more-btn">
+    
+      <button type="button">
+       <span class="show-more">Show More</span> 
+        <span class="show-less">Show Less</span> 
+      </button>
+    </div>
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".tblecamera").toggleClass("expand-table");
+    $(this).toggleClass("active");
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": {
+    "en": "Table data v3s"
+  },
+  "class": "index-section",
+  "settings": [
+        {
+      "type": "text",
+      "id": "heading_title",
+      "label": {
+        "de": "Überschrift",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+    },
+{
+          "type": "text",
+          "id": "row1",
+          "label": {
+            "en": "Row 1 heading"
+          }
+        },{
+          "type": "text",
+          "id": "row2",
+          "label": {
+            "en": "Row 2 heading"
+          }
+        },
+{
+          "type": "text",
+          "id": "row3",
+          "label": {
+            "en": "Row 3 heading"
+          }
+        }
+],
+  "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "text"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "row1",
+          "label": {
+            "en": "Row 1 heading"
+          }
+        },{
+          "type": "text",
+          "id": "row2",
+          "label": {
+            "en": "Row 2 data"
+          }
+        },{
+          "type": "text",
+          "id": "row3",
+          "label": {
+            "en": "Row 3 data"
+          }
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": {
+        "en": "Table data v3s"
+      }
+    }
+  ]
+}
+{% endschema %}
+
+

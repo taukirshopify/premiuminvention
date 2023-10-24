@@ -1,0 +1,213 @@
+/* video css start */
+div#shopify-section-video-info.onlyv4-enjoy-peace .two--flex video.video-js {
+    width: 100%;
+}
+/* video css end  */
+div#shopify-section-video-info {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+div#shopify-section-video-info .feature_video {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+div#shopify-section-video-info .feature_video .col-6 {
+    width: 50%;
+}
+div#shopify-section-video-info .feature_video .left_video .video-section-wrapper {
+    height: 492px!important;
+    min-height: 400px!important;
+}
+div#shopify-section-video-info .feature_video .right-info {
+    padding: 80px;
+}
+div#shopify-section-video-info .feature_video .right-info h2.section-header {
+    font-size: 34px;
+    color: #000;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+div#shopify-section-video-info div img {
+    border-radius: 20px;
+    width: 100%;
+    height: 492px!important;
+    min-height: 400px!important;
+    object-fit: cover;
+}
+div#shopify-section-video-info  .two--flex {
+    display: flex;
+}
+div#shopify-section-video-info .feature_video .right-info p {
+    margin-top: 0;
+    color: #000;
+    margin-bottom: 34px;
+    letter-spacing: 0;
+    font-size: 17px;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .stay-connect ul {
+    padding: 0;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .stay-connect li {
+    list-style: none;
+    display: flex;
+    gap: 26px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .stay-connect li img {
+    height: 24px !important;
+    min-height: auto !important;
+    border-radius: unset;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    width: 25px;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .stay-connect li:nth-child(1) img {
+    width: 30px;
+    height: 30px !important;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .stay-connect li:last-child img {
+    /*visibility: hidden; */
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .stay-connect li p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    margin-bottom: 0;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .stay-connect li span{
+  width:30px;
+  display: inline-flex;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .feature_video .right-info {
+    padding-right: 50px;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .feature_video .right-info h2.section-header {
+    font-size: 25px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .feature_video .right-info  p.pre-head {
+    padding-left: 50px;
+}
+/* #shopify-section-video-info.onlyv4-enjoy-peace .two--flex img {
+    border-radius: 0;
+    height: 487px !important;
+    padding-bottom: 20px;
+} */
+div#shopify-section-video-info.onlyv4-enjoy-peace .feature_video .right-info {
+    padding-right: 50px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.wirless_outer_v3.wirless_extra_v4only:after {
+    visibility: hidden;
+}
+div#shopify-section-video-info.accurate-motion-only ul {
+    padding: 0;
+}
+div#shopify-section-video-info.accurate-motion-only {
+    padding-bottom: 0;
+}
+div#shopify-section-video-info.accurate-motion-only .feature_video .right-info {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+div#shopify-section-video-info.accurate-motion-only ul li {
+    list-style: none;
+}
+div#shopify-section-video-info.accurate-motion-only ul li img {
+    width: 100% !important;
+    height: 142px !important;
+    min-height: auto !important;
+    object-fit: contain;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace {
+    background: #E7EAEC;
+    padding: 100px 0;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace::before {
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/animation_new.png?v=1649708077);
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .feature_video .left_video .video-section-wrapper {
+    height: auto !important;
+    min-height: auto !important;
+}
+#shopify-section-video-info.onlyv4-enjoy-peace .feature_video {
+    align-items: normal;
+}
+div#shopify-section-video-info.only-v4-capture{
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+div#shopify-section-video-info .feature_video .right-info .section-info p {
+    
+    margin-bottom: 16px;
+}
+@media only screen and (min-width: 990px){
+div#shopify-section-video-info {
+    position: relative;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+div#shopify-section-video-info:before {
+    position: absolute;
+    content: "";
+    width: 375px;
+    height: 100%;
+    z-index: -11;
+    right: -30px;
+    bottom: 34%;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/animation5_new.png?v=1649710777);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+div#shopify-section-video-info.only-v4-capture:before{
+     display: none; 
+}
+}
+@media only screen and (max-width: 767px){
+div#shopify-section-video-info.onlyv4-enjoy-peace .stay-connect li:last-child img {
+    visibility: visible;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .feature_video .right-info h2.section-header {
+    font-size: 20px !important;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .feature_video .right-info {
+    padding-right: 0px;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .stay-connect li img {
+    width: 30px;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .stay-connect li:nth-child(3) img {
+    width: 25px;
+}
+div#shopify-section-video-info.onlyv4-enjoy-peace .stay-connect li {
+    gap: 15px;
+}
+div#shopify-section-video-info.only-v4-capture {
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+div#shopify-section-video-info.only-v4-capture .feature_video .right-info p {
+    margin-bottom: 10px;
+}
+div#shopify-section-video-info.only-v4-capture .feature_video {
+    display: flex;
+    flex-wrap: wrap;
+}
+div#shopify-section-video-info.only-v4-capture .feature_video .col-6:nth-child(1) {
+    order: 2;
+    -webkit-order: 2;
+}
+div#shopify-section-video-info.only-v4-capture .feature_video .right-info {
+    padding-top: 15px;
+}
+}

@@ -1,0 +1,20 @@
+div#shopify-section-loox-form h2.section-header {
+    text-align: center;
+    color: #000;
+/*     font-size: 36px; */
+    font-size: 34px;
+    letter-spacing: 0;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 40px;
+}
+div#shopify-section-loox-form .loox--form-sow {
+    margin-top: 66px;
+}
+@media only screen and (min-width: 990px){
+div#shopify-section-loox-form {
+    background: #F7F7F7;
+    padding: 30px 0 60px;
+    margin-top: 90px;
+}
+}

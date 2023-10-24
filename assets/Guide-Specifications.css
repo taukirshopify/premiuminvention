@@ -1,0 +1,100 @@
+.Guide-Specifications {
+/*     background: #EEEEEE; */
+    display: inline-block;
+    width: 100%; 
+    padding: 30px 0 40px;
+   margin-top: 0px;
+}
+.Guide-Specifications .section-header h2 {
+    font-family: Work Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-top: 10px;
+}
+.Guide-Specifications-inner {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    align-items: center;
+}
+.Guide-Specifications .left-side-img {
+    width: 40%;
+    position: relative;
+    left: 80px;
+}
+.Guide-Specifications img.guide_specification {
+    width: 100%;
+}
+.Guide-Specifications .right-side-text {
+    width: 60%;
+    position: relative;
+    right: 80px;
+}
+.Guide-Specifications .right-side-text ol {
+    padding: 0;
+}
+.Guide-Specifications .right-side-text ol li {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  margin-bottom: 30px;
+}
+.Guide-Specifications .right-side-text ol li span.left-number {
+    width: 65%;
+    text-align: right;
+    position: relative;
+}
+.Guide-Specifications .right-side-text ol li span.right-text {
+    width: 35%;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-top: 5px;
+    color: #333333;
+}
+.Guide-Specifications .right-side-text ol li span.only_number {
+    width: 37px;
+    height: 37px;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 37px;
+    letter-spacing: 0px;
+    text-align: center;
+    background: #E5E5E5;
+    color: #333333;
+    display: inline-flex;
+    border-radius: 100%;
+    justify-content: center;
+}
+.Guide-Specifications .right-side-text ol li span.left-number:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    color: #c2add8;
+    right: 57px;
+    bottom: 8px;
+    border-bottom: 1px solid #6e6e6e;
+}
+.Guide-Specifications .right-side-text ol li:nth-child(1) span.left-number:before{
+    width: 94%;
+}
+
+.Guide-Specifications .right-side-text ol li:nth-child(4) span.left-number:before {
+    width: 112%;
+}
+.Guide-Specifications .right-side-text ol li:nth-child(5) span.left-number:before{
+    width: 82%;
+}
+@media only screen and (max-width: 767px){
+
+}
+@media only screen and (max-width: 510px){
+  
+}

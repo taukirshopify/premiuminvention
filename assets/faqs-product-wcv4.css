@@ -1,0 +1,104 @@
+.py-120{padding:120px 0}
+
+.hiddenac{
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding-bottom: 0 !important;
+}
+div#shopify-section-faq {
+    padding: 60px 0;
+}
+.heading-lable {
+    background: rgba(255,255,255,.1);
+    border-radius: 50px;
+    padding: 4px 16px !important;
+    font-style: normal;
+    margin: auto;
+    display: block;
+    max-width: 230px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.03em;
+      margin-bottom: 34px;
+}
+div#shopify-section-faq h2.section-header, div#shopify-section-faq .section-header.h2 {  
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 52px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.faq_section {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 2px 0px 0px rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item:hover {
+    box-shadow: 0 0 18px #0000001a;
+}
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item h3 {
+   font-family: Jost,sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #fff;
+    padding: 18px 24px;
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+}
+.shopify_explorer_faq__answer.rte.faq-answer {
+    padding:0 24px 18px ;
+  
+}
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #ABC6D9; 
+}
+span.bodbot {
+    width: 100%;
+    border-top: 1px solid rgb(255 255 255 / 10%);
+    display: block;
+    margin-bottom: 18px;
+}
+.faq-question.open:after{
+    content: "";
+    background: url(faqarrow.svg);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    right: 26px !important;
+    transform: rotate(180deg);
+  transition:all 0.2s;
+}
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item .faq-question:after {
+   position: absolute;
+    content: "";
+    width: 15px;
+    height: 11px;
+    background: url('https://cdn.shopify.com/s/files/1/0249/8949/9437/t/73/assets/faqarrow.svg');
+    background-repeat: no-repeat;
+    right: 22px;
+    transition: all .2s;
+    top: 28px;
+    left: auto;
+}
+.hidden1{
+  display:none;
+}

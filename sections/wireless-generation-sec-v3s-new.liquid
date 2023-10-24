@@ -1,0 +1,88 @@
+<div id="shopify-section-wireless-generation-sec" class="shopify-section">
+  <div class="page-width wirless-generation"> 
+  <div id="wirless-gen-v3s"> 
+    <div class="main_wire_gen desktop_view">
+     <div class="left-wire_gen">
+        <div class="product-single__description rte">
+          <h2>{{ section.settings.heading_title_1 }}</h2>
+          <div>{{ section.settings.prehead}}</div>
+        </div>
+     </div>
+     <div class="wire-gen-right">
+        <div class="inner_gen_right first">
+          {% for block in section.blocks %}
+           <div class="first_media sem_wire_gen">
+              <div class="twoway-main same_inner_wire">
+                 <div class="twoway-left">
+                    <img src="{{block.settings.image1 | img_url : 'master' }}" class="media-wiregen">
+                 </div>
+                 <div class="twoway-body">
+                    <h4 class="wire_heading">{{ block.settings.heading-first }}</h4>
+                 </div>
+              </div>
+           </div>
+           
+        {% endfor %}
+      </div>
+     </div>
+  </div>
+</div>    
+</div>
+</div>
+{% schema %}
+   {
+    "name": "wireless gen v3s sec",
+    "settings": [
+       {
+      "type": "text",
+      "id": "heading_title_1",
+      "label": "Desktop Heading"
+    },
+    {
+      "type": "html",
+       "id": "prehead",
+      "label": "Desktop Peragraph"
+      },
+       {
+      "type": "text",
+      "id": "heading_title_2",
+      "label": "Mobile Heading"
+    },
+    {
+      "type": "html",
+       "id": "prehead1",
+      "label": "Mobile Peragraph"
+      }
+    ],
+     "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "logo with text"
+      }, 
+    "settings": [
+         
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label":"Image"
+        }, 
+      {
+         "type": "html",
+          "id": "heading-first",
+          "label": "heading "
+        }
+      ]
+      
+    }
+  ],
+   "presets": [
+       {
+         "name": "wireless gen v3s sec"
+       
+       }
+      ]
+      }
+{% endschema %}
+{{ 'wireless-generation-sec-v3s-new.css' | asset_url | stylesheet_tag }}
+

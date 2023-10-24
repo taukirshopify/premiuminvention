@@ -1,0 +1,149 @@
+<div class="multi--faq">
+  <div class="page-width">
+  <h2 class="top_header">
+      {{ section.settings.heading_title_2 | escape }}
+    </h2>
+  
+  <div class="faq--grid">
+  {%- for block in section.blocks -%}
+          {%- case block.type -%}
+          {%- when 'text' -%}
+    <h3 class="parent--tab"><span>{{block.settings.text}}</span> <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 13.9286L5.80357 8.125L0 2.32143L1.16071 0L9.28571 8.125L1.16071 16.25L0 13.9286Z" fill="#086FB5"/>
+</svg>
+</h3>
+    <div class="child--tabs">
+    <div class="hidden--part">
+      <div class="child">
+        
+        
+        
+        
+        
+        {%- when 'richtext' -%}
+        
+        <h3>{{block.settings.rtext}}<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 13.9286L5.80357 8.125L0 2.32143L1.16071 0L9.28571 8.125L1.16071 16.25L0 13.9286Z" fill="black"/>
+</svg>
+        </h3>
+            
+            <div class="child--hidden-part">
+     {{block.settings.rtextdes}}
+        
+        
+        
+        </div>
+        
+     {% when 'Heading-end'%}   
+        
+</div>
+    
+      </div>
+    
+    </div>
+     {%- endcase -%}
+  {% endfor %}
+  </div>
+<h3 class="bottom_header">
+      {{ section.settings.heading_title_3 | escape }}
+    </h3>
+</div>
+
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Multi FAQ",
+    "settings": [
+    {
+      "type": "text",
+      "id": "heading_title_2",
+      "label": "Top Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading_title_3",
+      "label": "bottom Heading"
+    }
+],
+"blocks": [
+{
+      "type": "text",
+      "name": "heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Text block",
+          "label": "Title"
+        }
+]
+},{
+      "type": "richtext",
+      "name": "child",
+      "settings": [
+        {
+          "type": "text",
+          "id": "rtext",
+          "default": "child heading",
+          "label": "Heading"
+        },{
+          "type": "richtext",
+          "id": "rtextdes",
+          "label": "child description"
+        }
+]
+},{
+      "type": "Heading-end",
+      "name": "Heading End"
+
+}
+],
+ "presets": [
+    {
+      "name": "Multi FAQ"
+    }
+  ]
+  }
+{% endschema %}
+{{ 'mult-faq-questions.css' | asset_url | stylesheet_tag }}
+<script>
+
+
+  $(document).ready(function(){
+  
+    $('h3.parent--tab').click(function(){
+      if($(this).hasClass('active')){
+       $(this).removeClass('active');
+      $('.child--tabs').find('.hidden--part').slideUp();
+      }else{
+    $('h3.parent--tab').removeClass('active');
+        $('.child--tabs').find('.hidden--part').slideUp();
+        $(this).next('.child--tabs').find('.hidden--part').slideDown();
+      $(this).addClass('active');
+      }
+    })
+    
+    
+    $('.hidden--part .child h3').click(function(){
+      
+      
+      if($(this).hasClass('active')){
+       $(this).removeClass('active');
+      $('.child--hidden-part').slideUp();
+      }else{
+    $('.hidden--part .child h3').removeClass('active');
+        $('.child--hidden-part').slideUp();
+        $(this).next('.child--hidden-part').slideDown();
+      $(this).addClass('active');
+      }
+      
+      
+      
+    })
+  
+  })
+
+</script>

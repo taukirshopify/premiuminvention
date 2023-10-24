@@ -1,0 +1,30 @@
+<div id="shopify-section-loox-form">
+  <!-- <div class="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default>{{ product.metafields.loox.reviews }}</div> -->
+  <h2 class="section-header">{{section.settings.title}}</h2>
+  <div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default" >{{ product.metafields.loox.reviews }}</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "v4--product-loox",
+    "settings": [{
+
+    "type":"text",
+    "id":"title",
+    "label":"title"
+    }],
+   "presets": [
+    {
+      "name": "v4--product-loox"
+      }
+  ]
+  }
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

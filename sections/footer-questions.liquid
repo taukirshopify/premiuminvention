@@ -1,0 +1,180 @@
+<section class="cta-section p-120" style="background-image:url({{ section.settings.qot-bg.src | image_url: width: 1920 }})">
+  <div class="content-width">
+    <div class="opening-hour">
+      <span class="opening">{{ section.settings.opening }}</span>
+      <h2>{{ section.settings['sec-title'] }}</h2>
+      <p>{{ section.settings['sec-content'] }}</p>
+      <span class="dblock"
+        ><a class="email anc" href="mailto:{{ section.settings.qutemeil }}">
+          <span class="emeilicon">
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 16C1.1 16 0.75 15.85 0.45 15.55C0.15 15.25 0 14.9 0 14.5V1.5C0 1.1 0.15 0.75 0.45 0.45C0.75 0.15 1.1 0 1.5 0H18.5C18.9 0 19.25 0.15 19.55 0.45C19.85 0.75 20 1.1 20 1.5V14.5C20 14.9 19.85 15.25 19.55 15.55C19.25 15.85 18.9 16 18.5 16H1.5ZM10 8.45L1.5 2.875V14.5H18.5V2.875L10 8.45ZM10 6.95L18.4 1.5H1.625L10 6.95ZM1.5 2.875V1.5V14.5V2.875Z" fill="#086FB5"/>
+            </svg>
+          </span>
+          {{ section.settings.qutemeil }}
+        </a>
+      </span>
+      <span class="dblock">
+        <a class="phone anc" href="tel:{{ section.settings.qutphon }}">
+          <span class="emeilicon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.875 18C14.8417 18 12.8208 17.5 10.8125 16.5C8.80417 15.5 7 14.2 5.4 12.6C3.8 11 2.5 9.19583 1.5 7.1875C0.5 5.17917 0 3.15833 0 1.125C0 0.808333 0.108333 0.541667 0.325 0.325C0.541667 0.108333 0.808333 0 1.125 0H4.625C4.85833 0 5.0625 0.0791666 5.2375 0.2375C5.4125 0.395833 5.525 0.608333 5.575 0.875L6.25 4.025C6.28333 4.25833 6.27917 4.47083 6.2375 4.6625C6.19583 4.85417 6.10833 5.01667 5.975 5.15L3.475 7.675C4.40833 9.225 5.45417 10.575 6.6125 11.725C7.77083 12.875 9.08333 13.85 10.55 14.65L12.925 12.2C13.0917 12.0167 13.2833 11.8875 13.5 11.8125C13.7167 11.7375 13.9333 11.725 14.15 11.775L17.125 12.425C17.375 12.475 17.5833 12.6 17.75 12.8C17.9167 13 18 13.2333 18 13.5V16.875C18 17.1917 17.8917 17.4583 17.675 17.675C17.4583 17.8917 17.1917 18 16.875 18ZM2.725 6.3L4.75 4.25L4.175 1.5H1.5C1.5 2.15 1.6 2.8625 1.8 3.6375C2 4.4125 2.30833 5.3 2.725 6.3ZM11.95 15.375C12.6333 15.6917 13.375 15.95 14.175 16.15C14.975 16.35 15.75 16.4667 16.5 16.5V13.825L13.925 13.3L11.95 15.375Z" fill="#086FB5"/>
+            </svg>
+          </span>
+          {%- if section.settings['tolfree'] -%}
+           <span class="tlfe"> Toll-free - </span>
+          {%- endif -%}
+           {{ section.settings.qutphon }}
+        </a>
+      </span>
+                <a class="catbtn" href="{{ section.settings.qot-button-url }}">{{ section.settings.qot-button }} 
+                  <span class="bticon">
+                  <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.5 11.5L9.438 10.438L13.125 6.75H0V5.25H13.125L9.438 1.562L10.5 0.5L16 6L10.5 11.5Z" fill="white"/>
+                  </svg>
+                  </span>
+                </a>
+    </div>
+  </div>
+</section>
+<style>
+  .p-120{padding:120px 0}
+  a.catbtn {
+    background: #086FB5;
+    border-radius: 8px;
+    padding: 11px 30px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-top: 30px;
+    display: inline-block;
+}
+  a.catbtn:hover {
+    background: #e1f3ff;
+    color: #086FB5;
+}
+   a.catbtn:hover svg path{
+     fill:#086FB5;
+   }
+    .dblock{display:block; margin-bottom: 15px;}
+      .content-width{width: 100%; margin: auto; max-width: 720px;text-align: center;}
+      .cta-section{background-repeat: no-repeat;background-size:cover}
+      .opening-hour .opening {
+        background: #F2F3F6;
+        box-shadow: 0px 10px 65px rgb(24 33 39 / 10%);
+        border-radius: 50px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #182127;
+        padding: 4px 16px;
+    }
+      .opening-hour h2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 52px;
+        text-align: center;
+        color: #182127;
+        margin: 24px 0;
+    }
+      .opening-hour p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+        color: #364148;
+        margin-bottom: 30px;
+        letter-spacing: 0;
+    }
+    .anc {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      color: #364148;
+      text-decoration: none;
+      transition: all 0.2s;
+  }
+    span.emeilicon {
+      margin-right: 10px;
+  }
+    .anc:hover {
+      color: #086fb5;
+  }
+
+</style>
+{% schema %}
+{
+  "name": "CTA Section",
+  "settings": [
+     {
+    "type": "text",
+    "id": "sec-title",
+    "default": "Still got Questions?",
+    "label": "Questions Title"
+  },
+     {
+    "type": "text",
+    "id": "sec-content",
+    "label": "Questions content"
+  },
+   {
+    "type": "text",
+    "id": "opening",
+    "label": "Opening hour "
+  },
+    {
+    "type": "text",
+    "id": "qutemeil",
+    "label": "Email"
+  },
+    {
+    "type": "text",
+    "id": "qutphon",
+    "label": "Phon"
+  },
+     {
+      "type": "checkbox",
+      "id": "tolfree",
+      "default": true,
+      "label": "Toll-free"
+    },
+    {
+    "type": "text",
+    "id": "qot-button",
+    "label": "Button Text"
+  },
+    {
+    "type": "url",
+    "id": "qot-button-url",
+    "label": "Button link"
+  },
+    {
+    "type": "image_picker",
+    "id": "qot-bg",
+    "label": "Background Image"
+  }
+  ],
+  "presets": [
+  {
+    "name": "CTA Section"
+
+  }
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,228 @@
+<div id="shopify-slider-q3">
+   <div class="page-width">
+      <div class="slider-q3-main">
+         <div class="slider-q3-insalled">
+           {% for block in section.blocks %}
+             {% if block.type == 'video' %}
+            <div class="slider-zoomq3-same slider-zoomq3-slide{{ forloop.index }}">
+               <div class="slider-zoomq3-inner">
+                  <div class="slider-zoomq3-left">
+                     <div class="same-q3-video">
+                        <video class="video-js" width="100%" loop autoplay preload="none" muted playsinline
+                        <source src="{{ block.settings.vid }}" type="video/mp4">
+                        </video>
+                     </div>
+                  </div>
+                  <div class="slider-zoomq3-right">
+                     <h2 class="zoom-heading">{{ block.settings.heading }}</h2>
+                     <p class="zoom-q3-mnitext">{{ block.settings.subheading }}
+                     </p>
+                  </div>
+               </div>
+            </div>
+             {% endif %}
+             {% if block.type == 'Vertical-image' %}
+            <div class="slider-zoomq3-same slider-zoomq3-slide{{ forloop.index }}">
+               <div class="slider-zoomq3-only4k">
+                  <div class="zoomq3-4k-hrd">
+                <h2 class="zoom-heading">{{ block.settings.heading }}</h2>
+                     <p class="zoom-q3-mnitext">{{ block.settings.subheading }}
+                     </p>
+               
+                 
+			  <img class="q3-4khrd-img" src="{{block.settings.img | img_url : 'master' }}"> 
+			
+                   </div>
+				 <div class="bottom-4k-hrd">
+				  <div class="bottom-left-hrd">				   
+				   <h4 class="none-heading">{{ block.settings.ltxt }}</h4>
+				   </div>
+				   <div class="bottom-right-hrd">
+				   <h4 class="real-heading">{{ block.settings.rtxt }}</h4>
+				   </div>
+				 </div>
+                  
+               </div>
+            </div>
+               {% endif %}
+              {% if block.type == 'Before-After' %}
+            <div class="slider-zoomq3-same slider-zoomq3-slide{{ forloop.index }}">
+               <div class="slider-zoomq3-inner">
+			     <div class="slider-zoomq3-left">
+                  <div class="slider-zoomq3-night "> 
+                     <div class="inner-slider-night">
+                        <div class="slider-night-versionimg">
+                           <img class="night-version-img1" src="{{ block.settings.img1 | img_url : 'master' }}"> 
+                           <img class="night-version-img2" src="{{ block.settings.img2 | img_url : 'master' }}">  
+                        </div>
+					  <div class="slider-night-bottom">
+						<button class="q3-slider-btn1" onclick="">{{ block.settings.bwen }}</button>
+                      </div>
+                        <div class="night-optionnames--all">
+                           <div class="night-opt-cls">{{ block.settings.text1 }}</div>
+                           <label class="switch-night">
+                           <input type="checkbox" checked="">
+                           <span class="night-slider night-round"></span>
+                           </label>
+                           <div class="night-opt-cls">{{ block.settings.text2 }}</div>
+                        </div>
+                        <p class="night-opt2" style="display:none;"></p>
+                        <p class="night-opt1"></p>
+                     
+                     </div>
+                  </div> 
+                 </div>
+				 <div class="slider-zoomq3-right">
+				 <h2 class="zoom-heading">{{ block.settings.heading }}</h2>
+                     <p class="zoom-q3-mnitext">{{ block.settings.subheading }}</p>
+                 </div>
+               </div>
+            </div>
+                {% endif %}
+			  {% if block.type == 'Horizontal-image' %}
+			 <div class="slider-zoomq3-same slider-zoomq3-slide{{ forloop.index }}">
+               <div class="slider-zoomq3-inner">
+                  <div class="slider-zoomq3-left">
+                     <div class="same-q3-image">
+                          <img class="audio-img" src="{{ block.settings.img | img_url : 'master' }}"> 
+                     </div>
+                  </div>
+                  <div class="slider-zoomq3-right">
+                     <h2 class="zoom-heading">{{ block.settings.heading }}</h2>
+                     <p class="zoom-q3-mnitext">{{ block.settings.subheading }}
+                     </p>
+                  </div>
+               </div>
+            </div>
+                 {% endif %}
+             {% endfor %}
+         </div>
+      </div>
+   </div>
+</div>
+{% schema %}
+   {
+    "name": "Q3 Zoom Optical slider",
+    "settings": [
+      
+    ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "video with text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "vid",
+          "label": "MP4 Video ID"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Sub Heading"
+        }
+      ]
+    },{
+      "type": "Vertical-image",
+      "name": "Vertical Image with text",
+      "settings": [
+        
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Sub Heading"
+        },{
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        }, {
+          "type": "text",
+          "id": "ltxt",
+          "label": "Left Text"
+        },
+        {
+          "type": "text",
+          "id": "rtxt",
+          "label": "Right Text"
+        }
+      ]
+    },{
+      "type": "Horizontal-image",
+      "name": "Left Image with text",
+      "settings": [
+        
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Sub Heading"
+        },{
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        }
+      ]
+    },{
+      "type": "Before-After",
+      "name": "Before After image",
+      "settings": [
+        
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Sub Heading"
+        },{
+          "type": "text",
+          "id": "bwen",
+          "label": "Text on image"
+        },{
+          "type": "image_picker",
+          "id": "img1",
+          "label": "Image 1"
+        },{
+          "type": "text",
+          "id": "text1",
+          "label": "Imag 1 Text"
+        },{
+          "type": "image_picker",
+          "id": "img2",
+          "label": "Image 2"
+        },{
+          "type": "text",
+          "id": "text2",
+          "label": "Image 2 Text"
+        }
+      ]
+    }
+    
+  ],
+   "presets": [
+       {
+         "name": "Q3 Zoom Optical slider"
+       
+       }
+      ]
+      }
+{% endschema %}
+
+{{ 'Slider-Q3-optical-zoom.css' | asset_url | stylesheet_tag }}
+

@@ -1,0 +1,696 @@
+/* span.statyc--rating.rating-v3s {
+    visibility: hidden;
+} */
+div#wirless_top_v3v3s {
+    position: relative;
+}
+div#wirless_top_v3v3s:before {
+    position: absolute;
+    content: "";
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/image_2022_12_07T22_11_13_628Z.png?v=1670451188);
+    width: 100%;
+    height: 29px;
+    left: 0;
+    top: 0;
+    background-repeat: repeat;
+}
+.inner-upgrade-s .opt2 {
+    display:none;
+}
+.upgarede_img .img2{
+  display:none;
+}
+.inner-upgrade-s.active p.opt1 {
+    display: none;
+}
+.inner-upgrade-s.active p.opt2 {
+    display:block !important;
+}
+.optionnames--all {
+    display: flex;
+    padding-top: 20px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70px;
+    margin-bottom: 38px;
+}
+.optionnames--all .opt---cls {
+    color: #f7f7f7;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.optionnames--all .switch {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 29px;
+}
+.inner-upgrade-s.active .upgarede_img img.img1 {
+    display: none;
+}
+.inner-upgrade-s.active .upgarede_img img.img2 {
+    display: block;
+}
+.optionnames--all .switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.optionnames--all .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.optionnames--all .slider:before {
+  position: absolute;
+  content: "";
+  height: 29px;
+  width: 29px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.optionnames--all input:checked + .slider {
+  background-color: #DADADA;;
+}
+
+.optionnames--all input:focus + .slider {
+  box-shadow: 0 0 1px #DADADA;;
+}
+
+.optionnames--all input:checked + .slider:before {
+  -webkit-transform: translateX(36px);
+  -ms-transform: translateX(36px);
+      transform: translate(36px);
+    background: #086fb5;
+}
+
+/* Rounded sliders */
+.optionnames--all .slider.round {
+  border-radius: 34px;
+}
+
+.optionnames--all .slider.round:before {
+  border-radius: 50%;
+}
+
+
+.wirless_outer_v3 {
+    position: relative;
+    padding: 50px 0 50px 0;
+}
+.shipping--details.show{
+  display:block !important;
+}
+.wirless_outer_v3:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7;
+    z-index: -1;
+    top: 0;
+}
+.wirless_outer_v3 .wirless_v3-left{
+    width: 46%;
+    position: relative;
+    top: 40px;
+    left: 100px
+} 
+.wirless_outer_v3 .wirless_v3_inner {
+    display: flex;
+    padding-bottom: 40px;
+}
+.wirless_outer_v3 .wirless_v3_right {
+    width: 54%;
+    position: relative;
+}
+.wirless_outer_v3 .wirless_v3-left h2 {
+    font-size: 47px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+.wirless_outer_v3 .wirless_v3_right img.wireless_media {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 530px;
+    object-fit: contain;
+}
+.wirless_outer_v3.wirless_extra_v3s ul.custom--variations.style span {
+    color: #fff;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.wirless_outer_v3 p.shipping--details {
+    display: none;
+}
+.wirless_outer_v3 ul.custom--variations {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    gap: 14px;
+}
+.wirless_outer_v3 ul.custom--variations li {
+    border: 1px solid #E5E5E5;
+    border-radius: 25px;
+    color: #000;
+    width: 180px;
+    cursor: pointer;
+    height: 43px;
+    justify-content: center;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.wirless_outer_v3  ul.custom--variations li.active {
+    background: #086FB5;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+}
+
+.wirless_outer_v3 .product__price.custom .regular--price {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    margin-right: 10px;
+    font-family: Work Sans,sans-serif;
+    color: #000;
+}
+.wirless_outer_v3 .product__price.custom .sale--price {
+    position: relative;
+    top: -11px;
+    right: 12px;
+    font-family: Work Sans,sans-serif;
+}
+.wirless_outer_v3 .product__price.custom .regular--price span.money {
+    margin-right: 15px;
+    font-family: Work Sans,sans-serif;
+}
+.wirless_outer_v3 .product__price.custom .sale--price span.money {
+    color: #989898;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 30px;
+    text-decoration: line-through;
+}
+.wirless_outer_v3 .product__price.custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 27px;
+    padding-bottom: 8px;
+    float: left;
+}
+.wirless_outer_v3 .star--rating {
+    letter-spacing: 3px;
+    gap: 2px;
+    position: relative;
+    top: 11px;
+    padding-top: 26px;
+    left: -62px;
+    display: flex; 
+    align-items: center;
+}
+.wirless_outer_v3 button.btn.product-form__cart-submit {
+    width: 342px;
+    float: left;
+    margin-top: 8px;
+    background: #086fb5;
+    border-radius: 35px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    height: auto;
+    line-height: normal;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0;
+    min-height: 44px;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.wirless_outer_v3 button.btn.product-form__cart-submit span {
+    text-transform: capitalize;
+}
+
+.wirless_outer_v3 .shipping--messages {
+/*     width: 100%; */
+    display: flex;
+    justify-content: center;
+    width: 342px;
+}
+.wirless_outer_v3 .shipping--messages p {
+    position: relative;
+/*     margin-left: 85px; */
+    margin-left: 12px;
+    width: fit-content;
+    font-family: Work Sans,sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+.wirless_outer_v3 .shipping--messages p:before {
+    position: absolute;
+    content: "";
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/carbon_delivery-parcel.png?v=1652207846);
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -28px;
+    top: 0px;
+}
+.wirless_v3_right.mobile_version {
+    display: none;
+}
+.wirless_outer_v3 .star--rating span {
+    color: #000;
+    font-family: Work Sans,sans-serif;
+    letter-spacing: 0px;
+    margin-left: 17px;
+  
+}
+.wirless_outer_v3 .star--rating span.statyc--rating {
+    margin-left: 0;
+    position: relative;
+    right: 51px;
+}
+.wirless_outer_v3.wirless_extra_v3s span.statyc--rating.rating-v3s {
+    right: 56px;
+}
+.wirless_outer_v3 .product__price_rating {
+    position: relative;
+    padding-bottom: 30px;
+}
+.wirless_outer_v3 .sezzle-shopify-info-button {
+    position: absolute;
+    top: 72px;
+      width: 100%;
+    left: 0;
+}
+.wirless_outer_v3 .sezzle-shopify-info-button .sezzle-button-text {
+    font-family: Work Sans,sans-serif !important;
+    color: #006bb3 !important;
+}
+/* only ZAR currency  */
+/* body.zar--get .wirless_outer_v3 .product__price.custom .regular--price {
+    font-size: 26px;
+}
+body.zar--get .wirless_outer_v3 .sezzle-shopify-info-button{
+  width: auto;
+  
+} */
+body.zar--get .wirless_outer_v3 .star--rating {
+    left: -22px;
+}
+/* v3s product css start */
+.wirless_outer_v3.wirless_extra_v3s {
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+.wirless_outer_v3.wirless_extra_v3s::before {
+    background: #162229;
+    top: 0;
+}
+.wirless_outer_v3.wirless_extra_v3s .wirless_v3-left h2 {
+    color: white;
+}
+.wirless_outer_v3.wirless_extra_v3s ul.custom--variations li {
+    color: white;
+}
+.wirless_outer_v3.wirless_extra_v3s ul.custom--variations li.active {
+    background: #B4CCDC;
+    color: #162229;
+}
+.wirless_outer_v3.wirless_extra_v3s .product__price.custom .regular--price span.money {
+    color: white;
+}
+.wirless_outer_v3.wirless_extra_v3s .star--rating span {
+    color: #fff;
+}
+.wirless_outer_v3.wirless_extra_v3s .sezzle-shopify-info-button .sezzle-button-text {
+    color: #ffffff!important;
+}
+.wirless_outer_v3.wirless_extra_v3s .shipping--messages p:before {
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/carbon_delivery-parcel_be068030-fa1f-4a91-94ad-f7ae396adca2.png?v=1668001869);
+    background-size: contain;
+}
+.wirless_outer_v3.wirless_extra_v3s .shipping--messages p {
+    color: white;
+    font-weight: 600;
+}
+.wirless_outer_v3.wirless_extra_v3s h4.select-type.select-type-v3s {
+    font-family: Work Sans;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    width: 410px;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+/* v3s product css end */
+.wirless_outer_v3.wirless_extra_v3only ul.custom--variations.type span {
+    display: none;
+}
+.anchor--upgrade{
+  display:none;
+}
+.ltd--free,
+.lmtd--txt{
+    font-family: Work Sans;
+    font-weight: 600;
+}
+/* v4 css start */
+
+.wirless_outer_v3.wirless_extra_v4only {
+    padding-top: 10px;
+}
+.wirless_outer_v3.wirless_extra_v4only .wirless_v3_right {
+    text-align: right;
+}
+.wirless_outer_v3.wirless_extra_v4only .wirless_v3_right img.wireless_media {
+    left: unset;
+    right: 106px;
+    height: 500px;
+    position: relative;
+    padding-top: 35px;
+    top: 30px;
+}
+.wirless_outer_v3.wirless_extra_v4only .ltd--free.hide,
+.wirless_outer_v3.wirless_extra_v4only .mob--updrage.hide{
+    display: none;
+}
+.wirless_outer_v3.wirless_extra_v4only .wirless_v3-left h2 {
+    margin-top: 30px;
+}
+.wirless_outer_v3.wirless_extra_v4only ul.custom--variations li.active {
+    background: #20313E;
+    border-radius: 0;
+}
+.wirless_outer_v3.wirless_extra_v4only ul.custom--variations li {
+    border-radius: 0;
+}
+.wirless_outer_v3.wirless_extra_v4only p.pre-head {
+    font-family: Work Sans;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #162229;
+}
+/* v4 css end  */
+@media only screen and (min-width: 1350px){
+.wirless_outer_v3.wirless_extra_v3s .wirless_v3_right img.wireless_media {
+    height: 610px;
+}
+}
+@media only screen and (min-width: 1450px){
+.wirless_outer_v3 .wirless_v3-left {
+    padding-right: 90px;
+}
+.wirless_outer_v3 .wirless_v3_right img.wireless_media{
+  min-height: 600px;
+  }
+.wirless_outer_v3.wirless_extra_v3s .wirless_v3_right img.wireless_media {
+    min-height: 630px;
+}
+.wirless_outer_v3.wirless_extra_v4only .wirless_v3_right img.wireless_media {
+    min-height: 530px;
+}
+.wirless_outer_v3.wirless_extra_v4only .wirless_v3-left {
+    padding-right: 60px;
+}
+}
+@media only screen and (max-width: 1060px){
+.wirless_outer_v3.wirless_extra_v3s span.statyc--rating.rating-v3s {
+    bottom: -1px;
+}
+}
+.wirless_extra_v3only .hide {
+    display: none !important;
+}
+@media only screen and (max-width: 767px){
+  .lmtd--txt {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    justify-content: center;
+    margin-top: 14px;
+}
+  .cmra3---shipng .ltd--free {
+    display: none;
+}
+  .mob--updrage a.anchor--upgrade {
+    display: block !important;
+    background: #162229;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    padding: 10px 20px;
+    margin: 6px auto 0;
+    height: auto;
+    line-height: normal;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0;
+    min-height: 44px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.wirless_outer_v3.wirless_extra_v3s span.statyc--rating.rating-v3s {
+    bottom: 0px;
+}
+.wirless_outer_v3.wirless_extra_v3s ul.custom--variations.style span {
+    color: #000;
+    font-size: 14px;
+}
+.wirless_outer_v3 .star--rating {
+    letter-spacing: 1px;
+}
+.wirless_outer_v3 .wirless_v3_inner {
+    display: inline-block;
+}
+.wirless_outer_v3 .wirless_v3-left {
+    width: 100%;
+    top: 0;
+}
+.wirless_outer_v3 .wirless_v3_right {
+    display: none;
+}
+.wirless_outer_v3 .wirless_v3_right.mobile_version {
+    width: 100%;
+    display: inline-block;
+}
+.wirless_outer_v3 .wirless_v3_right img.wireless_media {
+    min-height: 295px !important;
+    top: 0 !important;
+    position: relative;
+}
+.wirless_outer_v3 ul.custom--variations li {
+    width: 145px;
+}
+body.zar--get .wirless_outer_v3 .product__price.custom .regular--price span.money {
+    margin-right: 10px;
+}
+body.zar--get .wirless_outer_v3 .product__price.custom .regular--price {
+    font-size: 21px;
+    margin-right: 2px;
+}
+.wirless_outer_v3.wirless_extra_v3s {
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+.wirless_outer_v3.wirless_extra_v3s h4.select-type.select-type-v3s {
+    width: 100%;
+    color: black;
+    padding-top: 0;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.wirless_outer_v3.wirless_extra_v3s ul.custom--variations {
+    margin-top: 15px;
+}
+.wirless_outer_v3.wirless_extra_v3s .wirless_v3-left h2, 
+.wirless_outer_v3.wirless_extra_v3s ul.custom--variations li, 
+.wirless_outer_v3.wirless_extra_v3s h4.select-type.select-type-v3s,
+.wirless_outer_v3.wirless_extra_v3s .product__price.custom .regular--price span.money, 
+.wirless_outer_v3.wirless_extra_v3s .star--rating span,
+.wirless_outer_v3.wirless_extra_v3s .shipping--messages p{
+    color: #000;
+}
+.wirless_outer_v3.wirless_extra_v3s ul.custom--variations li.active {
+    background: #086FB5;
+    color: #ffffff;
+}
+.wirless_outer_v3.wirless_extra_v3s .sezzle-shopify-info-button .sezzle-button-text {
+    color: #000!important;
+}
+.wirless_outer_v3.wirless_extra_v4only .wirless_v3_right img.wireless_media {
+    right: 0;
+    height: 310px;
+}
+.wirless_extra_v3only .cmra3---shipng {
+    display: block !important;
+}
+
+
+}
+
+
+@media only screen and (min-width: 768px){
+.cmra3---shipng {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 500px;
+}
+.wirless_extra_v3only .cmra3---shipng {
+    display: flex !important;
+}  
+  .ltd--free {
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    justify-content: center;
+        width: 270px;
+    max-width: 50%;
+}
+  .cmra3---shipng .shipping--messages {
+    max-width: 50%;
+    width: 270px;
+}
+.wirless_outer_v3 .upgrad--btn  button.btn.product-form__cart-submit {
+    width: 270px;
+    float: left;
+    background: #086fb5;
+    border-radius: 35px;
+    padding: 10px 20px;
+    margin: 20px auto 0;
+    height: auto;
+    line-height: normal;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0;
+    min-height: 44px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    max-width: 50%;
+}
+.upgrad--btn a.anchor--upgrade {
+    width: 270px;
+    background: #162229;
+    border-radius: 35px;
+    min-height: 44px;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin: 20px auto 0;
+    max-width: 50%;
+    display:flex;
+  font-weight: 700;
+font-size: 20px;
+line-height: 23px;
+display: flex;
+align-items: center;
+text-align: center;
+    justify-content: center;
+    font-size: 18px;
+color: #FFFFFF;
+}
+  .upgrad--btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 500px;
+}
+ .wirless_extra_v3only .mob--updrage{
+    display:none;
+  }
+  
+}
+
+.wirless_extra_v3s .mob--updrage.hide,
+.wirless_extra_v3s .ltd--free.hide{
+    display: none;
+}
+@media only screen and  (min-width: 768px) and (max-width: 1240px){
+.cmra3---shipng {
+    width: 340px;
+    gap: 20px;
+}
+.upgrad--btn {
+    gap: 15px;
+    width: 375px;
+}
+.cmra3---shipng .shipping--messages p.shipping--details.show ,
+.ltd--free {
+    font-size: 12px;
+}
+.wirless_outer_v3 .upgrad--btn button.btn.product-form__cart-submit {
+    width: 153px;
+    font-size: 16px;
+    margin-left: 0px;
+    margin-right: 0;
+}
+.upgrad--btn a.anchor--upgrade {
+    font-size: 17px;
+    margin-left: 0;
+}
+.wirless_outer_v3 .upgrad--btn button.btn.product-form__cart-submit {
+    width: 153px;
+    font-size: 17px;
+    margin-left: 0px;
+    margin-right: 0;
+}
+}

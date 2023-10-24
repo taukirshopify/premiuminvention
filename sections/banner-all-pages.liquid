@@ -1,0 +1,42 @@
+<div class="banner-all-pages {{ section.settings.extra-all-banner }}">
+   <div class="page-width">
+      <div class="banner-all-pages_inner ">
+      <p class="sub_head_all">
+       {{ section.settings.sub_info }}
+          </p>      
+      <h2 class="bannerall-pages-heading">
+       {{ section.settings.all_pages_heading }}
+          </h2>        
+   </div>
+   </div>
+</div>
+{% schema %}
+   {
+    "name": "banner all pages",
+    "settings": [
+  {
+          "type": "text",
+          "id": "extra-all-banner",
+          "label": "choose your class"
+        },
+  
+ {
+      "type": "text",
+      "id": "sub_info",
+      "label": "Sub Info"
+    },
+   {
+      "type": "text",
+      "id": "all_pages_heading",
+      "label": "all pages heading"
+    }
+],
+   "presets": [
+       {
+         "name": "banner all pages"
+       
+       }
+      ]
+      }
+{% endschema %}
+{{ 'banner-all-pages.css' | asset_url | stylesheet_tag }}

@@ -1,0 +1,167 @@
+<!-- easy installation /-start -->
+<section class="easyinstallation pt-120 pb-120" style="background:{{ section.settings.section-bg }}">
+  <div class="container">
+    <div class="row justify-content-center position-relative">
+      <div class="section-header text-center pb-60">
+        <h2 class="section-title fs-42 text-clr-dark1 fw-bold text-white">
+          {{ section.settings['section-title'] }}
+        </h2>
+      </div>
+      {% for block in section.blocks %}
+        <div class="col-lg-3 d-flex justify-content-center">
+          <div class="card bg-transparent border-0">
+            <div class="easyinstallation-card">
+              <img
+                src="{{ block.settings.step-image | img_url: '228x297' }}"
+                class="card-img-top img-fluid"
+                alt="easyinstallation"
+              >
+              <div class="card-body">
+                <p class="card-text fw-medium fs-24 text-white text-center">
+                  {{ block.settings['step-title'] }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      <div class="step-shape">
+        <img class="step-one img-fluid position-absolute" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/t/73/assets/step-1.png" alt="step">
+        <img class="step-two img-fluid position-absolute" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/t/73/assets/step-2.png" alt="step">
+        <img class="step-three img-fluid position-absolute" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/t/73/assets/step-1.png" alt="step">
+      
+      </div>
+    </div>
+  </div>
+</section>
+<!-- easy installation /-end -->
+{% schema %}
+  {
+    "name": "Easy Installation",
+    "settings": [
+       {
+        "type": "text",
+        "id": "section-title",
+        "label": "Title"
+ },
+      {
+        "type": "color",
+        "id": "section-bg",
+        "label": "Section BG"
+ }
+    ],
+         "presets": [
+  {
+    "name": {
+      "en": "Easy Installation"
+    }
+  }
+],
+      "blocks": [
+  	{
+     "name": "Step",
+     "type": "block",
+     "settings": [
+       {
+         "type": "image_picker",
+         "id": "step-image",
+         "label": "Image"
+       },
+       {
+         "type": "text",
+         "id": "step-title",
+         "label": "Title"
+       },
+       {
+         "type": "richtext",
+         "id": "step-cont",
+         "label": "Content"
+       }
+     ]
+    }
+]
+  }
+{% endschema %}
+
+<style>
+  p.card-text {
+   font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;
+    font-family: 'Jost';
+}
+    h2.section-title.fs-42.text-clr-dark1.fw-bold.text-white {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 52px;
+      text-align: center;
+      color: #FFFFFF;
+      font-family: 'Jost';
+  }
+
+  .easyinstallation-card{
+
+     z-index: 10 !important;
+    
+  }
+    .easyinstallation-card img{
+          max-width: 228px;
+      width: 100%;
+      margin: auto;
+      display: block;
+      margin-bottom: 30px;
+    }
+
+
+   @media (min-width:1200px) and (max-width:1432px){
+         .easyinstallation .step-shape .step-one {
+      left: 215px;
+    width: 120px;
+           top: 170px;
+    z-index: 0;
+  }
+      .easyinstallation .step-shape .step-two {
+          left: 490px;
+     width: 120px;
+        top: 170px;
+        z-index: 0;
+}
+
+      .easyinstallation .step-shape .step-three {
+        right: 235px;
+    width: 120px;
+        top: 170px;
+    z-index: 0;
+}
+  }
+
+
+  
+    @media (min-width:1433px){
+       .easyinstallation .step-shape .step-one {
+      left: 215px;
+    top: 170px;
+  }
+      .easyinstallation .step-shape .step-two {
+          left: 570px;
+    top: 170px;
+}
+
+      .easyinstallation .step-shape .step-three {
+          right: 265px;
+    top: 170px;
+}
+  }
+
+ 
+
+    @media (max-width:1200px){
+      .step-shape{display:none}
+    }
+  .position-absolute {
+      position: absolute!important;
+  }
+</style>
+
+{% javascript %}
+{% endjavascript %}

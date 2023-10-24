@@ -1,0 +1,87 @@
+<div id="shopify-section-top-premium" class="{{ section.settings.extra-top-premium }}">
+<div class="footer-top-premium">
+
+<div class="page-width">
+  <div class="footer-inner-premium">
+   <h2 class="footer_prm_heading"> {{ section.settings.heading_title_2 | escape }}</h2>
+  <ul class="mobile_silder_prm other_class">
+  
+  {% for block in section.blocks %}
+  <li>
+  <img src="{{block.settings.image | img_url : 'master' }}">
+     <h2 class="footer_prm_heading"> {{ block.settings.heading_title_2  }}</h2>
+    <p>{{block.settings.cta_label  }}</p>
+    </li>
+    {% endfor %}
+  
+  </ul>
+  
+  
+  
+ 
+  </div>
+  
+  </div>
+</div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "footer top premium",
+    "settings": [
+    {
+          "type": "text",
+          "id": "extra-top-premium",
+          "label": "choose your class"
+   },
+    {
+      "type": "text",
+      "id": "heading_title_2",
+      "label": "Top Heading"
+    }],
+       "presets": [
+    {
+      "name": {
+        "en": "footer top premium"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+        
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        
+    {
+      "type": "text",
+      "id": "heading_title_2",
+      "label": "Top Heading"
+    },
+        
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Text"
+            
+        }
+      
+      ]
+   
+    }
+  ]
+  }
+{% endschema %}
+{{ 'footer-top-premium.css' | asset_url | stylesheet_tag }}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

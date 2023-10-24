@@ -1,0 +1,105 @@
+.custom-solution {
+    overflow: hidden;
+    padding: 60px 0 90px 0;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/unsplash_178j8tJrNlc.png?v=1654199447);
+    width: 94%;
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+.custom-solution .solution_inner {
+    position: relative;
+    display: flex;
+    z-index: 22;
+    align-items: center;
+  /*
+    background: white;
+    background-image: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/solution_main.png?v=1651777956);
+    width: 94%;
+    margin: 0 auto;*/
+}
+.custom-solution:before {
+    position: absolute;
+    content: "";
+    background: rgb(0 0 0 / 60%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+/*
+.custom-solution .solution_inner:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -3%;
+    background: rgb(241 245 248 / 46%);
+    width: 106%;
+    height: 100%;
+}
+*/
+
+.custom-solution .solution-left {
+    width: 50%;
+    position: relative;
+    padding: 30px 24px 0px 30px;
+}
+.custom-solution .solution_right {
+    width: 50%;
+    position: relative;
+    text-align: center;
+}
+.custom-solution .solution-left h2 {
+    font-family: Work Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: -1px;
+    text-align: left;
+    margin-bottom: 25px;
+    color: #fff;
+   margin-top: 0;
+}
+.custom-solution .solution-left p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #fff;
+}
+.custom-solution .solution-left p span.blueclr {
+    color: #086FB5;
+    font-weight: 600;
+}
+.custom-solution .solution-left .button_solution{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 18px 40px;
+    background: #086FB5;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 1;
+    cursor: pointer;
+    width: 210px;
+    height: 50px;
+}
+.custom-solution .solution-left .button_solution:hover::after {
+    box-shadow: none;
+}
+.custom-solution .solution-left .solution_btn {
+    margin-top: 46px;
+}
+/*
+.custom-solution .solution_right img {
+    position: absolute;
+    width: 568px;
+    top: 100px;
+}
+*/

@@ -1,0 +1,77 @@
+<div class="recording-q3-section">
+<div class="page-width">
+<div class="recording-q3section_inner  desktop_version">
+<div class="recording-q3-left"> 
+  <h2 class="top_header mt-0">
+{{ section.settings.heading_title | escape }}
+</h2> 
+<video class="video-js" width="100%" loop autoplay preload="none" muted playsinline
+      
+         <source src="{{ section.settings.video_link1 }}" type="video/mp4">
+      
+      </video>
+
+</div>
+<div class="recording-q3_right">
+<img src="{{section.settings.right_image | img_url : 'master' }}">
+  <p class="sub_head mb-60">
+{{ section.settings.sub_info }}
+</p>
+</div>
+</div>
+</div>
+</div>
+{% schema %}
+{
+"name": "Recording twenty four q3",
+"settings": [
+{
+"type": "text",
+"id": "heading_title",
+"label": "Top Heading"
+},
+
+{
+"type":"text",
+"id":"video_link1",
+"label":"Video-link"
+},
+{
+"type": "image_picker",
+"id": "right_image",
+"label":"Right First Image"
+},
+{
+"type": "text",
+"id": "sub_info",
+"label": "Sub Info"
+}
+
+],
+"blocks": [
+{
+"type": "image",
+"name": "image",
+"settings": [
+{
+"type": "image_picker",
+"id": "cta_image",
+"label": "image"
+},
+{
+"type": "text",
+"id": "cta_label",
+"label": "Text"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Recording twenty four q3"
+
+}
+]
+}
+{% endschema %}
+{{ 'Recording-twenty-four-q3.css' | asset_url | stylesheet_tag }}

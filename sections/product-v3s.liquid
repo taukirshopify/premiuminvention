@@ -1,0 +1,250 @@
+{% comment %} <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/t/55/assets/Vectors.png" style="margin-bottom:-10px;width:100%"> {% endcomment %}
+<div id="wirless_top_v3v3s">
+<img src="{{ 'Vectors.png' | asset_url }}" style="position:absolute;width:100%; display: none;">
+
+<div class="wirless_outer_v3 {{ section.settings.extra-class-v3s }}">
+   <div class="page-width">
+      <div class="wirless_v3_inner ">
+        <div class="wirless_v3_right mobile_version"> 
+            <img src="{{ product.metafields.custom.mobile_top_section_image }}" class="wireless_media">
+         </div>
+         <div class="wirless_v3-left ">
+            <div class="star--rating">
+        
+          <a href="#looxReviews"><div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div></a>
+        <span class="statyc--rating {{ section.settings.extra-class }}">{{section.settings.staticrating}}</span></div>
+           
+            <h2 class="section-header">{{section.settings.title}}</h2>
+            <p class="pre-head">{{section.settings.prehead}}</p>
+            <h4 class="select-type {{ section.settings.extra-class-select }}">{{section.settings.mini-title}}</h4>
+          {% for option in product.options_with_values %}
+                   <ul class="custom--variations {{option.name | downcase }}">
+                      {% for value in option.values %}
+                        {% if forloop.last == true %}
+                     <span>or</span>
+                     {% endif %}
+                      <li class="trgt{{forloop.index}}{% if option.selected_value == value %}  active{% endif %}" numbering="{{forloop.index}}" vlew="{{value}}"> {{ value }}</li>
+                     {% endfor %}
+                    </ul>
+            {% endfor %}
+
+           
+            {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+            {% unless product.has_only_default_variant %}
+
+			{% endunless %}
+                <select name="id" id="ProductSelect-{{ section.id }}" class="prodcut--variant--slction product-form__variants no-js">
+              {% for variant in product.variants %}
+                 {% assign amount = 0 %}
+
+           {% assign saving = variant.compare_at_price | minus: variant.price %}
+      {% assign amount = saving | at_least: amount %}
+          {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
+                {% if variant.available %}
+               {%- assign compare_at_price = variant.compare_at_price -%}
+                  <option diffrceprice="{{ saved_amount }}" class="{% if variant == product.selected_or_first_available_variant %} selected {% endif %} {% if compare_at_price != blank%} comparepro {% endif %}" nmbr="{{forloop.index}}"{% if compare_at_price != blank%} compareprice={{compare_at_price | money}} {% endif %}newprice="{{variant.price | money_with_currency}}" pprice="{{variant.price | money }}" {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                    {{ variant.title }}
+                  </option>
+                {% else %}
+                  
+                  <option diffrceprice="{{ saved_amount }}" {% if compare_at_price != blank%} compareprice={{compare_at_price | money}} {% endif %} class="{% if variant == product.selected_or_first_available_variant %} selected {% endif %} {% if compare_at_price != blank%} comparepro {% endif %} soldout" nmbr="{{forloop.index}}"  pprice="{{variant.price | money }}" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                {% endif %}
+              {%- assign compare_at_price = '' -%}
+              {% endfor %}
+            </select>
+
+         <div class="product__price_rating"> 
+         <div class="product__price custom lp">        
+ {% assign prodsinglefg= product %}
+    {% for variantis in prodsinglefg.variants %}
+      {% if variantis == product.selected_or_first_available_variant %}
+           {% assign amount = 0 %}
+
+           {% assign saving = variantis.compare_at_price | minus: variantis.price %}
+      {% assign amount = saving | at_least: amount %}
+          {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
+           <div class="regular--price " diffrnceprice="{{ saved_amount }}" originalclr="{{variantis.price | money }}"><span class="money" >{{variantis.price | money }}</span></div>
+           <div class="sale--price gh  money"><span class="money">{{variantis.compare_at_price | money }}</span>
+
+
+            
+
+          
+         <span class="money1"> {{ saved_amount }} Off</span>
+
+          </div>
+        {% endif %}
+        {% endfor %} 
+          </div>
+<!--        <div class="star--rating">
+        
+          <a href="#looxReviews"><div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div></a>
+        <span class="statyc--rating {{ section.settings.extra-class }}">{{section.settings.staticrating}}</span></div> -->
+           
+    </div>
+       <div class="{% if product.handle == 'wireless-outdoor-camera-v3' or  product.handle == 'wireless-camera-v4' %}desktop--updrage upgrad--btn show--here{% endif %}">    <button type="button" name="add" aria-label="Add to cart" class="btn  product-form__cart-submit" data-add-to-cart="">
+              
+                  {% assign current_variant = product.selected_or_first_available_variant %}
+
+                   <span data-add-to-cart-text>
+                  {% unless current_variant.available %}
+                    {{ 'products.product.sold_out' | t }}
+                  {% else %}
+                   buy now
+                  {% endunless %}
+                </span>
+           </button>
+              <a href="/products/wireless-camera-v3s" class="anchor--upgrade">{% if product.handle == 'wireless-outdoor-camera-v3' %}Upgrade to S model{% else %}Learn more{% endif %}</a>
+       </div>
+           <script>
+             $('.product-form__cart-submit').click(function(e) {
+               console.log('test23')
+                  e.preventDefault();
+                   $('html, body').animate({
+        scrollTop: $(".product--slct-tab").offset().top
+    }, 100);
+    return false;
+
+            });
+           </script>
+           <div class="{% if product.handle == 'wireless-outdoor-camera-v3' or  product.handle == 'wireless-camera-v4' %} cmra3---shipng{% endif %} {% if product.handle != 'wireless-outdoor-camera-v3' or  product.handle != 'wireless-camera-v4' %} hide{% endif %}">
+            <div class="shipping--messages">
+          <p class="shipping--details first usd active" country="USD" style="display: block;">2-4 Days USA Shipping</p>
+        
+        </div>
+             <div class="ltd--free {% if product.handle != 'wireless-outdoor-camera-v3' %}hide{% endif %}">
+               FREE - Limited Time
+             </div>
+           </div>
+           <div class="mob--updrage {% if product.handle != 'wireless-outdoor-camera-v3' %}hide{% endif %}">
+ <a href="/products/wireless-camera-v3s" class="anchor--upgrade">Upgrade to S model</a>
+             <div class="lmtd--txt">FREE - Limited Time</div>
+             
+           </div>
+            {% endform %}
+         </div>
+
+       
+         <div class="wirless_v3_right" sc="{{ product.metafields.custom.desktop_top_section_image }}">
+            <img src="{{ product.metafields.custom.desktop_top_section_image }}" class="wireless_media">
+         </div>
+        <div class="rihgt--ara-grid">
+           {% for block in section.blocks %}
+         <div class="main-new-v3sinner">
+            <div class="new-v3s-sec">
+              <div class="left-v3s-newsec">
+              <img src="{{block.settings.image | img_url : 'master' }}">
+             </div>
+              <div class="right-v3s-newsec">
+                 <h2 class="text__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                {{ block.settings.heading | escape }}
+                </h2>
+                <p>{{block.settings.cta_label  }}</p>
+              </div>
+            </div>
+        </div>{% endfor %} 
+      </div> 
+   </div>
+</div>
+</div>
+{% schema %}
+   {
+    "name": "product tamplate v3s",
+    "settings": [
+     {
+    "type": "text",
+    "id": "extra-class-v3s",
+    "label": "choose your class"
+   },
+    {
+    "type":"text",
+    "id":"title",
+    "label":"title"
+    }, 
+    {
+      "type":"text",
+      "id":"prehead",
+      "label":"paragarph"
+    },
+    {
+    "type": "text",
+    "id": "extra-class",
+    "label": "choose your class"
+   },
+     {
+    "type":"text",
+    "id":"mini-title",
+    "label":"Select type"
+    },
+    {
+    "type": "text",
+    "id": "extra-class-select",
+    "label": "choose your class"
+   },
+    {
+    "type":"text",
+    "id":"staticrating",
+    "label":"Rating"
+    }
+   ],
+    "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "Top Banner 3rd Section"
+      }, 
+    "settings": [
+         
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label":"Image"
+        },
+          {
+          "type": "text",
+          "id": "heading",
+          "default": "Image with text",
+          "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+          }, 
+          {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+          },
+
+        
+      {
+         "type": "text",
+          "id": "cta_label",
+          "label": "Description "
+        }
+      ]
+      
+    }
+  ],
+    
+   "presets": [
+       {
+         "name": "product tamplate v3s"
+       
+       }
+      ]
+      }
+{% endschema %}
+{{ 'product-template-v3.css' | asset_url | stylesheet_tag }}
+{{ 'product-template-v3s-new.css' | asset_url | stylesheet_tag }}

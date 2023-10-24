@@ -1,0 +1,27 @@
+<div class="page-top-section">
+  <div class="page-top-img">
+    {% if section.settings.image != blank %}
+      <img src="{{ section.settings.image | img_url: "master" }}" alt="" />
+    {% endif %}
+  </div>
+  <div class="main-heading">
+    <h2>{{ page.title }}</h2>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Page Top Section",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        }
+    ],
+    "presets":[
+      {
+        "name": "Page Top Section"
+      }
+    ]
+  }
+{% endschema %}

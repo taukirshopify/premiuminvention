@@ -1,0 +1,122 @@
+.multi--faq h2.top_header {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 66px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-top: 0;
+}
+.multi--faq h3.parent--tab {
+    border: 1px solid #E5E5E5;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+   
+}
+.multi--faq h3.parent--tab.active {
+   margin-bottom: 60px;
+}
+.multi--faq h3.parent--tab.active,
+.multi--faq h3.parent--tab:hover{
+  box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+}
+.multi--faq h3.parent--tab span {
+    justify-content: center;
+    display: flex;
+    width: 97%;
+    color: #086FB5;
+    font-family: Work Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.multi--faq .child--tabs .child h3 {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 15px;
+    border-bottom: 1px solid #989898;
+    padding-bottom: 30px;
+}
+.multi--faq .child--tabs {
+    padding-bottom: 10px;
+}
+.multi--faq .child--tabs .child h3.active {
+    border: none;
+    padding-bottom: 0;
+}
+.multi--faq .child--tabs .child h3 svg {
+    margin-left: 40px;
+    position: relative;
+    top: 3px;
+}
+.multi--faq h3.parent--tab.active svg,
+.multi--faq .child h3.active svg{
+    transform: rotate(90deg);
+}
+.multi--faq .child--tabs  .child--hidden-part {
+    border-bottom: 1px solid #989898;
+}
+.multi--faq .child--tabs .child--hidden-part {
+    border-bottom: 1px solid #989898;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+.multi--faq .child--tabs .child--hidden-part p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+    padding-left: 16px;
+}
+div#shopify-section-top-premium.extra_collection_main.faq-extra-prm .footer-top-premium {
+    margin-top: 20px;
+}
+.multi--faq .faq--grid {
+    width: 60%;
+    margin: 0 auto;
+}
+.multi--faq h3.bottom_header {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    position: relative;
+    top: 7px;
+    padding: 0 0 10px 0;
+    margin-bottom: 0;
+}
+.multi--faq .child--tabs .child--hidden-part p a {
+    text-decoration: none;
+}
+.custom-solution.only_faq_mobile {
+/*     display: none; */
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px){
+.multi--faq h3.parent--tab {
+    padding-right: 20px;
+}
+}
+@media only screen and (max-width: 1399px){
+  .multi--faq h2.top_header {
+    font-size: 50px;
+}
+}
+@media only screen and (max-width: 1270px){
+  .multi--faq .faq--grid {
+    width: 70%;
+}
+}

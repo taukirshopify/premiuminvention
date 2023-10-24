@@ -1,0 +1,132 @@
+<div id="shopify-section-table-data" class=" why-choose-us pt-120 pb-120" style="background:{{ section.settings.sec-bg }}">
+  <div class="page-width">
+    {%- unless section.settings.heading_title == blank -%}
+      <h2 class="section-header">
+        {{ section.settings.heading_title | escape }}
+      </h2>
+    {%- endunless -%}
+    <div class="tblecamera" style="max-width: 900px; margin:auto; padding-top:100px;">
+      <table>
+        <tr>
+          <td>{{ section.settings.row1 }}</td>
+          <td class="blactoblue">{{ section.settings.row2 }}</td>
+          <td class="blcktobrwn">{{ section.settings.row3 }}</td>
+        </tr>
+        {% for block in section.blocks %}
+          <tr>
+            <td class="headTb">{{ block.settings.row1 }}</td>
+            <td>
+              <div class="item-fl">
+                <span class="icon-wright">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.2003 14.2831C4.9774 14.2832 4.75667 14.2393 4.55076 14.1539C4.34484 14.0686 4.15779 13.9435 4.0003 13.7857L0.292969 10.0804L1.70764 8.66641L5.2003 12.1591L14.293 3.06641L15.7076 4.48041L6.4003 13.7857C6.24282 13.9435 6.05576 14.0686 5.84984 14.1539C5.64393 14.2393 5.4232 14.2832 5.2003 14.2831Z" fill="#17BD8D"/>
+                </svg>
+              </span>
+              <span>{{ block.settings.row2 }}</span>
+              </div>
+              </td>
+            <td>
+              <div class="item-fl">
+               <span class="icon-wright">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.2003 14.2831C4.9774 14.2832 4.75667 14.2393 4.55076 14.1539C4.34484 14.0686 4.15779 13.9435 4.0003 13.7857L0.292969 10.0804L1.70764 8.66641L5.2003 12.1591L14.293 3.06641L15.7076 4.48041L6.4003 13.7857C6.24282 13.9435 6.05576 14.0686 5.84984 14.1539C5.64393 14.2393 5.4232 14.2832 5.2003 14.2831Z" fill="#17BD8D"/>
+                </svg>
+              </span>            
+         <span>{{block.settings.row3  }}</span></div></td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": {
+    "en": "Table wcv4"
+  },
+  "class": "index-section",
+  "settings": [
+        {
+      "type": "text",
+      "id": "heading_title",
+      "label": {
+        "de": "Überschrift",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+    },
+{
+          "type": "text",
+          "id": "row1",
+          "label": {
+            "en": "Row 1 heading"
+          }
+        },{
+          "type": "text",
+          "id": "row2",
+          "label": {
+            "en": "Row 2 heading"
+          }
+        },
+{
+          "type": "text",
+          "id": "row3",
+          "label": {
+            "en": "Row 3 heading"
+          }
+        },
+    {
+          "type": "color",
+          "id": "sec-bg",
+          "label": {
+            "en": "Section BG"
+          }
+        }
+],
+  "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "text"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "row1",
+          "label": {
+            "en": "Row 1 heading"
+          }
+        },{
+          "type": "text",
+          "id": "row2",
+          "label": {
+            "en": "Row 2 data"
+          }
+        },{
+          "type": "text",
+          "id": "row3",
+          "label": {
+            "en": "Row 3 data"
+          }
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": {
+        "en": "Table wcv4"
+      }
+    }
+  ]
+}
+{% endschema %}
+{{ 'data-table-product-table-wcv4.css' | asset_url | stylesheet_tag }}

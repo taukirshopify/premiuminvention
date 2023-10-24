@@ -1,0 +1,54 @@
+<div class="logobar_main new_logo_home">
+   <div class="page-width">
+      <div class="section-header text-center">
+         <h2>{{ section.settings.heading_title_2 | escape }}</h2>
+      </div>
+     <ul>
+       {% if block.settings.heading1 != blank %} 
+       <li>
+         <img class="logo-bar__image" src="{{block.settings.icon1 | img_url : 'master' }}">
+       </li>
+       {% endif %}
+
+       
+
+
+
+
+     </ul>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "logo home new",
+    "settings": [{
+      "type": "text",
+      "id": "heading_title_2",
+      "label": "Top Heading"
+    }
+   ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "image"
+      }, 
+    "settings": [
+         
+            {
+          "type": "image_picker",
+          "id": "image",
+          "label":"tab1 Image"
+        }
+    ]
+    }
+      ],
+  "presets": [
+    {
+      "name": "logo home new"
+    }
+  ]
+  }
+{% endschema %}
+ {{ 'home-banner-logo.css' | asset_url | stylesheet_tag }}

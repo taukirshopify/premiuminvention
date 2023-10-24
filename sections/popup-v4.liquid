@@ -1,0 +1,136 @@
+{% if section.settings['dispaly-position'] == 'relative' %}
+  <div class="banner-content-bottom position-{{ section.settings['dispaly-position'] }}">
+    <div class="page-width">
+      <div
+        class="banner-bottom d-flex gap-2 flex-md-nowrap flex-wrap justify-content-between gap-3 border-top align-items-start  pt-3"
+      >
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'item' %}
+              <div id="{{block.id}}" class="feature-item d-flex  flex-md-row flex-column gap-3">
+                <img src="{{ block.settings.image | image_url: width: 2048  }}">
+                <li class="itemcont">                 
+                    <h2 class="popup_prm_heading-relativ">{{ block.settings.itemname }}</h2>
+                
+                  <p class="pop-contrelativ">
+                    {{ block.settings.popitemcont }}
+                  </p>
+                </li>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% else %}
+  <div
+    id="shopify-section-Popup--premium"
+    class="{{ section.settings.extra-Popup--premium }} {{ section.settings.dispaly-position }}"
+  >
+    <div class="Popup--premium">
+      <div class="page-width">
+        <div class="popup-inner-premium">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'item' %}
+                <div class="popup" id="popup{{block.id}}">
+                  <h2 class="popup_prm_heading">{{ block.settings.itemname }}</h2>
+                  <p>{{ block.settings.popitemcont }}</p>
+                  <a href="javascript:;" onclick="hide('popup{{block.id}}')"
+                    ><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/remove-iconpopup.png?v=1656171185"
+                  ></a>
+                </div>
+            {% endcase %}
+          {% endfor %}
+
+          <ul class="popup-only-slider">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'item' %}
+                  <li>
+                    <button class="button" href="javascript:;" onclick="show('popup{{block.id}}')">
+                      <img src="{{ block.settings.image | image_url: width: 2048  }}">
+                      <h2 class="popup_prm_heading">{{ block.settings.itemname }}</h2>
+                    </button>
+                  </li>
+              {% endcase %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Popup premium Wc v3",
+  "settings": [
+  {
+        "type": "text",
+        "id": "extra-Popup--premium",
+        "label": "choose your class"
+ },
+    {
+    "type": "select",
+    "id": "dispaly-position",
+    "options": [
+      {
+        "value": "overlayer",
+        "label": "Over layer"
+      },
+      {
+        "value": "relative",
+        "label": "Relative"
+      }
+    ],
+    "default": "relative",
+    "label": "Select Position"
+  }
+  ]
+
+  ,
+     "presets": [
+  {
+    "name": {
+      "en": "Popup premium Wc v3"
+    }
+  }
+],
+"blocks": [
+  	{
+     "name": "Item",
+     "type": "item",
+     "settings": [
+       {
+         "type": "image_picker",
+         "id": "image",
+         "label": "Image"
+       },
+       {
+         "type": "text",
+         "id": "itemname",
+         "label": "Item Text"
+       },
+       {
+         "type": "text",
+         "id": "popitemcont",
+         "label": "Pop up Item Content"
+       }
+     ]
+   }
+]
+}
+{% endschema %}
+{{ 'Popup--premium-wc-v4.css' | asset_url | stylesheet_tag }}
+<style>
+    .banner-content-bottom {
+    background: linear-gradient(101.36deg,#eef4f5 0%,#e1f3ff 176.83%);
+    padding: 26px 0px;
+  }
+.position-relative .feature-item {
+    align-items: center;
+}
+</style>
+{% javascript %}
+{% endjavascript %}

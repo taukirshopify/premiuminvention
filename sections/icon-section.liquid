@@ -1,0 +1,41 @@
+<div class="main-icon-section padd-80">
+  <div class="page-width">
+    <div class="main-icon-column">
+      {% for block in section.blocks %}
+        <div class="main-icon-inner">
+          {{ block.settings.svgicon }}
+          <h5>{{ block.settings.title }}</h5>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Icon Section",
+    "settings": [],
+    "blocks":[
+      {
+        "type": "header",
+        "name": "service",
+        "settings":[
+          {
+            "type": "textarea",
+            "id": "svgicon",
+            "label": "Add SVG Content"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Add Title"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Icon Section"    
+      }
+    ]
+  }
+{% endschema %}

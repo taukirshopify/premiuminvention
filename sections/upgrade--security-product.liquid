@@ -1,0 +1,121 @@
+<div id="shopify-section-shiipingncare">
+<div class="shiipingncare">
+
+<div class="page-width">
+  <div class="upgrade_security">
+  <div class="upgrade_security-top">
+   <h2 class="upgrade_heading">
+      {{ section.settings.heading_title_1  }}
+    </h2>
+    <h2 class="prehead">
+      {{ section.settings.heading_title_2  }}
+    </h2>
+   </div>
+  <div class="upgrade_security-bottom">
+  <ul>
+ 
+  {% for block in section.blocks %}
+  <li>
+  <img src="{{block.settings.image | img_url : 'master' }}">
+    <p>{{block.settings.cta_label  }}</p>
+    </li>
+    {% endfor %}
+  
+  </ul>
+  <button class="btn claim_$100off" onClick="upgrdescurityreport();">{{ section.settings.clmtxt }}</button>
+  
+  
+  </div>
+  </div>
+  
+  </div>
+</div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "upgrade security",
+    "settings": [
+    {
+      "type": "text",
+      "id": "heading_title_1",
+      "label": "left Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading_title_2",
+      "label": "Right Heading"
+    },
+    {
+      "type": "text",
+      "id": "clmtxt",
+      "label": "claim text"
+    }
+    ],
+       "presets": [
+    {
+      "name": {
+        "en": "upgrade security"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": {
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "de": "Foto",
+            "en": "Image",
+            "es": "Imagen",
+            "fr": "Image",
+            "it": "Immagine",
+            "ja": "画像",
+            "nl": "Afbeelding",
+            "pt-BR": "Imagem",
+            "zh-CN": "图片",
+            "zh-TW": "圖片"
+          }
+        },
+        
+        
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": {
+            "de": "Unterschrift",
+            "en": "Text",
+            "es": "Leyenda",
+            "fr": "Légende",
+            "it": "Didascalia",
+            "ja": "キャプション",
+            "nl": "Bijschrift",
+            "pt-BR": "Legenda",
+            "zh-CN": "字幕",
+            "zh-TW": "說明"
+          }
+        }
+      
+      ]
+   
+    }
+  ]
+  }
+{% endschema %}
+{{ 'upgrade--security-product.css' | asset_url | stylesheet_tag }}

@@ -1,0 +1,260 @@
+<div id="shopify-section-product-tab-slider">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700" rel="stylesheet">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+	{%- for block in section.blocks -%}
+{% if block.settings.prodct == product.handle %}
+<section class="chart-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="button-tabs">
+						<ul>
+                           {% if block.settings.heading1 != blank %} 
+							<li class="tgrt-click1">
+								<a href="#" class="data-tabs  first" data-target="tab-1">
+                                  <img src="{{block.settings.icon1 | img_url : 'master'}}"><span>	{{block.settings.heading1}}</span>
+						</a>
+							</li>
+                          {% endif %}
+                          
+							{% if block.settings.heading2 != blank %} 
+							<li  class="tgrt-click2">
+								<a href="#" class="data-tabs active   " data-target="tab-2">
+                                  <img src="{{block.settings.icon2 | img_url : 'master'}}"><span>	{{block.settings.heading2}}</span>
+						</a>
+							</li>
+                          {% endif %}
+                          
+                          {% if block.settings.heading3 != blank %} 
+							<li  class="tgrt-click3">
+								<a href="#" class="data-tabs  " data-target="tab-3">
+                                  <img src="{{block.settings.icon3 | img_url : 'master'}}"><span>	{{block.settings.heading3}}</span>
+						</a>
+							</li>
+                          {% endif %}
+                          
+                          {% if block.settings.heading4 != blank %} 
+							<li  class="tgrt-click4">
+								<a href="#" class="data-tabs last " data-target="tab-4">
+                                  <img src="{{block.settings.icon4 | img_url : 'master'}}"><span>	{{block.settings.heading4}}</span>
+						</a>
+							</li>
+                          {% endif %}
+                         
+							
+						</ul>
+					</div>
+                  <div class="lower-section">
+					<div class="timeline-area">
+                     <div class="tab-content " uid="1" id="tab-1">
+							<div>
+                            <img src="{{block.settings.tabimg1 |img_url : 'master' }}" />
+								<div class="descr"  style="color:{{block.settings.clr1}}">{{block.settings.des1 | strip_html }}</div class="descr">
+								
+							</div>
+							
+						</div>
+						<div class="tab-content"  uid="2" id="tab-2">
+							<div>
+                            <img src="{{block.settings.tabimg2 |img_url : 'master' }}" />
+								<div class="descr"  style="color:{{block.settings.clr2}}">{{block.settings.des2 | strip_html }}</div class="descr">
+								
+							</div>
+							
+						</div>
+						<div class="tab-content" uid="3" id="tab-3">
+							<div>
+                            <img src="{{block.settings.tabimg3 |img_url : 'master' }}" />
+								<div class="descr"  style="color:{{block.settings.clr3}}">{{block.settings.des3 | strip_html }}</div class="descr">
+								
+							</div>
+							
+						</div>
+					
+
+
+
+					<div class="tab-content" uid="4" id="tab-4">
+							<div>
+                            <img src="{{block.settings.tabimg4 |img_url : 'master' }}" />
+								<div class="descr" style="color:{{block.settings.clr4}}">{{block.settings.des4  | strip_html}}</div class="descr">
+								
+							</div>
+							
+						</div>
+                     
+					</div>
+
+
+</div>
+              </div>
+				</div>
+			</div>
+	</section>
+</div>
+{% endif %}
+{% endfor %}
+	<style type="text/css">
+		
+</style>
+{% schema %}
+  {
+    "name": "Key Featuresr",
+    "settings": [
+	    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "de": "Titel",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      },
+      "default": {
+        "de": "Testimonials",
+        "en": "Testimonials",
+        "es": "Testimonios",
+        "fr": "Témoignages",
+        "it": "Testimonial",
+        "ja": "お客様の声",
+        "nl": "Getuigenissen",
+        "pt-BR": "Depoimentos",
+        "zh-CN": "感言",
+        "zh-TW": "推薦文"
+      }
+    }
+],
+
+"blocks": [
+      {
+        "type": "Tab",
+        "name": "Section Tab",
+        "settings": [
+          {
+            "type": "product",
+            "id": "prodct",
+            "label": "Choose product for which you want to show it?"
+          },{
+            "type": "image_picker",
+            "id": "icon1",
+            "label": "tab 1 Image"
+          },
+            {
+ 			"type": "text",
+            "id": "heading1",
+            "label": "tab 1 heading"
+          },{
+            "type": "image_picker",
+            "id": "tabimg1",
+            "label": "tab 1 full image"
+          },
+            {
+ 			"type": "richtext",
+            "id": "des1",
+            "label": "tab 1 Descrition"
+          },
+            {
+ 			"type": "color",
+            "id": "clr1",
+            "label": "Text Color"
+          }
+,{
+            "type": "image_picker",
+            "id": "icon2",
+            "label": "tab 2 Image"
+          },
+            {
+ 			"type": "text",
+            "id": "heading2",
+            "label": "tab 2 heading"
+          },{
+            "type": "image_picker",
+            "id": "tabimg2",
+            "label": "tab 2 full image"
+          },
+            {
+ 			"type": "richtext",
+            "id": "des2",
+            "label": "tab 2 Descrition"
+          },
+            {
+ 			"type": "color",
+            "id": "clr2",
+            "label": "Text Color"
+          }
+
+
+,{
+            "type": "image_picker",
+            "id": "icon3",
+            "label": "tab 3 Image"
+          },
+            {
+ 			"type": "text",
+            "id": "heading3",
+            "label": "tab 3 heading"
+          },{
+            "type": "image_picker",
+            "id": "tabimg3",
+            "label": "tab 3 full image"
+          },
+            {
+ 			"type": "richtext",
+            "id": "des3",
+            "label": "tab 3 Descrition"
+          },
+            {
+ 			"type": "color",
+            "id": "clr3",
+            "label": "Text Color"
+          }
+,{
+            "type": "image_picker",
+            "id": "icon4",
+            "label": "tab 4 Image"
+          },
+            {
+ 			"type": "text",
+            "id": "heading4",
+            "label": "tab 4 heading"
+          },{
+            "type": "image_picker",
+            "id": "tabimg4",
+            "label": "tab 4 full image"
+          },
+            {
+ 			"type": "richtext",
+            "id": "des4",
+            "label": "tab 4 Descrition"
+          },
+            {
+ 			"type": "color",
+            "id": "clr4",
+            "label": "Text Color"
+          }
+
+        ]
+      }
+    ],
+"presets": [
+    {
+      "name": {
+        "en": "Key Features"
+      }
+      
+    }
+  ]
+  }
+{% endschema %}
+{{ 'Key--Features.css' | asset_url | stylesheet_tag }}
+

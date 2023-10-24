@@ -1,0 +1,126 @@
+  <script>
+(function() {
+  $('body').on('click', '.shopify_explorer_faq__question', function() {
+    if($(this).hasClass('open')){
+    
+     $(this).removeClass('open');
+      $(this).next('.shopify_explorer_faq__answer').addClass('hidden');
+    }else{
+    
+    
+    $('.shopify_explorer_faq__answer').addClass('hidden');
+    $('.shopify_explorer_faq__question').removeClass('open');
+      $(this).addClass('open');
+     $(this).next('.shopify_explorer_faq__answer').removeClass('hidden');
+    }
+  });
+
+}());
+</script>
+<div id="shopify-section-faq" class="{{ section.settings.extra-faq_all }}">
+  <div class="shopify_explorer__content sdsdsd">
+  <div class="page-width">
+        {%- unless section.settings.heading_title == blank -%}
+    <h2 class="section-header">
+      {{ section.settings.heading_title | escape }}
+    </h2>
+  {%- endunless -%} 
+    <div class="faq_section">
+  {%- assign expand_questions = section.settings.expand_questions -%}
+
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'separator' -%}
+        <h3 class="shopify_explorer_faq__separator h3" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h3>
+
+      {%- when 'question' -%}
+        <div class=" shopify_explorer_faq__item {% unless expand_questions %}shopify_explorer_faq__item--expandable{% endunless %}" {{ block.shopify_attributes }}>
+          <h3 class="shopify_explorer_faq__question faq-question h5 {% unless expand_questions %}link{% endunless %}">{{ block.settings.title }}</h3>
+          <div class="shopify_explorer_faq__answer rte faq-answer hidden">
+            {{ block.settings.answer }}
+          </div>
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "faq-product",
+    "settings": [
+      {
+          "type": "text",
+          "id": "extra-faq_all",
+          "label": "choose your class"
+        },
+      {
+        "type": "checkbox",
+        "id": "expand_questions",
+        "label": "Expand all questions by default",
+        "default": false
+      },
+      {
+      "type": "text",
+      "id": "heading_title",
+      "label": {
+        "de": "Überschrift",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+    }
+  ],
+    "blocks": [
+      {
+        "type": "separator",
+        "name": "Section separator",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "name": "Question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+    {
+      "name": "faq product"
+    }
+  ]
+  }
+{% endschema %}
+{{ 'faq-product.css' | asset_url | stylesheet_tag }}
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+

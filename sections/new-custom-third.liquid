@@ -1,0 +1,158 @@
+<div class="product-primary {% if section.settings.custom_class !=blank %} {{ section.settings.custom_class }}  {% endif %}">
+<div class="page-width">
+  <div class="third-main">
+    <div class="third-lefts">
+      <div class="third-lefts-top">
+        {% if section.settings.imageone !=blank %}
+        <div class="third-lefts-top-one">
+          <a href="{{ section.settings.linkone }}">
+          <img src="{{  section.settings.imageone | img_url : 'master'}}" />
+          </a>
+        </div>
+        {% endif %}
+        {% if section.settings.imagetwo !=blank %}
+        <div class="third-lefts-top-two">
+           <a href="{{ section.settings.linktwo }}">
+          <img src="{{ section.settings.imagetwo | img_url : 'master'}}" />
+           </a>
+        </div>
+        {% endif %}
+      </div>
+      {% if section.settings.imagethree !=blank %}
+      <div class="third-lefts-bottom">
+         <a href="{{ section.settings.linkthree }}">
+          <img src="{{ section.settings.imagethree | img_url : 'master'}}" />
+         </a>
+         </div>
+      {% endif %}
+    </div>
+    {% if section.settings.image_right !=blank %}
+     <div class="third-rights">
+        <a href="{{ section.settings.linkright }}">
+      <img src="{{ section.settings.image_right | img_url : 'master'}}" />
+        </a>
+        </div>
+    {% endif %}
+  </div>
+  <div class="fourth-main">
+    <div class="fourth-left">
+       {% if section.settings.four_imageone !=blank %}
+     <div class="fourth-lefts-top-one">
+           <a href="{{ section.settings.four_linkone }}">
+          <img src="{{ section.settings.four_imageone | img_url : 'master'}}" />
+           </a>
+        </div>
+        {% endif %}
+          {% if section.settings.four_imagetwo !=blank %}
+      <div class="fourth-lefts-top-two">
+           <a href="{{ section.settings.four_linktwo }}">
+          <img src="{{ section.settings.four_imagetwo | img_url : 'master'}}" />
+           </a>
+        </div>
+        {% endif %}
+    </div>
+    <div class="fourth-right">
+{% if section.settings.four_image_right !=blank %}
+     <div class="fourth-rights">
+        <a href="{{ section.settings.four_linkright }}">
+      <img src="{{ section.settings.four_image_right | img_url : 'master'}}" />
+        </a>
+        </div>
+    {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Multi Images",
+     "settings": [{
+    "type": "image_picker",
+    "id": "imageone",
+    "label": "First Image"
+  },
+ {
+		"type": "text",
+          "id": "linkone",
+          "label": "Link To First Image"
+        },
+          {
+    "type": "image_picker",
+    "id": "imagetwo",
+    "label": "Second Image"
+  },
+ {
+		"type": "text",
+          "id": "linktwo",
+          "label": "Link To Second Image"
+        },
+       {
+    "type": "image_picker",
+    "id": "imagethree",
+    "label": "Three Image"
+  },
+ {
+		"type": "text",
+          "id": "linkthree",
+          "label": "Link To Third Image"
+        },
+       {
+    "type": "image_picker",
+    "id": "image_right",
+    "label": "Right Image"
+  },
+ {
+		"type": "text",
+          "id": "linkright",
+          "label": "Link To Right Image"
+        },
+       {
+    "type": "image_picker",
+    "id": "four_imageone",
+    "label": "Fourth Image"
+  },
+ {
+		"type": "text",
+          "id": "four_linkone",
+          "label": "Link To Image Fourth"
+        },
+
+       {
+    "type": "image_picker",
+    "id": "four_imagetwo",
+    "label": "Fifth Image"
+  },
+ {
+		"type": "text",
+          "id": "four_linktwo",
+          "label": "Link To Image Fifth"
+        },
+
+       {
+    "type": "image_picker",
+    "id": "four_image_right",
+    "label": "Sixth Image"
+  },
+ {
+		"type": "text",
+          "id": "four_linkright",
+          "label": "Link To Image Six"
+        }
+
+       
+ ],
+    "presets": [
+  {
+    "name": "Multi Images"
+  }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

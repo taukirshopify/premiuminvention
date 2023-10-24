@@ -1,0 +1,83 @@
+<div class="about-Us-top">
+   <div class="page-width">
+      <div class="about-top_inner ">
+        <h2 class="about-heading">
+       {{ section.settings.about_heading }}
+          </h2>    
+      <p class="sub_head">
+       {{ section.settings.sub_info }}
+          </p> 
+  
+  <ul>
+  
+  {% for block in section.blocks %}
+  <li>
+    <p>{{block.settings.cta_label  }}</p>
+    </li>
+    {% endfor %}
+  
+  </ul>
+         
+      <p class="sub_head">
+       {{ section.settings.sub_info2 }}
+          </p> 
+        <div class="about_inner_img">
+            <img src="{{section.settings.image | img_url : 'master' }}">  
+         </div>
+        </div>  
+     
+
+   </div>
+</div>
+{% schema %}
+   {
+    "name": "about Us top",
+    "settings": [
+   {
+    "type": "text",
+    "id":  "about_heading",
+    "label": "heading"
+    },
+   {
+      "type": "text",
+      "id": "sub_info",
+      "label": "Sub Info"
+    },
+ {
+      "type": "text",
+      "id": "sub_info2",
+      "label": "Sub questions"
+    },
+    {
+          "type": "image_picker",
+          "id": "image",
+          "label":"Image"
+        }
+
+],
+"blocks": [
+    {
+      "type": "text",
+      "name": "text", 
+      "settings": [
+
+        
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Text"
+        }
+      
+      ]
+   
+    }
+  ],
+   "presets": [
+       {
+         "name": "about Us top"
+       
+       }
+      ]
+      }
+{% endschema %}
+{{ 'about-Us-top.css' | asset_url | stylesheet_tag }}

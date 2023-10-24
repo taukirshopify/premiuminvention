@@ -1,0 +1,119 @@
+<div class="how-it-works" id="how-it-works">
+<div class="page-width product-page-width">
+  {% if section.settings.title !=blank  %}
+  <div class="main-title">
+    <h2>{{ section.settings.title }}</h2>
+  </div>
+  {% endif %}
+
+  <div class="how-work-main">
+     {% for block in section.blocks %}
+<div class="how-work-inner">
+       {% if block.settings.image !=blank %}
+<img src="{{block.settings.image | img_url : 'master' }}">
+ {% endif %}
+        {% if block.settings.des !=blank %}
+  <div class="step-des">
+       {{block.settings.des }}
+  </div>{% endif %}
+        {% if block.settings.btn !=blank %}
+       <div class="step-btn">
+  <a href="#" class="btn">{{block.settings.btn }}</a>
+       </div>{% endif %}
+  </div>{% endfor %} 
+  </div>
+</div>
+</div>
+{% schema %}
+  {
+    "name": "How it works",
+    "settings": [
+       {
+          "type": "text",
+          "id": "title",
+          "label":"Title"
+        }
+    ],
+    "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "Steps"
+      }, 
+    "settings": [
+         
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label":"Image"
+        },
+        
+      
+      {
+         "type": "text",
+          "id": "des",
+          "label": "Description"
+        },
+      {
+         "type": "text",
+          "id": "btn",
+          "label": "Button"
+        }
+      ]
+      
+    }
+  ],
+    "presets": [
+       {
+         "name": "How it works"
+       
+       }
+      ]
+  }
+
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+  <script>
+
+    	$(window).on("load resize",function(e){
+
+var winWidth = $(window).width();
+if(winWidth < 768){
+  $('.how-work-main').slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+    arrows:true,
+    prevArrow:"<button type='button' class='slick-prev pull-left'><img src='https://cdn.shopify.com/s/files/1/0249/8949/9437/t/85/assets/left-arrow-new.png?v=1683211032'></button>",
+		nextArrow:"<button type='button' class='slick-next pull-right'><img src='https://cdn.shopify.com/s/files/1/0249/8949/9437/t/85/assets/right-arrow-new.png?v=1683211057'></button>",
+     responsive: [
+    
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+}
+else { 
+
+$('.how-work-main').slick('unslick');
+
+} 
+
+          
+
+});
+
+    
+  
+  </script>

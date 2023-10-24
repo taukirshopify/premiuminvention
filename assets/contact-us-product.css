@@ -1,0 +1,181 @@
+div#shopify-section-custom-contact .contact_inner.desktop_version .page-width {
+	max-width: 80%;
+	margin: auto;
+}
+.contact_inner.desktop_version {
+    display: flex;
+    padding-bottom: 70px;
+    padding-top: 25px;
+}
+
+div#shopify-section-custom-contact .custpm-header-title {
+	width: 40%;
+	float: left;
+    margin-bottom: 0;
+}
+
+div#shopify-section-custom-contact .contact_right {
+	width: 60%;
+	float: left;
+    position: relative;
+}
+
+div#shopify-section-custom-contact .contact_right img.contact_media {
+    min-height: 475px;
+    height: 254px;
+    width: 100%;
+    position: absolute;
+    bottom: -70px;
+}
+
+div#shopify-section-custom-contact {
+	padding-top: 65px;
+}
+
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item {
+	background: #FFFFFF;
+	border-radius: 20px;
+	padding: 6px 20px;
+	border: 1px solid #E5E5E5;
+	margin-bottom: 20px
+}
+
+div#shopify-section-faq .faq_section .shopify_explorer_faq__item:hover {
+	box-shadow: 0px 0px 18px rgb(0 0 0 / 10%);
+}
+.custom-contact {
+    background: #f8f8f8;
+    padding-top: 60px;
+    width: 100%;
+    display: inline-block;
+}
+.custpm-header-title p {
+	color: #000;
+	font-size: 17px;
+}
+.custpm-header-title p.inner-text {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+div#shopify-section-custom-contact .blueclr {
+	color: #086fb5;
+	font-weight: 600;
+	font-family: "Work Sans", sans-serif;
+}
+
+div#shopify-section-custom-contact h3.blueclr {
+	font-weight: 700;
+	font-size: 36px;
+	color: #000000;
+    margin: 0;
+}
+
+.main_wire_gen.mobile_view, .contact_inner.mobile_version {
+    display: none;
+}
+div#shopify-section-custom-contact .contact_right {
+    display: none;
+}
+div#shopify-section-custom-contact .custpm-header-title {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.custom-contact h5.pre_blueclr {
+    font-family: Work Sans;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: .05em;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+div#shopify-section-custom-contact a.blueclr {
+    color: #000;
+    font-weight: 600;
+    font-family: Work Sans,sans-serif;
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-decoration: none;
+}
+div#shopify-section-custom-contact .custpm-header-title svg {
+    width: 25px;
+    margin-right: 16px;
+}
+div#shopify-section-custom-contact .custom-contact {
+    position: relative;
+}
+
+@media only screen and (min-width: 768px){
+div#shopify-section-custom-contact {
+    position: relative;
+    z-index: 1;
+}
+div#shopify-section-custom-contact .custom-contact:before {
+    position: absolute;
+    content: "";
+    width: 787px;
+    height: 302px;
+    left: 0px;
+    top: 56%;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/animation_bottomsec1.png?v=1652807356);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div#shopify-section-custom-contact:after {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    width: 472px;
+    height: 347px;
+    right: 0px;
+    top: 53%;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/animation_bottomsec2.png?v=1652807356);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+}
+@media only screen and (max-width: 767px){
+.contact_inner.mobile_version {
+    display: block;
+}
+div#shopify-section-custom-contact {
+    position: relative;
+    padding-top: 10px;
+}
+div#shopify-section-custom-contact .custom-contact:before {
+    position: absolute;
+    content: "";
+    width: 306px;
+    height: 302px;
+    left: 0px;
+    top: 0%;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/animation_mobile.png?v=1652808136);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div#shopify-section-custom-contact:after {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    width: 340px;
+    height: 200px;
+    right: 0px;
+    top: 58%;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/animation_mobile2.png?v=1652817776);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div#shopify-section-custom-contact h3.blueclr {
+    font-size: 30px;
+}
+.custom-contact h5.pre_blueclr {
+    margin-top: 0;
+}
+}

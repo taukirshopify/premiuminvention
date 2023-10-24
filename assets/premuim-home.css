@@ -1,0 +1,108 @@
+.premimum_main .section-header h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.premimum_main .section-header p {
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #333333;
+    width: 60%;
+    margin: 0 auto;
+}
+.premimum_main {
+    padding-top: 45px;
+    padding-bottom: 30px;
+}
+.premimum_main .premium_inner {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    padding-top: 30px;
+}
+.premimum_main .premium_inner .premimu_same {
+    width: 33%;
+    background: #F1F5F8;
+    padding-bottom: 60px;
+    border-radius: 5px
+}
+.premimum_main .premium_text {
+    padding: 25px 40px 20px;
+    min-height: 135px;
+}
+.premimum_main .premium_text h3 {
+    font-family: Work Sans;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 5px;
+}
+.premimum_main .premium_text h2 {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 34px;
+    margin-bottom: 0;
+}
+.premimum_main .premium_text h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000;
+    margin-bottom: 5px;
+}
+.premimum_main .premium_text p {
+    line-height: 26px;
+    color: #333333;
+}
+.premimum_main .premium_img {
+    text-align: center;
+}
+
+.premimum_main .premium_img img {
+    width: 275px;
+    object-fit: contain;
+    height: 280px;
+    margin-top: -15px;
+}
+.premimum_main .premimu_same:nth-child(1) .premium_img img {
+    width: 202px;
+}
+.premimum_main .premimu_same:nth-child(3) .premium_img img {
+    width: 320px;
+}
+.premimum_main .premium_btn {
+    text-align: center;
+    margin-top: 40px;
+}
+.premimum_main .premium_btn a.button_premium {
+    opacity: 1;
+    border: 1px solid #086FB5;
+    width: 230px;
+    height: 50px;
+    background: #086FB5;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.premimum_main .premium_btn a.button_premium:after {
+    display: none;
+}

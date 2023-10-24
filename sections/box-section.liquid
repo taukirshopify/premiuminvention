@@ -1,0 +1,78 @@
+<div class="main-box-section padd-b-80">
+  <div class="page-width">
+    <div class="ctm-flex box-column">
+      <div class="col-50 box-info">
+         <div class="main-heading">
+            <h2>{{ section.settings.bannertitle }}</h2>
+            <h6>{{ section.settings.subtitle }}</h6>
+         </div>
+        <div class="box-list">
+          <ul>
+            {% for block in section.blocks %}
+              <li class="ctm-flex">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 11C22 17.0751 17.0751 22 11 22C4.92487 22 0 17.0751 0 11C0 4.92487 4.92487 0 11 0C17.0751 0 22 4.92487 22 11Z" fill="#086FB5" fill-opacity="0.1"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11 20.1667C16.0626 20.1667 20.1667 16.0626 20.1667 11C20.1667 5.93739 16.0626 1.83333 11 1.83333C5.93739 1.83333 1.83333 5.93739 1.83333 11C1.83333 16.0626 5.93739 20.1667 11 20.1667ZM11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22Z" fill="#086FB5"/>
+                  <g clip-path="url(#clip0_1145_1710)">
+                    <path d="M9.05171 14.9705C8.73947 14.9706 8.44001 14.8465 8.21941 14.6256L5.70307 12.1102C5.43231 11.8393 5.43231 11.4003 5.70307 11.1294C5.97392 10.8587 6.41296 10.8587 6.6838 11.1294L9.05171 13.4973L15.3162 7.23285C15.587 6.9621 16.0261 6.9621 16.2969 7.23285C16.5677 7.5037 16.5677 7.94274 16.2969 8.21359L9.88402 14.6256C9.66341 14.8465 9.36396 14.9706 9.05171 14.9705Z" fill="#086FB5"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1145_1710">
+                      <rect width="11" height="11" fill="white" transform="translate(5.5 5.5)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+                {{ block.settings.title }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-50 box-image">
+        {% if section.settings.image != blank %}
+          <img src="{{ section.settings.image | img_url: "master" }}" alt="{{ section.settings.image.alt }}" />
+        {% endif %}  
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Box Section",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        },
+        {
+          "type": "text",
+          "id": "bannertitle",
+          "label": "Add Main Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Add Subtitle"
+        }
+    ],
+    "blocks":[
+      {
+        "type": "header",
+        "name": "service",
+        "settings":[
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Add Title Here"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Box Section"    
+      }
+    ]
+  }
+{% endschema %}

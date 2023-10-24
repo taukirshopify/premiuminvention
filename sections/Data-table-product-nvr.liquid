@@ -1,0 +1,148 @@
+<div id="technical_features">
+  <div id="shopify-section-table-data">
+  <div class="page-width">
+      {%- unless section.settings.heading_title == blank -%}
+    <h2 class="section-header">
+      {{ section.settings.heading_title | escape }}
+    </h2>
+  {%- endunless -%}   
+<div class="tblecamera {% if section.settings.custom_class != blank %} {{ section.settings.custom_class }} {%- endif -%}" style="max-width: 900px; margin:auto; padding-top:100px;">
+
+<div class="left_table">	
+<span>{{section.settings.row1}}</span> 
+    {% for block in section.blocks %}
+<span>{{block.settings.row1}}</span>
+  {% endfor %}
+</div>
+  
+<div class="right_table">	
+<span>{{section.settings.row2}}</span> 
+    {% for block in section.blocks %}
+<p><span>{{block.settings.row2}}</span></p>
+  {% endfor %}
+</div>
+  <div class="right_table">	
+<span>{{section.settings.row3}}</span> 
+    {% for block in section.blocks %}
+<p><span>{{block.settings.row3}}</span></p>
+  {% endfor %}
+</div>
+  {% if section.settings.row4 != blank %}
+  <div class="right_table">	
+<span>{{section.settings.row4}}</span> 
+    {% for block in section.blocks %}
+<p><span>{{block.settings.row4}}</span></p>
+  {% endfor %}
+</div>
+    {% endif %}
+    
+ 
+</div>
+</div>
+</div>
+</div>
+{% schema %}
+{
+  "name": {
+    "en": "Table data"
+  },
+  "class": "index-section",
+  "settings": [
+        {
+      "type": "text",
+      "id": "heading_title",
+      "label": {
+        "de": "Überschrift",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+    },
+{
+          "type": "textarea",
+          "id": "row1",
+          "label": {
+            "en": "Row 1 heading"
+          }
+        },{
+          "type": "textarea",
+          "id": "row2",
+          "label": {
+            "en": "Row 2 heading"
+          }
+        },
+{
+          "type": "textarea",
+          "id": "row3",
+          "label": {
+            "en": "Row 3 heading"
+          }
+},
+{
+          "type": "textarea",
+          "id": "row4",
+          "label": {
+            "en": "Row 4 heading"
+          }
+        },{
+          "type": "text",
+          "id": "custom_class",
+          "label": {
+            "en": "Custom Class For Extra CSS"
+          }
+        }
+],
+  "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "text"
+      },
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "row1",
+          "label": {
+            "en": "Row 1 heading"
+          }
+        },{
+          "type": "textarea",
+          "id": "row2",
+          "label": {
+            "en": "Row 2 data"
+          }
+        },{
+          "type": "textarea",
+          "id": "row3",
+          "label": {
+            "en": "Row 3 data"
+          }
+        },{
+          "type": "textarea",
+          "id": "row4",
+          "label": {
+            "en": "Row 4 data"
+          }
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": {
+        "en": "Table data"
+      }
+    }
+  ]
+}
+{% endschema %}
+{{ 'data-table-product.css' | asset_url | stylesheet_tag }}
+
+

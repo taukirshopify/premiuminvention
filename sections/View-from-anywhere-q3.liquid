@@ -1,0 +1,52 @@
+<div id="shopify-section-anyeveryQ3">
+  <div class="page-width">
+    <img class="first-imgany" src="{{section.settings.right_image | img_url : 'master' }}">
+    <h2 class="main-heading">
+       {{ section.settings.heading_title }}
+          </h2>
+    <p class="sub_head mb-60">
+{{ section.settings.sub_info }}
+</p>
+    <img class="second-imgany" src="{{section.settings.right_image1 | img_url : 'master' }}">
+  </div>
+ </div>
+{% schema %}
+   {
+    "name": "View From Anywhere Q3",
+    "settings": [
+{
+"type": "image_picker",
+"id": "right_image",
+"label":" First Image"
+},
+{
+"type": "text",
+"id": "heading_title",
+"label": "Top Heading"
+},
+{
+"type": "text",
+"id": "sub_info",
+"label": "Sub Info"
+},
+{
+"type": "image_picker",
+"id": "right_image1",
+"label":" Second Image"
+}
+
+],
+"blocks": [
+    
+  ],
+   "presets": [
+       {
+         "name": "View From Anywhere Q3"
+       
+       }
+      ]
+      }
+{% endschema %}
+
+{{ 'View-from-anywhere-q3.css' | asset_url | stylesheet_tag }}
+

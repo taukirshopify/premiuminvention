@@ -1,0 +1,146 @@
+<section class="videomp">
+        <div class="page-width-1220 pt-120 pb-120">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div
+                        class="section-header-wrapper d-flex flex-wrap align-items-center justify-content-between pb-60">
+
+                        <div class="section-header">
+                            <h2 class="section-title fs-42 text-clr-dark1 fw-bold">
+                               {{ section.settings.section-title }}
+                            </h2>
+                        </div>
+
+                        <div class="twohd-btn d-flex flex-wrap align-items-center gap-2">
+                            <span class="btn-txt">1080p</span>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" name="graduate"type="checkbox" role="switch"
+                                    id="flexSwitchCheckChecked" checked>
+                            </div>
+                            <span class="btn-txt">2k HD</span>
+                        </div>
+                    </div>
+
+                    <div class="video-image text-center">
+                      <div class="low">  
+                         <img class="img1" src="{{ section.settings.low-video-poster | img_url: '1200x567' }}">
+<!--                         <video poster="{{ section.settings.low-video-poster | img_url: width: 1200 }}" controls>
+                         <source src="movie.mp4" type="video/mp4">
+                         <source src="movie.ogg" type="video/ogg">
+                         Your browser does not support the video tag.
+                        </video> -->
+                      </div>
+                      <div class="hd">
+                        <img class="img1" src="{{ section.settings.hd-video-poster | img_url: '1200x567' }}">
+<!--                       <video poster="{{ section.settings.hd-video-poster | img_url: '1200x567' }}" controls>
+                         <source src="movie.mp4" type="video/mp4">
+                         <source src="movie.ogg" type="video/ogg">
+                         Your browser does not support the video tag.
+                      </video> -->
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+   
+<script>
+  let checkbox = document.querySelector("#flexSwitchCheckChecked");
+
+checkbox.addEventListener("change", function () {
+	document.querySelector(".low").classList.toggle("theme--light");
+  document.querySelector(".hd").classList.toggle("theme");
+});
+</script>
+<style>
+  .page-width-1220{
+    width:100%;
+    max-width:1220px;
+    margin:auto;
+  }
+  h2.section-title.fs-42.text-clr-dark1.fw-bold {
+    font-size: 42px;
+    line-height: 52px;
+}
+.video-image img {
+    width: 100% !important;
+    max-width: 1220px;
+    max-height: 587px;
+    height: 100%;
+    border: 10px solid #fff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #FFFFFF;
+    box-shadow: 0px 10px 90px rgba(24, 33, 39, 0.1);
+    border-radius: 30px;
+}
+  .hd.theme, .low {
+    display: none;
+}
+.hd, .low.theme--light {
+    display: block;
+}
+.btn-txt{
+      font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #182127;
+}
+  input#flexSwitchCheckChecked {
+    width: 64px;
+    height: 36px;
+}
+  .form-switch .form-check-input{
+    background-color: rgb(13 110 253 / 20%);
+  }
+  .form-check-input:checked {
+    background-color: #0d6efd !important;
+}
+</style>
+{% schema %}
+  {
+    "name": "HD Resolution",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section-title",
+        "label": "Title"
+ },
+      {
+        "type": "image_picker",
+        "id": "low-video-poster",
+        "label": "Poster"
+ },
+      {
+        "type": "video",         
+        "id": "low-video-url",
+        "label": "Video"
+ },
+       {
+        "type": "image_picker",
+        "id": "hd-video-poster",
+        "label": "HD Video Poster"
+ },
+      {
+        "type": "video",
+        "id": "hd-video-url",
+        "label": "HD Video"
+ }
+    ],       
+     "presets": [
+  {
+    "name": {
+      "en": "HD Resolution"
+    }
+  }
+]
+  }
+  
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

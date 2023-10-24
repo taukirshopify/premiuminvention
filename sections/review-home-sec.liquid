@@ -1,0 +1,118 @@
+<div class="review_home_main">
+   <div class="page-width">
+       <div class="review_home_inner">
+         
+         
+            {% for block in section.blocks %}
+         <div class="review_sec1 review_sec_same">
+            <div class="review_text">
+               <img class="prmium__image" src="{{block.settings.image | img_url : 'master' }}">  
+              <p>{{block.settings.cta_label  }}</p>
+            </div>
+            <div class="review_bottom">
+              <div class="img_left">
+              <img src="{{block.settings.image2 | img_url : 'master' }}">  
+              </div>
+              <div class="right_text">
+                <h5>{{block.settings.prehead}}</h5>
+                <p>{{block.settings.cta_label2  }}</p>
+                </div>             
+           </div>
+         </div>
+          {% endfor %}
+         
+         
+             <!--
+        <div class="review_sec1 review_sec_same">
+            <div class="review_text">
+               <img src ="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/review2_img.png?v=1651785473" alt="" class="prmium__image">
+               <p> Separated they live in Bookmarksgrove right at the coast of the famous Semantics, large language ocean and many more stuff and more more more. Separated they live in Bookmarksgrove right at the coast of the famous Semantics.
+               </p>
+            </div>
+            <div class="review_bottom">
+              <div class="img_left">
+               <img src ="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/client_img2.png?v=1651785473" alt="" class="review__bottom">
+                    </div>
+              <div class="right_text">
+                <h5>Name Surname</h2>
+               <p> Description</p> 
+                </div>             
+           </div>
+         </div>
+         <div class="review_sec1 review_sec_same">
+            <div class="review_text">
+               <img src ="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/review3_img.png?v=1651785473" alt="" class="prmium__image">
+               <p> Separated they live in Bookmarksgrove right at the coast of the famous Semantics, large language ocean and many more stuff and more more more. Separated they live in Bookmarksgrove right at the coast of the famous Semantics.
+               </p>
+            </div>
+            <div class="review_bottom">
+              <div class="img_left">
+               <img src ="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/client_img3.png?v=1651785473" alt="" class="review__bottom">
+                 </div>
+              <div class="right_text">
+                <h5>Name Surname</h2>
+               <p> Description</p> 
+                </div>
+           </div>
+         </div>-->
+              
+         
+      </div>
+   </div>
+</div>
+{% schema %}
+   {
+    "name": "review home sec",
+    "settings": [],
+   "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "text"
+      }, 
+    "settings": [
+            {
+          "type": "image_picker",
+          "id": "image",
+          "label":"Image"
+        },
+        
+          {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Text"
+        },
+
+             {
+          "type": "image_picker",
+          "id": "image2",
+          "label":"Image"
+        },
+             {
+          "type": "text",
+          "id": "prehead",
+          "default": "prehead",
+          "label": "prehead"
+        },
+     
+          {
+          "type": "text",
+          "id": "cta_label2",
+          "label": "Text"
+        }  
+        
+    
+      ]
+      
+    }
+  ],
+   "presets": [
+       {
+         "name": "review home sec"
+       
+       }
+      ]
+      }
+{% endschema %}
+{{ 'review-bottom-home.css' | asset_url | stylesheet_tag }}
+

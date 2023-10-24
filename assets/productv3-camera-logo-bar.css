@@ -1,0 +1,66 @@
+.product-logobar_main ul.product-logo-bar li {
+    list-style: none;
+/* margin: 0 40px 46px; */
+  margin: 0 40px 20px;
+}
+.product-logobar_main ul.product-logo-bar {
+    display: flex;
+    padding: 0;
+    text-align: left;
+    width: 50%;
+    margin: 0;
+    position: relative;
+    left: 110px;
+    padding-top: 62px;
+}
+
+.product-logobar_main ul.product-logo-bar li img {
+    width: 60px;
+    height: 60px;
+
+}
+body.Wireless.Camera.V3S .product-logobar_main ul.product-logo-bar {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    padding-top: 13px;
+    text-align: center;
+}
+body.Wireless.Camera.V3S .product-logobar_main {
+    background: #F0F0F0;
+    padding-top: 3px;
+    margin-bottom: 60px;
+}
+@media only screen and (max-width: 1199px){
+body.Wireless.Camera.V3S .product-logobar_main {
+    margin-bottom: 50px;
+}
+body.Wireless.Camera.V3S div#shopify-section-feature-image-1 {
+    padding-top: 0px;
+}
+}
+@media only screen and (max-width: 989px){
+body.Wireless.Camera.V3S .product-logobar_main {
+    margin-bottom: 45px;
+}
+}
+@media only screen and (max-width: 767px){
+body.Wireless.Camera.V3S .product-logobar_main ul.product-logo-bar {
+    padding-bottom: 12px;
+    padding-top: 8px;
+}
+
+@media only screen and (max-width: 481px){
+body.Wireless.Camera.V3S .product-logobar_main ul.product-logo-bar li img {
+    padding: 5px;
+}
+}
+body.Wireless.Camera.V3S .product-logobar_main ul.product-logo-bar {
+    padding-bottom: 8px;
+    padding-top: 5px;
+}
+}

@@ -1,0 +1,385 @@
+.wifi--side.div--grid,
+.wifi--grid .div--grid {
+	background: none;
+	border: none;
+}
+
+div#shopify-section-wifior4g h2 {
+	margin-bottom: 28px;
+	color: #000;
+}
+
+div#shopify-section-wifior4g .wifi--grid h3 {
+	border-radius: 20px;
+	background: #000;
+}
+
+div#shopify-section-wifior4g .wifi--grid .div--grid {
+	background: none;
+	border-radius: 0;
+}
+
+div#shopify-section-wifior4g .wifi--grid .div--grid li:nth-child(2) path {
+	fill: #C4C4C4;
+}
+
+div#shopify-section-wifior4g {
+	padding-top: 10px;
+}
+.wifi--grid {
+	display: flex;
+}
+
+.wifi--grid .div--grid {
+	border-radius: 20px;
+	width: 50%;
+	background: #F8F8F8;
+	display: flex;
+	flex-direction: column;
+	align-items: unset;
+	justify-content: start;
+	height: auto;
+}
+
+.internal---con {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+/* .wifi--side.div--grid ul li {
+    display: flex;
+    align-items: center;
+} */
+
+.widi4g h2 {
+	color: #6E6E6E;
+	text-transform: none;
+	font-weight: bold;
+	font-size: 36px;
+	letter-spacing: 0;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.wifi--grid {
+	display: flex;
+	width: 90%;
+	margin: auto;
+	gap: 60px;
+	align-items: flex-start;
+	display: flex;
+	justify-content: inherit;
+	align-items: stretch;
+}
+
+div#shopify-section-wifior4g .wifi--grid .div--grid ul {
+    text-align: left;
+    padding: 0;
+    box-shadow: 0 0 60px #0000001a;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    min-height: 180px;
+    padding-top: 6px;
+    padding-left: 20px;
+    padding-right: 21px;
+}
+
+div#shopify-section-logo-bar h2 {
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+
+
+.wifi--grid h3 {
+	background: #000;
+	border-radius: 20px;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	color: #FFFFFF;
+	padding: 31px 0;
+	margin-bottom: 0;
+}
+
+.wifi--grid .div--grid li {
+    position: relative;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000;
+    padding: 3px 32px 3px 68px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    height: auto;
+    padding-top: 33px;
+    list-style: none;
+    letter-spacing: 0;
+}
+
+.wifi--grid .div--grid li svg {
+	position: absolute;
+	left: 20px;
+	width: 25px;
+	top: 32px;
+	height: 27px;
+	display: flex;
+}
+/* .wifi--grid .wifi--side.div--grid li:nth-child(2) svg {
+    top: 38px;
+} */
+div#shopify-section-wifior4g .wifi--grid .div--grid span {
+	font-family: "Work Sans", sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+}
+
+
+
+.wifi--grid .g4g--side.div--grid li:nth-child(1) {
+	padding-top: 22px;
+}
+
+.last--pargraph {
+	padding: 0 31px;
+	margin-bottom: 23px;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	color: #000000;
+	text-align: left;
+}
+div#shopify-section-wifior4g .wifi--grid .div--grid ul {
+    text-align: left;
+    box-shadow: 0 0 60px #0000001a;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    min-height: 180px;
+    padding: 6px 21px 0 20px;
+}
+div#shopify-section-wifior4g h2 {
+    display: none;
+}
+div#shopify-section-wifior4g .wifi--grid .div--grid span.boldsec {
+    font-size: 18px;
+    font-weight: 700;
+}
+div#shopify-section-wifior4g .wifi--grid  .last--pargraph {
+    padding: 0 31px;
+    margin-bottom: 23px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    text-align: left;
+    letter-spacing: 0;
+}
+body.Wireless.Camera.V4 div#shopify-section-wifior4g .wifi--grid h3,
+body.Wireless.Camera.Q3 div#shopify-section-wifior4g .wifi--grid h3{
+    border: 2px solid #086FB5;
+    background: white;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div#shopify-section-wifior4g .wifi--grid h3 svg {
+    display: none;
+}
+body.Wireless.Camera.V4 div#shopify-section-wifior4g .wifi--grid h3 svg,
+body.Wireless.Camera.Q3 div#shopify-section-wifior4g .wifi--grid h3 svg{
+    display: inline-block;
+    width: 32px;
+    height: 29px;
+    margin-right: 9px;
+}
+body.Wireless.Camera.V4 div#shopify-section-wifior4g .wifi--grid .wifi--side.div--grid h3 svg,
+body.Wireless.Camera.Q3 div#shopify-section-wifior4g .wifi--grid .wifi--side.div--grid h3 svg{
+    height: 35px;
+    margin-right: 10px;
+    margin-bottom: -5px;
+    position: relative;
+    bottom: 2px;
+}
+.wifi--side .internal---con{
+justify-content: start;
+}
+@media only screen and (min-width: 768px){
+.wifi--grid {
+    position: relative;
+}
+.wifi--grid:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    height: 81%;
+    width: 1px;
+    background: #E5E5E5;
+    transform: translate(-50%);
+}
+}
+@media only screen and (min-width: 990px){
+div#shopify-section-wifior4g .wifi--grid h3 {
+    font-size: 24px;
+}
+div#shopify-section-wifior4g {
+    padding-bottom: 100px;
+    position: relative;
+}
+body.Wireless.Camera.V4 div#shopify-section-wifior4g,
+body.Wireless.Camera.Q3 div#shopify-section-wifior4g{
+    padding-bottom: 20px;
+}
+div#shopify-section-wifior4g:before {
+    position: absolute;
+    content: "";
+    width: 240px;
+    height: 100%;
+    z-index: -11;
+    right: 0;
+    top: 36%;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/animation_new4.png?v=1649710514);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+}
+@media only screen and (max-width: 767px){
+div#shopify-section-wifior4g .wifi--grid h3 {
+    padding: 20px 10px;
+    border-radius: 20px 20px 0 0;
+    font-size: 20px;
+    line-height: 22px;
+    }
+    div#shopify-section-wifior4g .wifi--grid .div--grid ul {
+    margin: 0;
+    min-height: 140px;
+    border: 1px solid #E5E5E5;
+    margin-bottom: 10px;
+    border-radius: 0 0 20px 20px;
+    padding:0;
+    }
+    div#shopify-section-wifior4g .wifi--grid .div--grid ul li{
+    padding: 14px 12px 0;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+    box-shadow: none;
+    min-height: auto;
+    font-weight: 400;
+    }
+   div#shopify-section-wifior4g .wifi--grid .div--grid ul li span.boldsec {
+    width: 100%;
+    display: inline-block;
+    font-size: 14px !important;
+    }
+	div#shopify-section-wifior4g .wifi--grid {
+		width: 96%;
+        gap: 4%;
+	}
+    div#shopify-section-wifior4g h2 {
+    display: none;
+    }
+    div#shopify-section-wifior4g .wifi--grid ul li svg {
+    display: none;
+    }
+   .wifi--grid .div--grid li {
+		font-size: 17px;
+		padding-top: 24px;
+        padding: 21px 41px 21px 58px;
+	}
+	.wifi--grid .g4g--side.div--grid li:nth-child(2) {
+		padding-bottom: 9px;
+		min-height: 75px;
+	}
+	.wifi--grid .g4g--side.div--grid li:nth-child(2) svg {
+		top: 26px;
+	}
+    div#shopify-section-wifior4g .wifi--grid ul li:nth-child(1) span.boldsec {
+    color: #086fb5;
+   }
+   div#shopify-section-wifior4g .wifi--grid .last--pargraph {
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+  div#shopify-section-wifior4g .wifi--grid .internal---con {
+    justify-content: unset;
+  }
+  body.Wireless.Camera.V4 div#shopify-section-wifior4g .wifi--grid h3 svg,
+  body.Wireless.Camera.Q3 div#shopify-section-wifior4g .wifi--grid h3 svg{
+    width: 100%;
+}
+body.Wireless.Camera.V4 div#shopify-section-wifior4g .wifi--grid h3,
+body.Wireless.Camera.Q3 div#shopify-section-wifior4g .wifi--grid h3{
+    display: block;
+    text-align: center;
+    font-size: 17px;
+}
+}
+@media only screen and (max-width: 481px){
+div#shopify-section-wifior4g .wifi--grid h3 {
+    font-size: 18px;
+}
+div#shopify-section-wifior4g .wifi--grid .div--grid ul {
+    min-height: 170px;
+}
+}
+
+.wifi--grid .div--grid ul li:first-child{
+  padding-bottom:18px;
+}
+.wifi--grid .div--grid ul li:last-child{
+  padding-top:18px;
+  position:relative;
+  border-radius:0
+}
+.wifi--grid .div--grid ul li:last-child::before {
+	border-top: 1px solid #A4A4A4;
+	content: "";
+	position: absolute;
+	left: 20px;
+	top: 0;
+	display: block;
+	width: 80%;
+}
+.wifi--grid .div--grid ul li:last-child svg{
+  top:22px
+}
+@media screen and (min-width:768px){
+  div#shopify-section-wifior4g .wifi--grid .last--pargraph{
+    padding-left:40px;
+  }
+}
+@media screen and (max-width:767px){
+  div#shopify-section-wifior4g .wifi--grid .div--grid ul li{
+    padding-bottom:20px
+  }
+  .wifi--grid .div--grid ul li:last-child::before{
+    width: auto;
+    right: 10px;
+    left: 10px;
+  }
+  div#shopify-section-wifior4g .wifi--grid{
+    flex-wrap:wrap
+  }
+ .Wireless.Camera.V4  div#shopify-section-wifior4g .wifi--grid {
+    flex-wrap: nowrap;
+  }
+  div#shopify-section-wifior4g .wifi--grid .div--grid{
+    width:100%
+  }
+}

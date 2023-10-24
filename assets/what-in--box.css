@@ -1,0 +1,107 @@
+div#shopify-section-what-in-the-box {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+div#shopify-section-what-in-the-box .feature-row .feature-row__text {
+    padding-right: 35px;
+}
+div#shopify-section-what-in-the-box .feature-row__item h2 {
+    font-size: 34px;
+    color: #000;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+div#shopify-section-what-in-the-box .feature-row__image-wrapper {
+    margin: 0 auto 19.44444px;
+    position: relative;
+    width: 100%;
+}
+div#shopify-section-what-in-the-box .feature-row__image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 541px;
+    object-fit: contain;
+}
+div#shopify-section-what-in-the-box .feature-row {
+  width: 100%;
+  display: flex;
+}
+div#shopify-section-what-in-the-box .feature-row .feature-row__item {
+    -webkit-flex: 0 1 50%;
+    -moz-flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+}
+div#shopify-section-what-in-the-box .feature-row ul.feature_listing {
+    padding-left: 0;
+}
+div#shopify-section-what-in-the-box .feature-row ul.feature_listing li {
+    list-style: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 25px;
+    position: relative;
+    margin: 6px 0;
+    font-family: 'Quattrocento Sans', sans-serif;
+    letter-spacing: 0;
+   
+}
+div#shopify-section-what-in-the-box .feature-row ul.feature_listing li img {
+    position: absolute;
+    width: 19px;
+    left: 0;
+    top: 2px;
+}
+div#shopify-section-what-in-the-box .feature-row p {
+    color: #000;
+    font-size: 18px;
+    letter-spacing: 0;
+    font-weight: 400;
+    line-height: 25px;
+}
+body.Wireless.Camera.V4 div#shopify-section-what-in-the-box {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+body.Wireless.Camera.V4  div#shopify-section-what-in-the-box .feature-row ul.feature_listing li {
+    font-family: Work Sans;
+    padding-left: 35px; 
+}
+body.Wireless.Camera.V4  div#shopify-section-what-in-the-box .feature-row ul.feature_listing li img {
+    width: 20px;
+}
+@media screen and (min-width: 750px){
+div#shopify-section-what-in-the-box .feature-row__image {
+    max-width: 545px;
+    max-height: 545px;
+}
+}
+@media screen and (min-width: 990px){
+  div#shopify-section-what-in-the-box {
+    padding-top: 100px;
+    position: relative;
+}
+body.Wireless.Camera.V4 div#shopify-section-what-in-the-box {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+div#shopify-section-what-in-the-box:before {
+    position: absolute;
+    content: "";
+    width: 340px;
+    height: 100%;
+    z-index: -11;
+    right: 0;
+    top: 17%;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/animation11_new.png?v=1649774204);
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+body.Wireless.Camera.V4 div#shopify-section-what-in-the-box:before {
+    visibility: hidden;
+}
+}

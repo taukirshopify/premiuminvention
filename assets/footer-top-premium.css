@@ -1,0 +1,124 @@
+.footer-top-premium {
+    width: 100%;
+    display: inline-block;
+    background: #F4F4F4;
+    padding: 10px 0;
+}
+.footer-top-premium ul {
+    display: flex;
+    padding-left: 0;
+}
+.footer-top-premium ul li {
+    width: 33.33%;
+    text-align: left;
+    padding: 0px 25px;
+    list-style: none;
+}
+.footer-top-premium ul img {
+    width: 51px;
+    height: 44px;
+    float: left;
+    margin-right: 15px;
+    object-fit: contain;
+    margin-top: 20px;
+}
+.footer-top-premium ul h2 {
+    font-size: 20px;
+    width: auto;
+    display: inline-block;
+    text-align: left;
+    font-weight: 600;
+    line-height: 24px;
+    color: #000;
+    margin: 0;
+}
+.footer-top-premium ul p {
+    display: table-cell;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium {
+    background: none;
+    margin-top: 0;
+    width: 65%;
+    margin: 0 auto;
+    display: block;
+}
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium:before {
+    display: none;
+}
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium h2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #000;
+}
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium ul {
+    display: inline-block;
+    width: 100%;
+}
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium ul li {
+    width: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium ul li img {
+    margin: 0 10px 0 0;
+    width: 30px;
+    height: 27px;
+    object-fit: contain;
+}
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium ul li h2.footer_prm_heading {
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #086FB5;
+}
+@media only screen and (min-width: 769px){
+div#shopify-section-top-premium.home_extra_premi ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#shopify-section-top-premium.home_extra_premi img {
+    margin-top: 0;
+    height: 50px;
+    width: 53px;
+    margin-right: 10px;
+}
+}
+@media only screen and (min-width: 1348px){
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium {
+    width: 53%;
+}
+}
+@media only screen and (min-width: 1430px){
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium {
+    width: 45%;
+}
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium ul li h2.footer_prm_heading {
+    white-space: nowrap;
+}  
+}
+@media only screen and (min-width: 1450px){
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium {
+    width: 37%;
+}
+@media only screen and (min-width: 1650px){
+div#shopify-section-top-premium.only_about_newsc .footer-top-premium ul li {
+    justify-content: center;
+}
+}

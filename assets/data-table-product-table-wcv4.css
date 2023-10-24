@@ -1,0 +1,92 @@
+table:not([class]) td{
+  padding-left: 30px;
+  border-right: 1px solid rgb(24 33 39 / 10%) !important;
+  border: none;
+}
+#shopify-section-table-data .tblecamera td.blactoblue{
+  padding: 20px 15px 20px 30px;
+}
+.item-fl {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+div#shopify-section-table-data h2.section-header {
+font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+    text-align: center;
+    color: #FFFFFF;
+  margin-bottom:60px;
+}
+div#shopify-section-table-data .tblecamera {
+    max-width: 100%!important;
+    padding: 10px 0 0!important;
+    overflow-x:auto
+}
+#shopify-section-table-data .tblecamera td.blactoblue,
+#shopify-section-table-data .tblecamera td.blcktobrwn {
+    color: #fff;
+    padding: 20px 15px;
+}
+#shopify-section-table-data .tblecamera td.blactoblue {
+   position: relative;
+    background: #086FB5;
+    border-width: 3px 0px 0px 3px;
+    border-style: solid;
+    border: none;
+    border-radius: 12px 0px 0px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+    color: #FFFFFF;
+}
+div#shopify-section-table-data .tblecamera table {
+    box-shadow: none;
+    background: none;
+    margin-bottom: 28px;
+}
+#shopify-section-table-data .tblecamera td.blcktobrwn {
+    background: #76A2C0;
+    border-radius: 0px 12px 0px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+    color: #FFFFFF;
+}
+#shopify-section-table-data .tblecamera td {
+   font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+color: #4F5960;
+}
+
+#shopify-section-table-data tr {
+    background: white;
+}
+#shopify-section-table-data tr:nth-child(odd){
+   background: #dee2e6;
+}
+#shopify-section-table-data tr:nth-child(2) td:nth-child(1) {
+   border-radius: 12px 0px 0px 0px;
+}
+#shopify-section-table-data tr:last-child td:first-child {
+   border-bottom-left-radius: 12px;
+}
+#shopify-section-table-data tr:last-child td:last-child {
+   border-bottom-right-radius: 12px;
+}
+#shopify-section-table-data .tblecamera td.headTb {
+   font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+color: #364148;
+}
+
+#shopify-section-table-data tr:first-child td:nth-child(1) {
+    visibility: hidden;
+}

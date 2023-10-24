@@ -1,0 +1,66 @@
+.app_guide_exrtra {
+    padding: 30px 0 0;
+}
+.app_guide_exrtra .image-with-text .grid {
+    align-items: center;
+}
+.app_guide_exrtra .image-with-text .grid h2 {
+    margin-top: 10px;
+}
+.app_guide_exrtra .image-with-text .grid .image-with-text__media-item {
+    padding-left: 60px;
+}
+.app_guide_exrtra .image-with-text .grid .image-with-text__text-item ol {
+    padding-left: 16px;
+}
+.app_guide_exrtra .image-with-text .grid .image-with-text__text-item ol li {
+    list-style: none;
+    display: flex;
+    margin-bottom: 20px;
+}
+.app_guide_exrtra .image-with-text .grid .image-with-text__text-item ol li span.text {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    list-style: none;
+}
+.app_guide_exrtra .image-with-text .grid .image-with-text__text-item ol {
+    padding-left: 0;
+}
+.app_guide_exrtra .image-with-text .grid .image-with-text__text-item ol li span.number {
+    height: 45px;
+    width: 50px;
+    border: 1px solid #DADADA;
+    border-radius: 50%;
+    font-family: Work Sans;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    margin-right: 35px;
+    padding: 1px 0px 0 0px;
+    text-align: center;
+}
+.app_guide_exrtra .image-with-text .grid .image-with-text__media-item .image-with-text__media {
+    border-radius: 5px;
+}
+.app_guide_exrtra .image-with-text .grid .image-with-text__media-item img {
+    border-radius: 5px;
+}
+.app_guide_exrtra .image-with-text .grid .image-with-text__text-item ol li span.number:hover {
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+}
+.app_guide_exrtra .image-with-text__content {
+    padding-left: 10px;
+    padding-right: 85px;
+}
+.app_guide_exrtra {
+    display: none;
+}
+@media only screen and (min-width: 1400px){
+ .app_guide_exrtra .image-with-text .grid .image-with-text__text-item ol li span.text {
+    padding-right: 50px;
+}
+}

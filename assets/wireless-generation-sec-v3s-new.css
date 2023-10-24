@@ -1,0 +1,252 @@
+div#shopify-section-wireless-generation-sec {
+	padding-top: 0px;
+}
+
+div#shopify-section-wireless-generation-sec .left-wire_gen h2 {
+/* 	font-size: 34px; */
+    font-size: 30px;
+	letter-spacing: 0;
+	text-transform: capitalize;
+	font-weight: 700;
+}
+
+div#shopify-section-wireless-generation-sec .left-wire_gen .product-single__description.rte div {
+	font-size: 15px;
+	font-family: "Work Sans", sans-serif;
+    color: #000;
+}
+
+div#shopify-section-wireless-generation-sec .left-wire_gen {
+	width: 45%;
+	float: left;
+	padding: 0 35px;
+}
+
+div#shopify-section-wireless-generation-sec .wire-gen-right {
+	width: 55%;
+	float: left;
+	padding: 0 0 0 35px;
+	margin-top: 60px;
+}
+
+div#shopify-section-wireless-generation-sec .inner_gen_right {
+	display: flex;
+	width: 100%;
+	margin-top: 20px;
+}
+
+div#shopify-section-wireless-generation-sec .inner_gen_right .sem_wire_gen {
+	width: 33.33%;
+}
+
+div#shopify-section-wireless-generation-sec .inner_gen_right .sem_wire_gen .same_inner_wire {
+	display: flex;
+}
+
+div#shopify-section-wireless-generation-sec .inner_gen_right .sem_wire_gen .same_inner_wire img {
+	padding: 15px;
+	background: #F8F8F8;
+	box-shadow: 0 0 2px #0000001a;
+	border-radius: 10px;
+	width: 40px;
+	min-height: 65px;
+	object-fit: contain;
+	height: 40px;
+	min-width: 60px;
+}
+
+div#shopify-section-wireless-generation-sec .inner_gen_right .sem_wire_gen .same_inner_wire img:hover {
+	background: #fff;
+	cursor: pointer;
+    box-shadow: 0 3px 24px #0000001c;
+}
+
+div#shopify-section-wireless-generation-sec .inner_gen_right .sem_wire_gen .same_inner_wire h4.wire_heading {
+	font-size: 15px;
+	padding-left: 12px;
+	color: #000;
+	margin-top: 9px;
+	padding-right: 17px;
+    font-weight: 600;
+   letter-spacing: 0;
+}
+
+div#shopify-section-feature-image-2 ul.feature_list li img {
+	width: 40px;
+	object-fit: contain;
+	min-height: 39px;
+}
+
+div#shopify-section-feature-image-2 ul.feature_list li {
+	align-items: center;
+	font-family: "Work Sans", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+}
+div#shopify-section-wireless-generation-sec .left-wire_gen h2 {
+    padding-right: 30px;
+}
+.main_wire_gen.mobile_view {
+    display: none;
+}
+/* V3s page only */
+body.Wireless.Camera.V3S div#shopify-section-wireless-generation-sec .wire-gen-right {
+    margin-top: 0;
+}
+body.Wireless.Camera.V3S  div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .main_wire_gen {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+body.Wireless.Camera.V3S  div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .left-wire_gen h2 {
+    padding-bottom: 15px;
+    padding-right: 0;
+}
+body.Wireless.Camera.V3S  div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .left-wire_gen {
+    width: 32%;
+    padding: 0 10px 0 35px;
+}
+body.Wireless.Camera.V3S  div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .wire-gen-right {
+    width: 68%;
+    padding: 0 0 0 20px;
+}
+body.Wireless.Camera.V3S  div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right {
+    flex-wrap: wrap;
+    gap: 1%;
+    justify-content: space-between;
+}
+div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen {
+    width: 24%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+body.Wireless.Camera.V3S  div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen .same_inner_wire {
+    display: flex;
+    align-items: center;
+}
+div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen .same_inner_wire img {
+    padding: 10px;
+    width: 39px;
+    min-width: 46px;
+    height: 30px;
+    min-height: 46px;
+    background: #E6F1F8;
+    border-radius: 6px;
+}
+div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen h4.wire_heading {
+    padding-right: 0;
+    font-weight: 500;
+    padding-left: 14px;
+    margin: 0;
+}
+div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen:nth-child(1), 
+div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen:nth-child(5) {
+    width: 22%;
+}
+
+@media only screen and (min-width: 1450px){
+div#shopify-section-wireless-generation-sec .inner_gen_right .sem_wire_gen .same_inner_wire h4.wire_heading {
+    padding-right: 30px;
+}
+div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen:nth-child(1), div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen:nth-child(5) {
+    width: 20%;
+}
+}
+@media only screen and (max-width: 1199px){
+body.Wireless.Camera.V3S div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .left-wire_gen h2 {
+    font-size: 26px;
+}
+}
+@media only screen and (max-width: 989px){
+body.Wireless.Camera.V3S div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .left-wire_gen, 
+body.Wireless.Camera.V3S div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .wire-gen-right {
+    width: 100%;
+    padding: 0;
+}
+body.Wireless.Camera.V3S div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .left-wire_gen h2 {
+    padding-bottom: 0px;
+    font-size: 30px;
+}
+}
+@media only screen and (max-width: 767px){
+.main_wire_gen.desktop_view {
+    display: none;
+}
+.main_wire_gen.mobile_view {
+    display: block !important;
+}
+div#shopify-section-wireless-generation-sec .left-wire_gen {
+    width: 100%;
+    padding: 0;
+}
+div#shopify-section-wireless-generation-sec .wire-gen-right {
+    width: 100%;
+    margin-top: 16px;
+    padding: 0;
+}
+div#shopify-section-wireless-generation-sec .inner_gen_right .sem_wire_gen .same_inner_wire img {
+    min-width: 80px;
+    padding: 14px;
+    min-height: 75px;
+}
+div#shopify-section-wireless-generation-sec .inner_gen_right .sem_wire_gen {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    margin-bottom: 4px;
+}
+div#shopify-section-wireless-generation-sec .inner_gen_right .sem_wire_gen .same_inner_wire h4.wire_heading {
+    width: 100%;
+    font-size: 17px;
+    padding: 0;
+    line-height: 21px;
+    font-weight: 600;
+}
+div#shopify-section-wireless-generation-sec .inner_gen_right .sem_wire_gen .same_inner_wire {
+    display: block;
+    text-align: center;
+}
+div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen {
+    width: 48%;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen:nth-child(1), 
+  div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen:nth-child(5) {
+    width: 48%;
+}
+body.Wireless.Camera.V3S div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen .same_inner_wire {
+    text-align: left;
+}
+div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen h4.wire_heading{
+    font-size: 14px;
+    line-height: 22px;
+}
+body.Wireless.Camera.V3S div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right {
+    margin-bottom: 15px;
+
+}
+body.Wireless.Camera.V3S div#shopify-section-wireless-generation-sec .left-wire_gen h2 {
+    padding-top: 0;
+}
+}
+@media only screen and (max-width: 481px){
+div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen .same_inner_wire img {
+    padding: 8px;
+    width: 30px;
+    min-width: 36px;
+    height: 30px;
+    min-height: 36px;
+}
+div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .inner_gen_right .sem_wire_gen h4.wire_heading {
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 12px;
+}
+body.Wireless.Camera.V3S div#shopify-section-wireless-generation-sec .left-wire_gen .product-single__description.rte div {
+    font-size: 14px;
+}
+body.Wireless.Camera.V3S div#shopify-section-wireless-generation-sec div#wirless-gen-v3s .left-wire_gen h2 {
+    font-size: 24px;
+}
+}

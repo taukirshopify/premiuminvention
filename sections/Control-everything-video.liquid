@@ -1,0 +1,46 @@
+<div id="shopify-section-control-every">
+  <div class="page-width">
+    <h2 class="about-heading">
+       {{ section.settings.about_heading }}
+          </h2>
+    <div class="control-every-video">
+        
+      <video class="video-js" width="100%" loop autoplay preload="none" muted playsinline
+      
+         <source src="{{ section.settings.video_link1 }}" type="video/mp4">
+      
+      </video>
+      
+      </div>
+  </div>
+ </div>
+{% schema %}
+   {
+    "name": "Control everything video",
+    "settings": [
+   {
+    "type": "text",
+    "id":  "about_heading",
+    "label": "heading"
+    },
+   {
+      "type":"text",
+      "id":"video_link1",
+      "label":"Video-link"
+    }
+
+],
+"blocks": [
+    
+  ],
+   "presets": [
+       {
+         "name": "Control everything video"
+       
+       }
+      ]
+      }
+{% endschema %}
+
+{{ 'Control-evrything-video.css' | asset_url | stylesheet_tag }}
+

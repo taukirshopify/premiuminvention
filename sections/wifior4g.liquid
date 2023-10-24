@@ -1,0 +1,268 @@
+ <div id="shopify-section-wifior4g">   
+ {% if section.settings.title != blank %}
+<h3 class="section-title">{{ section.settings.title }}</h3>
+   {% endif %}
+   
+<div class="widi4g"><div class="page-width">
+  
+  <div class="wifi--grid">
+  
+    <div class="wifi--side div--grid">
+      <h2>Connect with Wifi</h2>
+      <h3><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.9996 12.4997C32.3684 12.4997 39.2434 15.3184 44.36 20.4351L47.3059 17.4893C41.4038 11.5851 33.4809 8.33301 24.9996 8.33301C16.5184 8.33509 8.59544 11.5851 2.69336 17.4893L5.63919 20.4351C10.7559 15.3184 17.6309 12.4997 24.9996 12.4997ZM36.8142 29.8059C30.41 23.4018 19.5892 23.4018 13.185 29.8059L16.1309 32.7518C20.9371 27.9455 29.0621 27.9455 33.8684 32.7518L36.8142 29.8059Z" fill="#086FB5"/>
+<path d="M42.5779 23.5268C33.0529 13.9976 16.9508 13.9976 7.42578 23.5268L10.3716 26.4726C18.3029 18.5413 31.7008 18.5413 39.632 26.4726L42.5779 23.5268Z" fill="#086FB5"/>
+<path d="M24.9987 41.6663C27.2999 41.6663 29.1654 39.8009 29.1654 37.4997C29.1654 35.1985 27.2999 33.333 24.9987 33.333C22.6975 33.333 20.832 35.1985 20.832 37.4997C20.832 39.8009 22.6975 41.6663 24.9987 41.6663Z" fill="#086FB5"/>
+</svg>
+Connect With WiFi</h3>
+      <div class="internal---con"><ul>
+        <li><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.60833 31.8332L0.166662 31.8332L0.16666 17.5832L3.33333 17.5832L7.60833 31.8332ZM28.6667 11.2498L19.1667 11.2498L19.1667 4.9165C19.1667 2.29292 17.0402 0.166501 14.4167 0.166501L12.8333 0.166502L12.8333 6.49984L8.24166 12.2394C7.11433 13.6486 6.49999 15.3998 6.49999 17.2032L6.49999 19.1665L9.825 30.2498L23.0252 30.2498C25.9322 30.2498 28.464 28.2707 29.1686 25.4523L31.7367 15.1844C32.2355 13.1862 30.725 11.2498 28.6667 11.2498Z" fill="#086FB5"/>
+</svg>
+<span class="boldsec">Pros: </span>No additional monthly costs</li>
+        <li><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.3917 0.166826L31.8333 0.166826L31.8333 14.4168L28.6667 14.4168L24.3917 0.166826ZM3.33334 20.7502L12.8333 20.7502L12.8333 27.0835C12.8333 29.7071 14.9598 31.8335 17.5833 31.8335L19.1667 31.8335L19.1667 25.5002L23.7583 19.7606C24.8857 18.3514 25.5 16.6002 25.5 14.7968L25.5 12.8335L22.175 1.75016L8.97476 1.75016C6.06776 1.75016 3.53601 3.72933 2.83143 6.54766L0.263261 16.8156C-0.235488 18.8137 1.27501 20.7502 3.33334 20.7502Z" fill="#086FB5"/>
+</svg>
+          <span class="boldsec">Cons:</span> Cameras must be set within wifi range</li>
+      </ul>
+    <div class="last--pargraph">
+   
+          <span>
+            {% for block in section.blocks %}
+              {%- case block.type -%}
+          {%- when 'text' -%}
+
+{% if request.host contains 'ca.' %}
+  
+
+{{ block.settings.ca }}
+
+
+  {% elsif  request.host contains 'au.'%}
+ 
+     {{ block.settings.au }}            
+
+
+   {% elsif  request.host contains 'eu.'%}
+  
+{{ block.settings.eu }}
+
+
+              {% elsif  request.host contains 'nz.'%}
+  
+{{ block.settings.nz }}
+
+
+
+  {% elsif  request.host contains 'sa.'%}
+  
+{{ block.settings.sa }}
+  {% elsif  request.host contains 'uk.'%}
+  
+{{ block.settings.uk }}
+
+   {% else %}
+  
+
+{{ block.settings.usa }}
+                 
+   {%endif%}
+   
+{% endcase %}
+        
+             {% endfor %}
+          </span></div>
+      </div>
+    
+    </div>
+    
+  <div class="g4g--side div--grid">
+    <h2>Connect with 4G</h2>
+      <h3><svg width="29" height="40" viewBox="0 0 29 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.857 24.2857C22.857 23.1491 22.4055 22.059 21.6017 21.2553C20.798 20.4515 19.7079 20 18.5713 20H9.99986C8.86322 20 7.77313 20.4515 6.9694 21.2553C6.16567 22.059 5.71415 23.1491 5.71415 24.2857V30C5.71415 31.1366 6.16567 32.2267 6.9694 33.0305C7.77313 33.8342 8.86322 34.2857 9.99986 34.2857H18.5713C19.7079 34.2857 20.798 33.8342 21.6017 33.0305C22.4055 32.2267 22.857 31.1366 22.857 30V24.2857ZM18.5713 22.8571C18.9502 22.8571 19.3135 23.0077 19.5814 23.2756C19.8493 23.5435 19.9999 23.9068 19.9999 24.2857V30C19.9999 30.3789 19.8493 30.7422 19.5814 31.0102C19.3135 31.2781 18.9502 31.4286 18.5713 31.4286H14.2856V22.8571H18.5713ZM11.4284 22.8571V31.4286H9.99986C9.62098 31.4286 9.25762 31.2781 8.98971 31.0102C8.7218 30.7422 8.57129 30.3789 8.57129 30V24.2857C8.57129 23.9068 8.7218 23.5435 8.98971 23.2756C9.25762 23.0077 9.62098 22.8571 9.99986 22.8571H11.4284ZM28.5713 7.14286C28.5713 5.24845 27.8187 3.43164 26.4792 2.09209C25.1396 0.752549 23.3228 0 21.4284 0H12.3656C10.472 0.000404411 8.65612 0.752664 7.317 2.09143L2.09129 7.31714C0.752525 8.65626 0.000265121 10.4722 -0.000141144 12.3657V32.8571C-0.000141144 34.7515 0.752409 36.5684 2.09196 37.9079C3.4315 39.2475 5.24831 40 7.14272 40H21.4284C23.3228 40 25.1396 39.2475 26.4792 37.9079C27.8187 36.5684 28.5713 34.7515 28.5713 32.8571V7.14286ZM21.4284 2.85714C22.5651 2.85714 23.6552 3.30867 24.4589 4.1124C25.2626 4.91613 25.7141 6.00622 25.7141 7.14286V32.8571C25.7141 33.9938 25.2626 35.0839 24.4589 35.8876C23.6552 36.6913 22.5651 37.1429 21.4284 37.1429H7.14272C6.00607 37.1429 4.91599 36.6913 4.11226 35.8876C3.30853 35.0839 2.857 33.9938 2.857 32.8571V12.3657C2.858 11.2295 3.31019 10.1401 4.11415 9.33714L9.33415 4.11143C9.73231 3.71352 10.205 3.39795 10.7251 3.18274C11.2452 2.96753 11.8027 2.85689 12.3656 2.85714H21.4284Z" fill="#086FB5"/>
+</svg>
+Connect With 4G Sim Card</h3>
+    <div class="internal---con">  <ul>
+        <li><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.60833 31.8332L0.166662 31.8332L0.16666 17.5832L3.33333 17.5832L7.60833 31.8332ZM28.6667 11.2498L19.1667 11.2498L19.1667 4.9165C19.1667 2.29292 17.0402 0.166501 14.4167 0.166501L12.8333 0.166502L12.8333 6.49984L8.24166 12.2394C7.11433 13.6486 6.49999 15.3998 6.49999 17.2032L6.49999 19.1665L9.825 30.2498L23.0252 30.2498C25.9322 30.2498 28.464 28.2707 29.1686 25.4523L31.7367 15.1844C32.2355 13.1862 30.725 11.2498 28.6667 11.2498Z" fill="#086FB5"/>
+</svg>
+          <span class="boldsec">Pros:</span> Set up camera in more locations, as long as there's network coverage</li>
+        <li><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.3917 0.166826L31.8333 0.166826L31.8333 14.4168L28.6667 14.4168L24.3917 0.166826ZM3.33334 20.7502L12.8333 20.7502L12.8333 27.0835C12.8333 29.7071 14.9598 31.8335 17.5833 31.8335L19.1667 31.8335L19.1667 25.5002L23.7583 19.7606C24.8857 18.3514 25.5 16.6002 25.5 14.7968L25.5 12.8335L22.175 1.75016L8.97476 1.75016C6.06776 1.75016 3.53601 3.72933 2.83143 6.54766L0.263261 16.8156C-0.235488 18.8137 1.27501 20.7502 3.33334 20.7502Z" fill="#086FB5"/>
+</svg>
+          <span class="boldsec"> Cons: </span>Monthly data costs
+        
+        
+        
+        </li>
+      </ul>
+    
+    <div class="last--pargraph">
+   
+          <span class="currencytext_usa">
+          
+            {% for block in section.blocks %}
+              {%- case block.type -%}
+          {%- when 'richtext' -%}
+
+{% if request.host contains 'ca.' %}
+  
+
+{{ block.settings.ca }}
+
+
+  {% elsif  request.host contains 'au.'%}
+ 
+     {{ block.settings.au }}            
+
+
+   {% elsif  request.host contains 'eu.'%}
+  
+{{ block.settings.eu }}
+
+
+              {% elsif  request.host contains 'nz.'%}
+  
+{{ block.settings.nz }}
+
+
+
+  {% elsif  request.host contains 'sa.'%}
+  
+{{ block.settings.sa }}
+  {% elsif  request.host contains 'uk.'%}
+  
+{{ block.settings.uk }}
+
+   {% else %}
+  
+
+{{ block.settings.usa }}
+                 
+   {%endif%}
+   
+{% endcase %}
+        
+             {% endfor %}
+             </span>
+     <span class="currencytext_all" style="display: none;">
+            <span class="boldsec"> Note:</span> You're fully responsible for purchasing your own SIM card & data plan.
+          </span>
+      </div>
+    </div>
+    
+    </div>
+  
+  
+  </div>
+</div>
+
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "wifior4g",
+     "class":"index-section",
+    "max_blocks":2,
+    "settings": [
+      {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      
+    ],
+"blocks": [
+{
+      "type": "text",
+      "name": "Connect With WiFi",
+       "limit":1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "usa",
+          "label": "USA text"
+        },{
+          "type": "textarea",
+          "id": "ca",
+          "label": "CA text"
+        },
+        {
+          "type": "textarea",
+          "id": "au",
+          "label": "AU text"
+        },{
+          "type": "textarea",
+          "id": "eu",
+          "label": "EU text"
+        },{
+          "type": "textarea",
+          "id": "nz",
+          "label": "NZ text"
+        },{
+          "type": "textarea",
+          "id": "sa",
+          "label": "SA text"
+        },{
+          "type": "textarea",
+          "id": "uk",
+          "label": "UK text"
+        }
+]
+},{
+      "type": "richtext",
+      "name": "Connect With 4G Sim Card",
+  "limit":1,
+    "settings": [
+        {
+          "type": "textarea",
+          "id": "usa",
+          "label": "USA text"
+        },{
+          "type": "textarea",
+          "id": "ca",
+          "label": "CA text"
+        },
+        {
+          "type": "textarea",
+          "id": "au",
+          "label": "AU text"
+        },{
+          "type": "textarea",
+          "id": "eu",
+          "label": "EU text"
+        },{
+          "type": "textarea",
+          "id": "nz",
+          "label": "NZ text"
+        },{
+          "type": "textarea",
+          "id": "sa",
+          "label": "SA text"
+        },{
+          "type": "textarea",
+          "id": "uk",
+          "label": "UK text"
+        }
+]
+}
+],
+  "presets": [
+    {
+      "name": "wifior4g"
+    }
+  ]
+  }
+ 
+{% endschema %}
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+ {{ 'wifior4g.css' | asset_url | stylesheet_tag }}
+

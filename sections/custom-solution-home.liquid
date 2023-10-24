@@ -1,0 +1,80 @@
+<div class="custom-solution {{ section.settings.extra-custom-solution }}">
+   <div class="page-width">
+      <div class="solution_inner desktop_version">
+         <div class="solution-left">
+           
+   <h2 class="top_header">
+      {{ section.settings.heading_title_2 | escape }}
+    </h2>
+      <p class="sub_head">
+       {{ section.settings.sub_info }}
+        
+     <span class="blueclr" style="color:{{section.settings.clr}}">
+  
+  </p> 
+           
+          
+          
+           {%- if section.settings.button_label != blank -%}
+              <div class="solution_btn">
+                <a href="{{ section.settings.link }}" class="button_solution button">{{ section.settings.button_label  }}</a>
+              </div>
+            {%- endif -%}
+          
+         </div>
+         <div class="solution_right">
+            <img src="{{section.settings.image | img_url : 'master' }}">  
+         </div>
+      </div>
+   </div>
+</div>
+{% schema %}
+   {
+    "name": "custom solution home",
+    "settings": [
+     {
+          "type": "text",
+          "id": "extra-custom-solution",
+          "label": "choose your class"
+        },
+     {
+      "type": "text",
+      "id": "heading_title_2",
+      "label": "Top Heading"
+    },
+   {
+      "type": "color",
+      "id": "clr",
+      "label": "Sub Info"
+    },
+   {
+      "type": "text",
+      "id": "sub_info",
+      "label": "Sub Info"
+    },
+   {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "button text"
+        },
+             { 
+          "id": "link",
+          "type": "url",
+          "label": "Button link"
+       },
+       {
+          "type": "image_picker",
+          "id": "image",
+          "label":"Image"
+        }
+],
+   "presets": [
+       {
+         "name": "custom solution home"
+       
+       }
+      ]
+      }
+{% endschema %}
+{{ 'custom-solution-home.css' | asset_url | stylesheet_tag }}

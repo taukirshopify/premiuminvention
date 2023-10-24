@@ -1,0 +1,212 @@
+.visitor--taglines {
+/*     background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/q3-banner_1.png?v=1654196743); */
+/*     background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/q3-banner_2_new.png?v=1656360050); */
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/q3-banner-Recovered_1.png?v=1656959410);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.visitor--taglines .image-with-text {
+    padding-top:0;
+    padding-bottom:0;
+    position: relative;
+    z-index: 22
+}
+.visitor--taglines .image-with-text__media-item {
+    visibility: hidden;
+}
+.visitor--taglines .image-with-text__content {
+    background: transparent;
+}
+.visitor--taglines:after {
+    content: "";
+    position: absolute;
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/wirless-security.png?v=1657182802);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: 64%;
+}
+.visitor--taglines p{
+    font-family: Work Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.visitor--taglines .rte p em,
+.visitor--guides.home_new_extra_video .rte p em{
+    font-style: normal;
+    color: #000000;
+    position: relative;
+    padding-left: 27px;
+    line-height: 28px;
+}
+.visitor--taglines .rte p em:before,
+.visitor--guides.home_new_extra_video .rte p em:before{
+/*     background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/x_icon_ed24c892-326b-4b06-94b4-599dd5a6d8e4.png?v=1655923560); */
+    background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/check_1_ebf9aec2-7773-4195-9cc3-9592865f595e.png?v=1656361339);
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: -0px;
+    top: 0px;
+    position: absolute;
+    z-index: 22;
+    background-repeat: no-repeat;
+}
+.visitor--taglines .rte p strong {
+  color: #086FB5;
+  font-weight: 600;
+}
+.visitor--guides.home_new_extra_video .rte p strong {
+  color: #086FB5;
+  font-weight: 600;
+}
+.visitor--video h3{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 4px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+.visitor--video  h2{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: 10px;
+}
+.visitor--video .visitor--taglines .image-with-text__content  {
+    padding-left: 0;
+}
+.visitor--video .image-with-text__text.rte.body {
+    margin-top: 12px;
+}
+.visitor--video    a.button{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    background: #086FB5;
+    opacity: 1;
+    cursor: pointer;
+    width: 230px;
+    height: 50px;
+    border-radius: 3px;
+}
+.visitor--video .image-with-text__content .image-with-text__text+.button {
+    margin-top: 1rem;
+}
+.visitor--video .visitor--guides.home_new_extra_video .image-with-text__content .image-with-text__text+.button {
+    margin-top: 2rem;
+}
+.visitor--video p{
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #000;
+    font-size: 16px;
+}
+.visitor--video  a.button:before, 
+.visitor--video  a.button:after
+{
+    border: none;
+    box-shadow: none;
+    display: none;
+}
+.visitor--video  {
+    overflow: hidden;
+}
+.visitor--guides{
+   padding-top: 115px;
+}
+.visitor--video .visitor--guides.home_new_extra_video {
+    padding-top: 60px;
+    padding-bottom: 0px;
+}
+/*
+.visitor--video  .visitor--guides a.button {
+    background: none;
+    color: #086FB5;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    justify-content: left;
+    padding: 0;
+    opacity: 1;
+    cursor: pointer ;
+}*/
+.visitor--guides .image-with-text {
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+.visitor--video .image-with-text__text.rte.body p:nth-child(1) {
+    margin-bottom: 0;
+}
+.visitor--video p:nth-child(2) {
+    margin-top: -18px;
+}
+.collection-visitor--guides .image-with-text {
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+.visitor--video .visitor--guides .image-with-text .grid,
+.collection-visitor--guides .image-with-text .grid {
+    align-items: center;
+}
+.visitor--video .visitor--guides .image-with-text .grid h3,
+.collection-visitor--guides .image-with-text .grid h3{
+    margin-top: 0;
+}
+@media only screen and (min-width: 1400px){
+.visitor--taglines:after{
+  background-size: 62%;
+  left: -60px;
+}
+}
+@media only screen and (min-width: 1450px){
+.visitor--taglines:after{
+  background-size: 60%;
+}
+}
+@media only screen and (min-width: 1600px){
+.visitor--taglines:after{
+  background-size: 55%;
+  left: -30px;
+}
+}
+@media only screen and (max-width: 1399px){
+.visitor--video h2 {
+    font-size: 35px;
+    line-height: 40px;
+}
+.visitor--taglines:after{
+  background-size: 70%;
+  left: -120px;
+}
+}
+@media only screen and (max-width: 1303px){
+.visitor--taglines:after{
+  background-size: 76%;
+  left: -190px;
+}
+}
+@media only screen and (max-width: 1199px){
+.visitor--taglines:after{
+  background-size: 79%;
+  left: -120px;
+}
+}

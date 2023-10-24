@@ -1,0 +1,53 @@
+<div class="faq-main-section padd-80">
+  <div class="page-width">
+    <div class="faq-section">
+      <div class="faq-main-item shortcodes-section">
+        <div class="al-toggle-frame-set">
+          {% for block in section.blocks %}
+          <div class="al-toggle-faq {% if forloop.first == true %}bg-none{% endif %}">
+            <h5 class="al-toggle-accordion {% if forloop.first == true %}active{% endif %}"><a href="#">{{ block.settings.title }}</a>
+            <span class="faq-icon"></span>
+            </h5>
+            <div class="al-toggle-content" {% if forloop.first == true %}style="display:block;"{% endif %}>
+              <div class="al-block">{{ block.settings.description }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Faq Section",
+  "max_blocks": 50,
+  "settings": [],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Question",
+          "label": "Question"
+        },
+        {
+          "type": "html",
+          "id": "description",
+          "default": "Answer goes here...",
+          "label": "Text",
+          "info": "Add Text Beside <p> Tag"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name": "Faq Section"
+    }
+  ]
+}
+{% endschema %}

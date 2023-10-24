@@ -1,0 +1,242 @@
+<div class="main-outdoors-section padd-80">
+  <div class="page-width">
+    {% for block in section.blocks %}
+      {% if block.type == "leftimage" %}
+        <div class="outdoors-col ctm-flex padd-b-80">
+          <div class="col-50">
+            {% if block.settings.deskimg != blank %}
+              <img src="{{ block.settings.deskimg | img_url: "master" }}" alt="{{ block.settings.deskimg.alt }}" />
+            {% endif %}
+          </div>
+          <div class="col-50">
+            <div class="main-heading">
+              <h2>{{ block.settings.bannertitle }}</h2>
+              <p>{{ block.settings.subtitle }}</p>
+            </div>
+            <div class="outdoors-section-info">
+              <div class="col-50 ctm-flex">
+                {{ block.settings.svgicon1 }}
+                <h5>{{ block.settings.title1 }}</h5>
+              </div>
+              <div class="col-50 ctm-flex">
+                {{ block.settings.svgicon2 }}
+                <h5>{{ block.settings.title2 }}</h5>
+              </div>
+              <div class="col-50 ctm-flex">
+                {{ block.settings.svgicon3 }}
+                <h5>{{ block.settings.title3 }}</h5>
+              </div>
+              <div class="col-50 ctm-flex">
+                {{ block.settings.svgicon4 }}
+                <h5>{{ block.settings.title4 }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if block.type == "rightimage" %}
+        <div class="outdoors-col ctm-flex ourdoor-rightimage">
+          <div class="col-50">
+            <div class="main-heading">
+              <h2>{{ block.settings.bannertitle }}</h2>
+              <p>{{ block.settings.subtitle }}</p>
+            </div>
+            <div class="outdoors-section-info">
+              <div class="col-50 ctm-flex">
+                {{ block.settings.svgicon1 }}
+                <h5>{{ block.settings.title1 }}</h5>
+              </div>
+              <div class="col-50 ctm-flex">
+                {{ block.settings.svgicon2 }}
+                <h5>{{ block.settings.title2 }}</h5>
+              </div>
+            </div>
+            <div class="main-outdoors-review">
+              <div class="outdoors-review-title ctm-flex">
+                <h5 class="ctm-flex">{{ block.settings.reviewname }}
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 8.5C16 12.9183 12.4183 16.5 8 16.5C3.58172 16.5 0 12.9183 0 8.5C0 4.08172 3.58172 0.5 8 0.5C12.4183 0.5 16 4.08172 16 8.5Z" fill="#086FB5"/>
+                      <g clip-path="url(#clip0_1146_874)">
+                        <path d="M6.22883 12.1095C5.94497 12.1096 5.67274 11.9968 5.47219 11.7959L3.18461 9.50915C2.93846 9.26293 2.93846 8.8638 3.18461 8.61758C3.43083 8.37143 3.82996 8.37143 4.07618 8.61758L6.22883 10.7702L11.9238 5.07523C12.17 4.82909 12.5692 4.82909 12.8154 5.07523C13.0615 5.32146 13.0615 5.72059 12.8154 5.96681L6.98547 11.7959C6.78492 11.9968 6.51269 12.1096 6.22883 12.1095Z" fill="white"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1146_874">
+                          <rect width="10" height="10" fill="white" transform="translate(3 3.5)"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                </h5>
+                <svg width="80" height="17" viewBox="0 0 80 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.53489 1.6789C7.70138 1.2569 8.29862 1.2569 8.46511 1.67889L9.92873 5.38866C9.99997 5.56924 10.1693 5.69226 10.363 5.70421L14.3435 5.94982C14.7963 5.97775 14.9809 6.54576 14.631 6.83451L11.5551 9.37287C11.4053 9.49643 11.3407 9.69548 11.3892 9.88345L12.3856 13.745C12.499 14.1843 12.0158 14.5353 11.6331 14.2918L8.26842 12.1508C8.10465 12.0466 7.89535 12.0466 7.73158 12.1508L4.36694 14.2918C3.9842 14.5353 3.50102 14.1843 3.61437 13.745L4.61083 9.88345C4.65933 9.69548 4.59466 9.49643 4.44493 9.37287L1.36902 6.83451C1.01912 6.54576 1.20368 5.97775 1.65647 5.94982L5.63695 5.70421C5.83071 5.69226 6.00003 5.56924 6.07127 5.38866L7.53489 1.6789Z" fill="#FEC84B"/>
+                  <path d="M23.5349 1.6789C23.7014 1.2569 24.2986 1.2569 24.4651 1.67889L25.9287 5.38866C26 5.56924 26.1693 5.69226 26.363 5.70421L30.3435 5.94982C30.7963 5.97775 30.9809 6.54576 30.631 6.83451L27.5551 9.37287C27.4053 9.49643 27.3407 9.69548 27.3892 9.88345L28.3856 13.745C28.499 14.1843 28.0158 14.5353 27.6331 14.2918L24.2684 12.1508C24.1046 12.0466 23.8954 12.0466 23.7316 12.1508L20.3669 14.2918C19.9842 14.5353 19.501 14.1843 19.6144 13.745L20.6108 9.88345C20.6593 9.69548 20.5947 9.49643 20.4449 9.37287L17.369 6.83451C17.0191 6.54576 17.2037 5.97775 17.6565 5.94982L21.637 5.70421C21.8307 5.69226 22 5.56924 22.0713 5.38866L23.5349 1.6789Z" fill="#FEC84B"/>
+                  <path d="M39.5349 1.6789C39.7014 1.2569 40.2986 1.2569 40.4651 1.67889L41.9287 5.38866C42 5.56924 42.1693 5.69226 42.363 5.70421L46.3435 5.94982C46.7963 5.97775 46.9809 6.54576 46.631 6.83451L43.5551 9.37287C43.4053 9.49643 43.3407 9.69548 43.3892 9.88345L44.3856 13.745C44.499 14.1843 44.0158 14.5353 43.6331 14.2918L40.2684 12.1508C40.1046 12.0466 39.8954 12.0466 39.7316 12.1508L36.3669 14.2918C35.9842 14.5353 35.501 14.1843 35.6144 13.745L36.6108 9.88345C36.6593 9.69548 36.5947 9.49643 36.4449 9.37287L33.369 6.83451C33.0191 6.54576 33.2037 5.97775 33.6565 5.94982L37.637 5.70421C37.8307 5.69226 38 5.56924 38.0713 5.38866L39.5349 1.6789Z" fill="#FEC84B"/>
+                  <path d="M55.5349 1.6789C55.7014 1.2569 56.2986 1.2569 56.4651 1.67889L57.9287 5.38866C58 5.56924 58.1693 5.69226 58.363 5.70421L62.3435 5.94982C62.7963 5.97775 62.9809 6.54576 62.631 6.83451L59.5551 9.37287C59.4053 9.49643 59.3407 9.69548 59.3892 9.88345L60.3856 13.745C60.499 14.1843 60.0158 14.5353 59.6331 14.2918L56.2684 12.1508C56.1046 12.0466 55.8954 12.0466 55.7316 12.1508L52.3669 14.2918C51.9842 14.5353 51.501 14.1843 51.6144 13.745L52.6108 9.88345C52.6593 9.69548 52.5947 9.49643 52.4449 9.37287L49.369 6.83451C49.0191 6.54576 49.2037 5.97775 49.6565 5.94982L53.637 5.70421C53.8307 5.69226 54 5.56924 54.0713 5.38866L55.5349 1.6789Z" fill="#FEC84B"/>
+                  <path d="M71.5349 1.6789C71.7014 1.2569 72.2986 1.2569 72.4651 1.67889L73.9287 5.38866C74 5.56924 74.1693 5.69226 74.363 5.70421L78.3435 5.94982C78.7963 5.97775 78.9809 6.54576 78.631 6.83451L75.5551 9.37287C75.4053 9.49643 75.3407 9.69548 75.3892 9.88345L76.3856 13.745C76.499 14.1843 76.0158 14.5353 75.6331 14.2918L72.2684 12.1508C72.1046 12.0466 71.8954 12.0466 71.7316 12.1508L68.3669 14.2918C67.9842 14.5353 67.501 14.1843 67.6144 13.745L68.6108 9.88345C68.6593 9.69548 68.5947 9.49643 68.4449 9.37287L65.369 6.83451C65.0191 6.54576 65.2037 5.97775 65.6565 5.94982L69.637 5.70421C69.8307 5.69226 70 5.56924 70.0713 5.38866L71.5349 1.6789Z" fill="#FEC84B"/>
+                </svg>
+              </div>
+            <p>{{ block.settings.reviewdesc }}</p>
+            </div>
+          </div>
+          <div class="col-50">
+            {% if block.settings.deskimg != blank %}
+              <img src="{{ block.settings.deskimg | img_url: "master" }}" alt="{{ block.settings.deskimg.alt }}" />
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Outdoors Section",
+    "settings": [],
+    "blocks":[
+      {
+        "type": "leftimage",
+        "name": "leftservice",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "deskimg",
+            "label": "Select Desktop Image"
+          },
+          {
+            "type": "text",
+            "id": "bannertitle",
+            "label": "Add Main Title"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Add Description"
+          },
+          {
+            "type": "header",
+            "content": "1 Icon with Text"
+          },
+          {
+            "type": "textarea",
+            "id": "svgicon1",
+            "label": "Add SVG Content"
+          },
+          {
+            "type": "text",
+            "id": "title1",
+            "label": "Add Title Here"
+          },
+          {
+            "type": "header",
+            "content": "2 Icon with Text"
+          },
+          {
+            "type": "textarea",
+            "id": "svgicon2",
+            "label": "Add SVG Content"
+          },
+          {
+            "type": "text",
+            "id": "title2",
+            "label": "Add Title Here"
+          },
+          {
+            "type": "header",
+            "content": "3 Icon with Text"
+          },
+          {
+            "type": "textarea",
+            "id": "svgicon3",
+            "label": "Add SVG Content"
+          },
+          {
+            "type": "text",
+            "id": "title3",
+            "label": "Add Title Here"
+          },
+          {
+            "type": "header",
+            "content": "4 Icon with Text"
+          },
+          {
+            "type": "textarea",
+            "id": "svgicon4",
+            "label": "Add SVG Content"
+          },
+          {
+            "type": "text",
+            "id": "title4",
+            "label": "Add Title Here"
+          }
+        ]
+      },
+      {
+        "type": "rightimage",
+        "name": "rightservice",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "deskimg",
+            "label": "Select Desktop Image"
+          },
+          {
+            "type": "text",
+            "id": "bannertitle",
+            "label": "Add Main Title"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Add Description"
+          },
+          {
+            "type": "header",
+            "content": "1 Icon with Text"
+          },
+          {
+            "type": "textarea",
+            "id": "svgicon1",
+            "label": "Add SVG Content"
+          },
+          {
+            "type": "text",
+            "id": "title1",
+            "label": "Add Title Here"
+          },
+          {
+            "type": "header",
+            "content": "2 Icon with Text"
+          },
+          {
+            "type": "textarea",
+            "id": "svgicon2",
+            "label": "Add SVG Content"
+          },
+          {
+            "type": "text",
+            "id": "title2",
+            "label": "Add Title Here"
+          },
+          {
+            "type": "header",
+            "content": "Review Text"
+          },
+          {
+            "type": "text",
+            "id": "reviewname",
+            "label": "Add Review Name"
+          },
+          {
+            "type": "text",
+            "id": "reviewdesc",
+            "label": "Add Review Description"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Outdoors Section"    
+      }
+    ]
+  }
+{% endschema %}

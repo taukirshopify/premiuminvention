@@ -1,0 +1,116 @@
+<div class="review_new_main">
+   <div class="page-width">
+     
+     <div class="section-header text-center">
+
+        <h2 class="top_header">
+      {{ section.settings.heading_title_2 | escape }}
+    </h2>
+    
+      </div>
+     <div class="review_new_inner">
+
+
+       {% for block in section.blocks %}
+       <div class="review_sec1 review_new_same">
+         <div class="review_text_top">
+           <img class="review__image" src="{{block.settings.image | img_url : 'master' }}">
+           <p>{{block.settings.cta_label_top  }}</p>                
+           <h3 class="inner_header">{{ block.settings.heading_titlle_top  }}  </h3>
+         </div>
+         <div class="review_text_new">
+
+           <p>{{block.settings.cta_label  }}</p>
+         </div>
+         <div class="review_bottom_new">
+           <div class="img_left">
+             <h5>{{block.settings.prehead2}}</h5>  
+           </div>
+           <div class="right_text">
+             <h5>{{block.settings.prehead}}</h5>
+             <p>{{block.settings.cta_label2  }}</p>
+           </div>             
+         </div>
+       </div>
+          {% endfor %}
+         
+         
+          
+              
+         
+      </div>
+   </div>
+</div>
+{% schema %}
+   {
+    "name": "home customer review",
+    "settings": [
+   {
+      "type": "text",
+      "id": "heading_title_2",
+      "label": "Top Heading"
+    }
+   ],
+   "blocks": [
+    {
+      "type": "text",
+      "name": {
+        "en": "text"
+      }, 
+    "settings": [
+           {
+          "type": "html",
+          "id": "cta_label_top",
+          "label": "Text"
+        },
+         {
+          "type": "text",
+          "id": "heading_titlle_top",
+          "label": "Heading"
+        },
+         {
+          "type": "image_picker",
+          "id": "image",
+          "label":"Image"
+        },
+        
+          {
+          "type": "html",
+          "id": "cta_label",
+          "label": "Text"
+        },
+
+            {
+          "type": "text",
+          "id": "prehead2",
+          "default": "Name",
+          "label": "Name"
+        },
+             {
+          "type": "text",
+          "id": "prehead",
+          "default": "prehead",
+          "label": "prehead"
+        },
+     
+          {
+          "type": "html",
+          "id": "cta_label2",
+          "label": "Text"
+        }  
+        
+    
+      ]
+      
+    }
+  ],
+
+   "presets": [
+       {
+         "name": "home customer review"
+       
+       }
+      ]
+      }
+{% endschema %}
+{{ 'home-customer-review.css' | asset_url | stylesheet_tag }}

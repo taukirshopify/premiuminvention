@@ -1,0 +1,244 @@
+<div class="wirless_outer_wc-v4  py-120">
+   <div class="page-width">
+      <div class="wirless_wc-v4_inner ">
+       
+         <div class="wirless_wc-v4-left ">
+           <div class="star--rating">        
+              <a href="#looxReviews">
+                <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
+              </a>
+              <span class="statyc--rating average-rating {{ section.settings.extra-class }}">{{section.settings.staticrating}}</span>
+           </div>   
+            {% if section.settings.title != blank %}
+            <h2 class="section-header">{{section.settings.title}}</h2>
+               {% else %}
+               <h2 class="section-header">{{product.title}}</h2>            
+             {% endif %}
+            {% if section.settings.prehead != blank %}
+               <p class="fs-18 text-clr-dark3 my-3 ">
+                {{ section.settings.prehead }}
+              </p>
+           {% else %}
+              <p class="fs-18 text-clr-dark3 my-3 ">
+                {{ product.description | strip_html | truncate: 200 }}
+              </p>
+            {% endif %}            
+             
+          {% for option in product.options_with_values %}
+          <ul class="custom--variations {{option.name | downcase }}">
+           {% for value in option.values %}
+           {% if forloop.last == true %}           
+           {% endif %}
+           <li class="trgt{{forloop.index}}{% if option.selected_value == value %}  active{% endif %}" numbering="{{forloop.index}}" vlew="{{value}}"> {{ value }}</li>
+            {% endfor %}
+         </ul>
+            {% endfor %}
+           
+            {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+            {% unless product.has_only_default_variant %}
+
+			{% endunless %}
+                <select name="id" id="ProductSelect-{{ section.id }}" class="prodcut--variant--slction product-form__variants no-js">
+              {% for variant in product.variants %}
+                 {% assign amount = 0 %}
+
+           {% assign saving = variant.compare_at_price | minus: variant.price %}
+      {% assign amount = saving | at_least: amount %}
+          {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
+                {% if variant.available %}
+               {%- assign compare_at_price = variant.compare_at_price -%}
+                  <option diffrceprice="{{ saved_amount }}" class="{% if variant == product.selected_or_first_available_variant %} selected {% endif %} {% if compare_at_price != blank%} comparepro {% endif %}" nmbr="{{forloop.index}}"{% if compare_at_price != blank%} compareprice={{compare_at_price | money}} {% endif %}newprice="{{variant.price | money_with_currency}}" pprice="{{variant.price | money }}" {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                    {{ variant.title }}
+                  </option>
+                {% else %}
+                  
+                  <option diffrceprice="{{ saved_amount }}" {% if compare_at_price != blank%} compareprice={{compare_at_price | money}} {% endif %} class="{% if variant == product.selected_or_first_available_variant %} selected {% endif %} {% if compare_at_price != blank%} comparepro {% endif %} soldout" nmbr="{{forloop.index}}"  pprice="{{variant.price | money }}" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                {% endif %}
+              {%- assign compare_at_price = '' -%}
+              {% endfor %}
+            </select>
+
+         <div class="product__price_rating "> 
+         <div class="product__price custom lp ">        
+ {% assign prodsinglefg= product %}
+    {% for variantis in prodsinglefg.variants %}
+      {% if variantis == product.selected_or_first_available_variant %}
+           {% assign amount = 0 %}
+
+           {% assign saving = variantis.compare_at_price | minus: variantis.price %}
+      {% assign amount = saving | at_least: amount %}
+          {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
+           <div class="regular--price " diffrnceprice="{{ saved_amount }}" originalclr="{{variantis.price | money }}"><span class="money" >{{variantis.price | money }}</span></div>
+           <div class="sale--price gh  money"><span class="money">{{variantis.compare_at_price | money }}</span>
+      
+                         <span class="saveamount">{{ saved_amount }}</span>   
+                             
+
+          </div>
+        {% endif %}
+        {% endfor %} 
+          </div>
+       
+       <div class="{% if product.handle == 'wireless-camera-v4' %}desktop--updrage upgrad--btn show--here{% endif %}"> 
+              <button type="button" name="add" aria-label="Add to cart" class="btn  product-form__cart-submit" data-add-to-cart="">              
+                  {% assign current_variant = product.selected_or_first_available_variant %}
+                   <span data-add-to-cart-text>
+                  {% unless current_variant.available %}
+                    {{ 'products.product.sold_out' | t }}
+                  {% else %}
+                   buy now
+                  {% endunless %}
+                </span>
+             </button>
+     <a href="/products/wireless-camera-v4s" class="anchor--upgrade">{% if product.handle == 'wireless-camera-v4' %}Upgrade to S model{% else %}Learn more{% endif %}</a>
+       </div>
+           <script>
+             $('.product-form__cart-submit').click(function(e) {
+                  e.preventDefault();
+                   $('html, body').animate({
+              scrollTop: $(".product--slct-tab").offset().top
+            }, 2000);
+              return false;
+            });
+           </script>
+
+            {% endform %}
+         </div>
+
+       </div>
+        
+         <div class="wirless_wc-v4_medil" sc="{{ product.metafields.custom.desktop_top_section_image }}">
+            <img src="{{ product.metafields.custom.desktop_top_section_image }}" class="wireless_media">
+         </div>   
+         <div class="wirless_wc-v4_right"> 
+        
+            {% for block in section.blocks %}
+            <div class="metabox">
+               <div class="metabox-inner">
+              {% render 'metafield-icon', icon: block.settings.prehead_icon2 %}      
+                 <div>
+               <span class="metacon-title"> {{block.settings.pfet}} </span> 
+               <span class="metacon-cont"> {{block.settings.pfetcon}} </span> 
+                 </div>
+               </div>
+            </div>
+            {% endfor %}
+         
+         </div>
+      
+     </div>
+  </div>
+</div>
+{% schema %}
+   {
+    "name": "product tamplate wc-v4",
+    "settings": [
+     {
+    "type": "text",
+    "id": "extra-class-v3s",
+    "label": "choose your class"
+   },
+    {
+    "type":"text",
+    "id":"title",
+    "label":"title"
+    }, 
+    {
+      "type":"text",
+      "id":"prehead",
+      "label":"paragarph"
+    },
+    {
+    "type": "text",
+    "id": "extra-class",
+    "label": "choose your class"
+   },
+     {
+    "type":"text",
+    "id":"mini-title",
+    "label":"Select type"
+    },
+    {
+    "type": "text",
+    "id": "extra-class-select",
+    "label": "choose your class"
+   },
+    {
+    "type":"text",
+    "id":"staticrating",
+    "label":"Rating"
+    }
+   ],
+      "blocks": [
+    {
+      "type": "text",
+      "name": "Product Feature",
+      "settings": [
+        {
+          "id": "pfet",
+          "type": "text",
+          "label": "Product Feature title"
+        },
+         {
+          "id": "pfetcon",
+          "type": "textarea",
+          "label": "Product Feature content"
+        },
+        {
+  "type": "select",
+  "id": "prehead_icon2",
+  "label": "Select Icon",
+  "options": [
+    {
+      "value": "none",
+      "label": "None"
+    },
+    {
+      "value": "military",
+      "label": "Military-grade Encryption"
+    },
+    {
+      "value": "unlimited",
+      "label": "Unlimited Access"
+    },
+    {
+      "value": "wifi",
+      "label": "Connect With WiFi"
+    },
+    {
+      "value": "gsim",
+      "label": "Connect With 4G Sim Card"
+    }
+  ],
+  "default": "none"
+}
+       
+      ]
+    }
+      ],
+   "presets": [
+       {
+         "name": "product tamplate wc-v4"
+       
+       }
+      ]
+      }
+{% endschema %}
+
+{{ 'product-template-wc-v4.css' | asset_url | stylesheet_tag }}
+
+<style>
+span.metacon-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #182127;
+    display: block;
+}
+  span.metacon-cont {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4F5960;
+}
+</style>

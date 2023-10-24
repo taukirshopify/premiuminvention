@@ -1,0 +1,247 @@
+.guide-video-V3-4G ol.guidev3-4g_bottom li span,
+div#guide-tab3 ol.guidev3-4g_bottom li span{
+    color: #000;
+}
+.guide-tab ul#tabs-nav-guide li:nth-child(1), .guide-tab ul#tabs-nav-guide li:nth-child(4) {
+    visibility: hidden;
+}
+.guide-tab {
+    display: inline-block;
+    width: 100%;
+    padding-top: 30px;
+}
+.guide-tab ul#tabs-nav-guide {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    gap: 50px;
+}
+.guide-tab ul#tabs-nav-guide li {
+    width: 25%;
+    list-style: none;
+    display: flex;
+    background: #F1F5F8;
+    position: relative;
+    border-radius: 5px;
+    border-top: 8px solid #F1F5F8;
+    padding: 0 0 50px;
+}
+.guide-tab ul#tabs-nav-guide li.active, .guide-tab ul#tabs-nav-guide li:hover {
+    background: white;
+    box-shadow: 0px 0px 54px 0px rgb(0 0 0 / 10%);
+    border-top: 8px solid #086FB5;
+}
+.guide-tab ul#tabs-nav-guide li a{
+  padding: 10px 20px 30px 20px;
+}
+.guide-tab ul#tabs-nav-guide li h3 {
+    width: fit-content;
+    float: left;
+    margin-right: 13px;
+    font-family: Work Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: -1px;
+    text-align: left;
+    margin-top: 0px;
+}
+.guide-tab ul#tabs-nav-guide img.guide_wireless__image {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    height: 112px;
+    object-fit: contain;
+}
+.guide-tab ul#tabs-nav-guide li:nth-child(1) img.guide_wireless__image {
+    width: 82px;
+}
+.guide-tab ul#tabs-nav-guide li:nth-child(4) img.guide_wireless__image {
+    width: 115px;
+}
+div#tabs-content-guide {
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+div#tabs-content-guide .guide_text h5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+div#tabs-content-guide .guide_text h5 {
+    display: none;
+}
+div#tabs-content-guide .guide_text h2 {
+    font-family: Work Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-top: 0px;
+}
+div#tabs-content-guide .guide-video iframe {
+    width: 100%;
+    min-height: 49.378vw;
+}
+
+.guide-tab.mobile,
+.guide-video-v2.mobile,
+.guide-video-V3-4G,
+.guide-video-Q{
+    display: none;
+}
+@media only screen and (max-width: 767px){
+  
+/* tab guide start  */ 
+
+.guide-tab.desktop {
+    display: none;
+}
+
+.guide-tab.mobile
+{
+    display: block;
+}
+.guide-tab.mobile ul#tabs-guide_mobile {
+    padding: 0;
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+}
+.guide-tab.mobile ul#tabs-guide_mobile li {
+    background: #F1F5F8;
+    padding: 20px 0 25px 30px;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.guide-tab.mobile ul#tabs-guide_mobile li h3 {
+    font-family: Work Sans;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: -1px;
+    text-align: left;
+    margin-top: 0px;
+}
+.guide-tab.mobile ul#tabs-guide_mobile li .mobile_guide_text {
+    width: 52%;
+    float: left;
+}
+.guide-tab.mobile ul#tabs-guide_mobile li img {
+    width: 129px;
+    float: right;
+}
+/* .guide-tab.mobile ul#tabs-guide_mobile li:nth-child(1) img {
+    width: 100px;
+    height: 130px;
+    object-fit: contain;
+} */
+.guide-tab.mobile ul#tabs-guide_mobile li .mobile_guide_text a.button {
+    width: 128px;
+    height: 44px;
+    background: #086fb5;
+    border: 1px solid #086FB5;
+    color: #fff;
+    min-width: auto;
+    min-height: auto;
+    font-family: Work Sans;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 25px;
+    border-radius: 3px;
+}
+.guide-video-v2.mobile .guide_text_video,
+.guide-video-V3-4G.mobile .guide_text_video,
+.guide-video-Q.mobile .guide_text_video{
+    text-align: center;
+}
+.guide-video-v2.mobile .guide_text_video h3,
+.guide-video-V3-4G.mobile .guide_text_video h3,
+.guide-video-Q.mobile .guide_text_video h3{
+    font-family: Work Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.guide-video-v2.mobile .guide_text_video h6,
+.guide-video-V3-4G.mobile .guide_text_video h6,
+.guide-video-Q.mobile .guide_text_video h6{
+    margin-top: 0;
+}
+.guide-video-v2.mobile .guide_text_video h6 a,
+.guide-video-V3-4G.mobile .guide_text_video h6 a,
+.guide-video-Q.mobile .guide_text_video h6 a{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: -1px;
+    text-align: center;
+  	text-decoration: none;
+}
+.guide-video-v2.mobile .guide-video_mobile iframe,
+.guide-video-V3-4G.mobile .guide-video_mobile iframe,
+.guide-video-Q.mobile .guide-video_mobile iframe{
+    width: 100%;
+    height: 400px;
+}
+.guide-video-v2.mobile .page-width,
+.guide-video-V3-4G.mobile .page-width,
+.guide-video-Q.mobile .page-width{
+    padding: 0;
+}
+.guide-video-v2.mobile .guide-video_mobile,
+.guide-video-V3-4G.mobile .guide-video_mobile,
+.guide-video-Q.mobile .guide-video_mobile{
+    padding: 0 20px;
+}
+.guide-video-v2.mobile .guide_text_video,
+.guide-video-V3-4G.mobile .guide_text_video,
+.guide-video-Q.mobile .guide_text_video{
+    text-align: center;
+    background: #F1F5F8;
+    padding: 2px;
+    margin-bottom: 25px;
+}
+.guide-tab.mobile ul#tabs-guide_mobile li:nth-child(3) {
+    display: none;
+}
+.guide-tab.mobile ul#tabs-guide_mobile li:nth-child(2) {
+    margin-bottom: -20px;
+}  
+}
+.guide-tab.mobile ul#tabs-guide_mobile li .mobile_guide_text a.button::before,
+.guide-tab.mobile ul#tabs-guide_mobile li .mobile_guide_text a.button::after{
+ display: none;
+}
+/* tab guide end   */
+
+@media only screen and (max-width: 480px){
+.guide-tab.mobile ul#tabs-guide_mobile {
+    width: 100%;  
+}
+.guide-tab.mobile ul#tabs-guide_mobile li h3 {
+    font-size: 24px;
+}
+.guide-tab.mobile ul#tabs-guide_mobile li .mobile_guide_text a.button {
+    width: 111px;
+    height: 34px;
+    font-size: 13px;
+}
+.guide-tab.mobile ul#tabs-guide_mobile li h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+}

@@ -1,0 +1,120 @@
+<div class="custom-v4-section">
+<div class="page-width">
+<div class="v4-section_inner v4-section_inner2 desktop_version">
+<div class="v4-section-left"> 
+<img src="{{section.settings.image | img_url : 'master' }}"> 
+
+</div>
+<div class="v4-section_right">
+<h2 class="top_header mt-0">
+{{ section.settings.heading_title | escape }}
+</h2>
+<p class="sub_head mb-60">
+{{ section.settings.sub_info }}
+</p> 
+<img src="{{section.settings.right_image | img_url : 'master' }}">
+</div>
+</div>
+<div class="v4-section_inner v4-section_inner1 desktop_version">
+<div class="v4-section_right">
+<h2 class="top_header">
+{{ section.settings.heading_title_1 | escape }}
+</h2>
+<p class="sub_head">
+{{ section.settings.sub_info_1 }}
+</p>  
+<ul class="easy-list">  
+{% for block in section.blocks %}
+  <li>
+     <span class="image_span"> <img src="{{block.settings.cta_image | img_url : 'master' }}"> </span>
+      {{ block.settings.cta_label }}  
+  </li>
+{% endfor %}
+</ul>
+<p class="sub_head2">
+{{ section.settings.sub_info_2 }}
+</p>
+</div>
+<div class="v4-section-left text-center"> 
+<img src="{{section.settings.left_image | img_url : 'master' }}"> 
+</div>
+</div>
+</div>
+</div>
+{% schema %}
+{
+"name": "custom v4 section",
+"settings": [
+{
+"type": "text",
+"id": "heading_title",
+"label": "Top Heading"
+},
+{
+"type": "text",
+"id": "sub_info",
+"label": "Sub Info"
+},
+{
+"type": "image_picker",
+"id": "image",
+"label":"Left First Image"
+},
+{
+"type": "image_picker",
+"id": "right_image",
+"label":"Right First Image"
+},
+{
+"type": "header",
+"content": "Bottom Section"
+},
+
+{
+"type": "text",
+"id": "heading_title_1",
+"label": "Top Heading"
+},
+{
+"type": "text",
+"id": "sub_info_1",
+"label": "Sub Info"
+},
+{
+"type": "text",
+"id": "sub_info_2",
+"label": "Bottom Text"
+},
+{
+"type": "image_picker",
+"id": "left_image",
+"label":"Bottom Image"
+}
+],
+"blocks": [
+{
+"type": "image",
+"name": "image",
+"settings": [
+{
+"type": "image_picker",
+"id": "cta_image",
+"label": "image"
+},
+{
+"type": "text",
+"id": "cta_label",
+"label": "Text"
+}
+]
+}
+],
+"presets": [
+{
+"name": "custom v4 section"
+
+}
+]
+}
+{% endschema %}
+{{ 'custom-v4-voice-heart.css' | asset_url | stylesheet_tag }}

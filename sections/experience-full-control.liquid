@@ -1,0 +1,93 @@
+<div class="experience-full-control-section padd-80">
+  <div class="page-width">
+    <div class="main-heading">
+      <h2>{{ section.settings.bannertitle }}</h2>
+      <div class="heading-image">
+          {% if section.settings.deskvideo != blank %}
+            <video class="video-js" width="100%" loop="" autoplay="" preload="none" muted="" playsinline="" <source="" src="{{ section.settings.deskvideo }}" type="video/mp4">
+            </video>
+          {% endif %}
+      </div>
+    </div>
+    <div class="experience-full-flex">
+      {% for block in section.blocks %}
+          <div class="experience-full-col">
+            <div class="experience-full-bg">
+              <div class="experience-full-img">
+                  {% if block.settings.mainimage != blank %}
+                    <img class="img1" src="{{ block.settings.mainimage | img_url: "master" }}" alt="{{ block.settings.mainimage.alt }}" />
+                  {% endif %}
+                  {% if block.settings.subimage != blank %}
+                    <img class="img2" src="{{ block.settings.subimage | img_url: "master" }}" alt="{{ block.settings.subimage.alt }}" />
+                  {% endif %}  
+                  {% if block.settings.subimage != blank %}
+                    <div class="experience-switch">
+                      <span>1080P</span>
+                      <label class="switch" for="checkbox_{{ forloop.index }}">
+                        <input type="checkbox" class="checkbox-input" id="checkbox_{{ forloop.index }}" />
+                        <div class="slider round"></div>
+                      </label>
+                      <span>2k HD</span>
+                    </div>
+                  {% endif %}  
+              </div>
+              <div class="experience-full-info">
+                <h4>{{ block.settings.title }}</h4>
+                {{ block.settings.desc }}
+              </div>
+            </div>
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Experience Full Control",
+    "settings": [
+        {
+          "type": "url",
+          "id": "deskvideo",
+          "label": "Select Desktop Image"
+        },
+        {
+          "type": "text",
+          "id": "bannertitle",
+          "label": "Add Main Title"
+        }
+    ],
+    "blocks":[
+      {
+        "type": "header",
+        "name": "service",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "mainimage",
+            "label": "Select Main Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "subimage",
+            "label": "Select Sub Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Add Title Here"
+          },
+          {
+            "type": "html",
+            "id": "desc",
+            "label": "Add Description"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Experience Full Control"
+      }
+    ]
+  }
+{% endschema %}
