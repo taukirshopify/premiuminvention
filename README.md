@@ -59,7 +59,8 @@ $ gulp wrap
 $ gulp distroy
 ```
 
-shopify theme dev --store quickstart-dd1e3469
+shopify theme dev --store=https://premiuminvention.myshopify.com
+shopify theme dev --store premium-invention
 
-<!--
+<!--premiuminvention.myshopify.com
 shopify theme dev --store babyphat-com -->
