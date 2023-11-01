@@ -63,7 +63,7 @@
            {% assign saving = variantis.compare_at_price | minus: variantis.price %}
       {% assign amount = saving | at_least: amount %}
           {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
-           <div class="regular--price " diffrnceprice="{{ saved_amount }}" originalclr="{{variantis.price | money }}"><span class="money" >{{variantis.price | money }}</span></div>
+           <div class="regular--price "><span class="money" >{{variantis.price | money }}</span></div>
            <div class="sale--price gh  money"><span class="money">{{variantis.compare_at_price | money }}</span>
 
 

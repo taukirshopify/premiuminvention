@@ -1,1 +1,724 @@
-{"sections":{"165212790086b13a3a":{"type":"product-template-v3","settings":{"extra-class-v3s":"wirless_extra_v3only","title":"Wireless Outdoor Camera V3","prehead":"","extra-class":"rating-v3only","mini-title":"","extra-class-select":"","staticrating":"4.9"}},"e70cc933-b43b-4da5-bfbd-3bc7a29b282a":{"type":"popup-upgrade-v3s","settings":{"product":"wireless-outdoor-camera-v3"}},"1652302738ddabc68a":{"type":"product-logo-bar","settings":{}},"1652302130e8dab211":{"type":"wireless-generation-sec","settings":{"heading_title_1":"The Latest Wireless V Generation","prehead":"A perfect upgrade from our V2.<br><br>Featuring new advanced motion detection, immense color night vision improvements, double solar panel &amp; battery life, and much more.<br><br>Enjoy peace of mind knowing that your home, family and business are protected with the best outdoor security camera on the market.","heading_title_2":"The Latest Wireless V Generation","prehead1":"A perfect upgrade from our V2.<br><br>Featuring new advanced motion detection, immense color night vision improvements, double solar panel &amp; battery life, and much more.<br><br>Enjoy peace of mind knowing that your home, family and business are protected with the best outdoor security camera on the market."}},"main":{"type":"main-page","settings":{"extra-contact":"","padding_top":0,"padding_bottom":0}},"1652889242c6010cd5":{"type":"eco--friendly-cost","blocks":{"c3e22e13-a8be-4a2b-85f8-169efe44b707":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/battriresnew1.png","cta_label":"4 powerful  <br> rechargeable batteries"}},"e3ff8d40-fcf3-4fbe-9505-bf915b47fe48":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/sw-solorpannelnew1.png","cta_label":"5W Solar panel"}}},"block_order":["c3e22e13-a8be-4a2b-85f8-169efe44b707","e3ff8d40-fcf3-4fbe-9505-bf915b47fe48"],"settings":{"image":"shopify:\/\/shop_images\/image_5.png","layout":"left","title":"Eco-Friendly & Cost-Saving","text":"<p>Say goodbye forever to messy wires searching for the nearest power outlet, constantly changing batteries and dangerous loss of coverage during power outages.<\/p>","button_label":"","button_link":"","text-below":"<p><strong>One of many similar reviews:<\/strong><br\/>Battery life never drops below 90% and we've been receiving a lot of rain\/cloudy weather within the past month. Consistent & reliable.<br\/><strong>Tim P.<\/strong><\/p>"}},"16529020177146e83b":{"type":"Designed--for--Outdoors","settings":{"extra-class-v3s":"","image":"shopify:\/\/shop_images\/premium_invention_-_image_two_1.jpg","layout":"left","title":"Designed for Outdoors","text":"<p>Equipped with the strongest and most durable IP67 weatherproof case for all-season security.<\/p><p>Super strong metal bracket with metal bolts provide ultimate protection even during hurricanes and strong winds.<\/p>","button_label":"","button_link":""}},"165237547758d19a52":{"type":"Gallery-View-From","blocks":{"29b91b40-a70d-4b4d-bc31-8c05fb2e9fb4":{"type":"image","settings":{"abv":"","image":"shopify:\/\/shop_images\/premium_invention_-_image_8_1.png","alignment":"center","link":"","cta_label":"Los Angeles, United States"}},"673597c5-df3d-45ce-b274-10831236c97a":{"type":"image","settings":{"abv":"","image":"shopify:\/\/shop_images\/premium_invention_-_image_9_-_v3_1.png","alignment":"center","link":"","cta_label":"Vancouver, Canada"}}},"block_order":["29b91b40-a70d-4b4d-bc31-8c05fb2e9fb4","673597c5-df3d-45ce-b274-10831236c97a"],"settings":{"extra-class-v4":"","heading_title":"View From Anywhere","heading_dsc":"","section_height":"medium"}},"16523098820710f417":{"type":"wifior4g","blocks":{"fb6f44bc-89b9-49fb-8531-bcce902f0dda":{"type":"text","settings":{"usa":"<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.","ca":"<b>Note:<\/b> Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.","au":"<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.","eu":"<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.","nz":"<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.","sa":"<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.","uk":"<b>Note: <\/b>Support 2..4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router."}},"0956b66f-db95-4462-829e-6ebb793f2e66":{"type":"richtext","settings":{"usa":"<b usa>Note:<\/b> FREE SIM Card included with 100MB of free data & zero activation costs. Works with Verizon, AT&T or T-Mobile.","ca":"<b ca>Note:<\/b> FREE SIM Card included with 100MB of free data & zero activation costs. Works with Bell, Telus & Rogers.","au":"<b au>Note:<\/b> FREE SIM Card included with 100MB of free data & zero activation costs. Works with Telstra & Optus.","eu":"<b>Note:<\/b> You are fully responsible for your own SIM card & data plan.","nz":"<b>Note:<\/b> You are fully responsible for your own SIM card & data plan.","sa":"<b sa>Note:<\/b> You are fully responsible for your own SIM card & data plan.","uk":"<b>Note:<\/b> FREE SIM Card included with 100MB of free data & zero activation costs. Works with Manx, Vodafone, 3 & Telefónica."}}},"block_order":["fb6f44bc-89b9-49fb-8531-bcce902f0dda","0956b66f-db95-4462-829e-6ebb793f2e66"],"settings":{"title":""}},"16529044188e8aaeec":{"type":"Key--Features","blocks":{"6128b489-ace3-4ecf-8475-eda3ae68d902":{"type":"Tab","settings":{"prodct":"wireless-outdoor-camera-v3","icon1":"shopify:\/\/shop_images\/beam.png","heading1":"Beam Lights","tabimg1":"shopify:\/\/shop_images\/premium_invention_-_features_one_-_v2_1_1.png","des1":"<p>Four powerful LED lights at night when motion is detected. Can be used to either provide light at night or scare away intruders.<\/p>","clr1":"#ffffff","icon2":"shopify:\/\/shop_images\/starlight.png","heading2":"Starlight Technology","tabimg2":"shopify:\/\/shop_images\/premium_invention_-_features_two_-_v2_1.png","des2":"<p>An improved version of the smart night vision. Our Starlight vision technology displays a clear color image, giving you a beautiful day vision at night.<\/p>","clr2":"#ffffff","icon3":"shopify:\/\/shop_images\/comm.png","heading3":"2-Way Navigation","tabimg3":"shopify:\/\/shop_images\/Hnet-image.gif","des3":"<p>Listen & Talk with Two-Way Audio communication, directly from your phone.<\/p>","clr3":"#ffffff","icon4":"shopify:\/\/shop_images\/worldwide.png","heading4":"Storage","tabimg4":"shopify:\/\/shop_images\/premium_invention_-_features_five_1_1.jpg","des4":"<p>Save your footage using an SD Card or use our cloud storage services, available in the app.<\/p>","clr4":""}}},"block_order":["6128b489-ace3-4ecf-8475-eda3ae68d902"],"settings":{"title":"Key Features"}},"16524715611d972951":{"type":"capture-8x-zoom","settings":{"extra-class-v4":"","prehead":"","image":"shopify:\/\/shop_images\/zoom_1.jpg","image_position":"center center","video_link":"","show_overlay":true,"style":"image_with_play","height":"medium","video_title":"Capture Critical Evidence with 8x zoom","video_info":"<p>See more of the picture with an ultra-wide 120 degrees FOV, 8x digital zoom and 1080P full HD. <\/p><p>High compression technology keeps all images and videos in high quality, full color and low in size.<\/p>","text_size":"medium"}},"1652474692bfac6fa2":{"type":"advance-motion-product","settings":{"videolink":"","image":"shopify:\/\/shop_images\/motion-detection.gif","layout":"left","title":"Advanced motion detection","text":"<p>Our True motion detection is a step up from traditional motion detection technology. It uses a breakthrough ultra-sensitive PIR sensor, eliminating false triggers such as small birds, falling leaves and trees moving in the wind. <\/p><p>When motion is detected from as far away as 10 meters, you'll receive instant and accurate alerts in just 0.1 to 2 seconds.<\/p>","button_label":"","button_link":""}},"16523808682464dd3d":{"type":"gallery-get-product","blocks":{"165238086852f26d0c-0":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/premium_invention_-_image_13_2_4d34d4b2-ab03-4611-85eb-f72424714968.png","alignment":"center","link":"","cta_label":"Easy 3-5 minutes installation<br> without a technician","txtclr":"#ffffff"}},"165238086852f26d0c-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/premium_invention_-_image_15_1_59b21cf7-568d-422a-b547-a4519dea7fde.png","alignment":"center","link":"","cta_label":"Clean Interface","txtclr":"#ffffff"}},"165238086852f26d0c-2":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/premium_invention_-_image_16_1.png","alignment":"center","link":"","cta_label":"Schedule Recording","txtclr":"#ffffff"}},"fa70cc43-9495-4e4e-9879-324dc2882d48":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/premium_invention_-_image_17_1.png","alignment":"center","link":"","cta_label":"Give Access To Key Members","txtclr":"#ffffff"}},"5d1915aa-9d2e-4277-b106-5bebbc446a72":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/premium_invention_-_image_14_2_f580c0ab-7b35-488c-9231-4324c6b721d1.png","alignment":"center","link":"","cta_label":"Relax, we'll notify you <br>if something happens!","txtclr":"#ffffff"}}},"block_order":["165238086852f26d0c-0","165238086852f26d0c-1","165238086852f26d0c-2","fa70cc43-9495-4e4e-9879-324dc2882d48","5d1915aa-9d2e-4277-b106-5bebbc446a72"],"settings":{"heading_title":"Get Your V3 Ready","section_height":"medium","heading_title_2":"","sub_info":""}},"16523907505967a00e":{"type":"Gallery-stop-crime","blocks":{"16523907500f1ef33e-0":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Stop_Crime_Before_They_Happen_1.png","alignment":"center","link":"","cta_label":""}}},"block_order":["16523907500f1ef33e-0"],"settings":{"extra-class-v4":"only-v3-stop","heading_title":"Stop crimes before they happen.","video_info":"","section_height":"medium"}},"1652392840092ccf7f":{"type":"premium-experience","blocks":{"1652392840f316581b-0":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/perimum_expercince1.png","alignment":"center","link":"","cta_label":"Premium Quality","des_info":"<p>Each order goes through a full quality-inspection with care. All products come with a 365days of warranty.<\/p>"}},"1652392840f316581b-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/five_star.png","alignment":"center","link":"","cta_label":"5 Star Support","des_info":"<p>All e-mails are responded to by real people (no bots) within 24hours. Video calls are also available if additional assistance is required.<\/p>"}},"1652392840f316581b-2":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/security_img4.png","alignment":"center","link":"","cta_label":"Express Shipping","des_info":"<p>Express shipping delivers in 2-5 days in the USA & 7-15 days in other countries. Easily track your order's every step of the way from our website.<\/p>"}}},"block_order":["1652392840f316581b-0","1652392840f316581b-1","1652392840f316581b-2"],"settings":{"heading_title":"The Premium Experience"}},"165244273183c26309":{"type":"product--tab-select","settings":{"wireless1x":"39819136761917","wireless5x":"39895121756221","fourg1x":"39819136794685","fourg5x":"39895121788989","sub_info_text":"4.9","sub_info_text2":"4.9","sub_info_text3":"4.9","sub_info_text4":"4.9"}},"1652446717309d206d":{"type":"review--product-loox","settings":{"title":"Customer Reviews"}},"1652448360d483d10d":{"type":"Faq-product","blocks":{"8e44fbd4-9748-4a7a-8a17-ddf0e69cbb63":{"type":"question","settings":{"title":"When will my order arrive?","answer":"<p><strong>USA -<\/strong> 2 to 5 business days<\/p><p><strong>Canada - <\/strong>10 to 12 business days<\/p><p><strong>Australia & New Zealand -<\/strong> 6 to 10 business days<\/p><p><strong>Other countries -<\/strong> 10 to 20 business days<\/p>"}},"76ce2d9a-86f5-4b12-9ee2-5aff9a7b4ab1":{"type":"question","settings":{"title":"How does this 4G work, what will I need?","answer":"<p>It is your responsibility to purchase your own SIM Card and get your own data plan.<\/p><p><\/p><p><strong>United States:<\/strong><\/p><p>Verizon & AT&T are not compatible. Any other network providers will work just fine and T-Mobile is highly recommended.<\/p><p><strong>Canada:<\/strong><\/p><p>No specific choice or restriction.<\/p><p>Below are some frequency bands that can be checked with your service provider to be more secure:<\/p><p>LTE:B1\/B3\/B5\/B7\/B8\/B20\/B38\/B40\/B41 WCDMA:B1\/B5\/B8   <\/p><p>GSM:900\/1800<\/p><p><strong>Australia & New Zealand:<\/strong><\/p><p>No specific choice or restriction.<\/p><p>Below are some frequency bands that can be checked with your service provider to be more secure:<\/p><p>LTE-FDD：B1\/B2\/B3\/B4\/B5\/B7\/B8\/B28\/B66 LTE-TDD：B40 UMTS\/HSDPA\/HSPA+：B1\/B2\/B5\/B8<\/p><p><strong>Other countries:<\/strong><\/p><p>No specific choice or restriction.<\/p><p><br\/><strong>Other countries<\/strong> -<\/p><p>Simply get the right sim card size and have network coverage in the area you plan to utilize the camera.<\/p>"}},"97288935-fbbf-4e3f-bf0e-2ffee5130fda":{"type":"question","settings":{"title":"How much data does this use?","answer":"<p>Data is only required when you open the app to view your camera or past footages. <br\/><\/p><p>To view footage in SD, it uses 0.9-1.9MB per minute<\/p><p>To view footage in HD, it uses 1.9-3.8MB per minute<br\/><\/p><p>Therefore, if you plan to get 1G of data per month, you can watch approximately 350 minutes of HD definition.<\/p>"}},"991ae318-bf9d-48b0-aa48-0b2b28722c2f":{"type":"question","settings":{"title":"Where can I save and watch the recorded videos?","answer":"<p>You can opt to have the recorded video saved to an SD card or cloud storage. You can playback the recorded videos from the application.<\/p><p><br\/><\/p>"}},"dd862160-298c-4636-84c6-fcf280675565":{"type":"question","settings":{"title":"Can I manually record?","answer":"<p>YES! The application allows you to manually record videos as well as take photos with a tap of a button.<\/p>"}}},"block_order":["8e44fbd4-9748-4a7a-8a17-ddf0e69cbb63","76ce2d9a-86f5-4b12-9ee2-5aff9a7b4ab1","97288935-fbbf-4e3f-bf0e-2ffee5130fda","991ae318-bf9d-48b0-aa48-0b2b28722c2f","dd862160-298c-4636-84c6-fcf280675565"],"settings":{"extra-faq_all":"","expand_questions":false,"heading_title":"Frequently Asked Questions"}},"1652452303d37f02d4":{"type":"what-in-the-box","blocks":{"760b5383-854f-4b32-af15-4e3b824d3577":{"type":"text","settings":{"row1":"Wireless Camera V3"}},"7615ff85-d8e8-492b-908d-cb6d122f075b":{"type":"text","settings":{"row1":"2 Antennas"}},"acaa9581-b1ab-46ad-a178-5f241fd66fab":{"type":"text","settings":{"row1":"Bracket Bag (2xBracket screws, 8xBattery screws & 4xMounting screws)"}},"075547f6-7548-48d8-9115-78ebedbf2d82":{"type":"text","settings":{"row1":"4 Rechargeable Batteries"}},"9954f618-f746-4e7b-809b-1687b77658d2":{"type":"text","settings":{"row1":"User Manual"}},"a45d8b47-641f-41d6-84f3-ff721dc6501a":{"type":"text","settings":{"row1":"USB Cable (used to initially charge the batteries)"}}},"block_order":["760b5383-854f-4b32-af15-4e3b824d3577","7615ff85-d8e8-492b-908d-cb6d122f075b","acaa9581-b1ab-46ad-a178-5f241fd66fab","075547f6-7548-48d8-9115-78ebedbf2d82","9954f618-f746-4e7b-809b-1687b77658d2","a45d8b47-641f-41d6-84f3-ff721dc6501a"],"settings":{"image":"shopify:\/\/shop_images\/premium_invention_-_image_eight_1.webp","layout":"left","title":"What’s in the Box?","text":"<p><strong>Please note:<\/strong> Our 4G wireless camera only supports 4G network and requires a SIM card to work (not included).<\/p><p><br\/><strong>You’ll receive…<\/strong><\/p>","button_label":"","button_link":""}},"16524599869234749c":{"type":"Data-table-product","blocks":{"49e26446-0a0a-497d-bb1e-93139e35c7ba":{"type":"text","settings":{"row1":"Battery Lifetime","row2":"2 years","row3":"6 months"}},"17f17725-c800-4ec7-88a2-e808eaaa3738":{"type":"text","settings":{"row1":"Solar Panel","row2":"Built-in, no extra charge.<br> Powerful 5W solar panel.","row3":"Require wires, extra charge. <br>1W solar panel."}},"455de187-edb4-4886-b43f-1f1ec0bd189c":{"type":"text","settings":{"row1":"Infrared Night Vision","row2":"33 feet","row3":"20-25 feet"}},"5ebd689d-77ab-4ad3-8c0f-d3895c568f2f":{"type":"text","settings":{"row1":"Beam Lights & Color Night Vision","row2":"Four powerful white LED lights.<br> Clear color vision in the dark.","row3":"One small LED light. <br> Low quality color vision in the dark."}},"1eea100a-decb-4e46-920e-9d62444ccecb":{"type":"text","settings":{"row1":"Video Compression","row2":"H.264\/265 - Images & Videos take small amount of space","row3":"H.264 - Images & Videos take double the space"}},"e34e9ae0-6f5e-4efa-9112-84e3f813ed8d":{"type":"text","settings":{"row1":"Motion Detection Length","row2":"10 Meters","row3":"7-10 Meters"}},"d57099f1-ba99-4e6b-8cb7-842e186689c7":{"type":"text","settings":{"row1":"Motion Detection Alerts","row2":"Records instantly so you see all the action. Receive alerts in 0.1 - 2 seconds.","row3":"Records too late, misses the action. Alerts are slowly sent out. Typically 3-10 seconds"}},"c3fff70b-7885-4000-a3a8-3c5fa8b6b782":{"type":"text","settings":{"row1":"Audio","row2":"Clear 2-way communication","row3":"Low level microphone and sound"}},"cdce807a-6b53-4c7a-9771-be367265e91b":{"type":"text","settings":{"row1":"Digital Zoom","row2":"8x","row3":"4x"}},"eb308f5c-2588-4b40-982f-ad872297b952":{"type":"text","settings":{"row1":"Operating Temperature","row2":"-30°C\/-22°F to  50°C\/122°F","row3":"-10°C\/14°F to 40°C\/104°F"}},"56ce013d-2d5c-449a-b5f7-c9a432854fad":{"type":"text","settings":{"row1":"Storage","row2":"Up to 128GB<br> Cloud storage Or both for more protection","row3":"Up to 64GB <br>Only offer cloud storage"}},"c1ec0da3-2030-4489-84ae-52f20bf0bf51":{"type":"text","settings":{"row1":"Durability","row2":"IP67 Rating  <br>Low chance of having water inside of the camera during extreme weather condition. Strong metal bracket with metal bolts making it very sturdy during strong winds\/hurricanes.","row3":"IP65 Rating <br>High chance of having water inside of the camera during extreme weather. Magnetic cable making it unreliable during strong winds\/hurricanes."}},"082014de-a190-419e-b1b1-7ec1f02dd2d4":{"type":"text","settings":{"row1":"Set-up","row2":"3 minute installation. <br>Setup video guides available on our website.","row3":"Lengthy installation procedures.<br> No setup video tutorials."}},"91a3b430-1397-456d-bb2c-c9d072e600c6":{"type":"text","settings":{"row1":"Customer Service","row2":"Quick responses, Toll-free number,  Easy to reach management","row3":"Slow responses. <br>Toll-free number. Hard to reach management."}},"4b742392-2820-4af4-bbe2-b5b734d96a86":{"type":"text","settings":{"row1":"Fees","row2":"Purchase Cloud Storage or Use SD Card for Free Storage","row3":"Purchase Cloud Storage or Use SD Card, pay monthly to access footage"}}},"block_order":["49e26446-0a0a-497d-bb1e-93139e35c7ba","17f17725-c800-4ec7-88a2-e808eaaa3738","455de187-edb4-4886-b43f-1f1ec0bd189c","5ebd689d-77ab-4ad3-8c0f-d3895c568f2f","1eea100a-decb-4e46-920e-9d62444ccecb","e34e9ae0-6f5e-4efa-9112-84e3f813ed8d","d57099f1-ba99-4e6b-8cb7-842e186689c7","c3fff70b-7885-4000-a3a8-3c5fa8b6b782","cdce807a-6b53-4c7a-9771-be367265e91b","eb308f5c-2588-4b40-982f-ad872297b952","56ce013d-2d5c-449a-b5f7-c9a432854fad","c1ec0da3-2030-4489-84ae-52f20bf0bf51","082014de-a190-419e-b1b1-7ec1f02dd2d4","91a3b430-1397-456d-bb2c-c9d072e600c6","4b742392-2820-4af4-bbe2-b5b734d96a86"],"settings":{"heading_title":"Why We’re a Cut Above the Competition:","row1":"***","row2":"Wireless Camera V3","row3":"Competition"}},"1652465392fcf3014f":{"type":"upgrade--security-product","blocks":{"5e8d7f46-ec6e-42fb-834d-0bc14cf6499f":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/upgrade1.png","cta_label":"#1 in Battery <br>  Lifetime"}},"ac946b47-be7a-4434-b87f-1b0cf6c13b47":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/upgrade2.png","cta_label":"No Wire <br>  Requirement"}},"b011dee6-c503-488b-9668-0a5af48a02b3":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/upgrade3.png","cta_label":"No Monthly <br> Charges"}},"136a4a05-1f8d-47fb-b4e7-6ba4be729766":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/upgrade4.png","cta_label":"Be aware with motion triggers"}},"20c9563b-5ce0-430f-a8a2-848405a2c105":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/upgrade5.png","cta_label":"View live<br> footage from <br>anywhere"}},"97d355cb-e2ae-4d2b-b265-87d480f9573c":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/upgrade6.png","cta_label":"Full color<br> detailed image <br>at night"}}},"block_order":["5e8d7f46-ec6e-42fb-834d-0bc14cf6499f","ac946b47-be7a-4434-b87f-1b0cf6c13b47","b011dee6-c503-488b-9668-0a5af48a02b3","136a4a05-1f8d-47fb-b4e7-6ba4be729766","20c9563b-5ce0-430f-a8a2-848405a2c105","97d355cb-e2ae-4d2b-b265-87d480f9573c"],"settings":{"heading_title_1":"Upgrade Your Security Today!","heading_title_2":"USD 100 OFF","clmtxt":"Claim $100 off"}},"16524672159db375de":{"type":"contact-us-product","settings":{}}},"order":["165212790086b13a3a","e70cc933-b43b-4da5-bfbd-3bc7a29b282a","1652302738ddabc68a","1652302130e8dab211","main","1652889242c6010cd5","16529020177146e83b","165237547758d19a52","16523098820710f417","16529044188e8aaeec","16524715611d972951","1652474692bfac6fa2","16523808682464dd3d","16523907505967a00e","1652392840092ccf7f","165244273183c26309","1652446717309d206d","1652448360d483d10d","1652452303d37f02d4","16524599869234749c","1652465392fcf3014f","16524672159db375de"]}
+{
+  "sections": {
+    "165212790086b13a3a": {
+      "type": "product-template-v3",
+      "settings": {
+        "extra-class-v3s": "wirless_extra_v3only",
+        "title": "Wireless Outdoor Camera V3",
+        "prehead": "",
+        "extra-class": "rating-v3only",
+        "mini-title": "",
+        "extra-class-select": "",
+        "staticrating": "4.9"
+      }
+    },
+    "e70cc933-b43b-4da5-bfbd-3bc7a29b282a": {
+      "type": "popup-upgrade-v3s",
+      "settings": {
+        "product": "wireless-outdoor-camera-v3"
+      }
+    },
+    "1652302738ddabc68a": {
+      "type": "product-logo-bar",
+      "settings": {
+      }
+    },
+    "1652302130e8dab211": {
+      "type": "wireless-generation-sec",
+      "settings": {
+        "heading_title_1": "The Latest Wireless V Generation",
+        "prehead": "A perfect upgrade from our V2.<br><br>Featuring new advanced motion detection, immense color night vision improvements, double solar panel &amp; battery life, and much more.<br><br>Enjoy peace of mind knowing that your home, family and business are protected with the best outdoor security camera on the market.",
+        "heading_title_2": "The Latest Wireless V Generation",
+        "prehead1": "A perfect upgrade from our V2.<br><br>Featuring new advanced motion detection, immense color night vision improvements, double solar panel &amp; battery life, and much more.<br><br>Enjoy peace of mind knowing that your home, family and business are protected with the best outdoor security camera on the market."
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "extra-contact": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1652889242c6010cd5": {
+      "type": "eco--friendly-cost",
+      "blocks": {
+        "c3e22e13-a8be-4a2b-85f8-169efe44b707": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/battriresnew1.png",
+            "cta_label": "4 powerful  <br> rechargeable batteries"
+          }
+        },
+        "e3ff8d40-fcf3-4fbe-9505-bf915b47fe48": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sw-solorpannelnew1.png",
+            "cta_label": "5W Solar panel"
+          }
+        }
+      },
+      "block_order": [
+        "c3e22e13-a8be-4a2b-85f8-169efe44b707",
+        "e3ff8d40-fcf3-4fbe-9505-bf915b47fe48"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_5.png",
+        "layout": "left",
+        "title": "Eco-Friendly & Cost-Saving",
+        "text": "<p>Say goodbye forever to messy wires searching for the nearest power outlet, constantly changing batteries and dangerous loss of coverage during power outages.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text-below": "<p><strong>One of many similar reviews:<\/strong><br\/>Battery life never drops below 90% and we've been receiving a lot of rain\/cloudy weather within the past month. Consistent & reliable.<br\/><strong>Tim P.<\/strong><\/p>"
+      }
+    },
+    "16529020177146e83b": {
+      "type": "Designed--for--Outdoors",
+      "settings": {
+        "extra-class-v3s": "",
+        "image": "shopify:\/\/shop_images\/premium_invention_-_image_two_1.jpg",
+        "layout": "left",
+        "title": "Designed for Outdoors",
+        "text": "<p>Equipped with the strongest and most durable IP66 weatherproof case for all-season security.<\/p><p>Super strong metal bracket with metal bolts provide ultimate protection even during hurricanes and strong winds.<\/p>",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "165237547758d19a52": {
+      "type": "Gallery-View-From",
+      "blocks": {
+        "29b91b40-a70d-4b4d-bc31-8c05fb2e9fb4": {
+          "type": "image",
+          "settings": {
+            "abv": "",
+            "image": "shopify:\/\/shop_images\/premium_invention_-_image_8_1.png",
+            "alignment": "center",
+            "link": "",
+            "cta_label": "Los Angeles, United States"
+          }
+        },
+        "673597c5-df3d-45ce-b274-10831236c97a": {
+          "type": "image",
+          "settings": {
+            "abv": "",
+            "image": "shopify:\/\/shop_images\/premium_invention_-_image_9_-_v3_1.png",
+            "alignment": "center",
+            "link": "",
+            "cta_label": "Vancouver, Canada"
+          }
+        }
+      },
+      "block_order": [
+        "29b91b40-a70d-4b4d-bc31-8c05fb2e9fb4",
+        "673597c5-df3d-45ce-b274-10831236c97a"
+      ],
+      "settings": {
+        "extra-class-v4": "",
+        "heading_title": "View From Anywhere",
+        "heading_dsc": "",
+        "section_height": "medium"
+      }
+    },
+    "16523098820710f417": {
+      "type": "wifior4g",
+      "blocks": {
+        "fb6f44bc-89b9-49fb-8531-bcce902f0dda": {
+          "type": "text",
+          "settings": {
+            "usa": "<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.",
+            "ca": "<b>Note:<\/b> Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.",
+            "au": "<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.",
+            "eu": "<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.",
+            "nz": "<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.",
+            "sa": "<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.",
+            "uk": "<b>Note: <\/b>Support 2..4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router."
+          }
+        },
+        "0956b66f-db95-4462-829e-6ebb793f2e66": {
+          "type": "richtext",
+          "settings": {
+            "usa": "<b usa>Note:<\/b> FREE SIM Card included with 100MB of free data & zero activation costs. Works with Verizon, AT&T or T-Mobile.",
+            "ca": "<b ca>Note:<\/b> FREE SIM Card included with 100MB of free data & zero activation costs. Works with Bell, Telus & Rogers.",
+            "au": "<b au>Note:<\/b> FREE SIM Card included with 100MB of free data & zero activation costs. Works with Telstra & Optus.",
+            "eu": "<b>Note:<\/b> You are fully responsible for your own SIM card & data plan.",
+            "nz": "<b>Note:<\/b> You are fully responsible for your own SIM card & data plan.",
+            "sa": "<b sa>Note:<\/b> You are fully responsible for your own SIM card & data plan.",
+            "uk": "<b>Note:<\/b> FREE SIM Card included with 100MB of free data & zero activation costs. Works with Manx, Vodafone, 3 & Telefónica."
+          }
+        }
+      },
+      "block_order": [
+        "fb6f44bc-89b9-49fb-8531-bcce902f0dda",
+        "0956b66f-db95-4462-829e-6ebb793f2e66"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "16529044188e8aaeec": {
+      "type": "Key--Features",
+      "blocks": {
+        "6128b489-ace3-4ecf-8475-eda3ae68d902": {
+          "type": "Tab",
+          "settings": {
+            "prodct": "wireless-outdoor-camera-v3",
+            "icon1": "shopify:\/\/shop_images\/beam.png",
+            "heading1": "Beam Lights",
+            "tabimg1": "shopify:\/\/shop_images\/premium_invention_-_features_one_-_v2_1_1.png",
+            "des1": "<p>Four powerful LED lights at night when motion is detected. Can be used to either provide light at night or scare away intruders.<\/p>",
+            "clr1": "#ffffff",
+            "icon2": "shopify:\/\/shop_images\/starlight.png",
+            "heading2": "Starlight Technology",
+            "tabimg2": "shopify:\/\/shop_images\/premium_invention_-_features_two_-_v2_1.png",
+            "des2": "<p>An improved version of the smart night vision. Our Starlight vision technology displays a clear color image, giving you a beautiful day vision at night.<\/p>",
+            "clr2": "#ffffff",
+            "icon3": "shopify:\/\/shop_images\/comm.png",
+            "heading3": "2-Way Navigation",
+            "tabimg3": "shopify:\/\/shop_images\/Hnet-image.gif",
+            "des3": "<p>Listen & Talk with Two-Way Audio communication, directly from your phone.<\/p>",
+            "clr3": "#ffffff",
+            "icon4": "shopify:\/\/shop_images\/worldwide.png",
+            "heading4": "Storage",
+            "tabimg4": "shopify:\/\/shop_images\/premium_invention_-_features_five_1_1.jpg",
+            "des4": "<p>Save your footage using an SD Card or use our cloud storage services, available in the app.<\/p>",
+            "clr4": ""
+          }
+        }
+      },
+      "block_order": [
+        "6128b489-ace3-4ecf-8475-eda3ae68d902"
+      ],
+      "settings": {
+        "title": "Key Features"
+      }
+    },
+    "16524715611d972951": {
+      "type": "capture-8x-zoom",
+      "settings": {
+        "extra-class-v4": "",
+        "prehead": "",
+        "image": "shopify:\/\/shop_images\/zoom_1.jpg",
+        "image_position": "center center",
+        "video_link": "",
+        "show_overlay": true,
+        "style": "image_with_play",
+        "height": "medium",
+        "video_title": "Capture Critical Evidence with 4x zoom",
+        "video_info": "<p>See more of the picture with an ultra-wide 120 degrees FOV, 4x digital zoom and 1080P full HD. <\/p><p>High compression technology keeps all images and videos in high quality, full color and low in size.<\/p>",
+        "text_size": "medium"
+      }
+    },
+    "1652474692bfac6fa2": {
+      "type": "advance-motion-product",
+      "settings": {
+        "videolink": "",
+        "image": "shopify:\/\/shop_images\/motion-detection.gif",
+        "layout": "left",
+        "title": "Advanced motion detection",
+        "text": "<p>Our True motion detection is a step up from traditional motion detection technology. It uses a breakthrough ultra-sensitive PIR sensor, eliminating false triggers such as small birds, falling leaves and trees moving in the wind. <\/p><p>When motion is detected from as far away as 10 meters, you'll receive instant and accurate alerts in just 0.1 to 2 seconds.<\/p>",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "16523808682464dd3d": {
+      "type": "gallery-get-product",
+      "blocks": {
+        "165238086852f26d0c-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/premium_invention_-_image_13_2_4d34d4b2-ab03-4611-85eb-f72424714968.png",
+            "alignment": "center",
+            "link": "",
+            "cta_label": "Easy 3-5 minutes installation<br> without a technician",
+            "txtclr": "#ffffff"
+          }
+        },
+        "165238086852f26d0c-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/premium_invention_-_image_15_1_59b21cf7-568d-422a-b547-a4519dea7fde.png",
+            "alignment": "center",
+            "link": "",
+            "cta_label": "Clean Interface",
+            "txtclr": "#ffffff"
+          }
+        },
+        "165238086852f26d0c-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/premium_invention_-_image_16_1.png",
+            "alignment": "center",
+            "link": "",
+            "cta_label": "Schedule Recording",
+            "txtclr": "#ffffff"
+          }
+        },
+        "fa70cc43-9495-4e4e-9879-324dc2882d48": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/premium_invention_-_image_17_1.png",
+            "alignment": "center",
+            "link": "",
+            "cta_label": "Give Access To Key Members",
+            "txtclr": "#ffffff"
+          }
+        },
+        "5d1915aa-9d2e-4277-b106-5bebbc446a72": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/premium_invention_-_image_14_2_f580c0ab-7b35-488c-9231-4324c6b721d1.png",
+            "alignment": "center",
+            "link": "",
+            "cta_label": "Relax, we'll notify you <br>if something happens!",
+            "txtclr": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "165238086852f26d0c-0",
+        "165238086852f26d0c-1",
+        "165238086852f26d0c-2",
+        "fa70cc43-9495-4e4e-9879-324dc2882d48",
+        "5d1915aa-9d2e-4277-b106-5bebbc446a72"
+      ],
+      "settings": {
+        "heading_title": "Get Your V3 Ready",
+        "section_height": "medium",
+        "heading_title_2": "",
+        "sub_info": ""
+      }
+    },
+    "16523907505967a00e": {
+      "type": "Gallery-stop-crime",
+      "blocks": {
+        "16523907500f1ef33e-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stop_Crime_Before_They_Happen_1.png",
+            "alignment": "center",
+            "link": "",
+            "cta_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "16523907500f1ef33e-0"
+      ],
+      "settings": {
+        "extra-class-v4": "only-v3-stop",
+        "heading_title": "Stop crimes before they happen.",
+        "video_info": "",
+        "section_height": "medium"
+      }
+    },
+    "1652392840092ccf7f": {
+      "type": "premium-experience",
+      "blocks": {
+        "1652392840f316581b-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/perimum_expercince1.png",
+            "alignment": "center",
+            "link": "",
+            "cta_label": "Premium Quality",
+            "des_info": "<p>Each order goes through a full quality-inspection with care. All products come with a 365days of warranty.<\/p>"
+          }
+        },
+        "1652392840f316581b-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/five_star.png",
+            "alignment": "center",
+            "link": "",
+            "cta_label": "5 Star Support",
+            "des_info": "<p>All e-mails are responded to by real people (no bots) within 24hours. Video calls are also available if additional assistance is required.<\/p>"
+          }
+        },
+        "1652392840f316581b-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/security_img4.png",
+            "alignment": "center",
+            "link": "",
+            "cta_label": "Express Shipping",
+            "des_info": "<p>Express shipping delivers in 2-5 days in the USA & 7-15 days in other countries. Easily track your order's every step of the way from our website.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1652392840f316581b-0",
+        "1652392840f316581b-1",
+        "1652392840f316581b-2"
+      ],
+      "settings": {
+        "heading_title": "The Premium Experience"
+      }
+    },
+    "165244273183c26309": {
+      "type": "product--tab-select",
+      "settings": {
+        "wireless1x": "39819136761917",
+        "wireless5x": "39895121756221",
+        "fourg1x": "39819136794685",
+        "fourg5x": "39895121788989",
+        "sub_info_text": "4.9",
+        "sub_info_text2": "4.9",
+        "sub_info_text3": "4.9",
+        "sub_info_text4": "4.9"
+      }
+    },
+    "1652446717309d206d": {
+      "type": "review--product-loox",
+      "settings": {
+        "title": "Customer Reviews"
+      }
+    },
+    "1652448360d483d10d": {
+      "type": "Faq-product",
+      "blocks": {
+        "8e44fbd4-9748-4a7a-8a17-ddf0e69cbb63": {
+          "type": "question",
+          "settings": {
+            "title": "When will my order arrive?",
+            "answer": "<p><strong>USA -<\/strong> 2 to 5 business days<\/p><p><strong>Canada - <\/strong>10 to 12 business days<\/p><p><strong>Australia & New Zealand -<\/strong> 6 to 10 business days<\/p><p><strong>Other countries -<\/strong> 10 to 20 business days<\/p>"
+          }
+        },
+        "76ce2d9a-86f5-4b12-9ee2-5aff9a7b4ab1": {
+          "type": "question",
+          "settings": {
+            "title": "How does this 4G work, what will I need?",
+            "answer": "<p>It is your responsibility to purchase your own SIM Card and get your own data plan.<\/p><p><\/p><p><strong>United States:<\/strong><\/p><p>Verizon & AT&T are not compatible. Any other network providers will work just fine and T-Mobile is highly recommended.<\/p><p><strong>Canada:<\/strong><\/p><p>No specific choice or restriction.<\/p><p>Below are some frequency bands that can be checked with your service provider to be more secure:<\/p><p>LTE:B1\/B3\/B5\/B7\/B8\/B20\/B38\/B40\/B41 WCDMA:B1\/B5\/B8   <\/p><p>GSM:900\/1800<\/p><p><strong>Australia & New Zealand:<\/strong><\/p><p>No specific choice or restriction.<\/p><p>Below are some frequency bands that can be checked with your service provider to be more secure:<\/p><p>LTE-FDD：B1\/B2\/B3\/B4\/B5\/B7\/B8\/B28\/B66 LTE-TDD：B40 UMTS\/HSDPA\/HSPA+：B1\/B2\/B5\/B8<\/p><p><strong>Other countries:<\/strong><\/p><p>No specific choice or restriction.<\/p><p><br\/><strong>Other countries<\/strong> -<\/p><p>Simply get the right sim card size and have network coverage in the area you plan to utilize the camera.<\/p>"
+          }
+        },
+        "97288935-fbbf-4e3f-bf0e-2ffee5130fda": {
+          "type": "question",
+          "settings": {
+            "title": "How much data does this use?",
+            "answer": "<p>Data is only required when you open the app to view your camera or past footages. <br\/><\/p><p>To view footage in SD, it uses 0.9-1.9MB per minute<\/p><p>To view footage in HD, it uses 1.9-3.8MB per minute<br\/><\/p><p>Therefore, if you plan to get 1G of data per month, you can watch approximately 350 minutes of HD definition.<\/p>"
+          }
+        },
+        "991ae318-bf9d-48b0-aa48-0b2b28722c2f": {
+          "type": "question",
+          "settings": {
+            "title": "Where can I save and watch the recorded videos?",
+            "answer": "<p>You can opt to have the recorded video saved to an SD card or cloud storage. You can playback the recorded videos from the application.<\/p><p><br\/><\/p>"
+          }
+        },
+        "dd862160-298c-4636-84c6-fcf280675565": {
+          "type": "question",
+          "settings": {
+            "title": "Can I manually record?",
+            "answer": "<p>YES! The application allows you to manually record videos as well as take photos with a tap of a button.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "8e44fbd4-9748-4a7a-8a17-ddf0e69cbb63",
+        "76ce2d9a-86f5-4b12-9ee2-5aff9a7b4ab1",
+        "97288935-fbbf-4e3f-bf0e-2ffee5130fda",
+        "991ae318-bf9d-48b0-aa48-0b2b28722c2f",
+        "dd862160-298c-4636-84c6-fcf280675565"
+      ],
+      "settings": {
+        "extra-faq_all": "",
+        "expand_questions": false,
+        "heading_title": "Frequently Asked Questions"
+      }
+    },
+    "1652452303d37f02d4": {
+      "type": "what-in-the-box",
+      "blocks": {
+        "760b5383-854f-4b32-af15-4e3b824d3577": {
+          "type": "text",
+          "settings": {
+            "row1": "Wireless Camera V3"
+          }
+        },
+        "7615ff85-d8e8-492b-908d-cb6d122f075b": {
+          "type": "text",
+          "settings": {
+            "row1": "2 Antennas"
+          }
+        },
+        "acaa9581-b1ab-46ad-a178-5f241fd66fab": {
+          "type": "text",
+          "settings": {
+            "row1": "Bracket Bag (2xBracket screws, 8xBattery screws & 4xMounting screws)"
+          }
+        },
+        "075547f6-7548-48d8-9115-78ebedbf2d82": {
+          "type": "text",
+          "settings": {
+            "row1": "4 Rechargeable Batteries"
+          }
+        },
+        "9954f618-f746-4e7b-809b-1687b77658d2": {
+          "type": "text",
+          "settings": {
+            "row1": "User Manual"
+          }
+        },
+        "a45d8b47-641f-41d6-84f3-ff721dc6501a": {
+          "type": "text",
+          "settings": {
+            "row1": "USB Cable (used to initially charge the batteries)"
+          }
+        }
+      },
+      "block_order": [
+        "760b5383-854f-4b32-af15-4e3b824d3577",
+        "7615ff85-d8e8-492b-908d-cb6d122f075b",
+        "acaa9581-b1ab-46ad-a178-5f241fd66fab",
+        "075547f6-7548-48d8-9115-78ebedbf2d82",
+        "9954f618-f746-4e7b-809b-1687b77658d2",
+        "a45d8b47-641f-41d6-84f3-ff721dc6501a"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/premium_invention_-_image_eight_1.webp",
+        "layout": "left",
+        "title": "What’s in the Box?",
+        "text": "<p><strong>Please note:<\/strong> Our 4G wireless camera only supports 4G network and requires a SIM card to work (not included).<\/p><p><br\/><strong>You’ll receive…<\/strong><\/p>",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "16524599869234749c": {
+      "type": "Data-table-product",
+      "blocks": {
+        "49e26446-0a0a-497d-bb1e-93139e35c7ba": {
+          "type": "text",
+          "settings": {
+            "row1": "Battery Lifetime",
+            "row2": "2 years",
+            "row3": "6 months"
+          }
+        },
+        "17f17725-c800-4ec7-88a2-e808eaaa3738": {
+          "type": "text",
+          "settings": {
+            "row1": "Solar Panel",
+            "row2": "Built-in, no extra charge.<br> Powerful 5W solar panel.",
+            "row3": "Require wires, extra charge. <br>1W solar panel."
+          }
+        },
+        "455de187-edb4-4886-b43f-1f1ec0bd189c": {
+          "type": "text",
+          "settings": {
+            "row1": "Infrared Night Vision",
+            "row2": "33 feet",
+            "row3": "20-25 feet"
+          }
+        },
+        "5ebd689d-77ab-4ad3-8c0f-d3895c568f2f": {
+          "type": "text",
+          "settings": {
+            "row1": "Beam Lights & Color Night Vision",
+            "row2": "Four powerful white LED lights.<br> Clear color vision in the dark.",
+            "row3": "One small LED light. <br> Low quality color vision in the dark."
+          }
+        },
+        "1eea100a-decb-4e46-920e-9d62444ccecb": {
+          "type": "text",
+          "settings": {
+            "row1": "Video Compression",
+            "row2": "H.264\/265 - Images & Videos take small amount of space",
+            "row3": "H.264 - Images & Videos take double the space"
+          }
+        },
+        "e34e9ae0-6f5e-4efa-9112-84e3f813ed8d": {
+          "type": "text",
+          "settings": {
+            "row1": "Motion Detection Length",
+            "row2": "10 Meters",
+            "row3": "7-10 Meters"
+          }
+        },
+        "d57099f1-ba99-4e6b-8cb7-842e186689c7": {
+          "type": "text",
+          "settings": {
+            "row1": "Motion Detection Alerts",
+            "row2": "Records instantly so you see all the action. Receive alerts in 0.1 - 2 seconds.",
+            "row3": "Records too late, misses the action. Alerts are slowly sent out. Typically 3-10 seconds"
+          }
+        },
+        "c3fff70b-7885-4000-a3a8-3c5fa8b6b782": {
+          "type": "text",
+          "settings": {
+            "row1": "Audio",
+            "row2": "Clear 2-way communication",
+            "row3": "Low level microphone and sound"
+          }
+        },
+        "cdce807a-6b53-4c7a-9771-be367265e91b": {
+          "type": "text",
+          "settings": {
+            "row1": "Digital Zoom",
+            "row2": "4x",
+            "row3": "2x"
+          }
+        },
+        "eb308f5c-2588-4b40-982f-ad872297b952": {
+          "type": "text",
+          "settings": {
+            "row1": "Operating Temperature",
+            "row2": "-30°C\/-22°F to  50°C\/122°F",
+            "row3": "-10°C\/14°F to 40°C\/104°F"
+          }
+        },
+        "56ce013d-2d5c-449a-b5f7-c9a432854fad": {
+          "type": "text",
+          "settings": {
+            "row1": "Storage",
+            "row2": "Up to 128GB Cloud storage Or both for more protection",
+            "row3": "Up to 64GB Only offer cloud storage"
+          }
+        },
+        "c1ec0da3-2030-4489-84ae-52f20bf0bf51": {
+          "type": "text",
+          "settings": {
+            "row1": "Durability",
+            "row2": "IP66 Rating  Low chance of having water inside of the camera during extreme weather condition. Strong metal bracket with metal bolts making it very sturdy during strong winds\/hurricanes.",
+            "row3": "IP65 Rating High chance of having water inside of the camera during extreme weather. Magnetic cable making it unreliable during strong winds\/hurricanes."
+          }
+        },
+        "082014de-a190-419e-b1b1-7ec1f02dd2d4": {
+          "type": "text",
+          "settings": {
+            "row1": "Set-up",
+            "row2": "3 minute installation. <br>Setup video guides available on our website.",
+            "row3": "Lengthy installation procedures.<br> No setup video tutorials."
+          }
+        },
+        "91a3b430-1397-456d-bb2c-c9d072e600c6": {
+          "type": "text",
+          "settings": {
+            "row1": "Customer Service",
+            "row2": "Quick responses, Toll-free number,  Easy to reach management",
+            "row3": "Slow responses. <br>Toll-free number. Hard to reach management."
+          }
+        },
+        "4b742392-2820-4af4-bbe2-b5b734d96a86": {
+          "type": "text",
+          "settings": {
+            "row1": "Fees",
+            "row2": "Purchase Cloud Storage or Use SD Card for Free Storage",
+            "row3": "Purchase Cloud Storage or Use SD Card, pay monthly to access footage"
+          }
+        }
+      },
+      "block_order": [
+        "49e26446-0a0a-497d-bb1e-93139e35c7ba",
+        "17f17725-c800-4ec7-88a2-e808eaaa3738",
+        "455de187-edb4-4886-b43f-1f1ec0bd189c",
+        "5ebd689d-77ab-4ad3-8c0f-d3895c568f2f",
+        "1eea100a-decb-4e46-920e-9d62444ccecb",
+        "e34e9ae0-6f5e-4efa-9112-84e3f813ed8d",
+        "d57099f1-ba99-4e6b-8cb7-842e186689c7",
+        "c3fff70b-7885-4000-a3a8-3c5fa8b6b782",
+        "cdce807a-6b53-4c7a-9771-be367265e91b",
+        "eb308f5c-2588-4b40-982f-ad872297b952",
+        "56ce013d-2d5c-449a-b5f7-c9a432854fad",
+        "c1ec0da3-2030-4489-84ae-52f20bf0bf51",
+        "082014de-a190-419e-b1b1-7ec1f02dd2d4",
+        "91a3b430-1397-456d-bb2c-c9d072e600c6",
+        "4b742392-2820-4af4-bbe2-b5b734d96a86"
+      ],
+      "settings": {
+        "heading_title": "Why We’re a Cut Above the Competition:",
+        "row1": "***",
+        "row2": "Wireless Camera V3",
+        "row3": "Competition",
+        "custom_class": ""
+      }
+    },
+    "1652465392fcf3014f": {
+      "type": "upgrade--security-product",
+      "blocks": {
+        "5e8d7f46-ec6e-42fb-834d-0bc14cf6499f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/upgrade1.png",
+            "cta_label": "#1 in Battery <br>  Lifetime"
+          }
+        },
+        "ac946b47-be7a-4434-b87f-1b0cf6c13b47": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/upgrade2.png",
+            "cta_label": "No Wire <br>  Requirement"
+          }
+        },
+        "b011dee6-c503-488b-9668-0a5af48a02b3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/upgrade3.png",
+            "cta_label": "No Monthly <br> Charges"
+          }
+        },
+        "136a4a05-1f8d-47fb-b4e7-6ba4be729766": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/upgrade4.png",
+            "cta_label": "Be aware with motion triggers"
+          }
+        },
+        "20c9563b-5ce0-430f-a8a2-848405a2c105": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/upgrade5.png",
+            "cta_label": "View live<br> footage from <br>anywhere"
+          }
+        },
+        "97d355cb-e2ae-4d2b-b265-87d480f9573c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/upgrade6.png",
+            "cta_label": "Full color<br> detailed image <br>at night"
+          }
+        }
+      },
+      "block_order": [
+        "5e8d7f46-ec6e-42fb-834d-0bc14cf6499f",
+        "ac946b47-be7a-4434-b87f-1b0cf6c13b47",
+        "b011dee6-c503-488b-9668-0a5af48a02b3",
+        "136a4a05-1f8d-47fb-b4e7-6ba4be729766",
+        "20c9563b-5ce0-430f-a8a2-848405a2c105",
+        "97d355cb-e2ae-4d2b-b265-87d480f9573c"
+      ],
+      "settings": {
+        "heading_title_1": "Upgrade Your Security Today!",
+        "heading_title_2": "USD 100 OFF",
+        "clmtxt": "Claim $100 off"
+      }
+    },
+    "16524672159db375de": {
+      "type": "contact-us-product",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "165212790086b13a3a",
+    "e70cc933-b43b-4da5-bfbd-3bc7a29b282a",
+    "1652302738ddabc68a",
+    "1652302130e8dab211",
+    "main",
+    "1652889242c6010cd5",
+    "16529020177146e83b",
+    "165237547758d19a52",
+    "16523098820710f417",
+    "16529044188e8aaeec",
+    "16524715611d972951",
+    "1652474692bfac6fa2",
+    "16523808682464dd3d",
+    "16523907505967a00e",
+    "1652392840092ccf7f",
+    "165244273183c26309",
+    "1652446717309d206d",
+    "1652448360d483d10d",
+    "1652452303d37f02d4",
+    "16524599869234749c",
+    "1652465392fcf3014f",
+    "16524672159db375de"
+  ]
+}

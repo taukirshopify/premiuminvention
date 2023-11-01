@@ -1,1 +1,466 @@
-{"current":{"colors_solid_button_labels":"#ffffff","colors_accent_1":"#121212","gradient_accent_1":"","colors_accent_2":"#334fb4","gradient_accent_2":"","colors_text":"#121212","colors_outline_button_labels":"#121212","colors_background_1":"#ffffff","gradient_background_1":"","colors_background_2":"#f3f3f3","gradient_background_2":"","txt_ca":"5-8 Days Canada Shipping","txt_uk":"5-8 Days UK Shipping","txt_au":"Australia Shipping 6-8 days","txt_eu":"European Shipping 6-10 days","txt_nz":"New Zealand Shipping 6-8 days","txt_sa":"South Africa Shipping 8-10 days","txt_usa":"2-4 Days USA Shipping","btxt_ca":"5-8 Days Canada Shipping","btxt_uk":"5-8 Days UK  Shipping","btxt_au":"Australia Shipping 6-8 days","btxt_eu":"European Shipping 6-10 days","btxt_nz":"New Zealand Shipping 6-8 days","btxt_sa":"South Africa Shipping 8-10 days","btxt_usa":"2-4 Days USA Shipping","show_multiple_currencies":true,"currency_format":"money_format","supported_currencies":"NZD CAD USD AUD EUR ZAR GBP","type_header_font":"work_sans_n4","heading_scale":100,"type_body_font":"work_sans_n4","body_scale":100,"page_width":1200,"spacing_sections":0,"spacing_grid_horizontal":8,"spacing_grid_vertical":8,"buttons_border_thickness":1,"buttons_border_opacity":100,"buttons_radius":0,"buttons_shadow_opacity":0,"buttons_shadow_horizontal_offset":0,"buttons_shadow_vertical_offset":4,"buttons_shadow_blur":5,"variant_pills_border_thickness":1,"variant_pills_border_opacity":55,"variant_pills_radius":40,"variant_pills_shadow_opacity":0,"variant_pills_shadow_horizontal_offset":0,"variant_pills_shadow_vertical_offset":4,"variant_pills_shadow_blur":5,"inputs_border_thickness":1,"inputs_border_opacity":55,"inputs_radius":0,"inputs_shadow_opacity":0,"inputs_shadow_horizontal_offset":0,"inputs_shadow_vertical_offset":4,"inputs_shadow_blur":5,"card_style":"standard","card_image_padding":0,"card_text_alignment":"left","card_color_scheme":"background-2","card_border_thickness":0,"card_border_opacity":10,"card_corner_radius":0,"card_shadow_opacity":0,"card_shadow_horizontal_offset":0,"card_shadow_vertical_offset":4,"card_shadow_blur":5,"text_boxes_border_thickness":0,"text_boxes_border_opacity":10,"text_boxes_radius":0,"text_boxes_shadow_opacity":0,"text_boxes_shadow_horizontal_offset":0,"text_boxes_shadow_vertical_offset":4,"text_boxes_shadow_blur":5,"media_border_thickness":1,"media_border_opacity":5,"media_radius":0,"media_shadow_opacity":0,"media_shadow_horizontal_offset":0,"media_shadow_vertical_offset":4,"media_shadow_blur":5,"popup_border_thickness":1,"popup_border_opacity":10,"popup_corner_radius":0,"popup_shadow_opacity":0,"popup_shadow_horizontal_offset":0,"popup_shadow_vertical_offset":4,"popup_shadow_blur":5,"drawer_border_thickness":1,"drawer_border_opacity":10,"drawer_shadow_opacity":0,"drawer_shadow_horizontal_offset":0,"drawer_shadow_vertical_offset":4,"drawer_shadow_blur":5,"badge_position":"bottom left","badge_corner_radius":40,"sale_badge_color_scheme":"accent-2","sold_out_badge_color_scheme":"inverse","accent_icons":"text","social_twitter_link":"","social_facebook_link":"","social_pinterest_link":"","social_instagram_link":"","social_tiktok_link":"","social_tumblr_link":"","social_snapchat_link":"","social_youtube_link":"","social_vimeo_link":"","predictive_search_enabled":true,"predictive_search_show_vendor":false,"predictive_search_show_price":false,"currency_code_enabled":true,"sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement-bar-0":{"type":"announcement","settings":{"text":"","color_scheme":"accent-1","link":""}}},"block_order":["announcement-bar-0"],"settings":{}},"header":{"type":"header","blocks":{"cd104623-900a-4307-935a-5ac52c7df384":{"type":"megamenu","settings":{"label":"Wireless Security","collection":"wireless-camera-all","url":""}},"59c14c55-65cf-4e06-8a71-b39525864c31":{"type":"megamenu","settings":{"label":"Wired Security","collection":"wired-cameras","url":""}},"d8a0f241-2b10-462d-9c80-2283dfb6e4ab":{"type":"megamenu","settings":{"label":"NVRs","collection":"nvr","url":""}},"f8bfaf9e-b16a-4c19-8055-5d55ac844834":{"type":"megamenu","settings":{"label":"Accessories","collection":"accessories","url":""}},"27a431e3-e829-4b56-81ed-4c604df39dbc":{"type":"megamenu","settings":{"label":"All Products","collection":"","url":"shopify:\/\/pages\/collection"}}},"block_order":["cd104623-900a-4307-935a-5ac52c7df384","59c14c55-65cf-4e06-8a71-b39525864c31","d8a0f241-2b10-462d-9c80-2283dfb6e4ab","f8bfaf9e-b16a-4c19-8055-5d55ac844834","27a431e3-e829-4b56-81ed-4c604df39dbc"],"settings":{"color_scheme":"background-1","headerCta":"877-224-0705","logo":"shopify:\/\/shop_images\/Image20220525144757.png","logo_width":230,"logo_position":"top-center","menu":"new-menu","megamenu_item":"products","menu_type_desktop":"mega","show_line_separator":true,"enable_sticky_header":true,"margin_bottom":0}},"footer":{"type":"footer","blocks":{"e571590f-4412-42ba-a5bc-01ef0b713352":{"type":"text","settings":{"title":"","text":"<p><a href=\"mailto:support@premiuminvention.com\" title=\"mailto:support@premiuminvention.com\">support@premiuminvention.com<\/a><\/p><p> <a href=\"tel:(877) 224 0705\" title=\"tel:(877) 224 0705\">(877) 224 0705<\/a><\/p><p>Suite #506, 105-7655 Edmonds St, Burnaby, BC, V3N 0C3, Canada<\/p>","logo_custom":"https:\/\/cdn.shopify.com\/s\/files\/1\/0249\/8949\/9437\/files\/Premium_Invention_1.svg?v=1650142419"}},"footer-1":{"type":"link_list","settings":{"title":"NAVIGATION","menu":"new-menu"}},"footer-0":{"type":"link_list","settings":{"title":"","menu":"footer"}},"3b21d724-2d48-44cb-9516-9e256f1fbaa8":{"type":"link_list","settings":{"title":"FOLLOW US","menu":"social-1"}},"8d524701-4cca-48be-8c14-61c9a706a778":{"type":"newsletter","settings":{"title":"SIGN UP FOR OUR NEWSLETTER!"}}},"block_order":["e571590f-4412-42ba-a5bc-01ef0b713352","footer-1","footer-0","3b21d724-2d48-44cb-9516-9e256f1fbaa8","8d524701-4cca-48be-8c14-61c9a706a778"],"settings":{"payment_enable":true,"show_payment_icons":false,"color_footer_bg":"#000000","color_footer_text":"#ffffff"}},"main-password-header":{"type":"main-password-header","settings":{"logo_max_width":100,"color_scheme":"background-1"}},"main-password-footer":{"type":"main-password-footer","settings":{"color_scheme":"background-1"}},"sezzle-widget":{"type":"sezzle-widget","settings":{"show-sezzle-widget":true,"color":"inherit","font-size":14,"font-family":"inherit","product-page-alignment":"auto","cart-page-alignment":"auto"}}},"content_for_index":[],"blocks":{"855628211100114053":{"type":"shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507","disabled":false,"settings":{}},"uppromote-affiliate-referral-customer-referral-64492-64c32457-930d-4cb9-9641-e24c0d9cf1f4":{"type":"shopify:\/\/apps\/uppromote-affiliate-referral\/blocks\/customer-referral\/64c32457-930d-4cb9-9641-e24c0d9cf1f4","disabled":true,"settings":{}},"uppromote-affiliate-referral-message-bar-64492-64c32457-930d-4cb9-9641-e24c0d9cf1f4":{"type":"shopify:\/\/apps\/uppromote-affiliate-referral\/blocks\/message-bar\/64c32457-930d-4cb9-9641-e24c0d9cf1f4","disabled":true,"settings":{}}}},"presets":{"Default":{"colors_solid_button_labels":"#ffffff","colors_accent_1":"#121212","gradient_accent_1":"","colors_accent_2":"#334fb4","gradient_accent_2":"","colors_text":"#121212","colors_outline_button_labels":"#121212","colors_background_1":"#ffffff","gradient_background_1":"","colors_background_2":"#f3f3f3","gradient_background_2":"","type_header_font":"assistant_n4","heading_scale":100,"type_body_font":"assistant_n4","body_scale":100,"page_width":1200,"spacing_sections":0,"spacing_grid_horizontal":8,"spacing_grid_vertical":8,"buttons_border_thickness":1,"buttons_border_opacity":100,"buttons_radius":0,"buttons_shadow_opacity":0,"buttons_shadow_horizontal_offset":0,"buttons_shadow_vertical_offset":4,"buttons_shadow_blur":5,"variant_pills_border_thickness":1,"variant_pills_border_opacity":55,"variant_pills_radius":40,"variant_pills_shadow_opacity":0,"variant_pills_shadow_horizontal_offset":0,"variant_pills_shadow_vertical_offset":4,"variant_pills_shadow_blur":5,"inputs_border_thickness":1,"inputs_border_opacity":55,"inputs_radius":0,"inputs_shadow_opacity":0,"inputs_shadow_horizontal_offset":0,"inputs_shadow_vertical_offset":4,"inputs_shadow_blur":5,"card_style":"standard","card_image_padding":0,"card_text_alignment":"left","card_color_scheme":"background-2","card_border_thickness":0,"card_border_opacity":10,"card_corner_radius":0,"card_shadow_opacity":0,"card_shadow_horizontal_offset":0,"card_shadow_vertical_offset":4,"card_shadow_blur":5,"text_boxes_border_thickness":0,"text_boxes_border_opacity":10,"text_boxes_radius":0,"text_boxes_shadow_opacity":0,"text_boxes_shadow_horizontal_offset":0,"text_boxes_shadow_vertical_offset":4,"text_boxes_shadow_blur":5,"media_border_thickness":1,"media_border_opacity":5,"media_radius":0,"media_shadow_opacity":0,"media_shadow_horizontal_offset":0,"media_shadow_vertical_offset":4,"media_shadow_blur":5,"popup_border_thickness":1,"popup_border_opacity":10,"popup_corner_radius":0,"popup_shadow_opacity":0,"popup_shadow_horizontal_offset":0,"popup_shadow_vertical_offset":4,"popup_shadow_blur":5,"drawer_border_thickness":1,"drawer_border_opacity":10,"drawer_shadow_opacity":0,"drawer_shadow_horizontal_offset":0,"drawer_shadow_vertical_offset":4,"drawer_shadow_blur":5,"badge_position":"bottom left","badge_corner_radius":40,"sale_badge_color_scheme":"accent-2","sold_out_badge_color_scheme":"inverse","accent_icons":"text","social_twitter_link":"","social_facebook_link":"","social_pinterest_link":"","social_instagram_link":"","social_tiktok_link":"","social_tumblr_link":"","social_snapchat_link":"","social_youtube_link":"","social_vimeo_link":"","predictive_search_enabled":true,"predictive_search_show_vendor":false,"predictive_search_show_price":false,"currency_code_enabled":true,"sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement-bar-0":{"type":"announcement","settings":{"text":"Welcome to our store","color_scheme":"background-1","link":""}}},"block_order":["announcement-bar-0"],"settings":{}},"header":{"type":"header","settings":{"color_scheme":"background-1","logo_width":90,"logo_position":"middle-left","menu":"main-menu","show_line_separator":true,"enable_sticky_header":true,"margin_bottom":0}},"footer":{"type":"footer","blocks":{"footer-0":{"type":"link_list","settings":{"menu":"footer"}},"footer-1":{"type":"link_list","settings":{"menu":"footer"}},"footer-2":{"type":"text","settings":{}}},"block_order":["footer-0","footer-1","footer-2"],"settings":{"payment_enable":true,"color_footer_bg":"#F5F5F5","color_footer_text":"#3d4246"}},"main-password-header":{"type":"main-password-header","settings":{"logo_max_width":100,"color_scheme":"background-1"}},"main-password-footer":{"type":"main-password-footer","settings":{"color_scheme":"background-1"}}}}}}
+{
+  "current": {
+    "colors_solid_button_labels": "#ffffff",
+    "colors_accent_1": "#121212",
+    "gradient_accent_1": "",
+    "colors_accent_2": "#334fb4",
+    "gradient_accent_2": "",
+    "colors_text": "#121212",
+    "colors_outline_button_labels": "#121212",
+    "colors_background_1": "#ffffff",
+    "gradient_background_1": "",
+    "colors_background_2": "#f3f3f3",
+    "gradient_background_2": "",
+    "txt_ca": "5-8 Days Canada Shipping",
+    "txt_uk": "5-8 Days UK Shipping",
+    "txt_au": "Australia Shipping 6-8 days",
+    "txt_eu": "European Shipping 6-10 days",
+    "txt_nz": "New Zealand Shipping 6-8 days",
+    "txt_sa": "South Africa Shipping 8-10 days",
+    "txt_usa": "2-4 Days USA Shipping",
+    "btxt_ca": "5-8 Days Canada Shipping",
+    "btxt_uk": "5-8 Days UK  Shipping",
+    "btxt_au": "Australia Shipping 6-8 days",
+    "btxt_eu": "European Shipping 6-10 days",
+    "btxt_nz": "New Zealand Shipping 6-8 days",
+    "btxt_sa": "South Africa Shipping 8-10 days",
+    "btxt_usa": "2-4 Days USA Shipping",
+    "show_multiple_currencies": true,
+    "currency_format": "money_format",
+    "supported_currencies": "NZD CAD USD AUD EUR ZAR GBP",
+    "type_header_font": "work_sans_n4",
+    "heading_scale": 100,
+    "type_body_font": "work_sans_n4",
+    "body_scale": 100,
+    "page_width": 1200,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 8,
+    "spacing_grid_vertical": 8,
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 0,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 4,
+    "buttons_shadow_blur": 5,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 55,
+    "variant_pills_radius": 40,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 4,
+    "variant_pills_shadow_blur": 5,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 55,
+    "inputs_radius": 0,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_blur": 5,
+    "card_style": "standard",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "background-2",
+    "card_border_thickness": 0,
+    "card_border_opacity": 10,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
+    "card_shadow_horizontal_offset": 0,
+    "card_shadow_vertical_offset": 4,
+    "card_shadow_blur": 5,
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 10,
+    "text_boxes_radius": 0,
+    "text_boxes_shadow_opacity": 0,
+    "text_boxes_shadow_horizontal_offset": 0,
+    "text_boxes_shadow_vertical_offset": 4,
+    "text_boxes_shadow_blur": 5,
+    "media_border_thickness": 1,
+    "media_border_opacity": 5,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "media_shadow_horizontal_offset": 0,
+    "media_shadow_vertical_offset": 4,
+    "media_shadow_blur": 5,
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 10,
+    "popup_corner_radius": 0,
+    "popup_shadow_opacity": 0,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 4,
+    "popup_shadow_blur": 5,
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 0,
+    "drawer_shadow_horizontal_offset": 0,
+    "drawer_shadow_vertical_offset": 4,
+    "drawer_shadow_blur": 5,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "accent-2",
+    "sold_out_badge_color_scheme": "inverse",
+    "accent_icons": "text",
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_tiktok_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "currency_code_enabled": true,
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "cd104623-900a-4307-935a-5ac52c7df384": {
+            "type": "megamenu",
+            "settings": {
+              "label": "Wireless Security",
+              "collection": "wireless-camera-all",
+              "url": ""
+            }
+          },
+          "59c14c55-65cf-4e06-8a71-b39525864c31": {
+            "type": "megamenu",
+            "settings": {
+              "label": "Wired Security",
+              "collection": "wired-cameras",
+              "url": ""
+            }
+          },
+          "d8a0f241-2b10-462d-9c80-2283dfb6e4ab": {
+            "type": "megamenu",
+            "settings": {
+              "label": "NVRs",
+              "collection": "nvr",
+              "url": ""
+            }
+          },
+          "f8bfaf9e-b16a-4c19-8055-5d55ac844834": {
+            "type": "megamenu",
+            "settings": {
+              "label": "Accessories",
+              "collection": "accessories",
+              "url": ""
+            }
+          },
+          "27a431e3-e829-4b56-81ed-4c604df39dbc": {
+            "type": "megamenu",
+            "settings": {
+              "label": "All Products",
+              "collection": "",
+              "url": "shopify:\/\/pages\/collection"
+            }
+          }
+        },
+        "block_order": [
+          "cd104623-900a-4307-935a-5ac52c7df384",
+          "59c14c55-65cf-4e06-8a71-b39525864c31",
+          "d8a0f241-2b10-462d-9c80-2283dfb6e4ab",
+          "f8bfaf9e-b16a-4c19-8055-5d55ac844834",
+          "27a431e3-e829-4b56-81ed-4c604df39dbc"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "headerCta": "877-224-0705",
+          "logo": "shopify:\/\/shop_images\/Image20220525144757.png",
+          "logo_width": 230,
+          "logo_position": "top-center",
+          "menu": "new-menu",
+          "megamenu_item": "products",
+          "menu_type_desktop": "mega",
+          "show_line_separator": true,
+          "enable_sticky_header": true,
+          "margin_bottom": 0
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "e571590f-4412-42ba-a5bc-01ef0b713352": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "text": "<p><a href=\"mailto:support@premiuminvention.com\" title=\"mailto:support@premiuminvention.com\">support@premiuminvention.com<\/a><\/p><p> <a href=\"tel:(877) 224 0705\" title=\"tel:(877) 224 0705\">(877) 224 0705<\/a><\/p><p>Suite #506, 105-7655 Edmonds St, Burnaby, BC, V3N 0C3, Canada<\/p>",
+              "logo_custom": "https:\/\/cdn.shopify.com\/s\/files\/1\/0249\/8949\/9437\/files\/Premium_Invention_1.svg?v=1650142419"
+            }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "title": "NAVIGATION",
+              "menu": "new-menu"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "menu": "footer"
+            }
+          },
+          "3b21d724-2d48-44cb-9516-9e256f1fbaa8": {
+            "type": "link_list",
+            "settings": {
+              "title": "FOLLOW US",
+              "menu": "social-1"
+            }
+          },
+          "8d524701-4cca-48be-8c14-61c9a706a778": {
+            "type": "newsletter",
+            "settings": {
+              "title": "SIGN UP FOR OUR NEWSLETTER!"
+            }
+          }
+        },
+        "block_order": [
+          "e571590f-4412-42ba-a5bc-01ef0b713352",
+          "footer-1",
+          "footer-0",
+          "3b21d724-2d48-44cb-9516-9e256f1fbaa8",
+          "8d524701-4cca-48be-8c14-61c9a706a778"
+        ],
+        "settings": {
+          "payment_enable": true,
+          "show_payment_icons": false,
+          "color_footer_bg": "#000000",
+          "color_footer_text": "#ffffff"
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "logo_max_width": 100,
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "sezzle-widget": {
+        "type": "sezzle-widget",
+        "settings": {
+          "show-sezzle-widget": true,
+          "color": "inherit",
+          "font-size": 14,
+          "font-family": "inherit",
+          "product-page-alignment": "auto",
+          "cart-page-alignment": "auto"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "uppromote-affiliate-referral-customer-referral-64492-64c32457-930d-4cb9-9641-e24c0d9cf1f4": {
+        "type": "shopify:\/\/apps\/uppromote-affiliate-referral\/blocks\/customer-referral\/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "uppromote-affiliate-referral-message-bar-64492-64c32457-930d-4cb9-9641-e24c0d9cf1f4": {
+        "type": "shopify:\/\/apps\/uppromote-affiliate-referral\/blocks\/message-bar\/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": true,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "colors_solid_button_labels": "#ffffff",
+      "colors_accent_1": "#121212",
+      "gradient_accent_1": "",
+      "colors_accent_2": "#334fb4",
+      "gradient_accent_2": "",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#ffffff",
+      "gradient_background_1": "",
+      "colors_background_2": "#f3f3f3",
+      "gradient_background_2": "",
+      "type_header_font": "assistant_n4",
+      "heading_scale": 100,
+      "type_body_font": "assistant_n4",
+      "body_scale": 100,
+      "page_width": 1200,
+      "spacing_sections": 0,
+      "spacing_grid_horizontal": 8,
+      "spacing_grid_vertical": 8,
+      "buttons_border_thickness": 1,
+      "buttons_border_opacity": 100,
+      "buttons_radius": 0,
+      "buttons_shadow_opacity": 0,
+      "buttons_shadow_horizontal_offset": 0,
+      "buttons_shadow_vertical_offset": 4,
+      "buttons_shadow_blur": 5,
+      "variant_pills_border_thickness": 1,
+      "variant_pills_border_opacity": 55,
+      "variant_pills_radius": 40,
+      "variant_pills_shadow_opacity": 0,
+      "variant_pills_shadow_horizontal_offset": 0,
+      "variant_pills_shadow_vertical_offset": 4,
+      "variant_pills_shadow_blur": 5,
+      "inputs_border_thickness": 1,
+      "inputs_border_opacity": 55,
+      "inputs_radius": 0,
+      "inputs_shadow_opacity": 0,
+      "inputs_shadow_horizontal_offset": 0,
+      "inputs_shadow_vertical_offset": 4,
+      "inputs_shadow_blur": 5,
+      "card_style": "standard",
+      "card_image_padding": 0,
+      "card_text_alignment": "left",
+      "card_color_scheme": "background-2",
+      "card_border_thickness": 0,
+      "card_border_opacity": 10,
+      "card_corner_radius": 0,
+      "card_shadow_opacity": 0,
+      "card_shadow_horizontal_offset": 0,
+      "card_shadow_vertical_offset": 4,
+      "card_shadow_blur": 5,
+      "text_boxes_border_thickness": 0,
+      "text_boxes_border_opacity": 10,
+      "text_boxes_radius": 0,
+      "text_boxes_shadow_opacity": 0,
+      "text_boxes_shadow_horizontal_offset": 0,
+      "text_boxes_shadow_vertical_offset": 4,
+      "text_boxes_shadow_blur": 5,
+      "media_border_thickness": 1,
+      "media_border_opacity": 5,
+      "media_radius": 0,
+      "media_shadow_opacity": 0,
+      "media_shadow_horizontal_offset": 0,
+      "media_shadow_vertical_offset": 4,
+      "media_shadow_blur": 5,
+      "popup_border_thickness": 1,
+      "popup_border_opacity": 10,
+      "popup_corner_radius": 0,
+      "popup_shadow_opacity": 0,
+      "popup_shadow_horizontal_offset": 0,
+      "popup_shadow_vertical_offset": 4,
+      "popup_shadow_blur": 5,
+      "drawer_border_thickness": 1,
+      "drawer_border_opacity": 10,
+      "drawer_shadow_opacity": 0,
+      "drawer_shadow_horizontal_offset": 0,
+      "drawer_shadow_vertical_offset": 4,
+      "drawer_shadow_blur": 5,
+      "badge_position": "bottom left",
+      "badge_corner_radius": 40,
+      "sale_badge_color_scheme": "accent-2",
+      "sold_out_badge_color_scheme": "inverse",
+      "accent_icons": "text",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": false,
+      "predictive_search_show_price": false,
+      "currency_code_enabled": true,
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "text": "Welcome to our store",
+                "color_scheme": "background-1",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "color_scheme": "background-1",
+            "logo_width": 90,
+            "logo_position": "middle-left",
+            "menu": "main-menu",
+            "show_line_separator": true,
+            "enable_sticky_header": true,
+            "margin_bottom": 0
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-1": {
+              "type": "link_list",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "text",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "payment_enable": true,
+            "color_footer_bg": "#F5F5F5",
+            "color_footer_text": "#3d4246"
+          }
+        },
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "logo_max_width": 100,
+            "color_scheme": "background-1"
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "color_scheme": "background-1"
+          }
+        }
+      }
+    }
+  }
+}

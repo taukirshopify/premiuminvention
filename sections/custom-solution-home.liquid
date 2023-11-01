@@ -20,14 +20,121 @@
                 <a href="{{ section.settings.link }}" class="button_solution button">{{ section.settings.button_label  }}</a>
               </div>
             {%- endif -%}
-          
+          {% for b in section.blocks %}
+            
+        
+            <a href="{{ b.settings.url }}" class="button button--primary fullwithbutton">
+               <span> {{ b.settings.title }}</span>
+
+
+
+               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+               <path d="M21.7071 8.70711C22.0976 8.31658 22.0976 7.68342 21.7071 7.2929L15.3431 0.928934C14.9526 0.538409 14.3195 0.538409 13.9289 0.928933C13.5384 1.31946 13.5384 1.95262 13.9289 2.34315L19.5858 8L13.9289 13.6569C13.5384 14.0474 13.5384 14.6805 13.9289 15.0711C14.3195 15.4616 14.9526 15.4616 15.3431 15.0711L21.7071 8.70711ZM-8.74228e-08 9L21 9L21 7L8.74228e-08 7L-8.74228e-08 9Z" fill="white"></path>
+               </svg>
+             </a>
+            {% endfor %}
+
          </div>
          <div class="solution_right">
             <img src="{{section.settings.image | img_url : 'master' }}">  
          </div>
       </div>
    </div>
+
 </div>
+<div class="page-width">
+  <div class="content-bottom-wrapper text-center">
+   <h3>{{ section.settings.bottontitle }}</h3>
+   <p>{{ section.settings.bottontitledec }}</p>
+   <a href="{{ section.settings.bottonurl }}" class="button">{{ section.settings.bottonbtn }}</a>
+  </div>
+</div>
+
+<style>
+
+   a.button.fullwithbutton {
+      border-radius: 16px  !important;
+      width: 100%  !important;
+      display: flex;
+      justify-content: space-between;
+      background: #f4f4f4;
+      color: #006BB3;
+      transition: 0.8s;
+      font-weight:600;
+      margin-bottom: 0;
+      margin: 20px 0px 0px 0 !important;
+      padding: 18px !important;
+  }
+      a.button.fullwithbutton:hover{
+             background: #006BB3;
+             color:#fff;
+      }
+      a.button.fullwithbutton svg path{
+           fill:#006BB3 !important;
+      }
+      a.button.fullwithbutton:hover svg path{
+  
+         fill:#fff !important;
+      }
+
+     .content-bottom-wrapper h3{
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 44px;
+      letter-spacing: 0px;
+      text-align: center;
+      margin-top: 10px;
+   }
+   .content-bottom-wrapper p {
+      line-height: 26px;
+      letter-spacing: 0px;
+      font-weight: 600;
+      color: #000;
+      font-size: 16px;
+      text-align: center;
+  }
+  .content-bottom-wrapper p a {
+  text-decoration:none;
+}
+
+.content-bottom-wrapper a {
+
+   text-decoration: none;
+}
+.content-bottom-wrapper a.button {
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 28px;
+   letter-spacing: 0px;
+   text-align: center;
+   background: #086FB5;
+   opacity: 1;
+   cursor: pointer;
+   width: 230px;
+   height: 50px;
+   border-radius: 3px;
+   margin-top: 20px;
+   border-radius: 30px;
+}
+
+.content-bottom-wrapper span.customli span {
+   color: #006bb3;
+}
+.content-bottom-wrapper.text-center {
+   margin: 36px 0;
+}
+
+@media only screen and (max-width: 600px)  {
+.custom-solution .solution_right {
+   padding: 36px 0px 20px !important;
+}
+.content-bottom-wrapper a.button:after {
+   padding: unset;
+   box-shadow: none;
+}
+}
+
+</style>
 {% schema %}
    {
     "name": "custom solution home",
@@ -67,8 +174,49 @@
           "type": "image_picker",
           "id": "image",
           "label":"Image"
+        },
+        {
+         "type": "text",
+         "id": "bottontitle",
+         "label": "Title"
+        },
+        {
+         "type": "html",
+         "id": "bottontitledec",
+         "label": "Selection Button",
+         "default": "<p></p>"
+        },
+        {
+         "type": "url",
+         "id": "bottonurl",
+         "label": "Select your button Url"
+        },
+        {
+         "type": "text",
+         "id": "bottonbtn",
+         "label": "Select your Button Title",
+         "default": " Contact Us !"
         }
 ],
+"blocks": [
+   {
+      "type": "Button",
+      "name": "Link",
+      "settings": [
+         {
+            "type": "url",
+            "id": "url",
+            "label": "Please connect your Url"
+         },
+         {
+            "type": "text",
+            "id": "title",
+            "label": "Button Text"
+         }
+      ]
+   }
+],
+
    "presets": [
        {
          "name": "custom solution home"

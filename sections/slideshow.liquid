@@ -77,68 +77,128 @@
     data-speed="{{ section.settings.change_slides_speed }}"
   >
     {%- for block in section.blocks -%}
-      <style>
-        #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
-          opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
-        }
-      </style>
-      <div class="slideshow__slide grid__item grid--1-col slider__slide"
-        id="Slide-{{ section.id }}-{{ forloop.index }}"
-        {{ block.shopify_attributes }}
-        role="group"
-        aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
-        aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-        tabindex="-1"
-      >
-        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
-          {%- if block.settings.image -%}
-            <img
-              srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
-              {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
-              {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-              {%- if block.settings.image.width >= 1100 -%}{{ block.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
-              {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-              {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
-              {%- if block.settings.image.width >= 2000 -%}{{ block.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
-              {%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
-              {%- if block.settings.image.width >= 3840 -%}{{ block.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
-              {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
-              sizes="100vw"
-              src="{{ block.settings.image | image_url: width: 1500 }}"
-              loading="lazy"
-              alt="{{ block.settings.image.alt | escape }}"
-              width="{{ block.settings.image.width }}"
-              height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
-            >
-          {%- else -%}
-            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-          {%- endif -%}
-        </div>
-        <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} {% if block.settings.page_width %} page-width {% endif  %}   {% if block.settings.extra-space-banner %} extra-space-banner {% endif  %}  {% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
-            {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading  }}</h2>
-            {%- endif -%}
-            {%- if block.settings.subheading != blank -%}
-              <div class="banner__text" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.subheading | escape }}</span>
-              </div>
-            {%- endif -%}
-            {%- if block.settings.button_label != blank -%}
-              <div class="banner__buttons  {% if block.settings.modifiedbutton %}   banner-modifed-button  {% endif %}  ">
-                <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}
-              
-                {% if block.settings.modifiedbutton %} <svg xmlns="http://www.w3.org/2000/svg" width="38" height="16" viewBox="0 0 38 16" fill="none">
-<path d="M37.7071 8.7071C38.0976 8.31658 38.0976 7.68341 37.7071 7.29289L31.3431 0.928929C30.9526 0.538405 30.3195 0.538405 29.9289 0.92893C29.5384 1.31945 29.5384 1.95262 29.9289 2.34314L35.5858 8L29.9289 13.6569C29.5384 14.0474 29.5384 14.6805 29.9289 15.0711C30.3195 15.4616 30.9526 15.4616 31.3431 15.0711L37.7071 8.7071ZM8.74228e-08 9L37 9L37 7L-8.74228e-08 7L8.74228e-08 9Z" fill="#006BB3"/>
-</svg> {% endif %}
+
+
+           {% case block.type %} 
+        {% when 'slide' %}
+          <style>
+            #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
+              opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
+            }
+          </style>
+          <div class="slideshow__slide grid__item grid--1-col slider__slide"
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            {{ block.shopify_attributes }}
+            role="group"
+            aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+            aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+            tabindex="-1"
+          >
+            <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
+              {%- if block.settings.image -%}
+                <img
+                  srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+                  {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                  {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1100 -%}{{ block.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                  {%- if block.settings.image.width >= 2000 -%}{{ block.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                  {%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                  {%- if block.settings.image.width >= 3840 -%}{{ block.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                  {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                  sizes="100vw"
+                  src="{{ block.settings.image | image_url: width: 6000 }}"
+            
+                  alt="{{ block.settings.image.alt | escape }}"
+                  width="{{ block.settings.image.width }}"
+      
+                   {% if block.settings.custome-width %}
+                     class="desktop-benner"
+                  {% endif %}
+                >
+                {% if block.settings.custome-width %}
+                                <img
+                  srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.imagetwo | image_url: width: 375 }} 375w,{%- endif -%}
+                  {%- if block.settings.image.width >= 550 -%}{{ block.settings.imagetwo | image_url: width: 550 }} 550w,{%- endif -%}
+                  {%- if block.settings.image.width >= 750 -%}{{ block.settings.imagetwo | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1100 -%}{{ block.settings.imagetwo | image_url: width: 1100 }} 1100w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1500 -%}{{ block.settings.imagetwo | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1780 -%}{{ block.settings.imagetwo | image_url: width: 1780 }} 1780w,{%- endif -%}
+                  {%- if block.settings.image.width >= 2000 -%}{{ block.settings.imagetwo | image_url: width: 2000 }} 2000w,{%- endif -%}
+                  {%- if block.settings.image.width >= 3000 -%}{{ block.settings.imagetwo | image_url: width: 3000 }} 3000w,{%- endif -%}
+                  {%- if block.settings.image.width >= 3840 -%}{{ block.settings.imagetwo | image_url: width: 3840 }} 3840w,{%- endif -%}
+                  {{ block.settings.imagetwo | image_url }} {{ block.settings.imagetwo.width }}w"
+                  sizes="100vw"
+                  src="{{ block.settings.imagetwo | image_url: width: 6000 }}"
+       
+                  alt="{{ block.settings.imagetwo.alt | escape }}"
+                  width="{{ block.settings.imagetwo.width }}"
+            
+                class="image-mobile"
+                >
+              {%  endif %}
                 
-                </a>
+              {%- else -%}
+                {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </div>
+            <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} {% if block.settings.page_width %} page-width {% endif  %}    {% if block.settings.custome-width %}slier-first-slide {% endif  %} {% if block.settings.extra-space-banner %} extra-space-banner {% endif  %}  {% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+              <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+                {%- if block.settings.heading != blank -%}
+                  <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading  }}</h2>
+                {%- endif -%}
+                {%- if block.settings.subheading != blank -%}
+                  <div class="banner__text" {{ block.shopify_attributes }}>
+                    <span>{{ block.settings.subheading  }}</span>
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.button_label != blank -%}
+                  <div class="banner__buttons  {% if block.settings.modifiedbutton %}   banner-modifed-button  {% endif %}  ">
+                    <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}
+                  
+                    {% if block.settings.modifiedbutton %} <svg xmlns="http://www.w3.org/2000/svg" width="38" height="16" viewBox="0 0 38 16" fill="none">
+                 <path d="M37.7071 8.7071C38.0976 8.31658 38.0976 7.68341 37.7071 7.29289L31.3431 0.928929C30.9526 0.538405 30.3195 0.538405 29.9289 0.92893C29.5384 1.31945 29.5384 1.95262 29.9289 2.34314L35.5858 8L29.9289 13.6569C29.5384 14.0474 29.5384 14.6805 29.9289 15.0711C30.3195 15.4616 30.9526 15.4616 31.3431 15.0711L37.7071 8.7071ZM8.74228e-08 9L37 9L37 7L-8.74228e-08 7L8.74228e-08 9Z" fill="white"/>
+                </svg> {% endif %}
+                    
+                    </a>
+                  </div>
+                {%- endif -%}
               </div>
-            {%- endif -%}
+            </div>
           </div>
-        </div>
-      </div>
+        {% when 'slide-image' %}
+          <style>
+            #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
+              opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
+            }
+          </style>
+        
+          <div class="slideshow__slide grid__item grid--1-col slider__slide"
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            {{ block.shopify_attributes }}
+            role="group"
+            aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+            aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+            tabindex="-1"
+          >
+            <a href="{{ block.settings.link }}">
+            <div class="slideshow__text-wrapper  extra-space-banner   ">
+           
+               <img class="image-desktop" src="{{ block.settings.image | img_url:'master' }}" alt="">
+               <img class="image-mobile" src="{{ block.settings.imagetwo | img_url:'master' }}" alt="">
+
+           
+            </div>
+          </a>
+          </div>   
+        {% endcase %}
+
+
+
     {%- endfor -%}
+
+
   </div>
 
   {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
@@ -188,6 +248,67 @@
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+<style>
+
+      .slier-first-slide 
+h2.banner__heading.h1 {
+    color: #000 !important;
+    font-size: 86px !important;
+    font-weight: 700 !important;
+  line-height: 1 !important;
+}   
+  
+  .slier-first-slide .banner__text span {
+    color: #000;
+}
+
+
+  .slier-first-slide .banner__text span {
+    color: #000;
+    font-size: 20px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+  
+
+  @media only screen and (max-width: 800px) and (min-width: 100px)  {
+  .slier-first-slide  .slideshow__text.banner__box {
+    padding-top: 120% !important;
+}
+  .image-desktop{
+  display:none;  
+  }
+  img.image-mobile {
+    width: 100%;
+    margin: 0 0 55px 0;
+    display: block;
+}
+
+.slier-first-slide 
+h2.banner__heading.h1 {
+
+    font-size: 56px !important;
+ 
+}    
+  }
+  @media only screen and (max-width: 8800px) and (min-width: 801px)  {
+
+ img.image-mobile {
+    display: none !important;
+}  
+  }
+
+
+
+
+
+
+
+
+
+
+</style>
 {% schema %}
 {
   "name": "t:sections.slideshow.name",
@@ -308,26 +429,36 @@
           "id": "image",
           "label": "t:sections.slideshow.blocks.slide.settings.image.label"
         },
-  {
-    "type": "checkbox",
-    "id": "page_width",
-    "label": "Check the Slide is Full width",
-    "default": true
-   },
-
-
+                {
+          "type": "image_picker",
+          "id": "imagetwo",
+          "label": "image two Slide"
+        },
           {
-    "type": "checkbox",
-    "id": "extra-space-banner",
-    "label": "Add extra space on Each slide",
-    "default": false
-   },
-                  {
-    "type": "checkbox",
-    "id": "modifiedbutton",
-    "label": "Modified Button",
-    "default": false
-   },
+            "type": "checkbox",
+            "id": "page_width",
+            "label": "Check the Slide is Full width",
+            "default": true
+          },
+
+
+                          {
+            "type": "checkbox",
+            "id": "custome-width",
+            "label": "Custome slide",
+            "default": true
+          },  {
+            "type": "checkbox",
+            "id": "extra-space-banner",
+            "label": "Add extra space on Each slide",
+            "default": false
+          },
+                        {
+          "type": "checkbox",
+          "id": "modifiedbutton",
+          "label": "Modified Button",
+          "default": false
+        },
         {
           "type": "text",
           "id": "heading",
@@ -513,6 +644,30 @@
           "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label"
         }
       ]
+    },
+    {
+      "type": "slide-image",
+      "name": "slide-image",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+        },
+
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Connect to the Page"
+        },
+          {
+            "type": "checkbox",
+            "id": "page_width",
+            "label": "Check the Slide is Full width",
+            "default": true
+          }
+      ]
     }
   ],
   "presets": [
@@ -554,8 +709,8 @@
     
 
     .banner__buttons.banner-modifed-button a {
-    background: white !important;
-    color: #006BB3 !important;
+    background:  #006BB3  !important;
+    color:  white !important;
     display: flex;
     padding: 10px 22px !important;
     border-radius: 35px !important;

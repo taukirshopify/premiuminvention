@@ -125,7 +125,9 @@
           {% if block.settings.product1 != blank %}
           <div class="products_grid_custom_item">
             <a href="{{ block.settings.url1 }}">
+
               <img src="{{ block.settings.product1 | img_url:'master' }}" alt="{{ block.settings.product1.alt }}" loading="lazy" width="auto" height="auto">
+               <p>{{ block.settings.product1_t }}</p>
             </a>
           </div>
             {% endif %}
@@ -133,6 +135,7 @@
           <div class="products_grid_custom_item">
             <a href="{{ block.settings.url2 }}">
               <img src="{{ block.settings.product2 | img_url:'master' }}" alt="{{ block.settings.product2.alt }}" loading="lazy" width="auto" height="auto">
+              <p>{{ block.settings.product2_t }}</p>
             </a>
           </div>
             {% endif %}
@@ -140,6 +143,7 @@
           <div class="products_grid_custom_item">
             <a href="{{ block.settings.url3 }}">
               <img src="{{ block.settings.product3 | img_url:'master' }}" alt="{{ block.settings.product3.alt }}" loading="lazy" width="auto" height="auto">
+              <p>{{ block.settings.product3_t }}</p>
             </a>
           </div>
             {% endif %}
@@ -147,6 +151,7 @@
           <div class="products_grid_custom_item">
             <a href="{{ block.settings.url4 }}">
               <img src="{{ block.settings.product4 | img_url:'master' }}" alt="{{ block.settings.product4.alt }}" loading="lazy" width="auto" height="auto">
+              <p>{{ block.settings.product4_t }}</p>
             </a>
           </div>
             {% endif %}
@@ -161,6 +166,56 @@
 </div>
     {% endif %}
     </div>
+
+
+    <style>
+      .products_grid_custom_item img {
+        width: 98px;
+        height: 99px;
+        object-fit: contain;
+  
+    }
+    @media only screen and (max-width: 600px)  {
+    
+      .products_grid_custom_item img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+  
+    }
+    .image_banner_home .products_grid_custom_item {
+      max-width: 25% !important;
+      width: 100%;
+  }
+
+    }
+
+    @media only screen and (max-width: 450px)  {
+      .image_banner_home .products_grid_custom {
+
+        column-gap: 5px;
+
+    }
+    }
+
+  .products_grid_custom_item  a p {
+    text-decoration: none;
+    font-weight:600;
+    margin:10px 0 0 0;
+}
+.products_grid_custom_item  a {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 0;
+  text-decoration: none;
+  border-radius: 15px;
+}
+    </style>
 {% schema %}
 {
   
@@ -504,6 +559,12 @@
           "id": "product1",
           "label": "Product1"
         },
+        {
+          "type": "text",
+          "id": "product1_t",
+          "label": "Product Title",
+          "default": "WireLess"
+        },
          {
           "type": "url",
           "id": "url1",
@@ -514,6 +575,12 @@
           "id": "product2",
           "label": "Product2"
         },
+        {
+          "type": "text",
+          "id": "product2_t",
+          "label": "Product Title",
+          "default": "WireLess"
+        },
          {
           "type": "url",
           "id": "url2",
@@ -523,6 +590,11 @@
           "type": "image_picker",
           "id": "product3",
           "label": "Product3"
+        },    {
+          "type": "text",
+          "id": "product3_t",
+          "label": "Product Title",
+          "default": "WireLess"
         },
          {
           "type": "url",
@@ -533,6 +605,12 @@
           "type": "image_picker",
           "id": "product4",
           "label": "Product4"
+        },
+        {
+          "type": "text",
+          "id": "product4_t",
+          "label": "Product Title",
+          "default": "WireLess"
         },
          {
           "type": "url",

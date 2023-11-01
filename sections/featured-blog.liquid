@@ -30,79 +30,158 @@
     assign posts_displayed = section.settings.post_limit
   endif
 -%}
-<div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
-  <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
-    {%- unless section.settings.heading == blank -%}
-      <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
-        <h2 class="blog__title {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
-     <div class="topmain-bar-blog">
-        <div class="tabs">
-                 <ul id="tabs-nav-blog">
-          <li><a href="#tab1">All</a></li>
-        <li><a href="#tab2">Installation</a></li>
-    <li><a href="#tab3">Safety Tips</a></li>
-  </ul> <!-- END tabs-nav -->                        
-  <div id="tabs-content-blog">
-    <div id="tab1" class="tab-content-blog">
-      <h2>Silent Bob</h2>
-       </div>
-    <div id="tab2" class="tab-content-blog">
-      <h2>Dante Hicks</h2>
-      </div>
-    <div id="tab3" class="tab-content-blog">
-      <h2>Randall Graves</h2>
-       </div>
-    
-  </div> <!-- END tabs-content -->
-</div> <!-- END tabs -->
-        <div class="search-container">
-          <form action="/action_page.php">
-              <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M25.3506 27.0375L15.4881 17.1375C14.7138 17.7961 13.8236 18.3047 12.8631 18.6375C11.8415 19.0077 10.7622 19.1931 9.67559 19.185C8.40136 19.2117 7.13515 18.9773 5.95493 18.4962C4.77471 18.0151 3.70549 17.2975 2.81309 16.3875C1.91041 15.5124 1.19547 14.4626 0.711923 13.302C0.228372 12.1415 -0.0136598 10.8946 0.000594963 9.6375C-0.0136598 8.38034 0.228372 7.13347 0.711923 5.97295C1.19547 4.81242 1.91041 3.76259 2.81309 2.8875C3.69502 1.97055 4.75584 1.24446 5.92983 0.754219C7.10382 0.263981 8.36598 0.0200354 9.6381 0.0374964C10.8956 0.0205935 12.1433 0.261418 13.3042 0.745126C14.4651 1.22883 15.5146 1.94518 16.3881 2.85C17.2896 3.7327 18.0018 4.78973 18.4815 5.95667C18.9612 7.1236 19.1982 8.37599 19.1781 9.6375C19.1819 10.6973 19.0043 11.75 18.6531 12.75C18.2887 13.7688 17.7563 14.7194 17.0781 15.5625L27.0006 25.35L25.3506 27.0375ZM9.6381 16.95C10.6021 16.965 11.559 16.7816 12.4492 16.4114C13.3394 16.0411 14.1441 15.4918 14.8131 14.7975C15.5031 14.1213 16.0485 13.3119 16.4159 12.4184C16.7834 11.5249 16.9653 10.566 16.9506 9.6C16.9653 8.634 16.7834 7.6751 16.4159 6.7816C16.0485 5.8881 15.5031 5.07866 14.8131 4.4025C14.1408 3.71502 13.3348 3.17264 12.4447 2.80887C11.5546 2.44511 10.5994 2.26766 9.6381 2.2875C8.66224 2.26755 7.69268 2.44832 6.78958 2.81859C5.88648 3.18886 5.06908 3.74074 4.3881 4.44C3.70089 5.11047 3.15707 5.91357 2.78964 6.80057C2.4222 7.68757 2.23881 8.63998 2.25059 9.6C2.23585 10.5669 2.41998 11.5265 2.79155 12.4193C3.16311 13.3121 3.7142 14.119 4.41059 14.79C5.08752 15.4889 5.90082 16.0413 6.80005 16.4128C7.69929 16.7844 8.66527 16.9672 9.6381 16.95Z" fill="black"/>
-</svg>
-</button>
-          </form>
-        </div>
-       </div>
-        
-        {%- if section.settings.blog != blank and section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
-          <a href="{{ section.settings.blog.url }}"
-            class="link underlined-link large-up-hide"
-          >
-            {{ 'sections.featured_blog.view_all' | t }}
-          </a>
-        {%- endif -%}
-      </div>
-    {%- endunless -%}
-    {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
-      <slider-component class="slider-mobile-gutter">
-        <ul id="Slider-{{ section.id }}"
-          class="blog__posts articles-wrapper contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
-          role="list"
-        >
-          {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
-            <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="blog__post grid__item article slider__slide slider__slide--full-width">
-              {% render 'article-card', blog: section.settings.blog, article: article, media_aspect_ratio: 1.66, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: true %}
-           
-            </li>
-          {%- endfor -%}
-    
-        </ul>
-        {%- if posts_exceed_limit -%}
-          <div class="slider-buttons no-js-hidden{% if section.settings.post_limit < 3 %} medium-hide{% endif %}{% if section.settings.post_limit < 2 %} small-hide{% endif %}">
-            <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-            <div class="slider-counter caption">
-              <span class="slider-counter--current">1</span>
-              <span aria-hidden="true"> / </span>
-              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-              <span class="slider-counter--total">{{ section.settings.post_limit }}</span>
-            </div>
-            <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
-          </div>
-        {%- endif -%}
-      </slider-component>
 
+{% comment %} 
+<slider-component class="slider-mobile-gutter">
+  <ul id="Slider-{{ section.id }}"
+    class="blog__posts articles-wrapper contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
+    role="list"
+  >
+    {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
+
+      <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="blog__post grid__item article slider__slide slider__slide--full-width">
+        {% render 'article-card', blog: section.settings.blog, article: article, media_aspect_ratio: 1.66, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: true %}
+     
+      </li>
+
+    {%- endfor -%}
+
+  </ul>
+  {%- if posts_exceed_limit -%}
+    <div class="slider-buttons no-js-hidden{% if section.settings.post_limit < 3 %} medium-hide{% endif %}{% if section.settings.post_limit < 2 %} small-hide{% endif %}">
+      <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+      <div class="slider-counter caption">
+        <span class="slider-counter--current">1</span>
+        <span aria-hidden="true"> / </span>
+        <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+        <span class="slider-counter--total">{{ section.settings.post_limit }}</span>
+      </div>
+      <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
+    </div>
+  {%- endif -%}
+</slider-component> {% endcomment %}
+
+
+<div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
+  <div class="page-width isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
+
+    {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
+    
+     <div class="custome-blog-wrapper">
+    
+       <div class="blog-left-wrapper">
+        {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
+            <div class="singel-blog-wrapper">   
+              <div class="blog-image-wrapper">
+                 <img src="{{ article.image.src | img_url: 'medium' }}">
+              </div>
+              <div class="blog-singel-content-left">
+
+                 <div class="blog-content-top">
+                  <h4> {{ article.title }} </h4>
+                  <p>{{ article.content | strip_html | truncate: 300 }}</p>
+                 </div>
+
+                  <div class="text-right">
+                      <a href="{{ article.url }}" aria-label="Read more: {{ article.title }}" class="btn blog-btn"> Read More <svg xmlns="http://www.w3.org/2000/svg" width="32" height="12" viewBox="0 0 32 16" fill="none">
+                        <path d="M31.5021 8.7071C31.8927 8.31658 31.8927 7.68341 31.5021 7.29289L25.1382 0.92893C24.7477 0.538406 24.1145 0.538406 23.724 0.92893C23.3334 1.31945 23.3334 1.95262 23.724 2.34314L29.3808 8L23.724 13.6569C23.3334 14.0474 23.3334 14.6805 23.724 15.0711C24.1145 15.4616 24.7477 15.4616 25.1382 15.0711L31.5021 8.7071ZM8.74228e-08 9L30.795 9L30.795 7L-8.74228e-08 7L8.74228e-08 9Z" fill="#F7FCFF"/>
+                        </svg>
+                      </a>
+                  </div>
+              </div>
+            </div>
+          {%- endfor -%}
+       </div>
+    
+       <div class="blog-right-wrapper">
+         <div class="blog-right-benner">
+             <div class="ad-wrapper">
+               <div class="ads-img">
+              
+                         <img src="{{ section.settings.img_benner | img_url:'master' }}" alt="">              
+               </div>
+               <div class="ads-content">
+                <h5>Why Premium Invention Cameras are Worth the Investment</h5>
+                <a href="{{ section.settings.link }}" aria-label="Read more" class="btn blog-btn"> Discover Now <svg xmlns="http://www.w3.org/2000/svg" width="32" height="12" viewBox="0 0 32 16" fill="none">
+                  <path d="M31.5021 8.7071C31.8927 8.31658 31.8927 7.68341 31.5021 7.29289L25.1382 0.92893C24.7477 0.538406 24.1145 0.538406 23.724 0.92893C23.3334 1.31945 23.3334 1.95262 23.724 2.34314L29.3808 8L23.724 13.6569C23.3334 14.0474 23.3334 14.6805 23.724 15.0711C24.1145 15.4616 24.7477 15.4616 25.1382 15.0711L31.5021 8.7071ZM8.74228e-08 9L30.795 9L30.795 7L-8.74228e-08 7L8.74228e-08 9Z" fill="#F7FCFF"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="ads-content-bottom">
+                {% comment %} id="shopify-section-Popup--premium" {% endcomment %}
+      
+                    <div class="popup-inner-premium">
+           
+                      <ul class="popup-two-only-slider">
+                        <li>
+        
+                          <div class="inner-item-brand-wrapper">
+                            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Group_397a5af9-7d49-4073-a217-96b0f1eaa0e2.png?v=1696492454">
+                            <h2 class="popup_prm_heading"> Premium Quality</h2>
+                          </div>
+                        </li>
+                  
+                       
+                  
+                        
+                        <li >
+                          <div class="inner-item-brand-wrapper">
+                  
+                            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__shipping_fast_solid.png?v=1696492455">
+                            <h2 class="popup_prm_heading">  Express Shipping</h2>
+                  
+                          </div>
+                        
+                        </li>
+                        <li >
+                          <div class="inner-item-brand-wrapper">
+                  
+                            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__help_customer_support_1.png?v=1696492454">
+                            <h2 class="popup_prm_heading">Top-Tier Support Team</h2>
+                  
+               
+                          </div>
+                        
+                        </li>
+                  
+                        <li >
+                 
+                          <div class="inner-item-brand-wrapper">
+                            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__premium_content_user_credit.png?v=1696492454">
+                            <h2 class="popup_prm_heading">1 Year Warranty</h2>
+                  
+              
+                          </div>
+                        
+                        </li>
+                        
+                        <li class="last-child-popup" >
+                                  
+                          <div class="inner-item-brand-wrapper">
+                          
+                       
+                  
+                            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__money_refund_dollar.png?v=1696492454">
+                            <h2 class="popup_prm_heading"> 30-Day Money-Back Guarantee</h2>
+                  
+                          </div>
+                          
+                        </li>
+                  
+                        
+                  
+                  
+                  
+                      </ul> 
+                   
+         
+                  </div>
+                  
+              </div>
+             </div>
+         </div>
+       </div>
+     </div>
       {%- if section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
         <div class="blog__view-all center small-hide medium-hide">
           <a href="{{ section.settings.blog.url }}" class="blog__button button">
@@ -127,7 +206,222 @@
     {%- endif -%}
   </div>
 </div>
+{{ 'Popup--premium.css' | asset_url | stylesheet_tag }}
+<style>
+  
+  .ad-wrapper {
+    position: relative;
+  
+}
+.inner-item-brand-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+
+  .inner-item-brand-wrapper img {
+    width: 40px;
+    height: 33px;
+    object-fit: contain;
+    margin-right: 3px;
+}
+.inner-item-brand-wrapper h2 {
+  color: #fff;
+  font-size: 14px;
+
+  margin: 0;
+  padding: 0  0  0 5px;
+}
+.ads-content {
+  padding: 17px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+}
+
+.ads-content-bottom {
+  padding: 0 8%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+}
+
+.ads-content-bottom .bottom-svg-wrapper a{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration:none;
+}
+
+.ads-content 
+h5 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom:18px;
+}
+
+
+
+@media only screen and (max-width: 1010px)  {
+  .blog-right-wrapper {
+    text-align:center;
+   }
+  .blog-right-benner {
+    display: inline-block;
+    max-width:450px;
+    margin-bottom: 40px;
+}
+.custome-blog-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+}
+
+
+@media only screen and (min-width: 1020px)  {
+  .custome-blog-wrapper {
+    flex-direction: row;
+
+}
+.ad-wrapper {
+
+  margin: 0 0 0 30px;
+}
+  .custome-blog-wrapper {
+    display: flex;
+    flex-direction: 
+}
+.blog-left-wrapper {
+  width: 70%;
+}
+.blog-right-wrapper {
+  width: 30%;
+}
+
+
+}
+.singel-blog-wrapper {
+  display: flex;
+  border: 1px solid;
+  margin: 0 0 23px 0;
+  border-radius: 31px;
+  border-color: rgba(0, 107, 179, 0.25);
+}
+.blog-singel-content-left {
+  padding: 11px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a.btn {
+  background: #006BB3 !important;
+  color: white !important;
+  border-radius: 30px;
+  font-weight: 700;
+  padding: 6px 17px 7px 17px;
+}
+
+
+a.btn svg{
+  margin-left:8px;
+  display: inline-block;
+}
+.singel-blog-wrapper h4 {
+  font-size: 23px;
+  line-height:1;
+  margin: 8px 0;
+}
+.singel-blog-wrapper
+p {
+  font-size: 14px;
+}
+.singel-blog-wrapper  img {
+  width: 254px;
+  border-radius: 31px;
+  height: 278px;
+  object-fit: cover;
+}
+
+.ads-img img {
+  width: 100%;
+  border-radius: 34px;
+}
+.text-right{
+ text-align:right;
+}
+
+a.btn {
+  background: #006BB3 !important;
+  color: white !important;
+  border-radius: 30px;
+  font-weight: 700;
+  line-height: 15px;
+  font-size: 15px;
+  padding: 6px 24px;
+  display: inline-flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px)  {
+  .singel-blog-wrapper {
+    display: unset;
+   
+}
+.singel-blog-wrapper  img {
+  width: 100%;
+}
+
+
+}
+
+.page-width {
+
+  max-width: 1500px;
+}
+
+@media only screen and (min-width: 1300px)  {
+
+  .blog-left-wrapper {
+    padding-right: 1.5%;
+}
+}
+</style>
+<script>
+
+  jQuery(document).ready(function(){
+  $('ul.popup-two-only-slider').slick({
+
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay:true,
+  responsive: [
+  
+  
+  
+  {
+  breakpoint: 866,
+  settings: {
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay:true
+  }
+  }
+  ]
+  });
+});
+</script>
 {% schema %}
 {
   "name": "t:sections.featured-blog.name",
@@ -139,6 +433,21 @@
       "id": "heading",
       "default": "Blog posts",
       "label": "t:sections.featured-blog.settings.heading.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_benner",
+      "label": "Select Your Image Wrapper"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link to the Blog"
+    },
+    {
+      "type": "url",
+      "id": "url2",
+      "label": "Link to the ad benner bottom"
     },
     {
       "type": "select",

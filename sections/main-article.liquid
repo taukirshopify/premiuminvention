@@ -247,6 +247,98 @@
   {%- endif -%}
 </article>
 
+ <style>
+
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    margin: 22px 0 12px 0;
+    @media only screen and (max-width: 600px)  {
+      margin: 10px 0;
+    }
+}
+
+  .article-template__title{
+   color:#000;
+  }
+  article.article-template.single-blog h1.article-template__title {
+    font-family: Work Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 53px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: unset !important;
+    padding-bottom: 35px;
+  }
+ #MainContent .blue {
+    color: blue;
+  }
+ #MainContent .blodnew {
+    font-weight: 700;
+  }
+ #MainContent article.article-template.single-blog p,
+  article.article-template.single-blog ul li {
+    font-family: Work Sans;
+    font-size: 20px !important;
+    font-weight: 400;
+    line-height: 30px !important;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000;
+  }
+  
+  @media only screen and (min-width: 1020px) {
+    .single-blog h3 {
+      font-size: 2.2rem;
+    }
+  }
+ #MainContent  li {
+    font-size: 21px;
+    line-height: 1.5;
+    margin: 25px 30px;
+}
+
+@media only screen and  (min-width: 1000px){
+.blog-border{
+  display:flex;
+}
+.blog-border-left{
+ border-bottom:1px solid #000;
+ border-right:1px solid #000;
+ border-top:1px solid #000;
+}
+.blog-border-only-left{
+
+ border-left:1px solid #000;
+}
+.blog-border-right.blog-border p {
+  width: 50%;
+  padding:1.5%;
+}
+.blog-border-right{
+ border:1px solid #000;
+}
+.blog-border-right p{
+ margin:0 !important;
+}
+
+.blog-border-left{
+
+  padding: 20px 19px  !important;
+}
+
+
+ 
+    article.article-template.single-blog img{width: auto !important;display: block;margin: auto;padding: 20px 0;}
+
+    .blog-h1-big-font { font-size: 3.5rem;}
+  }
+
+  p.blog-border-only-left img {
+    width: 100%  !important;
+}
+ </style>
+
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",

@@ -11,8 +11,8 @@
     ></div>
     <div class="tab-top-text">
       <div class="page-width">
-        <h2 class="section-ti">Live in the <span>FUTURE</span></h2>
-        <h3 class="section-cont">Start protecting your home and loved ones TODAY:</h3>
+        <h2 class="section-ti text-center">Live in the <span>FUTURE</span></h2>
+        <h3 class="section-cont text-center">Start protecting your home and loved ones TODAY:</h3>
       </div>
     </div>
 
@@ -98,7 +98,7 @@
 
             {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}          
                       
-                         <span class="saveamount">{{ saved_amount }}</span>   
+                         <span class="saveamount">{{ variantis.price | times: 100 | divided_by: variantis.compare_at_price | minus: 100 | abs }}% off</span>   
                             
                   
                   </p>
@@ -249,7 +249,7 @@
                   {% assign amount = saving | at_least: amount %}
 
                   {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
-                  <span class="saveamount">{{ saved_amount }}</span>   
+                  <span class="saveamount">{{ variantis.price | times: 100 | divided_by: variantis.compare_at_price | minus: 100 | abs }}% off</span>   
                             
                 </p>
               {% endif %}
@@ -388,7 +388,7 @@
                   {% assign amount = saving | at_least: amount %}
 
                   {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
-                   <span class="saveamount">{{ saved_amount }}</span>   
+                   <span class="saveamount">{{ variantis.price | times: 100 | divided_by: variantis.compare_at_price | minus: 100 | abs }}% off</span>   
                             
                 </p>
               {% endif %}
@@ -494,7 +494,7 @@
                   {% assign amount = saving | at_least: amount %}
 
                   {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
-                  <span class="saveamount">{{ saved_amount }}</span> 
+                  <span class="saveamount">{{ variantis.price | times: 100 | divided_by: variantis.compare_at_price | minus: 100 | abs }}% off</span> 
                   
                 </p>
               {% endif %}
@@ -655,6 +655,6 @@
 </script>
   <style>
     body.template_wc-v4 .buynow-btn {
-    flex-direction: column;
+    flex-direction: row !important;
 }
   </style>
