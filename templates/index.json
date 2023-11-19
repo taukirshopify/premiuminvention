@@ -16,7 +16,7 @@
             "heading_size": "h1",
             "subheading": "Experience advanced security <br> technology at its peak",
             "button_label": "Discover",
-            "link": "shopify:\/\/products\/wireless-camera-v4",
+            "link": "https:\/\/premiuminvention.com\/pages\/collection",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": false,
@@ -204,10 +204,10 @@
           "settings": {
             "product1": "shopify:\/\/shop_images\/V4_copy_1.png",
             "product1_t": "Wireless",
-            "url1": "https:\/\/premiuminvention.com\/pages\/collection?tab=wired",
+            "url1": "https:\/\/premiuminvention.com\/pages\/collection",
             "product2": "shopify:\/\/shop_images\/X3_copy_1_f47930c7-5b73-4da3-8ee2-c45d3cca4c95.png",
             "product2_t": "Wired",
-            "url2": "https:\/\/premiuminvention.com\/pages\/collection?tab=wireless",
+            "url2": "https:\/\/premiuminvention.com\/pages\/collection?tab=wired",
             "product3": "shopify:\/\/shop_images\/NVR_copy_1_6dcf49bf-30fb-4d75-88bf-74b771563d1f.png",
             "product3_t": "NVRs",
             "url3": "https:\/\/premiuminvention.com\/pages\/collection?tab=nvr",
@@ -634,8 +634,8 @@
         "61e3b018-32c2-4a17-ae98-2e1bab2387f4": {
           "type": "fullbutton",
           "settings": {
-            "button_label": "Wireless Camera V3",
-            "button_link": "shopify:\/\/products\/wireless-outdoor-camera-v3"
+            "button_label": "Wireless Camera V3S",
+            "button_link": "https:\/\/premiuminvention.com\/products\/wireless-camera-v3s"
           }
         },
         "8d35d648-16dc-4253-bf62-a3f1140b5193": {
@@ -857,6 +857,7 @@
         },
         "1da517a3-8b14-4030-988e-b253ed230ba1": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Add_a_subheading-17_4.png",
             "title": "Wireless Camera V4",
@@ -868,6 +869,7 @@
         },
         "5182449b-d8f1-4803-94b5-733b2e1fe690": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_4149.png",
             "title": "Wired X3 Outdoor Camera",
@@ -878,6 +880,7 @@
         },
         "8d31d056-228d-4cc8-9108-158700d4fd69": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/WiFi__Single_Product_Image_3.png",
             "title": "Wireless Camera V3s",

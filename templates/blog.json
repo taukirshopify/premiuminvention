@@ -1,5 +1,52 @@
 {
   "sections": {
+    "56721e50-7fa7-44d2-9126-2f6d4fe8d6fa": {
+      "type": "image-with-text-suscribe",
+      "blocks": {
+        "template--15307819548733__56721e50-7fa7-44d2-9126-2f6d4fe8d6fa-heading-1": {
+          "type": "heading",
+          "settings": {
+            "prehead": "",
+            "heading": "Stay Informed and Well-Protected",
+            "heading_size": "h1"
+          }
+        },
+        "template--15307819548733__56721e50-7fa7-44d2-9126-2f6d4fe8d6fa-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Be up-to-date with the latest news and articles about home security and tech. Enter your email to sign up to our newsletter for amazing promos and news.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "e94597f3-f5f7-4fd1-84c7-575f4e8cff22": {
+          "type": "from",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15307819548733__56721e50-7fa7-44d2-9126-2f6d4fe8d6fa-heading-1",
+        "template--15307819548733__56721e50-7fa7-44d2-9126-2f6d4fe8d6fa-text-1",
+        "e94597f3-f5f7-4fd1-84c7-575f4e8cff22"
+      ],
+      "settings": {
+        "extra-visitor": "",
+        "extra-visitor_id": "",
+        "image": "shopify:\/\/shop_images\/Blog_Image.png",
+        "clr": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-blog",
       "disabled": true,
@@ -13,19 +60,12 @@
         "padding_bottom": 36
       }
     },
-    "166041524135b4c574": {
-      "type": "banner-all-pages",
-      "settings": {
-        "extra-all-banner": "only_blog_banner no_faq-page_includ",
-        "sub_info": "",
-        "all_pages_heading": "Premium Invention Blog"
-      }
-    },
     "166040763657a5228e": {
-      "type": "featured-blog",
+      "type": "featured-blog-new",
       "settings": {
         "heading": "Blog posts",
         "img_benner": "shopify:\/\/shop_images\/Premium_Invention_Multiple_Products_MOBILE_93cfc7e6-1e3d-4dc3-b43c-61c33abb2e63.jpg",
+        "img": "shopify:\/\/shop_images\/Mobile_Navbar_Logo_copy_2_1.png",
         "link": "https:\/\/premiuminvention.com\/blogs\/all\/blog-6-why-premium-invention-cameras-are-worth-the-investment",
         "url2": "https:\/\/premiuminvention.com\/blogs\/all\/blog-6-why-premium-invention-cameras-are-worth-the-investment",
         "heading_size": "h1",
@@ -144,8 +184,8 @@
         "61e3b018-32c2-4a17-ae98-2e1bab2387f4": {
           "type": "fullbutton",
           "settings": {
-            "button_label": "Wireless Camera V3",
-            "button_link": "shopify:\/\/products\/wireless-outdoor-camera-v3"
+            "button_label": "Wireless Camera V3S",
+            "button_link": "https:\/\/premiuminvention.com\/products\/wireless-camera-v3s"
           }
         },
         "8d35d648-16dc-4253-bf62-a3f1140b5193": {
@@ -193,20 +233,13 @@
         "padding_top": 60,
         "padding_bottom": 40
       }
-    },
-    "1660417092d30efa0a": {
-      "type": "Popup--premium",
-      "settings": {
-        "extra-Popup--premium": "extra-home-popup"
-      }
     }
   },
   "order": [
+    "56721e50-7fa7-44d2-9126-2f6d4fe8d6fa",
     "main",
-    "166041524135b4c574",
     "166040763657a5228e",
     "16604167614aed0e4f",
-    "33e11edd-9862-4bb6-a4eb-7e44756323d5",
-    "1660417092d30efa0a"
+    "33e11edd-9862-4bb6-a4eb-7e44756323d5"
   ]
 }

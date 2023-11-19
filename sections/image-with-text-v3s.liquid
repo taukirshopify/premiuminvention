@@ -10,7 +10,9 @@
         <div id="{{ wrapper_id }}" class="feature-row__image-wrapper js">
           <div style="padding-top:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;">
             <img id="{{ img_id }}"
+              loading="lazy" 
                  class="feature-row__image lazyload"
+                 loading="lazy" 
                  src="{{ section.settings.image | img_url: 'master' }}"
                  data-src="{{ img_url }}"
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
@@ -44,12 +46,16 @@
 	  <ul class="image-with-text-ul hide-desk">
         {% for block in section.blocks %}
   <li>
-  <div class="ul-image"><img src="{{block.settings.image | img_url : 'master' }}"></div>
+  <div class="ul-image">
+    <img src="{{block.settings.image | img_url : 'master' }}">
+
+
+
+</div>
     <p>{{block.settings.cta_label  }}</p>
     </li>
     {% endfor %}
-<!--         <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/powerful_bettries.svg?v=1649531227"><p>4 powerful  <br>rechargeable batteries </p></li>
-         <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/solar_panel.svg?v=1649531227">5W Solar panel</li>-->
+
       </ul> 
 	  
 	  

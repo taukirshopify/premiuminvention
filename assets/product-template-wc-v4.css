@@ -17,9 +17,12 @@ div {
   .py-120 {
     padding: 60px 0 !important;
   }
-  .item-wrap:first-child,
+
   .security-img {
     margin-right: 0px !important;
+  }
+  .item-wrap:first-child {
+    margin-right: 0 !important;
   }
 }
 
@@ -1138,3 +1141,4 @@ img#FeatureRowImage-template--15169451032637__0b1ec46d-e16f-4e4f-8680-9394dda27e
   width: 100% !important;
   max-width: 1400px !important;
 }
+

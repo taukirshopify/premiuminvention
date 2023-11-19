@@ -27,7 +27,7 @@
     "btxt_usa": "2-4 Days USA Shipping",
     "show_multiple_currencies": true,
     "currency_format": "money_format",
-    "supported_currencies": "NZD CAD USD AUD EUR ZAR GBP",
+    "supported_currencies": "NZ CA US AU EU ZA GB",
     "type_header_font": "work_sans_n4",
     "heading_scale": 100,
     "type_body_font": "work_sans_n4",
@@ -205,21 +205,22 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "title": "",
+              "title": "Others",
               "menu": "footer"
             }
           },
           "3b21d724-2d48-44cb-9516-9e256f1fbaa8": {
             "type": "link_list",
             "settings": {
-              "title": "FOLLOW US",
+              "title": "Follow Us",
               "menu": "social-1"
             }
           },
           "8d524701-4cca-48be-8c14-61c9a706a778": {
             "type": "newsletter",
             "settings": {
-              "title": "SIGN UP FOR OUR NEWSLETTER!"
+              "title": "Sign Up to Our Newsletters",
+              "text": "<p><a href=\"mailto:support@premiuminvention.com\" title=\"mailto:support@premiuminvention.com\">support@premiuminvention.com<\/a><\/p><p> <a href=\"tel:(877) 224 0705\" title=\"tel:(877) 224 0705\">(877) 224 0705<\/a><\/p><p>Suite #506, 105-7655 Edmonds St, Burnaby, BC, V3N 0C3, Canada<\/p>"
             }
           }
         },

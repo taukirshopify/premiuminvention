@@ -7,7 +7,7 @@
           {% case block.type %}
             {% when 'image' %}
               <div class="brand-item d-flex align-items-center justify-content-center">
-                <img src="{{ block.settings.image | image_url: width: 220  }}" class="img-fluid" alt="brand">
+                <img src="{{ block.settings.image | image_url: width: 220  }}" loading="lazy" class="img-fluid" alt="brand">
               </div>
           {% endcase %}
         {% endfor %}

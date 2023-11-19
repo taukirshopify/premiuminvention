@@ -27,11 +27,17 @@
         <div class="ad-wrapper">
           <div class="ads-img">
          
-                    <img src="{{ section.settings.img_benner | img_url:'master' }}" alt="">              
+                    {{ section.settings.img_benner| image_url: width: 3840 | image_tag:
+                      loading: 'lazy',
+                      height: '558',
+                      sizes: "100vw",
+         format: 'webp',
+                      widths: '333,355, 403'
+                    }}
           </div>
           <div class="ads-content">
            <h5>Why Premium Invention Cameras are Worth the Investment</h5>
-           <a href="{{ section.settings.link }}" aria-label="Read more" class="btn blog-btn"> Discover Now <svg xmlns="http://www.w3.org/2000/svg" width="32" height="12" viewBox="0 0 32 16" fill="none">
+           <a href="{{ section.settings.link }}" aria-label="Discover Now" class="btn blog-btn"> Discover Now <svg xmlns="http://www.w3.org/2000/svg" width="32" height="12" viewBox="0 0 32 16" fill="none">
              <path d="M31.5021 8.7071C31.8927 8.31658 31.8927 7.68341 31.5021 7.29289L25.1382 0.92893C24.7477 0.538406 24.1145 0.538406 23.724 0.92893C23.3334 1.31945 23.3334 1.95262 23.724 2.34314L29.3808 8L23.724 13.6569C23.3334 14.0474 23.3334 14.6805 23.724 15.0711C24.1145 15.4616 24.7477 15.4616 25.1382 15.0711L31.5021 8.7071ZM8.74228e-08 9L30.795 9L30.795 7L-8.74228e-08 7L8.74228e-08 9Z" fill="#F7FCFF"/>
              </svg>
            </a>
@@ -45,7 +51,7 @@
                    <li>
    
                      <div class="inner-item-brand-wrapper">
-                       <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Group_397a5af9-7d49-4073-a217-96b0f1eaa0e2.png?v=1696492454">
+                       <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Group_397a5af9-7d49-4073-a217-96b0f1eaa0e2.png?v=1696492454">
                        <h2 class="popup_prm_heading"> Premium Quality</h2>
                      </div>
                    </li>
@@ -56,7 +62,7 @@
                    <li >
                      <div class="inner-item-brand-wrapper">
              
-                       <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__shipping_fast_solid.png?v=1696492455">
+                       <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__shipping_fast_solid.png?v=1696492455">
                        <h2 class="popup_prm_heading">  Express Shipping</h2>
              
                      </div>
@@ -65,7 +71,7 @@
                    <li >
                      <div class="inner-item-brand-wrapper">
              
-                       <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__help_customer_support_1.png?v=1696492454">
+                       <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__help_customer_support_1.png?v=1696492454">
                        <h2 class="popup_prm_heading">Top-Tier Support Team</h2>
              
           
@@ -76,7 +82,7 @@
                    <li >
             
                      <div class="inner-item-brand-wrapper">
-                       <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__premium_content_user_credit.png?v=1696492454">
+                       <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__premium_content_user_credit.png?v=1696492454">
                        <h2 class="popup_prm_heading">1 Year Warranty</h2>
              
          
@@ -90,7 +96,7 @@
                      
                   
              
-                       <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__money_refund_dollar.png?v=1696492454">
+                       <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__money_refund_dollar.png?v=1696492454">
                        <h2 class="popup_prm_heading"> 30-Day Money-Back Guarantee</h2>
              
                      </div>
@@ -114,7 +120,7 @@
     </div>
     
     <div class="image-with-text__text-item grid__item   width-60">
-      <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container">
+      <div id="ImageWithText--{{ section.id }}" class="rest-apadding image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container">
         {%- for block in section.blocks -%}
           {% case block.type %}
             {%- when 'heading' -%}
@@ -223,6 +229,12 @@
     left: 0;
     width: 100%;
     right: 0;
+    @media only screen and (max-width: 600px) {
+      padding: 0 10%;
+
+      bottom: 3.9%;
+
+    }
   }
   img, svg {
     vertical-align: middle;
@@ -290,11 +302,15 @@
   margin: 0 auto;
 }
 
+.rest-apadding {
+  margin: 0;
+  padding: 15px 0 !important;
+}
 }
 
 .ads-content-bottom .slick-prev, .ads-content-bottom .slick-next {
 
-  top: 75% !important;
+  top: 56% !important;
 
 }
 </style>

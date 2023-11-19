@@ -10,7 +10,16 @@
             <div class="row align-items-center mb-5 pb-4">
               <div class="col-lg-5 order-2 order-md-1">
                 <div class="timeline-image radius-12 overflow-hidden p-1">
-                  <img src="{{ block.settings.stpb-image | image_url: width: 635  }}" alt="" class="img-fluid my-image">
+
+          
+                  {{ block.settings.stpb-image | image_url: width: 3840 | image_tag:
+                    loading: 'lazy',
+                    height: '566',
+                    sizes: "100vw",
+                class: 'img-fluid my-image',
+                format: 'webp',
+                    widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                  }}
                 </div>
               </div>
               <div class="col-lg-2 order-1 order-md-2">
@@ -58,12 +67,21 @@
               </div>
               <div class="col-lg-2 order-1 order-md-2">
                 <div class="timeline-dot-circle text-lg-center position-relative">
-                  <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/timeline-dot.png?v=1678870453" alt="icon" class="img-fluid">
+                  <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/timeline-dot.png?v=1678870453" alt="icon" loading="lazy" class="img-fluid">
                 </div>
               </div>
               <div class="col-lg-5 order-2 order-md-3">
                 <div class="timeline-image radius-12 overflow-hidden p-1">
-                  <img src="{{ block.settings.stpb-image | image_url: width: 635  }}" alt="" class="img-fluid my-image">
+       
+                            
+                  {{  block.settings.stpb-image | image_url: width: 3840 | image_tag:
+                    loading: 'lazy',
+                    height: '566',
+                    sizes: "100vw",
+                class: 'img-fluid my-image',
+                format: 'webp',
+                    widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                  }}
                 </div>
               </div>
             </div>

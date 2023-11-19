@@ -10,6 +10,7 @@
         <div id="{{ wrapper_id }}" class="feature-row__image-wrapper js">
           <div style="padding-top:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;">
             <img id="{{ img_id }}"
+              loading="lazy" 
                  class="feature-row__image lazyload"
                  src="{{ section.settings.image | img_url: 'master' }}"
                  data-src="{{ img_url }}"
@@ -48,7 +49,7 @@
       {% endif %}
       
       <ul class="feature_list">
-        <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/dust_residence.svg?v=1649531227">Dust resistant</li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/dust_residence.svg?v=1649531227" >Dust resistant</li>
          <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/rain_lighting.svg?v=1649531227">Withstand heavy <br>rain & lightning</li>
         <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/hot_temp.svg?v=1649531227">Hot temperatures <br>(50C/122F) </li>
          <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/cold_resitance.svg?v=1649531226">Cold Resistance <br>(-30/-22F)</li>

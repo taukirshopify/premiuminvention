@@ -1,0 +1,71 @@
+{%- comment -%}
+  Renders the country picker for the localization form
+
+  Accepts:
+    - localPosition: pass in the position in which the form is coming up to create specific IDs
+{%- endcomment -%}
+
+
+
+      <li class="header-menu-wrapper" >
+        <a class="" href="#" data-value="NZ">
+        
+
+          <img src="//premiuminvention.com/cdn/shop/t/110/assets/nzd.svg?v=163305415908738441781698309646" loading="lazy" width="40" height="40">  NZD
+        </a>
+
+        
+      </li>
+      <li class="header-menu-wrapper" >
+        <a class="" href="#" data-value="CA">
+         
+          <img src="//premiuminvention.com/cdn/shop/t/110/assets/cad.svg?v=130002559475744279901698309646" loading="lazy" width="40" height="40"> CAD
+        </a>
+      </li>
+
+
+   <li class="header-menu-wrapper" >
+        <a class="" href="#" data-value="US">
+    
+          <img src="//premiuminvention.com/cdn/shop/t/110/assets/usd.svg?v=110800583780761806741698309646" loading="lazy" width="40" height="40">  USD
+        </a>
+      </li>
+
+      
+      <li class="header-menu-wrapper" >
+        <a class="" href="#" data-value="AU">
+   
+          <img src="//premiuminvention.com/cdn/shop/t/110/assets/aud.svg?v=63288355922623888651698309646" loading="lazy" width="40" height="40" alt="Aud"> AUD
+        </a>
+      </li>
+   <li class="header-menu-wrapper" >
+        <a class="" href="#" data-value="AX">
+       
+          <img src="//premiuminvention.com/cdn/shop/t/110/assets/eur.svg?v=133459811224269260061698309646" loading="lazy" width="40" height="40" alt="Eur"> EUR
+        </a>
+      </li>
+      <li class="header-menu-wrapper" >
+        <a class="" href="#" data-value="GI">
+
+          <img src="//premiuminvention.com/cdn/shop/t/110/assets/gbp.svg?v=108841804978447134021698309646" loading="lazy" width="40" height="40" alt="GBP"> GBP
+
+        </a>
+      </li>
+      <li class="header-menu-wrapper" >
+        <a class="" href="#" data-value="ZA">
+       
+
+          <img src="//premiuminvention.com/cdn/shop/t/110/assets/zar.svg?v=82479722012659401471698309646" loading="lazy" width="40" height="40" alt="ZAR"> ZAR
+        </a>
+      </li>
+      
+
+
+<input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
+
+
+<style>
+.header-menu-wrapper{
+ margin:3px 0;
+}
+</style>

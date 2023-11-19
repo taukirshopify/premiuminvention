@@ -792,6 +792,9 @@ div#shopify-section-product--tab-select .choose--from ul li span {
     width: 261px;
     right: -79px;
   }
+  div#shopify-section-product--tab-select .data-settings .buynow-btn button {
+    width: auto !important;
+  }
 }
 
 @media only screen and (max-width: 1600px) and (min-width: 1300px) {

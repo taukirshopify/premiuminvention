@@ -313,7 +313,7 @@ div#commercial-tab1 .collection_sec2.collection_same .collection_img:before{
     position: absolute;
     content: "";
     right: 15px;
-    top: 4px;
+    top: -0.6%;
     width: 46px;
     height: 56px;
     background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/New_v3_arrived.png?v=1660661221);
@@ -321,7 +321,7 @@ div#commercial-tab1 .collection_sec2.collection_same .collection_img:before{
     z-index: 2;
     background-size: contain;
 }
-.collection_main div#collection-top-tab1 div#collection-tab11 .collection_same:after {
+/* .collection_main div#collection-top-tab1 div#collection-tab11 .collection_same:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -330,7 +330,7 @@ div#commercial-tab1 .collection_sec2.collection_same .collection_img:before{
     top: 0;
     background: #ffffff;
     z-index: 1;
-}
+} */
 .collection_main div#collection-top-tab1 div#collection-tab11 {
     position: relative;
     top: -8px;
@@ -367,7 +367,7 @@ div#commercial-tab1 .collection_sec2.collection_same .collection_img:before{
     width: 46px;
     height: 56px;
     background-size: contain;
-    top: 2px;
+    top: -0.6%;
 }
 }
 @media only screen and (max-width: 767px){

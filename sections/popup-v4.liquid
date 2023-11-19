@@ -8,7 +8,7 @@
           {% case block.type %}
             {% when 'item' %}
               <div id="{{block.id}}" class="feature-item d-flex  flex-md-row flex-column gap-3">
-                <img src="{{ block.settings.image | image_url: width: 2048  }}">
+                <img src="{{ block.settings.image | image_url: width: 2048  }}" alt="proudct">
                 <li class="itemcont">                 
                     <h2 class="popup_prm_heading-relativ">{{ block.settings.itemname }}</h2>
                 

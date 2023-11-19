@@ -1,1 +1,279 @@
-{"sections":{"e70cc933-b43b-4da5-bfbd-3bc7a29b282a":{"type":"popup-upgrade-v3s","disabled":true,"settings":{"product":""}},"4c321f42-63f9-42ff-99e4-093ba4f6d430":{"type":"product-template-Q3","blocks":{"d7594f34-2142-4fab-a480-541a3bf2569b":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/q3-main-banner-icon1.png","cta_label":"Connect with SIM Card or Wifi"}},"565936f2-5deb-449f-ad8f-f167e001db23":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/q3-main-banner-icon2.png","cta_label":"Advanced Video Motion Detection (100 meters)"}},"ebbcaa78-7029-4938-b907-9249ab92df00":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/q3-main-banner-icon3.png","cta_label":"Color Night Vision (50 meters)"}},"5cd292f3-2b3a-43b2-80e6-3e468696b020":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/q3-main-banner-icon4.png","cta_label":"24\/7 Recording"}},"f15102cd-f569-4483-b9e2-c20771d6ee05":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/q3-main-banner-icon5.png","cta_label":"30x Optical Zoom"}},"a701c936-02e1-40fd-a02e-1cfa83c36e22":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/q3-main-banner-icon6.png","cta_label":"Time-Lapse Images"}},"c634ef60-6484-4243-ad8b-b117750666d9":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/q3-main-banner-icon7.png","cta_label":"Commercial Grade"}},"5760dd34-ec33-475f-a6ba-99a2d313eaed":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/q3-main-banner-icon8.png","cta_label":"Optional Built-in Heater -40C"}}},"block_order":["d7594f34-2142-4fab-a480-541a3bf2569b","565936f2-5deb-449f-ad8f-f167e001db23","ebbcaa78-7029-4938-b907-9249ab92df00","5cd292f3-2b3a-43b2-80e6-3e468696b020","f15102cd-f569-4483-b9e2-c20771d6ee05","a701c936-02e1-40fd-a02e-1cfa83c36e22","c634ef60-6484-4243-ad8b-b117750666d9","5760dd34-ec33-475f-a6ba-99a2d313eaed"],"settings":{"extra-class-v3s":"wirless_extra_q3only","title":"24\/7 Wireless Security Meant for Commercial","prehead":"","clmtxt":"Get a quote","clmtxt1":"More information"}},"41a271cf-8550-4d7d-aa3b-d6e744cd2571":{"type":"capture-8x-video","settings":{"extra-class-v4":"q3page-only","video_link1":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8d000b36e4fb40c78d4991ec336f2b0c.mp4","prehead":"","image_position":"center center","video_link":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","show_overlay":true,"style":"image_with_play","height":"medium","video_title":"Monitor Anything In 4K","video_info":"<p>See every detail of your property with crystal clear LIVE viewing from anywhere you are, with multiple simultaneous viewers. <\/p>","text_size":"medium"}},"b9c6f443-bebd-4eb2-afd9-3d4aa9e9b2e8":{"type":"Q3-slider-optical-zoom","blocks":{"76b0c3ec-593d-4529-bbd0-898a11dc0d64":{"type":"video","settings":{"vid":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/abb23d265c37419ca77dacfc4b987e99.mp4","heading":"Time Lapse","subheading":"Capture the progress of your projects in stunning time-lapse videos. Review past moments, from weather delays to team activities, with the click of a button. Never miss a beat on your projects again."}},"a340177e-09d8-41b7-ad98-3379aaabc4ad":{"type":"Vertical-image","settings":{"heading":"4K HDR","subheading":"","img":"shopify:\/\/shop_images\/4k-hrdk.png","ltxt":"NON HDR","rtxt":"4K HDR"}},"a1b18cb9-9fd4-4872-8e17-ee3855acbb4e":{"type":"Before-After","settings":{"heading":"Color Night Vision","subheading":"See clear details in pitch-black area with the Q3's high beam light, making night vision like day vision.","bwen":"Up to 50 meters","img1":"shopify:\/\/shop_images\/night-version-q3.png","text1":"Black & White Night Vision","img2":"shopify:\/\/shop_images\/black-white-version-q3.png","text2":"Starlight Night Vision"}},"7fc8d6cd-9830-442a-84ea-1490939abea9":{"type":"video","settings":{"vid":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b2c4a92edefb49cf9842e321d906d188.mp4","heading":"30X Optical Zoom","subheading":"The camera lens can zoom in on a specific area of your property without losing image quality. This feature is particularly useful for identifying people or objects at a distance, such as spotting intruders on your property or monitoring traffic on a busy street. With 30x optical zoom, you'll be able to see more detail and make more informed decisions about potential security risks."}},"e98161dd-6e2f-4691-b524-7a79693da48c":{"type":"Horizontal-image","settings":{"heading":"Clear 2-Way Audio Communication","subheading":"This feature allows you to talk to people through the camera using your smartphone or computer, making it easy to communicate with delivery drivers, visitors, or anyone else who may be on your property. The camera also comes with a built-in microphone and speaker, which provides clear audio for both sides of the conversation. This feature can also be useful for scaring away potential intruders or alerting people on your property of a potential emergency.","img":"shopify:\/\/shop_images\/audio-zoom-q3.png"}}},"block_order":["76b0c3ec-593d-4529-bbd0-898a11dc0d64","a340177e-09d8-41b7-ad98-3379aaabc4ad","a1b18cb9-9fd4-4872-8e17-ee3855acbb4e","7fc8d6cd-9830-442a-84ea-1490939abea9","e98161dd-6e2f-4691-b524-7a79693da48c"],"settings":{}},"5b7ad6fc-b43b-4c85-a464-880b90fd552f":{"type":"Recording-twentyfour-q3","settings":{"heading_title":"24\/7 Recording","video_link1":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/434dea0547784e448e5e219e3be16936.mp4","right_image":"shopify:\/\/shop_images\/CCTV_Monitor_2.png","sub_info":"Save it all on a \"Hard Drive locally or SD Card\""}},"e8d028e5-f6fb-46e2-9b0e-f339b42b5e14":{"type":"Weather-proof-Q3","blocks":{"6f172cf9-8d81-455d-a7d9-e5cf7dc7251a":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Weatherproof-q3-1.png"}},"e2924ecd-9bda-4bc0-b187-5734aa834c5a":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Weatherproof-q3-2.png"}},"d692583a-f1bf-4e1e-991c-48a0ae6927c3":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Weatherproof-q3-3.png"}}},"block_order":["6f172cf9-8d81-455d-a7d9-e5cf7dc7251a","e2924ecd-9bda-4bc0-b187-5734aa834c5a","d692583a-f1bf-4e1e-991c-48a0ae6927c3"],"settings":{"heading_title_1":"Weatherproof Quality","prehead_title":"Designed & made for the outdoors. The weatherproof quality ensures that the camera will continue to properly operate and provide you the surveillance you need regardless of any extreme weather conditions."}},"main":{"type":"main-page","disabled":true,"settings":{"extra-contact":"","padding_top":0,"padding_bottom":0}},"4ff47dd3-e9b8-4895-bf41-697f1178f542":{"type":"View-from-anywhere-q3","disabled":true,"settings":{"right_image":"shopify:\/\/shop_images\/q3-any-where.png","heading_title":"View From Anywhere in the World","sub_info":"Enjoy Vacation While Camera Keeps Your Property Safe","right_image1":"shopify:\/\/shop_images\/q3-any-where2.png"}},"16523098820710f417":{"type":"wifior4g","blocks":{"fb6f44bc-89b9-49fb-8531-bcce902f0dda":{"type":"text","settings":{"usa":"<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.","ca":"<b>Note:<\/b> Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.","au":"<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.","eu":"<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.","nz":"<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.","sa":"<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router."}},"0956b66f-db95-4462-829e-6ebb793f2e66":{"type":"richtext","settings":{"usa":"","ca":"","au":"","eu":"","nz":"","sa":""}}},"block_order":["fb6f44bc-89b9-49fb-8531-bcce902f0dda","0956b66f-db95-4462-829e-6ebb793f2e66"],"settings":{"title":""}},"e4886288-82a6-467a-bc6a-02eb332078bc":{"type":"Receive-quate-q3-form","settings":{"heading_title":"Receive a quote today!","right_image":"shopify:\/\/shop_images\/Receive-q3-form.png","clmtxt":"Receive a Quote"}}},"order":["e70cc933-b43b-4da5-bfbd-3bc7a29b282a","4c321f42-63f9-42ff-99e4-093ba4f6d430","41a271cf-8550-4d7d-aa3b-d6e744cd2571","b9c6f443-bebd-4eb2-afd9-3d4aa9e9b2e8","5b7ad6fc-b43b-4c85-a464-880b90fd552f","e8d028e5-f6fb-46e2-9b0e-f339b42b5e14","main","4ff47dd3-e9b8-4895-bf41-697f1178f542","16523098820710f417","e4886288-82a6-467a-bc6a-02eb332078bc"]}
+{
+  "sections": {
+    "e70cc933-b43b-4da5-bfbd-3bc7a29b282a": {
+      "type": "popup-upgrade-v3s",
+      "disabled": true,
+      "settings": {
+        "product": ""
+      }
+    },
+    "4c321f42-63f9-42ff-99e4-093ba4f6d430": {
+      "type": "product-template-Q3",
+      "blocks": {
+        "d7594f34-2142-4fab-a480-541a3bf2569b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q3-main-banner-icon1.png",
+            "cta_label": "Connect with SIM Card or Wifi"
+          }
+        },
+        "565936f2-5deb-449f-ad8f-f167e001db23": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q3-main-banner-icon2.png",
+            "cta_label": "Advanced Video Motion Detection (100 meters)"
+          }
+        },
+        "ebbcaa78-7029-4938-b907-9249ab92df00": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q3-main-banner-icon3.png",
+            "cta_label": "Color Night Vision (50 meters)"
+          }
+        },
+        "5cd292f3-2b3a-43b2-80e6-3e468696b020": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q3-main-banner-icon4.png",
+            "cta_label": "24\/7 Recording"
+          }
+        },
+        "f15102cd-f569-4483-b9e2-c20771d6ee05": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q3-main-banner-icon5.png",
+            "cta_label": "30x Optical Zoom"
+          }
+        },
+        "a701c936-02e1-40fd-a02e-1cfa83c36e22": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q3-main-banner-icon6.png",
+            "cta_label": "Time-Lapse Images"
+          }
+        },
+        "c634ef60-6484-4243-ad8b-b117750666d9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q3-main-banner-icon7.png",
+            "cta_label": "Commercial Grade"
+          }
+        },
+        "5760dd34-ec33-475f-a6ba-99a2d313eaed": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q3-main-banner-icon8.png",
+            "cta_label": "Optional Built-in Heater -40C"
+          }
+        }
+      },
+      "block_order": [
+        "d7594f34-2142-4fab-a480-541a3bf2569b",
+        "565936f2-5deb-449f-ad8f-f167e001db23",
+        "ebbcaa78-7029-4938-b907-9249ab92df00",
+        "5cd292f3-2b3a-43b2-80e6-3e468696b020",
+        "f15102cd-f569-4483-b9e2-c20771d6ee05",
+        "a701c936-02e1-40fd-a02e-1cfa83c36e22",
+        "c634ef60-6484-4243-ad8b-b117750666d9",
+        "5760dd34-ec33-475f-a6ba-99a2d313eaed"
+      ],
+      "settings": {
+        "extra-class-v3s": "wirless_extra_q3only",
+        "title": "24\/7 Wireless Security Meant for Commercial",
+        "prehead": "",
+        "clmtxt": "Get a quote",
+        "clmtxt1": "More information"
+      }
+    },
+    "41a271cf-8550-4d7d-aa3b-d6e744cd2571": {
+      "type": "capture-8x-video",
+      "settings": {
+        "extra-class-v4": "q3page-only",
+        "video_link1": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8d000b36e4fb40c78d4991ec336f2b0c.mp4",
+        "prehead": "",
+        "image_position": "center center",
+        "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "show_overlay": true,
+        "style": "image_with_play",
+        "height": "medium",
+        "video_title": "Monitor Anything In 4K",
+        "video_info": "<p>See every detail of your property with crystal clear LIVE viewing from anywhere you are, with multiple simultaneous viewers. <\/p>",
+        "text_size": "medium"
+      }
+    },
+    "b9c6f443-bebd-4eb2-afd9-3d4aa9e9b2e8": {
+      "type": "Q3-slider-optical-zoom",
+      "blocks": {
+        "76b0c3ec-593d-4529-bbd0-898a11dc0d64": {
+          "type": "video",
+          "settings": {
+            "vid": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/abb23d265c37419ca77dacfc4b987e99.mp4",
+            "heading": "Time Lapse",
+            "subheading": "Capture the progress of your projects in stunning time-lapse videos. Review past moments, from weather delays to team activities, with the click of a button. Never miss a beat on your projects again."
+          }
+        },
+        "a340177e-09d8-41b7-ad98-3379aaabc4ad": {
+          "type": "Vertical-image",
+          "settings": {
+            "heading": "4K HDR",
+            "subheading": "",
+            "img": "shopify:\/\/shop_images\/4k-hrdk.png",
+            "ltxt": "NON HDR",
+            "rtxt": "4K HDR"
+          }
+        },
+        "a1b18cb9-9fd4-4872-8e17-ee3855acbb4e": {
+          "type": "Before-After",
+          "settings": {
+            "heading": "Color Night Vision",
+            "subheading": "See clear details in pitch-black area with the Q3's high beam light, making night vision like day vision.",
+            "bwen": "Up to 50 meters",
+            "img1": "shopify:\/\/shop_images\/night-version-q3.png",
+            "text1": "Black & White Night Vision",
+            "img2": "shopify:\/\/shop_images\/black-white-version-q3.png",
+            "text2": "Starlight Night Vision"
+          }
+        },
+        "7fc8d6cd-9830-442a-84ea-1490939abea9": {
+          "type": "video",
+          "settings": {
+            "vid": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b2c4a92edefb49cf9842e321d906d188.mp4",
+            "heading": "30X Optical Zoom",
+            "subheading": "The camera lens can zoom in on a specific area of your property without losing image quality. This feature is particularly useful for identifying people or objects at a distance, such as spotting intruders on your property or monitoring traffic on a busy street. With 30x optical zoom, you'll be able to see more detail and make more informed decisions about potential security risks."
+          }
+        },
+        "e98161dd-6e2f-4691-b524-7a79693da48c": {
+          "type": "Horizontal-image",
+          "settings": {
+            "heading": "Clear 2-Way Audio Communication",
+            "subheading": "This feature allows you to talk to people through the camera using your smartphone or computer, making it easy to communicate with delivery drivers, visitors, or anyone else who may be on your property. The camera also comes with a built-in microphone and speaker, which provides clear audio for both sides of the conversation. This feature can also be useful for scaring away potential intruders or alerting people on your property of a potential emergency.",
+            "img": "shopify:\/\/shop_images\/audio-zoom-q3.png"
+          }
+        }
+      },
+      "block_order": [
+        "76b0c3ec-593d-4529-bbd0-898a11dc0d64",
+        "a340177e-09d8-41b7-ad98-3379aaabc4ad",
+        "a1b18cb9-9fd4-4872-8e17-ee3855acbb4e",
+        "7fc8d6cd-9830-442a-84ea-1490939abea9",
+        "e98161dd-6e2f-4691-b524-7a79693da48c"
+      ],
+      "settings": {
+      }
+    },
+    "5b7ad6fc-b43b-4c85-a464-880b90fd552f": {
+      "type": "Recording-twentyfour-q3",
+      "settings": {
+        "heading_title": "24\/7 Recording",
+        "video_link1": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/434dea0547784e448e5e219e3be16936.mp4",
+        "right_image": "shopify:\/\/shop_images\/CCTV_Monitor_2.png",
+        "sub_info": "Save it all on a \"Hard Drive locally or SD Card\""
+      }
+    },
+    "e8d028e5-f6fb-46e2-9b0e-f339b42b5e14": {
+      "type": "Weather-proof-Q3",
+      "blocks": {
+        "6f172cf9-8d81-455d-a7d9-e5cf7dc7251a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Weatherproof-q3-1.png"
+          }
+        },
+        "e2924ecd-9bda-4bc0-b187-5734aa834c5a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Weatherproof-q3-2.png"
+          }
+        },
+        "d692583a-f1bf-4e1e-991c-48a0ae6927c3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Weatherproof-q3-3.png"
+          }
+        }
+      },
+      "block_order": [
+        "6f172cf9-8d81-455d-a7d9-e5cf7dc7251a",
+        "e2924ecd-9bda-4bc0-b187-5734aa834c5a",
+        "d692583a-f1bf-4e1e-991c-48a0ae6927c3"
+      ],
+      "settings": {
+        "heading_title_1": "Weatherproof Quality",
+        "prehead_title": "Designed & made for the outdoors. The weatherproof quality ensures that the camera will continue to properly operate and provide you the surveillance you need regardless of any extreme weather conditions."
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "extra-contact": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "4ff47dd3-e9b8-4895-bf41-697f1178f542": {
+      "type": "View-from-anywhere-q3",
+      "disabled": true,
+      "settings": {
+        "right_image": "shopify:\/\/shop_images\/q3-any-where.png",
+        "heading_title": "View From Anywhere in the World",
+        "sub_info": "Enjoy Vacation While Camera Keeps Your Property Safe",
+        "right_image1": "shopify:\/\/shop_images\/q3-any-where2.png"
+      }
+    },
+    "16523098820710f417": {
+      "type": "wifior4g",
+      "blocks": {
+        "fb6f44bc-89b9-49fb-8531-bcce902f0dda": {
+          "type": "text",
+          "settings": {
+            "usa": "<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.",
+            "ca": "<b>Note:<\/b> Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.",
+            "au": "<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.",
+            "eu": "<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.",
+            "nz": "<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router.",
+            "sa": "<b>Note: <\/b>Support 2.4G Wi-Fi band only, 5Ghz is not supported. Compatible with almost any router."
+          }
+        },
+        "0956b66f-db95-4462-829e-6ebb793f2e66": {
+          "type": "richtext",
+          "settings": {
+            "usa": "",
+            "ca": "",
+            "au": "",
+            "eu": "",
+            "nz": "",
+            "sa": ""
+          }
+        }
+      },
+      "block_order": [
+        "fb6f44bc-89b9-49fb-8531-bcce902f0dda",
+        "0956b66f-db95-4462-829e-6ebb793f2e66"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "e4886288-82a6-467a-bc6a-02eb332078bc": {
+      "type": "Receive-quate-q3-form",
+      "settings": {
+        "heading_title": "Receive a quote today!",
+        "right_image": "shopify:\/\/shop_images\/Receive-q3-form.png",
+        "clmtxt": "Receive a Quote"
+      }
+    }
+  },
+  "order": [
+    "e70cc933-b43b-4da5-bfbd-3bc7a29b282a",
+    "4c321f42-63f9-42ff-99e4-093ba4f6d430",
+    "41a271cf-8550-4d7d-aa3b-d6e744cd2571",
+    "b9c6f443-bebd-4eb2-afd9-3d4aa9e9b2e8",
+    "5b7ad6fc-b43b-4c85-a464-880b90fd552f",
+    "e8d028e5-f6fb-46e2-9b0e-f339b42b5e14",
+    "main",
+    "4ff47dd3-e9b8-4895-bf41-697f1178f542",
+    "16523098820710f417",
+    "e4886288-82a6-467a-bc6a-02eb332078bc"
+  ]
+}

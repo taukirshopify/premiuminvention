@@ -71,7 +71,7 @@
  
   {% for block in section.blocks %}
   <li>
-  <span class="video_image"><img src="{{block.settings.image | img_url : 'master' }}"></span>
+  <span class="video_image"><img  loading="lazy" src="{{block.settings.image | img_url : 'master' }}"></span>
     <p>{{block.settings.cta_label  }}</p>
     </li>
     {% endfor %}

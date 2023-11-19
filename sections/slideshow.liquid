@@ -3,7 +3,8 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'home-banner.css' | asset_url | stylesheet_tag }}
 
-
+<link rel="preload" as="image" imagesrcset="//premiuminvention.com/cdn/shop/files/Live_in_the_Future_light_2.jpg?v=1698328005&amp;width=5760">
+<link rel="preload" as="image" imagesrcset="//premiuminvention.com/cdn/shop/files/Live_in_the_future_light_mobile_2.jpg?v=1698328018&amp;width=5760">
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
   @media screen and (max-width: 749px) {
@@ -96,6 +97,7 @@
           >
             <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
               {%- if block.settings.image -%}
+                <link rel="preload" as="image" imagesrcset="{{ block.settings.image | image_url: width: 6000 }}">
                 <img
                   srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
                   {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
@@ -113,11 +115,19 @@
                   alt="{{ block.settings.image.alt | escape }}"
                   width="{{ block.settings.image.width }}"
       
-                   {% if block.settings.custome-width %}
-                     class="desktop-benner"
-                  {% endif %}
+                   
+                     class=" {% if block.settings.custome-width %} desktop-benner      {% endif %}  {% if forloop.index == 1 %}
+                      {% else %}
+                      lazyload
+                 {% endif %} "
+
+                 {% if forloop.index == 1 %}
+                  {% else %}
+                 loading="lazy" 
+                {% endif %} 
                 >
                 {% if block.settings.custome-width %}
+                  <link rel="preload" as="image" imagesrcset="{{ block.settings.imagetwo | image_url: width: 6000 }}">
                                 <img
                   srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.imagetwo | image_url: width: 375 }} 375w,{%- endif -%}
                   {%- if block.settings.image.width >= 550 -%}{{ block.settings.imagetwo | image_url: width: 550 }} 550w,{%- endif -%}
@@ -135,7 +145,7 @@
                   alt="{{ block.settings.imagetwo.alt | escape }}"
                   width="{{ block.settings.imagetwo.width }}"
             
-                class="image-mobile"
+                class="image-mobile "
                 >
               {%  endif %}
                 

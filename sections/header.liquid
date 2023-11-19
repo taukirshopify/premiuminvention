@@ -210,7 +210,7 @@
                                                 <a href="{{ product.url }}" class=""menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                        
                     <div class="collection_img_header">
-                        <img src ="{{product.metafields.custom.proudct_svg  | img_url : 'master' }}" alt="{{ product.title }}" class="">
+                        <img src ="{{product.metafields.custom.proudct_svg  | img_url : 'master' }}" loading="lazy" width="140" height="140" alt="{{ product.title }}" class="">
                         <h2>{{product.title}}</h2>
                                     {% assign custom_des = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
                           
@@ -552,7 +552,7 @@
                                       <a href="{{ product.url }}" class="mega-menu__link link">
                                        
                     <div class="collection_img_header">
-                        <img src ="{{product.metafields.custom.proudct_svg  | img_url : 'master' }}" alt="{{ product.title }}" class="">
+                        <img src ="{{product.metafields.custom.proudct_svg  | img_url : 'master' }}" alt="{{ product.title }}" class="" loading="lazy" width="140" height="140">
                         <h2>{{product.title}}</h2>
                                     {% assign custom_des = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
                           
@@ -723,10 +723,10 @@
             
             <div class="currency-picker--wrapper hide">
 <div class="activelanguge">{% render 'icon-web' %}
-  <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/t/30/assets/cad.svg"> </div>
+  <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/t/30/assets/cad.svg" loading="lazy" width="40" height="24" alt="country"> </div>
               <div class="language--picker-parent">
               <ul>
-              {% assign codes = 'USD,EUR,GBP,CAD,ARS,AUD,BBD,BDT,BSD,BHD,BRL,BOB,BND,BGN,ILS,MMK,KYD,CLP,CNY,COP,CRC,HRK,CZK,DKK,DOP,XCD,EGP,XPF,FJD,GHS,GTQ,GYD,GEL,HKD,HUF,ISK,INR,IDR,NIS,JMD,JPY,JOD,KZT,KES,KWD,LVL,LTL,MXN,MYR,MUR,MDL,MAD,MNT,MZN,ANG,NZD,NGN,NOK,OMR,PKR,PYG,PEN,PHP,PLN,QAR,RON,RUB,SAR,RSD,SCR,SGD,SYP,ZAR,KRW,LKR,SEK,CHF,TWD,THB,TZS,TTD,TRY,UAH,AED,UYU,VEB,VND,ZMK' | split: ',' %}
+              {% comment %} {% assign codes = 'USD,EUR,GBP,CAD,ARS,AUD,BBD,BDT,BSD,BHD,BRL,BOB,BND,BGN,ILS,MMK,KYD,CLP,CNY,COP,CRC,HRK,CZK,DKK,DOP,XCD,EGP,XPF,FJD,GHS,GTQ,GYD,GEL,HKD,HUF,ISK,INR,IDR,NIS,JMD,JPY,JOD,KZT,KES,KWD,LVL,LTL,MXN,MYR,MUR,MDL,MAD,MNT,MZN,ANG,NZD,NGN,NOK,OMR,PKR,PYG,PEN,PHP,PLN,QAR,RON,RUB,SAR,RSD,SCR,SGD,SYP,ZAR,KRW,LKR,SEK,CHF,TWD,THB,TZS,TTD,TRY,UAH,AED,UYU,VEB,VND,ZMK' | split: ',' %}
 								{% assign supported_codes = settings.supported_currencies | split: ' ' %}
 								
               {% for code in supported_codes %}
@@ -755,10 +755,17 @@
 										<li n value="{{ code }}">
                                         
                                         
-<a href="{{ urls }}"><img src="{{codelower  | asset_url}}" /> {{ code }}</a></li>
+<a href="{{ urls }}"></a></li>
 									{% endif %}
-								{% endfor %}
-              
+								{% endfor %} {% endcomment %}
+                <localization-form>
+                  {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
+                    <div class="no-js-hidden">
+                
+                      {%- render 'country-localization', localPosition: 'FooterCountry' -%}
+                    </div>
+                  {%- endform -%}
+                </localization-form>
               </ul>
               
               </div>
@@ -896,7 +903,7 @@
                                                 <a href="{{ product.url }}" class=""menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                        
                     <div class="collection_img_header">
-                       <img src ="{{product.metafields.custom.proudct_svg  | img_url : 'master' }}" alt="{{ product.title }}" class="">
+                       <img loading="lazy" width="140" height="140" src ="{{product.metafields.custom.proudct_svg  | img_url : 'master' }}" alt="{{ product.title }}" class="">
                         <h2>{{product.title}}</h2>
                                     {% assign custom_des = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
                           
@@ -926,7 +933,7 @@
                     {%- endfor -%}
                     <li class="mobile_version"> <div class="shopNow--header">
       
-        <a href="/products/wireless-outdoor-camera-v3#product-scroll" id="scrolling-ancor">Shop Now</a>
+        <a href="https://premiuminvention.com/pages/collection" id="scrolling-ancor">Shop Now</a>
       
       </div></li>
                   </ul>
@@ -1046,6 +1053,101 @@
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
+
+
+
+<noscript>
+    {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization-form' -%}
+      <div class="localization-form__select">
+
+        <select
+          class="localization-selector link"
+          name="country_code"
+          aria-labelledby="FooterCountryLabelNoScript"
+        >
+          {%- for country in localization.available_countries -%}
+            <option
+              value="{{ country.iso_code }}"
+              {%- if country.iso_code == localization.country.iso_code %}
+                selected
+              {% endif %}
+            >
+              {{ country.name }} ({{ country.currency.iso_code }}
+              {{ country.currency.symbol }})
+            </option>
+          {%- endfor -%}
+        </select>
+        {% render 'icon-caret' %}
+      </div>
+      <button class="button button--tertiary">{{ 'localization.update_country' | t }}</button>
+    {%- endform -%}
+  </noscript>
+
+
+   
+
+<script>
+
+  if (!customElements.get('localization-form')) {
+    customElements.define(
+      'localization-form',
+      class LocalizationForm extends HTMLElement {
+        constructor() {
+          super();
+          this.elements = {
+            input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
+            button: this.querySelector('button'),
+            panel: this.querySelector('.disclosure__list-wrapper'),
+          };
+          {% comment %} this.elements.button.addEventListener('click', this.openSelector.bind(this)); {% endcomment %}
+          {% comment %} this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
+          this.addEventListener('keyup', this.onContainerKeyUp.bind(this)); {% endcomment %}
+  
+          this.querySelectorAll('a').forEach((item) => item.addEventListener('click', this.onItemClick.bind(this)));
+        }
+  
+        hidePanel() {
+          this.elements.button.setAttribute('aria-expanded', 'false');
+          this.elements.panel.setAttribute('hidden', true);
+        }
+  
+        onContainerKeyUp(event) {
+          if (event.code.toUpperCase() !== 'ESCAPE') return;
+  
+          if (this.elements.button.getAttribute('aria-expanded') == 'false') return;
+          this.hidePanel();
+          event.stopPropagation();
+          this.elements.button.focus();
+        }
+  
+        onItemClick(event) {
+          event.preventDefault();
+          const form = this.querySelector('form');
+          this.elements.input.value = event.currentTarget.dataset.value;
+          if (form) form.submit();
+        }
+  
+        openSelector() {
+          this.elements.button.focus();
+          this.elements.panel.toggleAttribute('hidden');
+          this.elements.button.setAttribute(
+            'aria-expanded',
+            (this.elements.button.getAttribute('aria-expanded') === 'false').toString()
+          );
+        }
+  
+        closeSelector(event) {
+          const isChild =
+            this.elements.panel.contains(event.relatedTarget) || this.elements.button.contains(event.relatedTarget);
+          if (!event.relatedTarget || !isChild) {
+            this.hidePanel();
+          }
+        }
+      }
+    );
+  }
+  
+</script> 
 
 {% javascript %}
   class StickyHeader extends HTMLElement {
@@ -1347,3 +1449,13 @@
     ]
 }
 {% endschema %}
+
+
+
+<style>
+ {% comment %} header css  {% endcomment %}
+  body.template_.index.gradient.Premium.Invention.wnw_loaded.overflow-hidden-tablet {
+    height: 100vh;
+    overflow: hidden;
+}
+</style>

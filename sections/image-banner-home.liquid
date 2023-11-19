@@ -38,6 +38,52 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+  .products_grid_custom_item img {
+        width: 98px;
+        height: 99px;
+        object-fit: contain;
+  
+    }
+    @media only screen and (max-width: 600px)  {
+    
+      .products_grid_custom_item img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+  
+    }
+    .image_banner_home .products_grid_custom_item {
+      max-width: 25% !important;
+      width: 100%;
+  }
+
+    }
+
+    @media only screen and (max-width: 450px)  {
+      .image_banner_home .products_grid_custom {
+
+        column-gap: 5px;
+
+    }
+    }
+
+  .products_grid_custom_item  a p {
+    text-decoration: none;
+    font-weight:600;
+    margin:10px 0 0 0;
+}
+.products_grid_custom_item  a {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 0;
+  text-decoration: none;
+  border-radius: 15px;
+}
 {%- endstyle -%}
 
 <div id="{{ section.settings.extra-visitor_id }}">
@@ -126,7 +172,15 @@
           <div class="products_grid_custom_item">
             <a href="{{ block.settings.url1 }}">
 
-              <img src="{{ block.settings.product1 | img_url:'master' }}" alt="{{ block.settings.product1.alt }}" loading="lazy" width="auto" height="auto">
+
+
+              {{ block.settings.product1 | image_url: width: 450 | image_tag:
+                loading: '70 , 90',
+                height: height,
+                sizes: "100vw",
+   format: 'webp',
+                widths: '70 , 90 ,300,450' 
+              }}
                <p>{{ block.settings.product1_t }}</p>
             </a>
           </div>
@@ -134,7 +188,14 @@
           {% if block.settings.product2 != blank %}
           <div class="products_grid_custom_item">
             <a href="{{ block.settings.url2 }}">
-              <img src="{{ block.settings.product2 | img_url:'master' }}" alt="{{ block.settings.product2.alt }}" loading="lazy" width="auto" height="auto">
+   
+              {{ block.settings.product2 | image_url: width: 450 | image_tag:
+                loading: '70 , 90',
+                height: height,
+                sizes: "100vw",
+   format: 'webp',
+                widths: '70 , 90 ,300,450' 
+              }}
               <p>{{ block.settings.product2_t }}</p>
             </a>
           </div>
@@ -142,7 +203,15 @@
           {% if block.settings.product3 != blank %}
           <div class="products_grid_custom_item">
             <a href="{{ block.settings.url3 }}">
-              <img src="{{ block.settings.product3 | img_url:'master' }}" alt="{{ block.settings.product3.alt }}" loading="lazy" width="auto" height="auto">
+
+
+              {{ block.settings.product3 | image_url: width: 450 | image_tag:
+                loading: '70 , 90',
+                height: height,
+                sizes: "100vw",
+   format: 'webp',
+                widths: '70 , 90 ,300,450' 
+              }}
               <p>{{ block.settings.product3_t }}</p>
             </a>
           </div>
@@ -150,7 +219,16 @@
           {% if block.settings.product4 != blank %}
           <div class="products_grid_custom_item">
             <a href="{{ block.settings.url4 }}">
-              <img src="{{ block.settings.product4 | img_url:'master' }}" alt="{{ block.settings.product4.alt }}" loading="lazy" width="auto" height="auto">
+
+
+              
+              {{ block.settings.product4 | image_url: width: 450 | image_tag:
+                loading: '70 , 90',
+                height: height,
+                sizes: "100vw",
+   format: 'webp',
+                widths: '70 , 90 ,300,450 '
+              }}
               <p>{{ block.settings.product4_t }}</p>
             </a>
           </div>
@@ -169,52 +247,7 @@
 
 
     <style>
-      .products_grid_custom_item img {
-        width: 98px;
-        height: 99px;
-        object-fit: contain;
-  
-    }
-    @media only screen and (max-width: 600px)  {
-    
-      .products_grid_custom_item img {
-        width: 70px;
-        height: 70px;
-        object-fit: contain;
-  
-    }
-    .image_banner_home .products_grid_custom_item {
-      max-width: 25% !important;
-      width: 100%;
-  }
 
-    }
-
-    @media only screen and (max-width: 450px)  {
-      .image_banner_home .products_grid_custom {
-
-        column-gap: 5px;
-
-    }
-    }
-
-  .products_grid_custom_item  a p {
-    text-decoration: none;
-    font-weight:600;
-    margin:10px 0 0 0;
-}
-.products_grid_custom_item  a {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-  background: white;
-  display: block;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 11px 0;
-  text-decoration: none;
-  border-radius: 15px;
-}
     </style>
 {% schema %}
 {

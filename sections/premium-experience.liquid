@@ -24,12 +24,12 @@
         <a class="image-bar__link" href="{{ block.settings.link }}">
           <div class="image-bar__item box ratio-container lazyload">
             <div class="image_icon">
-            <img src="{{ block.settings.image | img_url }}">
+            <img  loading="lazy" src="{{ block.settings.image | img_url }}">
             </div>
       {% elsif block.settings.image != blank %}
         <div class="image-bar__item image-bar__item--{{ block.id }}">
            <div class="image_icon">
-          <img src="{{ block.settings.image | img_url }}">
+          <img  loading="lazy" src="{{ block.settings.image | img_url }}">
           </div>
       {% else %}
         <div class="image-bar__item">
@@ -54,7 +54,7 @@
             <noscript>
       <div class="grid__item {{ column_size }}" {{ block.shopify_attributes }}>
         <div class="image-bar__item image-bar__item--{{ block.id }}">
-        <img src="{{ block.settings.image | img_url }}">
+        <img  loading="lazy" src="{{ block.settings.image | img_url }}">
         </div>
       </div>
     </noscript>

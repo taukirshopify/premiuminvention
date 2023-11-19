@@ -39,7 +39,7 @@
       </div>
       <div class=" desktop_view">
          <div class="tab-top-img">
-            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/product-page-v3new13.png?v=1652962160">
+            <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/product-page-v3new13.png?v=1652962160">
          </div>
          <div class="page-width ">
             <div class="tab--desktop-text">
@@ -50,7 +50,7 @@
       </div>
       <div class="mobile_version_tab">
          <div class="tab-mobile-img">
-            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Group_5509.png?v=1652966007">
+            <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Group_5509.png?v=1652966007">
          </div>
          <div class="page-width">
             <div class="tab--mobile-text">
@@ -58,7 +58,7 @@
                <h2>See what your <br>V3 found</h2>
             </div>
             <div class="tab-mobile-img2">
-               <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/new_feature10.png?v=1652791284">
+               <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/new_feature10.png?v=1652791284">
             </div>
          </div>
       </div>
@@ -95,26 +95,26 @@
 
 
 {% if request.host contains 'ca.' %}
- <div class="data-settings-img"> <img src="{{ block.settings.image3 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300"></div>
+ <div class="data-settings-img"> <img  loading="lazy" src="{{ block.settings.image3 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300"></div>
                  
 
   {% elsif  request.host contains 'au.'%}
- <div class="data-settings-img">  <img  src="{{ block.settings.image4 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+ <div class="data-settings-img">  <img  loading="lazy"  src="{{ block.settings.image4 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
                  </div>
 
 
    {% elsif  request.host contains 'eu.'%}
- <div class="data-settings-img">  <img src="{{ block.settings.image5 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+ <div class="data-settings-img">  <img  loading="lazy" src="{{ block.settings.image5 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
                  </div>
               {% elsif  request.host contains 'nz.'%}
-  <div class="data-settings-img"> <img src="{{ block.settings.image2 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+  <div class="data-settings-img"> <img  loading="lazy" src="{{ block.settings.image2 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
                  </div>
 
   {% elsif  request.host contains 'sa.'%}
- <div class="data-settings-img">  <img src="{{ block.settings.image6 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+ <div class="data-settings-img">  <img  loading="lazy" src="{{ block.settings.image6 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
                 </div> 
    {% else %}
- <div class="data-settings-img">  <img  {{ request.host }} src="{{ block.settings.image1 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+ <div class="data-settings-img">  <img  loading="lazy"  {{ request.host }} src="{{ block.settings.image1 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
                 </div> 
    {%endif%}
    
@@ -154,13 +154,67 @@
                   {% endif %}
                   {% endfor %}
                   
-                  <div class="buynow-btn">
-                     <div class="number">
-                        <span class="minus">-</span>
-                        <input type="text" value="1"/>
-                        <span class="plus">+</span>
-                     </div>
-                     <button type="submit" proid="{{ prodsingle.first_available_variant.id }}">{{block.settings.btn}}</button></div>
+
+
+
+
+
+                             {% comment %} new added snippets  {% endcomment %}
+
+                             <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+                             {% comment %} new added snippets  {% endcomment %}
+            
+            
+                                  {%- assign Oneproduct_form_id = 'product-form-' | append: prodsingle.first_available_variant.id -%}
+                                  <div class="buy_now_custom">
+                                      <div class="buynow-btn tab--selction">
+                                         <div class="number">
+                                           <span class="minus">-</span>
+                                           <input name="quantity" type="text" id="Quantity-{{ prodsingle.first_available_variant.id }}" form="{{ Oneproduct_form_id }}" value="1"/>
+                                          <span class="plus">+</span></div>
+                                    <button class="2x" proid="{{ prodsingle.first_available_variant.id }}">PRE-ORDER</button>
+                                  </div>
+                                      <product-form class="product-form">
+                                                    {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                                                      <input type="hidden" name="id" value="{{ prodsingle.first_available_variant.id }}" disabled>
+                                                      <div class="product-form__buttons">
+                                                        <button
+                                                          type="submit"
+                                                          name="add"
+                                                          class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                                                        {% if prodsingle.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                                                        >
+                                                            <span>
+                                                              {%- if prodsingle.selected_or_first_available_variant.available -%}
+                                                                Take Advantage
+                                                              {%- else -%}
+                                                               Take Advantage
+                                                              {%- endif -%}
+                                                            </span>
+                                                            <div class="loading-overlay__spinner hidden">
+                                                              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                              </svg>
+                                                            </div>
+                                                        </button>
+                                                      </div>
+                                                    {%- endform -%}
+                                    </product-form>
+                                  </div>
+                                  {% comment %} new added snippets End {% endcomment %}
+
+
+
+                             <style>
+           
+             .buynow-btn {
+               
+               padding-bottom: 0 !important;
+           }
+           </style>
+                      {% comment %} new added snippets End {% endcomment %}
+
+
                         {% if request.host contains 'ca.' %}
                         <p class="shipday only-new-v3s">  {{ settings.btxt_ca }}</p>
                        {% elsif  request.host contains 'au.' %}
@@ -201,26 +255,26 @@
           {% assign prodsingle=block.settings.product %}
 
 {% if request.host contains 'ca.' %}
- <div class="data-settings-img"> <img src="{{ block.settings.image3 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300"></div>
+ <div class="data-settings-img"> <img  loading="lazy" src="{{ block.settings.image3 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300"></div>
                  
 
   {% elsif  request.host contains 'au.'%}
- <div class="data-settings-img">  <img  src="{{ block.settings.image4 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+ <div class="data-settings-img">  <img  loading="lazy"  src="{{ block.settings.image4 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
                  </div>
 
 
    {% elsif  request.host contains 'eu.'%}
- <div class="data-settings-img">  <img src="{{ block.settings.image5 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+ <div class="data-settings-img">  <img  loading="lazy" src="{{ block.settings.image5 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
                  </div>
               {% elsif  request.host contains 'nz.'%}
-  <div class="data-settings-img"> <img src="{{ block.settings.image2 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+  <div class="data-settings-img"> <img  loading="lazy" src="{{ block.settings.image2 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
                  </div>
 
   {% elsif  request.host contains 'sa.'%}
- <div class="data-settings-img">  <img src="{{ block.settings.image6 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+ <div class="data-settings-img">  <img  loading="lazy" src="{{ block.settings.image6 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
                 </div> 
    {% else %}
- <div class="data-settings-img">  <img src="{{ block.settings.image1 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+ <div class="data-settings-img">  <img  loading="lazy" src="{{ block.settings.image1 | img_url : 'master' }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
                 </div> 
    {%endif%}
                  <div class="data-setting-inner">
@@ -256,14 +310,52 @@
                   {% endif %}
                   {% endfor %}
                   
-                  <div class="buynow-btn">
-                     <div class="number">
-                        <span class="minus">-</span>
-                        <input type="text" value="1"/>
-                        <span class="plus">+</span>
-                     </div>
-                     <button type="submit" proid="{{ prodsingle.first_available_variant.id }}">{{block.settings.btn}}</button>
-                  </div>
+
+
+
+  {% comment %} new added snippets  {% endcomment %}
+
+
+  {%- assign product_form_id = 'product-form-' | append: prodsingle.first_available_variant.id -%}
+  <div class="buy_now_custom">
+      <div class="buynow-btn tab--selction">
+         <div class="number">
+           <span class="minus">-</span>
+           <input name="quantity" type="text" id="Quantity-{{ prodsingle.first_available_variant.id}}" form="{{ product_form_id }}" value="1"/>
+          <span class="plus">+</span></div>
+    <button class="2x" proid="{{ prodsingle.first_available_variant.id }}">PRE-ORDER</button>
+  </div>
+      <product-form class="product-form">
+                    {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                      <input type="hidden" name="id" value="{{ prodsingle.first_available_variant.id }}" disabled>
+                      <div class="product-form__buttons">
+                        <button
+                          type="submit"
+                          name="add"
+                          class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                        {% if prodsingle.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                        >
+                            <span>
+                              {%- if prodsingle.selected_or_first_available_variant.available -%}
+                                Take Advantage
+                              {%- else -%}
+                               Take Advantage
+                              {%- endif -%}
+                            </span>
+                            <div class="loading-overlay__spinner hidden">
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                              </svg>
+                            </div>
+                        </button>
+                      </div>
+                    {%- endform -%}
+    </product-form>
+  </div>
+  {% comment %} new added snippets End {% endcomment %}
+
+
+
                   {% if request.host contains 'ca.' %}
                         <p class="shipday only-new-v3s">  {{ settings.btxt_ca }}</p>
                        {% elsif  request.host contains 'au.' %}
@@ -306,7 +398,7 @@
     <div class="li-top">
       {% if block.settings.image !=blank  %}
     <div class="icon">
-<img src="{{block.settings.image | img_url : 'master' }}">
+<img  loading="lazy" src="{{block.settings.image | img_url : 'master' }}">
     </div>{% endif %}
       {% if block.settings.head !=blank  %}
     <span>{{block.settings.head}}</span>{% endif %}

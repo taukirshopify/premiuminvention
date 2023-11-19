@@ -52,7 +52,7 @@
                      </a>
                      <span class="statyc--rating {{ section.settings.extra-class }}">{{section.settings.staticrating}}</span>
                   </div>
-                  <div class="proudct-inner-varint-quantity d-flex align-items-center">
+                  <div class="proudct-inner-varint-quantity d-flex align-items-center-2">
                     {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
                       {% unless product.has_only_default_variant %}
                       {% endunless %}
@@ -240,10 +240,48 @@
   margin:0 auto;
   
 }
+ul.custom--variations.inner-checkbox-warpper.d-flex {
+   margin-left: 19px !important;
+}
+.align-items-center-2 {
+   align-items: center;
+}
+
+ @media only screen and (max-width: 800px)  {
+
+  .main-v3s .d-flex {
+
+      flex-direction: column;
+  }
+ .main-v3s ul.custom--variations.inner-checkbox-warpper.d-flex {
+   flex-direction: row;
+}
+label.checkbox.d-flex {
+   flex-direction: row;
+   margin: 10px 0;
+}
+.product__price.custom {
+
+   justify-content: left !important;
+
+}
+.align-items-center-2 {
+   align-items: start;
+}
+ul.custom--variations.inner-checkbox-warpper.d-flex {
+   margin-left: 0px !important;
+}
+} 
+
+
+@media only screen and (min-width: 1000px)  {
 .main-v3s .main-v3s-info {
   width: 50%;
 
 }
+}
+
+
 .main-v3s .main-v3s-info .product__price {
    align-items: center;
 }
@@ -271,17 +309,17 @@
 .main-v3s .main-v3s-info .custom--variations li.active{
   background: none !important;
   border: transparent;
-}
-.main-v3s .main-v3s-info h2.section-header.custom_new {
+} 
+
+
+ .main-v3s .main-v3s-info h2.section-header.custom_new {
  
 
   font-size: 41px;
 
 }
 
-ul.custom--variations.inner-checkbox-warpper.d-flex {
-   margin-left: 19px !important;
-}
+
 
 .checkbox {
   position: relative;

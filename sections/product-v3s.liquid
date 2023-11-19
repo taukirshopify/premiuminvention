@@ -133,7 +133,17 @@
          <div class="main-new-v3sinner">
             <div class="new-v3s-sec">
               <div class="left-v3s-newsec">
-              <img src="{{block.settings.image | img_url : 'master' }}">
+      
+
+
+              {{ block.settings.image | image_url: width: 3840 | image_tag:
+                loading: 'lazy',
+                height: '32',
+                sizes: "100vw",
+            class: 'css-class-1 css-class-2',
+            format: 'webp',
+                widths: '32, 100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              }}
              </div>
               <div class="right-v3s-newsec">
                  <h2 class="text__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>

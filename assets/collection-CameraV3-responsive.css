@@ -84,6 +84,7 @@ div#shopify-section-Popup--premium.collection_popup {
 }
 .collection_main ul#tabs-top-collection li a {
     font-size: 26px;
+        font-family: Work Sans,sans-serif !important;
 }
 .collection_main .tabs ul#tabs-nav-collection, 
 .collection_main .tabs ul#tabs-nav-collection1 {

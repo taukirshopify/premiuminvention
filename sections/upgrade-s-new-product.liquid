@@ -14,9 +14,9 @@
                 {{ block.settings.heading | escape }}
               </h2>
               <div class="upgarede_img">
-              <img class="img1" src="{{block.settings.image | img_url : 'master' }}"> 
+              <img  loading="lazy" class="img1" src="{{block.settings.image | img_url : 'master' }}"> 
                 {% if block.settings.image2 != black %}
-                <img  class="img2" src="{{block.settings.image2 | img_url : 'master' }}">  
+                <img  loading="lazy"  class="img2" src="{{block.settings.image2 | img_url : 'master' }}">  
                   {% endif %}
              </div> 
 			 {%- if block.settings.button_label != blank -%}

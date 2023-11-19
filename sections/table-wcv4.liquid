@@ -8,8 +8,9 @@
     <div class="tblecamera" style="max-width: 900px; margin:auto; padding-top:100px;">
       <table>
         <tr>
-          <td>{{ section.settings.row1 }}</td>
-          <td class="blactoblue">{{ section.settings.row2 }}</td>
+
+          <td class="blactoblue">{{ section.settings.row1 }}</td>
+          <td class="blactoblue-middel">{{ section.settings.row2 }}</td>
           <td class="blcktobrwn">{{ section.settings.row3 }}</td>
         </tr>
         {% for block in section.blocks %}
@@ -130,3 +131,14 @@
 }
 {% endschema %}
 {{ 'data-table-product-table-wcv4.css' | asset_url | stylesheet_tag }}
+
+
+<style>
+
+  td.blactoblue-middel {
+    font-weight: 700 !important;
+}
+#shopify-section-table-data tr:nth-child(2) td:nth-child(1) {
+  border-radius: 0 !important;
+}
+</style>

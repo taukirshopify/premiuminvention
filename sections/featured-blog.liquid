@@ -96,9 +96,9 @@
        <div class="blog-right-wrapper">
          <div class="blog-right-benner">
              <div class="ad-wrapper">
-               <div class="ads-img">
+               <div class="ads-img" >
               
-                         <img src="{{ section.settings.img_benner | img_url:'master' }}" alt="">              
+                         <img  loading="lazy" src="{{ section.settings.img_benner | img_url:'master' }}" alt="">              
                </div>
                <div class="ads-content">
                 <h5>Why Premium Invention Cameras are Worth the Investment</h5>
@@ -115,8 +115,8 @@
                       <ul class="popup-two-only-slider">
                         <li>
         
-                          <div class="inner-item-brand-wrapper">
-                            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Group_397a5af9-7d49-4073-a217-96b0f1eaa0e2.png?v=1696492454">
+                          <div  loading="lazy" class="inner-item-brand-wrapper">
+                            <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Group_397a5af9-7d49-4073-a217-96b0f1eaa0e2.png?v=1696492454">
                             <h2 class="popup_prm_heading"> Premium Quality</h2>
                           </div>
                         </li>
@@ -127,7 +127,7 @@
                         <li >
                           <div class="inner-item-brand-wrapper">
                   
-                            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__shipping_fast_solid.png?v=1696492455">
+                            <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__shipping_fast_solid.png?v=1696492455">
                             <h2 class="popup_prm_heading">  Express Shipping</h2>
                   
                           </div>
@@ -136,7 +136,7 @@
                         <li >
                           <div class="inner-item-brand-wrapper">
                   
-                            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__help_customer_support_1.png?v=1696492454">
+                            <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__help_customer_support_1.png?v=1696492454">
                             <h2 class="popup_prm_heading">Top-Tier Support Team</h2>
                   
                
@@ -161,7 +161,7 @@
                           
                        
                   
-                            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__money_refund_dollar.png?v=1696492454">
+                            <img  loading="lazy" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__money_refund_dollar.png?v=1696492454">
                             <h2 class="popup_prm_heading"> 30-Day Money-Back Guarantee</h2>
                   
                           </div>
@@ -311,6 +311,10 @@ h5 {
 .singel-blog-wrapper {
   display: flex;
   border: 1px solid;
+  @media only screen and (max-width: 600px) {
+    border: none;
+  
+  }
   margin: 0 0 23px 0;
   border-radius: 31px;
   border-color: rgba(0, 107, 179, 0.25);
@@ -346,9 +350,11 @@ p {
 }
 .singel-blog-wrapper  img {
   width: 254px;
-  border-radius: 31px;
+  border-radius: 25px;
   height: 278px;
   object-fit: cover;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .ads-img img {

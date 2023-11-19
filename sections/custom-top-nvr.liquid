@@ -113,9 +113,9 @@
                     >
                         <span>
                           {%- if product.selected_or_first_available_variant.available -%}
-                           PRE-ORDER
+                            BUY NOW
                           {%- else -%}
-                            PRE-ORDER
+                          PRE-ORDER   
                           {%- endif -%}
                         </span>
                         <div class="loading-overlay__spinner hidden">
@@ -266,7 +266,7 @@
                   {% unless current_variant.available %}
                   PRE-ORDER
                   {% else %}
-                  PRE-ORDER
+                  BUY NOW
                   {% endunless %}
                 </span>
            </button>
