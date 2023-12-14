@@ -1,0 +1,19 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "de"
+  },
+  "sections": {
+    "fcf5c962-9579-4399-b80a-fee4dc38c88f": {
+      "settings": {
+      },
+      "blocks": {
+        "848632d8-ddaf-448f-bf76-a38c1da9ec13": {
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NVR_08923630-0ecd-4c1b-a316-766a46bcb3d5.png"
+          }
+        }
+      }
+    }
+  }
+}

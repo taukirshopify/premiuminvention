@@ -15,10 +15,10 @@
             <div class="experience-full-bg">
               <div class="experience-full-img">
                   {% if block.settings.mainimage != blank %}
-                    <img class="img1" src="{{ block.settings.mainimage | img_url: "master" }}" alt="{{ block.settings.mainimage.alt }}" />
+                    <img class="img1" src="{{ block.settings.mainimage | img_url: "master" }}" alt="{{ block.settings.mainimage.alt }}"  loading="lazy"/>
                   {% endif %}
                   {% if block.settings.subimage != blank %}
-                    <img class="img2" src="{{ block.settings.subimage | img_url: "master" }}" alt="{{ block.settings.subimage.alt }}" />
+                    <img class="img2" src="{{ block.settings.subimage | img_url: "master" }}" alt="{{ block.settings.subimage.alt }}"  loading="lazy"/>
                   {% endif %}  
                   {% if block.settings.subimage != blank %}
                     <div class="experience-switch">

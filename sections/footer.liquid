@@ -118,7 +118,7 @@
                 {%- if block.settings.text != blank -%}
                   <div class="site-footer__rte
                               {% if section.blocks.size == 1 %} site-footer__single-block--centered{% endif %}">
-                    <a href="{{ routes.root_url }}"><img src="{{ block.settings.logo_custom}}" alt="" loading="lazy" style="margin-bottom: 19px; margin-top: -29px;" width="226" height="62">  
+                    <a aria-label="home" href="{{ routes.root_url }}"><img src="{{ block.settings.logo_custom}}" alt="" loading="lazy" style="margin-bottom: 19px;" width="226" height="62">  
           
                   </a>                  
 {{ block.settings.text }}
@@ -242,7 +242,7 @@
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-            <ul class="list list-payment" role="list">
+            <ul class="list list-payment flex-wrap" role="list">
               {%- for type in shop.enabled_payment_types -%}
                 <li class="list-payment__item">
                   {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}

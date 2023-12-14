@@ -1,0 +1,137 @@
+
+
+<style>
+.about-proudct-image img{
+  width:100%;
+}
+
+
+.about-proudct-image {
+  border-radius: 20px;
+  border: 1px solid #666;
+  background: #FFF;
+  padding: 5%;
+  margin: 3%;
+}
+.about-proudct-image h5
+{
+  color: #000;
+
+  font-family: Work Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 100% */
+  letter-spacing: 0.1px;
+}
+
+.about-proudct-image a{
+text-decoration:none;
+}
+.about-proudct-image a span.about-view-proudct{
+  color: #4285F4;
+
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.2px;
+}
+.about-proudct-image a span{
+
+}
+</style>
+
+
+<div class="about-text-wrapper">
+<div class="container">
+     <div class="multiple-slick">
+    
+      {% for c in section.blocks %}
+         <div class="singel-prodcut-about-wrapper">
+           <div class="about-proudct-image">
+
+          <img src="{{ c.settings.product.featured_image | img_url:'master' }}" alt="">
+            <h5>{{ c.settings.product.title }}</h5>
+            <div class="singel-about-image-botoom-wrapper d-flex">
+           
+             <a href="{{ c.settings.product.url}}" class="d-flex justify-content-between d-block align-items-center w-100"><span class="about-view-proudct">View Product</span>
+             <span class="about-arrow">{% include 'about-arrow' %}</span>
+            </a>
+
+             </div>
+           </div>
+
+     
+            
+        </div>
+      {% endfor %}
+    </div>
+</div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "About Product",
+        "class": "abouttext",
+        "settings": [
+        
+        ],
+        "blocks": [
+          {
+            "type": "product",
+            "name": "product",
+            "settings": [
+              {
+                "type": "product",
+                "id": "product",
+                "label": "Product Page"
+              }
+            ]
+          }
+        ],
+        
+        "presets": [
+            {
+              "name": "About Product"}
+        ]
+    }
+{% endschema %}
+
+<script>
+  // A $( document ).ready() block.
+$( document ).ready(function() {
+  $('.multiple-slick').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows:false,
+    dots:false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+
+  });
+});
+  </script>

@@ -6,7 +6,8 @@
    <div class="page-width">
       <div class="wirless_v3_inner ">
         <div class="wirless_v3_right mobile_version"> 
-            <img src="{{ product.metafields.custom.mobile_top_section_image }}" class="wireless_media">
+            <img alt="product image" src="{{ product.metafields.custom.mobile_top_section_image }}" 
+              alt="product image" class="wireless_media">
          </div>
          <div class="wirless_v3-left ">
             <div class="star--rating">
@@ -82,9 +83,14 @@
         <span class="statyc--rating {{ section.settings.extra-class }}">{{section.settings.staticrating}}</span></div> -->
            
     </div>
-       <div class="{% if product.handle == 'wireless-outdoor-camera-v3' or  product.handle == 'wireless-camera-v4' %}desktop--updrage upgrad--btn show--here{% endif %}">    <button type="button" name="add" aria-label="Add to cart" class="btn  product-form__cart-submit" data-add-to-cart="">
+    {% assign current_variant = product.selected_or_first_available_variant %}
+       <div class="{% if product.handle == 'wireless-outdoor-camera-v3' or  product.handle == 'wireless-camera-v4' %}desktop--updrage upgrad--btn show--here{% endif %}">    <button type="button" name="add" aria-label="      {% unless current_variant.available %}
+        {{ 'products.product.sold_out' | t }}
+      {% else %}
+       buy now
+      {% endunless %}" class="btn  product-form__cart-submit" data-add-to-cart="">
               
-                  {% assign current_variant = product.selected_or_first_available_variant %}
+                 
 
                    <span data-add-to-cart-text>
                   {% unless current_variant.available %}
@@ -126,7 +132,8 @@
 
        
          <div class="wirless_v3_right" sc="{{ product.metafields.custom.desktop_top_section_image }}">
-            <img src="{{ product.metafields.custom.desktop_top_section_image }}" class="wireless_media">
+            <img 
+              alt="product image" src="{{ product.metafields.custom.desktop_top_section_image }}" class="wireless_media">
          </div>
         <div class="rihgt--ara-grid">
            {% for block in section.blocks %}

@@ -17,7 +17,7 @@
             <div class="main">
 
                <div class="left-image-wrapper">
-                  <img src="{{ section.settings.img | img_url:'master' }}" alt="">
+                  <img src="{{ section.settings.img | img_url:'master' }}" alt="img" loading="lazy">
                </div>
             </div>
          </div>
@@ -173,7 +173,7 @@
                      {% for block in section.blocks %}
                      <li>
                         <div class="icon">
-                           <img src="{{block.settings.image | img_url : 'master' }}">
+                           <img src="{{block.settings.image | img_url : 'master' }}" alt="product" loading="lazy">
                         </div>
                         <p>{{block.settings.des}}</p>
                      </li>

@@ -73,10 +73,10 @@
         {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
             <div class="singel-blog-wrapper">   
               <div class="blog-image-wrapper">
-             <div class="blog-bet">
-              <img src="{{ section.settings.img | img_url:'' }}" alt="">
-             </div>
-                 <img src="{{ article.image.src | img_url: 'medium' }}">
+             {% comment %} <div class="blog-bet">
+              <img src="{{ section.settings.img | img_url:'' }}" alt="img" loading="lazy">
+             </div> {% endcomment %}
+                 <img src="{{ article.image.src | img_url: 'master' }}" alt="img" loading="lazy">
               </div>
               <div class="blog-singel-content-left">
 
@@ -325,6 +325,8 @@ p {
 
 .singel-blog-wrapper  img {
   width: 100%;
+  object-fit: cover;
+  height: 400px;
 }
 a.blog-btn {
 

@@ -8,7 +8,23 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
 
+  @media screen and (max-width: 750px) {
+    .singel-wrapper {
+    padding: 0 17%;
+   }
+
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
   {%- if section.settings.image_height == 'adapt-image' and section.settings.image != blank -%}
     @media screen and (max-width: 749px) {
       #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
@@ -16,6 +32,8 @@
         content: '';
         display: block;
       }
+
+
     }
 
     #Banner-{{ section.id }}::before,
@@ -25,48 +43,45 @@
       display: block;
     }
   {%- endif -%}
+  #Banner-{{ section.id }} .banner__content {
+    padding: 0;
+}
+.contract-wrapper {
+    margin-top: 5%;
+}
+
+.customer .field:hover.field:after, .customer select:hover.select:after, .field:hover.field:after, .localization-form__select:hover.localization-form__select:after, .select:hover.select:after, .select__select:hover.select__select:after {
+    
+    border-radius: 30px !important;
+
+}
+
+.customer .field:after, .customer select:after, .field:after, .localization-form__select:after, .quantity:after, .select:after, .share-button__fallback:after {
+    border-radius: 30px !important;
+}
+
+.newsletter-form__field-wrapper .field__input {
+    padding-right: 5rem;
+    border-radius: 30px;
+}
 {%- endstyle -%}
 
-<div id="Banner-{{ section.id }}" class="email-signup-banner banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.image_height == 'adapt-image' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-  {%- if section.settings.show_background_image -%}
-    <div class="banner__media{% if section.settings.image != blank %} media{% endif %}">
-      {%- if section.settings.image != blank -%}
-        <img
-          srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
-            {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-            {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
-            {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
-            {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
-            {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
-            {%- if section.settings.image.width >= 3840 -%}{{ section.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
-            {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
-          sizes="100vw"
-          src="{{ section.settings.image | image_url: width: 1500 }}"
-          loading="lazy"
-          alt="{{ section.settings.image.alt | escape }}"
-          width="{{ section.settings.image.width }}"
-          height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
-        >
-      {%- else -%}
-        {%- render 'email-signup-banner-background' -%}
-        {%- render 'email-signup-banner-background-mobile' -%}
-      {%- endif -%}
-    </div>
-  {%- endif -%}
+<div id="Banner-{{ section.id }}" class="section-{{ section.id }}-padding  cusotme-home-news email-signup-banner banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.image_height == 'adapt-image' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width">
     <div class="email-signup-banner__box banner__box newsletter newsletter__wrapper isolate{% if section.settings.show_background_image == false %} email-signup-banner__box--no-image{% endif %} content-container color-{{ section.settings.color_scheme }} gradient content-container--full-width-mobile">
+
       {%- for block in section.blocks -%}
         {%- case block.type -%}
-          {%- when 'heading' -%}
+            {%- when 'heading' -%}
             <h2 class="email-signup-banner__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
           {%- when 'paragraph' -%}
             <div class="newsletter__subheading rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
           {%- when 'email_form' -%}
             <div {{ block.shopify_attributes }}>
-              {% form 'customer', class: 'newsletter-form' %}
+              {% form 'customer', class: 'newsletter-form d-flex' %}
                 <input type="hidden" name="contact[tags]" value="newsletter">
-                <div class="newsletter-form__field-wrapper">
+                <div class="newsletter-form__field-wrapper d-flex align-items-center home-new-letter">
                   <div class="field">
                     <input
                       id="NewsletterForm--{{ section.id }}"
@@ -91,10 +106,14 @@
                     <label class="field__label" for="NewsletterForm--{{ section.id }}">
                       {{ 'newsletter.label' | t }}
                     </label>
-                    <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                 
                       {% render 'icon-arrow' %}
-                    </button>
+                
                   </div>
+                  
+                  <button type="submit" class="naewsletter-form__button field__buttona" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                    SIGN UP
+                  </button>
                   {%- if form.errors -%}
                     <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
                   {%- endif -%}
@@ -105,17 +124,66 @@
               {% endform %}
             </div>
         {%- endcase -%}
+
       {%- endfor -%}
+      <div class="contract-wrapper d-lg-flex justify-content-lg-between align-items-lg-center">
+        <div class="singel-wrapper d-flex align-items-md-center justify-content-md-center">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="24" viewBox="0 0 36 34" fill="none">
+            <rect x="0.594727" width="30" height="30" fill="url(#patsfgsdftern0ser)"/>
+            <defs>
+            <pattern id="patsfgsdftern0ser" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#imaaaaadsfsdfge0_1038_231" transform="matrix(0.0107299 0 0 0.0111111 0.0171527 0)"/>
+            </pattern>
+            <image id="imaaaaadsfsdfge0_1038_231" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEk0lEQVR4nO2cS4hcRRiFK84YfM10us45986EkUFNRAQxboL4AkGMooggBBViEBTxhQtXbkTBTRCDEVci+IgoashCiSgICoqPhYqPheBzIkExMYivJJpMS810IoYeu/s+rLrV9cG/nL51zvz9V9+/HsYkEolEIpFIJBKJxAhxrIANBF4lsFvkTyKfsdbO+B5YNMjaSwl8JbJzdJD8Ns/zzPcYm84xAjaLnO9lsg4H8JzvgTaZ5QS2/afBPBLzJC/0PeAmMibg+QFN7nRLyKfGmHHfA28UJDcNY7L+KSG3+h57YyB5Rd+avHRW75mcnLS+NQTP9PT0CQS+LpTNPGL2o751BI+svaeMyVqMg1mWneVbS8gsF7mrAqM7It/wLSZYJK2ryOROt4Ss960pSAQ8XKXRIudczfetKzgIvFWx0R0B9/vWFRwEvq/aaAL78jw/xbe2oCCwv/KM5oLZ23xrCwoCf9RhtFxI63zrCwb3VleX0SQ/S32QLiLfry2juWD2TX5TKRBIbq3Z6Nd9awwCAbfXabSAD31rDAKSp9ds9GO+NQZD2c6dlo6/rLVn+tYXDALuqymbN/vWFhTtdvtk1+asdBIEfmi32y3f2oJDwI6Ks3mDb01BIum8CrP5bWPMMt+agoXkaxUYfVDSGt9agiaz9twKSsbjvnU0AgHPljJaOt+3hkZAclrkz0WNzlMfenAk3VnUaABX1ZgH0TFWtKtH8h33974FNAZJp4n8paDZm3yPv1GQvLnEpHij7/E3CgEvFHxp2WetXet7/I1h5cQECHxTMLO/c79ifGtoDJLOJvB7wcz+pNVqtX1raAwAri9ar0m+m+f5ib41NAYBDxWeHIGX04r44Iy7Y3AqntlPpa7egACYcAuuhc0GHklmDwjJ6RK/RFxmb3UHRYf4Jo0uklYR+LFMzU7bewc3+4Iye/fcluFWq7Wi3pSIBJKXizxQwuyPAaws8mx3ZobAE26PnzvW4VoGUf+yyYCrRf5ZuIyQu4Z5XXffAgFb3L6RHp/1ufvnm1iRdM0SwgfN7P2ydmOfxyyTtTe4rQyDzAFZlp1qYkTWbhR5qERmO4O29OpnkzzHra4P+XkHFjJfOsnEBoBbyprtXtldOSK5GsDFJJ8sucFnLsrTYljsixQuI7UF8KZrkJmYILm+5ARZVxwi+fTU1JRMLJC80i0ABGBur9hL8q5o1jclXVbrgaSSQeAjkheZWN4gtXjpVSfQmHfXFkVxRxSAM8o0ov6nmIvi9jO6XVDABwEY2q+zGEc/myUWD2o3GthtImK81LJYvRm9x8QGyWsJ/Obb3H8FsMPEiKQ1IU2SJK8zUW/SIbd7Nxn4Iup+9mG6LdBfPRk97+5iNaMCydUk3/NQMh40I8iYrL2jzMmDIUvGi+7iWzOqSJpynbaiN0wOmMnbZ2dnj/OtNQistWsFvFJ5TQYeGOlM7nM876Wyx6kXLh9P1xD1xzV+SN5L4MshTd4J4O6ZmZnjB3hM4ugdUwJuc7XcrTV2V8j3dmOn2+/hXvczay9J29ASiUQikUgkEolEIpFIJExP/gaEAni6ekIJYQAAAABJRU5ErkJggg=="/>
+            </defs>
+            </svg>
+
+            <p>Phone: <a href="tel:8772240705">877-224-0705 </a></p>
+        </div>
+        <div class="singel-wrapper d-flex align-items-md-center justify-content-md-center">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 38" fill="none">
+            <rect x="0.542969" width="30" height="30" fill="url(#paadsfafdsfttern0)"/>
+            <defs>
+            <pattern id="paadsfafdsfttern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_1038_233" transform="matrix(0.0107299 0 0 0.0111111 0.0171527 0)"/>
+            </pattern>
+            <image id="image0_1038_233" width="90" height="90" xlink:href="data:image/png;base64,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"/>
+            </defs>
+            </svg>
+          <p> Hours: Monday - Friday, 8am - 4pm PST</p>
+         
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "t:sections.email-signup-banner.name",
+  "name": "Home Email",
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
     {
       "type": "paragraph",
       "content": "t:sections.email-signup-banner.settings.paragraph.content"
@@ -360,6 +428,11 @@
       ]
     },
     {
+      "type": "contact",
+      "name": "contact",
+      "limit": 1
+    },
+    {
       "type": "email_form",
       "name": "t:sections.email-signup-banner.blocks.email_form.name",
       "limit": 1
@@ -367,22 +440,131 @@
   ],
   "presets": [
     {
-      "name": "t:sections.email-signup-banner.presets.name",
-      "blocks": [
-        {
-          "type": "heading"
-        },
-        {
-          "type": "paragraph"
-        },
-        {
-          "type": "email_form"
-        }
-      ]
+      "name": "Home email"
     }
-  ],
-  "templates": [
-    "password"
   ]
+
 }
 {% endschema %}
+
+
+<style>
+  .banner__content.banner__content--middle-center.page-width {
+
+    border-radius: 34px;
+background: #FFF;
+
+box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25);
+
+}
+.cusotme-home-news h2 {
+  color: #262525;
+
+  text-align: center;
+  font-family: Work Sans;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 57.6px */
+  letter-spacing: -1.92px;
+}
+.cusotme-home-news p{
+  color: #151414;
+  text-align: center;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.contract-wrapper p{
+  color: #151414;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  @media only screen and (max-width: 600px) {
+    text-align: left;
+  }
+}
+.contract-wrapper p a{
+  color: #151414;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.newsletter-form__field-wrapper{
+  background: #006BB3;
+  border-radius: 30px;
+}
+
+
+.home-new-letter button#Subscribe {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  display: block;
+  width: 120px;
+  color: #FFF;
+  width: 25%;
+text-align: center;
+font-size: 16px;
+@media only screen and (max-width: 600px) {
+  width: 30%;
+  font-size: 14px;
+}
+font-style: normal;
+font-weight: 700;
+line-height: 128.95%; 
+
+
+}
+.home-new-letter .field {
+  background: white;
+  border-radius: 30px;
+  margin: 6px;
+  border: none;
+  outline: none;
+  width:75%;
+}
+.home-new-letter .field:after{
+ position: unset;
+ box-shadow: none !important;
+}
+.home-new-letter .field:before{
+ position: unset;
+ box-shadow: none !important;
+}
+
+.home-new-letter .customer .field input:focus, .customer select:focus, .field__input:focus, .localization-form__select:focus.localization-form__select:after, .select__select:focus {
+
+  box-shadow: none;
+
+}
+.home-new-letter  .icon-arrow, .title-wrapper-with-link .link-with-icon svg {
+  width: 1.5rem;
+  margin-right: 10px;
+}
+
+button#Subscribe {
+  border: none;
+  outline: none;
+  background: transparent;
+  display: block;
+  width: 118px;
+  padding: 0 10px;
+  color: #FFF;
+  text-align: center;
+  font-family: Articulat CF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 128.95%;
+}
+</style>

@@ -73,7 +73,7 @@
         {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
             <div class="singel-blog-wrapper">   
               <div class="blog-image-wrapper">
-                 <img src="{{ article.image.src | img_url: 'medium' }}">
+                 <img src="{{ article.image.src | img_url: 'master' }}" alt="{{ article.title }}" loading="lazy">
               </div>
               <div class="blog-singel-content-left">
 

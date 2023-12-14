@@ -491,7 +491,7 @@
                         {% render 'icon-caret' %}
                       </summary>
                       <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
-                        <ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
+                        <ul class="mega-menu__list p-0 page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
                           {%- for childlink in link.links -%}
                             <li>
                               <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
@@ -529,7 +529,7 @@
                         {% render 'icon-caret' %}
                       </summary>
                       <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
-                        <ul class="mega-menu__list page-width" role="list">
+                        <ul class="mega-menu__list page-width p-0" role="list">
                           {%- for block in section.blocks -%}
                           {% assign index_loop = forloop.index %}
                             <li{% if index_loop == 1 %} class="active"{% endif %}>
@@ -592,11 +592,13 @@
             <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
               src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
               loading="lazy"
-              class="header__heading-logo"
+              class="header__heading-logo desktop-image"
               width="{{ section.settings.logo.width }}"
               height="{{ section.settings.logo.height }}"
               alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
             >
+
+              <img class="mobile-image" src="{{ section.settings.logo2 | img_url:'master'  }}" alt="">
           {%- else -%}
             <span class="h2">{{ shop.name }}</span>
           {%- endif -%}
@@ -619,10 +621,18 @@
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
-              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 37 40"><path d="M35.6 36l-9.8-9.8c4.1-5.4 3.6-13.2-1.3-18.1-5.4-5.4-14.2-5.4-19.7 0-5.4 5.4-5.4 14.2 0 19.7 2.6 2.6 6.1 4.1 9.8 4.1 3 0 5.9-1 8.3-2.8l9.8 9.8c.4.4.9.6 1.4.6s1-.2 1.4-.6c.9-.9.9-2.1.1-2.9zm-20.9-8.2c-2.6 0-5.1-1-7-2.9-3.9-3.9-3.9-10.1 0-14C9.6 9 12.2 8 14.7 8s5.1 1 7 2.9c3.9 3.9 3.9 10.1 0 14-1.9 1.9-4.4 2.9-7 2.9z"></path></svg>
-              <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                <use href="#icon-close">
+              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 250 250" aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" >
+                <g id="brbuAV">
+                  <g>
+                    <path d="m243.72,218.24c-14.42-14.3-29.01-28.91-43.11-43.03l-13.12-13.14c-.56-.56-1.1-1.14-1.44-1.51l-2.08-2.25,1.21-2.53c.92-1.93,1.85-3.81,2.78-5.67,1.97-4,3.84-7.77,5.43-11.64,3.99-9.73,6.24-19.72,6.71-29.67.43-9.57.03-17.33-1.27-24.43-1.59-8.63-3.89-16.22-7.06-23.22-4.13-9.13-9.59-17.61-16.21-25.21-5.83-6.68-12.49-12.55-19.82-17.47-9.57-6.41-18.49-10.55-27.32-12.66-8.7-2.08-15.36-3.27-21.59-3.88-1.7-.15-3.48-.24-5.42-.24-4.06,0-8.22.35-11.81.69-5.18.49-10.4,1.38-15.55,2.67-8.34,2.08-16.67,5.61-25.49,10.81-9.8,5.78-18.54,13.31-25.98,22.37-5.93,7.23-10.82,15.27-14.49,23.9-3.73,8.76-6.06,17.05-7.14,25.34-.18,1.34-.44,2.61-.71,3.83-.08.39-.18.8-.25,1.19v17.92c.13.85.28,1.68.41,2.53.36,2.17.72,4.35,1.04,6.53,1.4,9.51,4.76,19.23,10.26,29.71,4.63,8.83,10.27,16.48,16.75,22.74,4.62,4.46,9.84,8.76,15.94,13.15,8.7,6.25,18.79,10.91,30.02,13.86,6.8,1.78,12.26,2.71,17.22,2.91,1.64.07,3.35.1,5.06.1,5.44,0,11.17-.34,17.51-1.03,5.07-.55,10.51-1.74,16.63-3.63,8.64-2.66,16.76-6.62,24.15-11.76,1.49-1.03,2.9-1.53,4.35-1.53,2.75,0,4.55,1.81,5.31,2.58,18.51,18.59,37.31,37.36,56.52,56.56,3.3,3.29,7.05,5.02,11.17,5.18.23.01.45.01.67.01,3.82,0,7.29-1.2,10.31-3.56,4.49-3.54,6.74-8.2,6.66-13.85-.05-4.44-2.05-8.47-6.28-12.67Zm-89.03-65.51c-14.83,15.67-33.31,23.68-54.89,23.77h-.7c-19.45,0-37.88-7.85-51.87-22.11-13.43-13.69-21.36-32.21-21.77-50.82-.44-19.96,7.41-39.68,21.52-54.1,14.03-14.34,32.78-22.23,52.81-22.23,1.37,0,2.78.03,4.16.11,37.56,2.02,67.93,31.53,70.61,68.62,1.61,22.04-5.08,41.13-19.88,56.76Z"/>
+                    <path d="m243.72,218.24c-14.42-14.3-29.01-28.91-43.11-43.03l-13.12-13.14c-.56-.56-1.1-1.14-1.44-1.51l-2.08-2.25,1.21-2.53c.92-1.93,1.85-3.81,2.78-5.67,1.97-4,3.84-7.77,5.43-11.64,3.99-9.73,6.24-19.72,6.71-29.67.43-9.57.03-17.33-1.27-24.43-1.59-8.63-3.89-16.22-7.06-23.22-4.13-9.13-9.59-17.61-16.21-25.21-5.83-6.68-12.49-12.55-19.82-17.47-9.57-6.41-18.49-10.55-27.32-12.66-8.7-2.08-15.36-3.27-21.59-3.88-1.7-.15-3.48-.24-5.42-.24-4.06,0-8.22.35-11.81.69-5.18.49-10.4,1.38-15.55,2.67-8.34,2.08-16.67,5.61-25.49,10.81-9.8,5.78-18.54,13.31-25.98,22.37-5.93,7.23-10.82,15.27-14.49,23.9-3.73,8.76-6.06,17.05-7.14,25.34-.18,1.34-.44,2.61-.71,3.83-.08.39-.18.8-.25,1.19v17.92c.13.85.28,1.68.41,2.53.36,2.17.72,4.35,1.04,6.53,1.4,9.51,4.76,19.23,10.26,29.71,4.63,8.83,10.27,16.48,16.75,22.74,4.62,4.46,9.84,8.76,15.94,13.15,8.7,6.25,18.79,10.91,30.02,13.86,6.8,1.78,12.26,2.71,17.22,2.91,1.64.07,3.35.1,5.06.1,5.44,0,11.17-.34,17.51-1.03,5.07-.55,10.51-1.74,16.63-3.63,8.64-2.66,16.76-6.62,24.15-11.76,1.49-1.03,2.9-1.53,4.35-1.53,2.75,0,4.55,1.81,5.31,2.58,18.51,18.59,37.31,37.36,56.52,56.56,3.3,3.29,7.05,5.02,11.17,5.18.23.01.45.01.67.01,3.82,0,7.29-1.2,10.31-3.56,4.49-3.54,6.74-8.2,6.66-13.85-.05-4.44-2.05-8.47-6.28-12.67Zm-89.03-65.51c-14.83,15.67-33.31,23.68-54.89,23.77h-.7c-19.45,0-37.88-7.85-51.87-22.11-13.43-13.69-21.36-32.21-21.77-50.82-.44-19.96,7.41-39.68,21.52-54.1,14.03-14.34,32.78-22.23,52.81-22.23,1.37,0,2.78.03,4.16.11,37.56,2.02,67.93,31.53,70.61,68.62,1.61,22.04-5.08,41.13-19.88,56.76Z"/>
+                  </g>
+                </g>
               </svg>
+
+
+
+  
             </span>
           </summary>
           <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
@@ -1337,6 +1347,11 @@
       "label": "t:sections.header.settings.logo.label"
     },
     {
+      "type": "image_picker",
+      "id": "logo2",
+      "label": "t:sections.header.settings.logo.label"
+    },
+    {
       "type": "range",
       "id": "logo_width",
       "min": 50,
@@ -1457,5 +1472,49 @@
   body.template_.index.gradient.Premium.Invention.wnw_loaded.overflow-hidden-tablet {
     height: 100vh;
     overflow: hidden;
+}
+@media only screen and (min-width: 750px) {
+.mobile-image{
+  display: none;
+}
+
+
+
+}
+@media only screen and (max-width: 750px) {
+.desktop-image{
+  display: none;
+}
+
+sticky-header header.header h1.header__heading {
+  order: 1;
+  width: 100%;
+  text-align: center;
+}
+sticky-header header.header .header__icons {
+  width: 0;
+}
+a#cart-icon-bubble {
+  display: none;
+}
+.currency-picker--wrapper {
+  display: none;
+}
+
+sticky-header header.header {
+
+  padding: 0;
+}
+
+.gradient {
+  background: white;
+  {% comment %} height: 75%; {% endcomment %}
+  background-attachment: fixed;
+}
+.home_mainbanner.new-homepage {
+  margin-top: -28px;
+}
+
+
 }
 </style>

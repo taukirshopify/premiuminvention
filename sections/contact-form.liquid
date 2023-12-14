@@ -15,7 +15,7 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+  <div class=" page-width page-width--narrow section-{{ section.id }}-padding">
     <div class="contact-forminner-main">
     {%- if section.settings.heading != blank -%}
       <h2 class="title title-wrapper--no-top-margin {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
@@ -38,12 +38,8 @@
         </ul>
       {%- endif -%}
       <div class="contact__fields">
-        <div class="field">
-          <label class="field__label" for="ContactForm-name">Name</label>
-          <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[name]" value="{% if form.fname %}{{ form.fname }}{% elsif customer %}{{ customer.fname }}{% endif %}" placeholder="Name">
-        </div>
-          <div class="field field--with-error">
-          <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+        <div class="field field--with-error">
+          <label class="field__label" for="ContactForm-email">Your Email Address <span aria-hidden="true">*</span></label>
           <input
             autocomplete="email"
             type="email"
@@ -67,13 +63,14 @@
             </small>
           {%- endif -%}
         </div>
+        <div class="field">
+          <label class="field__label d-flex" for="ContactForm-name">Your Name <p>(Optional)</p></label>
+          <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[name]" value="{% if form.fname %}{{ form.fname }}{% elsif customer %}{{ customer.fname }}{% endif %}" placeholder="Name">
+        </div>
+      
       </div>
       <div class="contact__fields">
-        <div class="field">
-          <label class="field__label" for="ContactForm-product_model">Product Model</label>
-          <input class="field__input" type="text" id="ContactForm-name" name="contact[product_model]"  placeholder="Product Model">
-        </div>
-          <div class="field field--with-error">
+        <div class="field field--with-error">
           <label class="field__label" for="ContactForm-order_number">Order Number <span aria-hidden="true">*</span></label>
           <input
             type="text"
@@ -96,52 +93,15 @@
             </small>
           {%- endif -%}
         </div>
+        <div class="field">
+          <label class="field__label" for="ContactForm-product_model">Product Model  <span aria-hidden="true">*</span> </label>
+          <input class="field__input" type="text" id="ContactForm-name" name="contact[product_model]"  placeholder="Product Model">
+        </div>
+
       </div>
-        <!--
-      <div class="contact__fields">
-        <div class="field">
-          <label class="field__label" for="ContactForm-name">First Name</label>
-          <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.fname' | t }}]" value="{% if form.fname %}{{ form.fname }}{% elsif customer %}{{ customer.fname }}{% endif %}" placeholder="{{ 'templates.contact.form.fname' | t }}">
-        </div>
-        <div class="field">
-          <label class="field__label" for="ContactForm-name">Last Name</label>
-          <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.lname' | t }}]" value="{% if form.lname %}{{ form.lname }}{% elsif customer %}{{ customer.lname }}{% endif %}" placeholder="{{ 'templates.contact.form.lname' | t }}">
-        </div>
-       
-      </div> -->
-     <!-- <div class=" contact__fields">
-        <div class="field">
-        <label class="field__label" for="ContactForm-phone">Phone</label>
-        <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}"> 
-         </div>
-          <div class="field field--with-error">
-          <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
-          <input
-            autocomplete="email"
-            type="email"
-            id="ContactForm-email"
-            class="field__input"
-            name="contact[email]"
-            spellcheck="false"
-            autocapitalize="off"
-            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-            aria-required="true"
-            {% if form.errors contains 'email' %}
-              aria-invalid="true"
-              aria-describedby="ContactForm-email-error"
-            {% endif %}
-            placeholder="{{ 'templates.contact.form.email' | t }}"
-          >
-          {%- if form.errors contains 'email' -%}
-            <small class="contact__field-error" id="ContactForm-email-error">
-              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-              <span class="form__message">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
-            </small>
-          {%- endif -%}
-        </div>
-      </div>-->
+      
       <div class="field">
-        <label class="form__label field__label" for="ContactForm-body">Message</label>
+        <label class="form__label field__label" for="ContactForm-body">Detailed Description of Concern <span aria-hidden="true">*</span> </label>
         <textarea
           rows="10"
           id="ContactForm-body"
@@ -152,19 +112,28 @@
           {{- form.body -}}
         </textarea>    
       </div>
-        <div class="field filed_checkbox">
-          <input class="field__input" type="checkbox" id="ContactForm-checkbox" name="contact[checkbox]"  value="true"  required>
-          <label class="field__label" for="ContactForm-checkbox">*I hereby consent to Premium Invention collecting and using my name, email, and address for identity verification purposes, as further detailed in the Privacy Policy and Terms & Conditions</label>
-         </div>
-      <div class="contact__fields">
+      <div class="">
         <div class="field">
-          <label class="field__label" for="ContactForm-attachments">Attachments</label>
-          <input class="field__input" type="file" id="ContactForm-name" name="contact[attachments]"  placeholder="Attachments">
+          <label class="field__label d-flex" for="ContactForm-attachments">Attachments <p>(Optional)</p> </label>
+          <input class="field__input" type="file" id="ContactForm-name" name="contact[attachments]"  placeholder="Upload file">
         </div>
+      </div>
+        <div class="field filed_checkbox form-margin-b">
+          <input class="field__input" type="checkbox" id="ContactForm-checkbox" name="contact[checkbox]"  value="true"  required>
+          <label class="field__label" for="ContactForm-checkbox"> <span>*</span> I hereby consent to Premium Invention collecting and using my name, email, and address for identity verification purposes, as further detailed in the Privacy Policy and Terms & Conditions</label>
         </div>
+
       <div class="contact__button">
         <button type="submit" class="button">
-          Submit
+          SUBMIT TICKET  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="26" viewBox="0 0 48 26" fill="none">
+            <rect x="47.0254" y="26" width="46.8651" height="26" transform="rotate(-180 47.0254 26)" fill="url(#pattern0)"/>
+            <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_1165_395" transform="matrix(0.00616427 0 0 0.0111111 0.222608 0)"/>
+            </pattern>
+            <image id="image0_1165_395" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAAAXNSR0IArs4c6QAADAhJREFUeF7tXWuQHFUV/k5Ptns2CWS7J+EhYBEoQS0LhGjJIwkIWIKCRXgjIKWIIBJIkYCKJfgqQB7hoYCKj5KUEh4JPkoEQRJQUJCnZZWGKomUhg1kZ2Z3iyTTszv9ubd3VpKZ7unbPb29E2vun/3R555z7tdnbp/XvSvojkwQkEykdIWgC3RGRtAFugt0RghkJKZr0V2gM0IgIzFdi+4CnRECGYnpOIsmmSuO4GABDhBifwD7gdgHghkAbMD/q8ZmAGUQmyF4FcQ6GnglB7w8qwcvikgtIwy1xHQE0MUt3NMwcEoNONoAFkKws5b24URDAJ4U4vc1Dw/Mni4b2uTX9vQpA/rfZO/MEZwCD58icBQERturCWZQE+JxCu4eMvHAXJHKJMlpyTZzoN8kZ/a4OI/AFRC8I9NFE5souENM3OyIKKvPbGQGNMmesoslEHwJgJPZCoMFlUhc41i4TURGstAlE6BLI1wAD3cAeF8Wi4ohY51HXDw7L4/FmJOIdFKBXk/mZ7m4CYLPAzESWOOexB8AvCAe1tVyWDfNwyZYKM8a9zYwpLwPF/aogTk54N0k9id9b2V+3UPRBYQQfNfuweUi4upOiks3aUAPVfiuGnAvBAdpKtUvgnsoWG1Pw7NJf9L+FlXBhySHk0icCWA3HfkEns8Rp/fl5Z869HFpJgXogQqPMYBVWm6aYA083GhbeCRt31f55GUXxwJYBsGRGuAMGR5O6uuVxzVoY5GkDnTR5WkCrABgttJEiMc8D1cXpsvTsTROSFwa4eEkviHEUS1ZEC4F5xQsuT+hqMBpqQJdrPJz4uHOCJ94A4HLCpbcl+ZCdHmVXKrt5CYAu4fOITwSFxZ65S5dvlF0qQHtWzJxTyuQ6WEl8rigIDIcpdhkPi+Rs8TFXRSc2hJswRlpWXYqQPt7suA3LbaLCoglTl6+P5kAxuVdqvAiAMshsALnEq5BfCyNPbttoOvexXMtPnxD4uFEu1fWxgUiC/rBrTzKEzzYSn+DmNeuN9IW0HU/+ekwF46CNw3go7YpL2UBWlIZ5SoP8oCHhdgliIdy/RwTh7fjZ7cFdKnC2yFQP7+gMSSCIzsd5AnFFdj0sDbUsgXfcUy5JOnLTAx0eSuPoIE1IRFfRTwc16nbRRhY9W3koZA9m/Cw0OmVPyYBOxHQJKeVq3gewAGBPzXBBQVTfpBEoameU6rwCyokD9Hjb7aJg5NErYmALlV4OQTXB4LsYWWhV5SvusOOcoX3hbl+JC4r5OXmuIuLDfQmcqdcFf8KSXVuoIn3TrWfHBeERnrlZ6OKvwcGNcTAqIW5u4i8FUdObKBLLr8I4LqQr/PpUxXxxVm0Dm3J5ScB/CxwncSyQl5UdKk9YgHtl59crKdg10YJKndh5+Uj2pI1CEla5Sq+DuDcOvlPbRNXiUhVY3rbJKUK14Qko/qHTOwTpywWC+hyleeQuDvwLRs4rNAjf2p7dXUGPsiuH0gc18DzOseSL6clpxWfesHiyRCasx1LAi0+iD4e0BU+SsExTYwEaxxTWmfFYiBD0ixX8QCAEwJ+OW/YedHKMccQGUpaqvAJCBYGEDzsWNJoBKF8tIFWLQFi4LXApBHxcScvD6WxsBaWPMG+37Eks6JuqcITIPhVwNpqtVHsNWeG9OusWxvocoVLKAhya/ptE+8UkVEdga1oNEBW0691LLmyXVm681XMUBrBhsDwnFjs5CXM595OhDbQAxX+2hAc3/RTFtxkm7JMV/EwOi2Qid/aFha1k3NIomexwltEcGnTXOIXTl4W6fDUAroeCQ4AmNXE1MB8p0ee0hG2I4KsdC6PcCE9PBGgf9k2MUenBKcF9ECVHxzLyz4bIOgt24STJCSd4NXJlrydjlWUAExvxKAm+MAcU1Q6ouXQArpY5XlC/LCRE4lHCnlRxc9EY0cAeWJh5Qp/R0FTnCCCz9im/CQKAC2gSy5VXuPyAGbXOJZ8JUpI0PNWLtzbloRHhi2cGCcwSKKLzpySSxUNq6i4cWj59bpA/3KsmeUTjRLEw7l2rwQGMK2U39FA9vfpKj9N4scBv+oHC3k5Kepl6QL9clBK1BMcMtuUZ6KEbPt8R9outtW7OMJDxUNQa8RLjiWRTUK6QK8HsHeARc+1e0Vl8rSGFshanNoi6gexwrbw1Tg5k8GtnOsZeLVJMrHeycs+URrpAq1cu0Ijs2kmZu8sUowSMvG8xT6nyyJNum87lqjOVq0xPMzZoxY2BQA94ORlThQTXaBV819T55FtwopjFSWXKlzNLE8RsfiNjiXhTTQNk+uZxOYmdsJ18pLvAh2OwAbHkj2jAJp4nhXQaW0d1wJ+I3onDC23bELRrLaO/5+PIfE6BCviFhCy+hgGunes4dDCdPlzHPPU8jymKHnUah3FLTxMcgjK6aTq3nUDlowClm4InkUI3k0qAeWQMl6qSaXQNCmx2bb8NGniqvSOsGfXXbvANKkhmNdnygtR3ymtgMU/C1KFigCbE/8eFiTtR9vORw2ueL+t/xR+IOt9hkFtx+km/tVqSy5VgbK5Ki1YbpuyNOqNRj3vZMsuVnmrEE2dpCS0Mndq7VoWrQjLFV5KwS0BgG20TeyVYXE2VqAR9YKjnqvjdKUR/CekOHvxWJ7j9igesYAe2MI9jBxeA5ALSKwc7+RFHa1oe2hYdme0GxCjo6PYa5eZslFn0doWXbfqwHIOiLVOXj6sI1CHpmVhgHjdycseOnzSoClV+CQECwJ4TU4DTX2fPhvjZwibRwrV8G2ZtrDszPo6WlS/lapnOZb8XPdlxrJo1eQ4o+onv5tSnRQ8XjDlaF3BOnR1t+prDU2OV7fjTurIVTQkpez6Ry2a28GI14cs7BunlhkLaN+qWzShAzjTsWSl7mI6ma5lQyextJCX5XH0jw10RCN6P0y8J+tLR+IsWIe2TPZxvBG9uUhBDFQt7L2biH/Lgu6IDbRiXKxwqQhuDBIixP12Xk7TVaAT6YouVwkQWNkWYomdl1vj6p0IaL/xz8VzIjgwUKDgIseUO+Mq0wn05QovoSAMyGwPC/l79fitMqofrfllpXi0N0vwI45aEwYWJO0zTGTRE4svVXkbiMWBYBDDYvgHOl/MEqyksjZVOS9H/9zkTkE8SNxayMuSpPzbAlq5X6UqnhJgXqBy40eUj+10sBXIBvBQ2BFlAf7SZ2J+O25lW0ArcAcr3NcT/3Bnc2bPd0gxbBCL0rghIKk1tZpX3y5Wh1ny2K0MgwZxcF+vqLpp4tE20D7Y4zcEhB3tVWCrvpClugmYxKuJObFc4WKOe09ht+WkdtQ6FaB9l8/lqUKsbHUxinL9aOH8qfazlZ/sVfGjMBeu/r5qBNS5yVUx31+II5YGlzqP4laeL4LvRVz1o7qVlsXJE6Sloh9WV3HW2EWyN0R0TNUouLBgSlNPeFJdUrPoCQXqlr0i9FaXCUJiLXK4yukRdb/dpA8/QVTDN0OOsr0tf/zyqrPSsuQJxqkD/b8924D6wAR/ILeFlVAHJm+wLTycRvFgO9bqFgbXPxCqLgkISnVu/4KJQSEWTcb1F5MC9IQ3UhPcG+b6NZqwuq0GHu4xcljdNw3PJD15pVzOwQoO8XJ+CH1GmMvWKF+5cOLh9Ha9i7Cf5qQBrQT6ac4R3ADi4jhlMwBbhHiKgudF8Ion+EeuhjfEwuDOgH+rwDAwky76ajnsatC/MnM/IeZRcHjQoZ4WexNJ3OZYuKIdPzlq75tUoCeEl7ZyPgyo2lrgRSpRSk7i87/CwEVJw+o4emUCdN26VSJqsQBXjt3wMjuOkqnTEgMCfKvPwu1pfxemZOsIErqRnGG5+CzFP+WVWe3Pf9nqO0DcCRPLs768JTOLbgTdv8qtipNJnCPjNyY0V9fTMWX1TxUeVbXOIROr45Sf0hE/zmXKgN52EZs2c/dcDicDOBqCI+r/naKddar/ZqFSuI+NjmKVbktAOwKj5nYE0A2+b25oBAfWgPcLsZ/vTQjmjl1tqf6TRR+AmXV65X0MKgeExHrlnYhgnYz/e5CXdc5nR4GT5vOOAzrNxXUSry7QGb2NLtBdoDNCICMxXYvuAp0RAhmJ6Vp0F+iMEMhITNeiMwL6vwTgJqbuAZ+BAAAAAElFTkSuQmCC"/>
+            </defs>
+            </svg>
         </button>
       </div>
     {%- endform -%}

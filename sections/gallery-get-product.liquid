@@ -28,12 +28,14 @@
           <div class="image-bar__item box ratio-container lazyload"
                data-bgset="{% include 'bgset', image: block.settings.image %}"
                data-sizes="auto"
+               loading="lazy"
                data-parent-fit="cover"
                style="background-position: {{ block.settings.alignment }}; background-image: url('{{ block.settings.image | img_url: 'master' }});">
       {% elsif block.settings.image != blank %}
         <div class="image-bar__item image-bar__item--{{ block.id }} box ratio-container lazyload"
              data-bgset="{% include 'bgset', image: block.settings.image %}"
              data-sizes="auto"
+             loading="lazy"
              data-parent-fit="cover"
              style="background-position: {{ block.settings.alignment }}; background-image: url('{{ block.settings.image | img_url: 'master' }});">
       {% else %}

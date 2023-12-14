@@ -3,6 +3,58 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'home-banner.css' | asset_url | stylesheet_tag }}
 
+<style>
+
+
+
+
+  @media only screen and (min-width: 600px)  {
+
+  .extra-space-banner{
+   margin: 0 3rem;
+}
+      .new-homepage  .extra-space-banner  h2.banner__heading.h1 {
+  font-size: 59px;
+  font-weight: 700;
+}
+  }
+
+
+    
+  
+
+  .banner__buttons.banner-modifed-button a {
+  background:  #006BB3  !important;
+  color:  white !important;
+  display: flex;
+  padding: 10px 22px !important;
+
+  @media only screen and (max-width: 800px) and (min-width: 100px)  {
+    padding: 7px 22px !important;
+  }
+  border-radius: 35px !important;
+}
+      .banner__buttons.banner-modifed-button a svg {
+   margin-left:17px;
+        
+      }
+      .banner-modifed-button-white{
+      }
+
+      .banner-modifed-button-white  h2.banner__heading.h1 {
+        color: #fff !important;
+    }
+      .banner-modifed-button-white  span {
+    
+        color: #fff !important;
+    }
+
+    .banner__buttons.banner-modifed-button a.button {
+      background: white !important;
+      color: #006BB3 !important;
+  }
+</style>
+
 <link rel="preload" as="image" imagesrcset="//premiuminvention.com/cdn/shop/files/Live_in_the_Future_light_2.jpg?v=1698328005&amp;width=5760">
 <link rel="preload" as="image" imagesrcset="//premiuminvention.com/cdn/shop/files/Live_in_the_future_light_mobile_2.jpg?v=1698328018&amp;width=5760">
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
@@ -154,7 +206,7 @@
               {%- endif -%}
             </div>
             <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} {% if block.settings.page_width %} page-width {% endif  %}    {% if block.settings.custome-width %}slier-first-slide {% endif  %} {% if block.settings.extra-space-banner %} extra-space-banner {% endif  %}  {% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-              <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+              <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }} {% if block.settings.modifiedbutton %}   banner-modifed-button-white  {% endif %}">
                 {%- if block.settings.heading != blank -%}
                   <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading  }}</h2>
                 {%- endif -%}
@@ -167,9 +219,17 @@
                   <div class="banner__buttons  {% if block.settings.modifiedbutton %}   banner-modifed-button  {% endif %}  ">
                     <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}
                   
-                    {% if block.settings.modifiedbutton %} <svg xmlns="http://www.w3.org/2000/svg" width="38" height="16" viewBox="0 0 38 16" fill="none">
-                 <path d="M37.7071 8.7071C38.0976 8.31658 38.0976 7.68341 37.7071 7.29289L31.3431 0.928929C30.9526 0.538405 30.3195 0.538405 29.9289 0.92893C29.5384 1.31945 29.5384 1.95262 29.9289 2.34314L35.5858 8L29.9289 13.6569C29.5384 14.0474 29.5384 14.6805 29.9289 15.0711C30.3195 15.4616 30.9526 15.4616 31.3431 15.0711L37.7071 8.7071ZM8.74228e-08 9L37 9L37 7L-8.74228e-08 7L8.74228e-08 9Z" fill="white"/>
-                </svg> {% endif %}
+                    {% if block.settings.modifiedbutton %}
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <rect x="26" y="26" width="26" height="26" transform="rotate(-180 26 26)" fill="url(#patt__0ern0)"/>
+                        <defs>
+                        <pattern id="patt__0ern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image_paft0_1032_203" transform="scale(0.0111111)"/>
+                        </pattern>
+                        <image id="image_paft0_1032_203" width="90" height="90" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                        </svg>
+                     {% endif %}
                     
                     </a>
                   </div>
@@ -262,8 +322,8 @@
 
       .slier-first-slide 
 h2.banner__heading.h1 {
-    color: #000 !important;
-    font-size: 86px !important;
+
+    font-size: 48px !important;
     font-weight: 700 !important;
   line-height: 1 !important;
 }   
@@ -276,6 +336,9 @@ h2.banner__heading.h1 {
   .slier-first-slide .banner__text span {
     color: #000;
     font-size: 20px;
+    @media only screen and (max-width: 800px) and (min-width: 100px)  {
+      font-size: 16px;
+    }
     margin-top: 15px;
     display: inline-block;
 }
@@ -284,7 +347,8 @@ h2.banner__heading.h1 {
 
   @media only screen and (max-width: 800px) and (min-width: 100px)  {
   .slier-first-slide  .slideshow__text.banner__box {
-    padding-top: 120% !important;
+    padding-top: 10% !important;
+    padding-bottom: 120% !important;
 }
   .image-desktop{
   display:none;  
@@ -299,6 +363,9 @@ h2.banner__heading.h1 {
 h2.banner__heading.h1 {
 
     font-size: 56px !important;
+    @media only screen and (max-width: 800px) and (min-width: 100px)  {
+      font-size: 36px !important;
+    }
  
 }    
   }
@@ -697,37 +764,3 @@ h2.banner__heading.h1 {
 {% endschema %}
 
 
-
-  <style>
-
-
-
-
-    @media only screen and (min-width: 600px)  {
-
-    .extra-space-banner{
-     margin: 0 3rem;
-}
-        .new-homepage  .extra-space-banner  h2.banner__heading.h1 {
-    font-size: 59px;
-    font-weight: 700;
-}
-    }
-
-
-      
-    
-
-    .banner__buttons.banner-modifed-button a {
-    background:  #006BB3  !important;
-    color:  white !important;
-    display: flex;
-    padding: 10px 22px !important;
-    border-radius: 35px !important;
-}
-        .banner__buttons.banner-modifed-button a svg {
-     margin-left:17px;
-          
-        }
-  </style>
-{{ 'home--banner.css' | asset_url | stylesheet_tag }}

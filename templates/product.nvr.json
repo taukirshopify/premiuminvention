@@ -28,7 +28,7 @@
           }
         },
         "loox-rating": {
-          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "contentSize": 16,
             "pattern": "",
@@ -203,7 +203,7 @@
         "96984ab5-6db8-443c-b7a7-9dbac49bfac4": {
           "type": "product",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/Group_40248.png",
+            "pro_img": "shopify:\/\/shop_images\/Starter_Package_d3422d51-2d80-4885-9af6-7ef57de8a86e.png",
             "package_name": "Starter Package",
             "product_title": "1 x X3 Wired Wifi Outdoor Camera + 1 x NVR",
             "text": "",
@@ -811,7 +811,7 @@
         "27a3dc3e-27e6-4e27-9a7b-aacde38f779d": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/Groupnew_b1bc0695-6898-46ec-b946-d3f7a12818fe.png",
+            "pro_img": "shopify:\/\/shop_images\/NVR_c272748a-6382-4dd3-bbca-5bab007179f4.png",
             "package_name": "Launchpad",
             "product_title": "",
             "text": "<ul><li>1 x 4K 8-Channel Smart NVR <\/li><\/ul>",
@@ -829,13 +829,13 @@
         "9b470a19-f70c-4b07-8353-5fda3a5ebaf9": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/Group_40248.png",
+            "pro_img": "shopify:\/\/shop_images\/Starter_Package_9ef7ff52-d3bf-4429-9536-8244f3740b0d.png",
             "package_name": "Starter Package",
             "product_title": "",
             "text": "<ul><li>1 x X3 Wired Wifi Outdoor Camera <\/li><li>1 x 4K 8-Channel Smart NVR <\/li><\/ul>",
             "product_id": "40871096614973",
             "saving_price": "",
-            "sale_price": "$549",
+            "sale_price": "$549.94",
             "off_price": "",
             "shipday": "",
             "rating_number": "",
@@ -847,13 +847,13 @@
         "cccd3ad9-4a32-4e7b-920c-2c48f59ceaf2": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/Group_40249.png",
+            "pro_img": "shopify:\/\/shop_images\/Core_Bundle_d692529a-6fd3-41a4-a1c9-30a6441ebb65.png",
             "package_name": "Core Bundle",
             "product_title": "",
             "text": "<ul><li>3 x X3 Wired Wifi Outdoor Camera <\/li><li>1 x 4K 8-Channel Smart NVR <\/li><\/ul>",
             "product_id": "40871097335869",
             "saving_price": "",
-            "sale_price": "$799.97",
+            "sale_price": "$849.88",
             "off_price": "",
             "shipday": "",
             "rating_number": "",
@@ -865,13 +865,13 @@
         "2e957cfc-dad2-4f14-8acc-6e690d98a114": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/Group_40250.png",
+            "pro_img": "shopify:\/\/shop_images\/NVR_Everyday_Bundle_d7ec55ad-f3f9-44a9-a6e0-7826712ae4f9.png",
             "package_name": "Everyday Bundle",
             "product_title": "",
             "text": "<ul><li>5 x X3 Wired Wifi Outdoor Camera <\/li><li>1 x 4K 8-Channel Smart NVR <\/li><\/ul>",
             "product_id": "40871097368637",
             "saving_price": "",
-            "sale_price": "$999.97",
+            "sale_price": "$1,149.82",
             "off_price": "",
             "shipday": "",
             "rating_number": "",
@@ -1090,9 +1090,9 @@
         "a4203056-0538-4463-b2c4-c896fcd8400b"
       ],
       "custom_css": [
-        ".weatherproof-bottom img {width: 100%;}",
         "div#shopify-q3-weatherproof {margin-top: 0%;}",
-        "@media (max-width: 914px) {#shopify-q3-weatherproof {display: none; }}"
+        "@media (max-width: 914px) {#shopify-q3-weatherproof {display: none; }}",
+        ".weatherproof-bottom img {width: 100%; height: auto;}"
       ],
       "settings": {
         "heading_title_1": "What's in the Box?",
@@ -1124,7 +1124,7 @@
       "type": "apps",
       "blocks": {
         "loox-product-reviews": {
-          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "only_photos": false,
             "aggregated": false,

@@ -8,7 +8,7 @@
   
   {% for block in section.blocks %}
   <li>
-  <img src="{{block.settings.image | img_url : 'master' }}">
+  <img src="{{block.settings.image | img_url : 'master' }}" alt="{{block.settings.cta_label }}" loading="lazy">
      <h2 class="footer_prm_heading"> {{ block.settings.heading_title_2  }}</h2>
     <p>{{block.settings.cta_label  }}</p>
     </li>

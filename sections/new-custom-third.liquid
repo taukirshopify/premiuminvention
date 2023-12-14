@@ -6,14 +6,14 @@
         {% if section.settings.imageone !=blank %}
         <div class="third-lefts-top-one">
           <a href="{{ section.settings.linkone }}">
-          <img src="{{  section.settings.imageone | img_url : 'master'}}" />
+          <img src="{{  section.settings.imageone | img_url : 'master'}}" loading="lazy"  alt="proudct img" />
           </a>
         </div>
         {% endif %}
         {% if section.settings.imagetwo !=blank %}
         <div class="third-lefts-top-two">
            <a href="{{ section.settings.linktwo }}">
-          <img src="{{ section.settings.imagetwo | img_url : 'master'}}" />
+          <img src="{{ section.settings.imagetwo | img_url : 'master'}}" loading="lazy" alt="proudct img" />
            </a>
         </div>
         {% endif %}
@@ -21,7 +21,7 @@
       {% if section.settings.imagethree !=blank %}
       <div class="third-lefts-bottom">
          <a href="{{ section.settings.linkthree }}">
-          <img src="{{ section.settings.imagethree | img_url : 'master'}}" />
+          <img src="{{ section.settings.imagethree | img_url : 'master'}}" loading="lazy" alt="proudct img"/>
          </a>
          </div>
       {% endif %}
@@ -29,7 +29,7 @@
     {% if section.settings.image_right !=blank %}
      <div class="third-rights">
         <a href="{{ section.settings.linkright }}">
-      <img src="{{ section.settings.image_right | img_url : 'master'}}" />
+      <img src="{{ section.settings.image_right | img_url : 'master'}}"  loading="lazy" alt="proudct img"/>
         </a>
         </div>
     {% endif %}
@@ -39,14 +39,30 @@
        {% if section.settings.four_imageone !=blank %}
      <div class="fourth-lefts-top-one">
            <a href="{{ section.settings.four_linkone }}">
-          <img src="{{ section.settings.four_imageone | img_url : 'master'}}" />
+
+          {{ section.settings.four_imageone | image_url: width: 3840 | image_tag:
+            loading: 'lazy',
+            height: '394',
+            sizes: "100vw",
+
+        format: 'webp',
+            widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+          }}
            </a>
         </div>
         {% endif %}
           {% if section.settings.four_imagetwo !=blank %}
       <div class="fourth-lefts-top-two">
            <a href="{{ section.settings.four_linktwo }}">
-          <img src="{{ section.settings.four_imagetwo | img_url : 'master'}}" />
+ 
+          {{ section.settings.four_imagetwo | image_url: width: 3840 | image_tag:
+            loading: 'lazy',
+            height: '472',
+            sizes: "100vw",
+        class: 'css-class-1 css-class-2',
+        format: 'webp',
+            widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+          }}
            </a>
         </div>
         {% endif %}
@@ -55,7 +71,15 @@
 {% if section.settings.four_image_right !=blank %}
      <div class="fourth-rights">
         <a href="{{ section.settings.four_linkright }}">
-      <img src="{{ section.settings.four_image_right | img_url : 'master'}}" />
+
+      {{ section.settings.four_image_right | image_url: width: 3840 | image_tag:
+        loading: 'lazy',
+        height: '856',
+        sizes: "100vw",
+    class: 'css-class-1 css-class-2',
+    format: 'webp',
+        widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+      }}
         </a>
         </div>
     {% endif %}

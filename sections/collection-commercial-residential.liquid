@@ -1,84 +1,98 @@
+{{ 'collection-residential-commercial.css' | asset_url | stylesheet_tag }}
+
 <div class="collection_main {{section.settings.extraclass}}">
-   <div class="page-width">
-      <div class="section-header text-center">
-         <h2>Are you looking for:</h2>
-      </div>
-      <div class="top-collection">
-         <ul id="tabs-top-collection">
-           {% for block in section.blocks %}
-            <li  hit="collection_inner" trgt="collection-top-tab{{forloop.index}}">
-               <a href="#collection-top-tab{{forloop.index}}">
-                  {{block.settings.tabsvg}}
-                   {{block.settings.tabtitle}}
-               </a>
-            </li>
-           {% endfor %}
-            
-         </ul>
-      </div>
-      <div class="tabs">
-        
+  <div class="page-width">
+     <div class="section-header text-center">
+        <h2>Are you looking for:</h2>
+     </div>
+     <div class="top-collection">
+        <ul id="tabs-top-collection">
           {% for block in section.blocks %}
+           <li  hit="collection_inner" trgt="collection-top-tab{{forloop.index}}">
+              <a href="#collection-top-tab{{forloop.index}}">
+                 {{block.settings.tabsvg}}
+                  {{block.settings.tabtitle}}
+              </a>
+           </li>
+          {% endfor %}
+           
+        </ul>
+     </div>
+     <div class="tabs">
+       
+         {% for block in section.blocks %}
+       
+       <div id="collection-top-tab{{forloop.index}}" class="residential-commercial"> 
+         <div class="collectio--slecte-mobile"> Select type...  
+           </div>
+        <ul class="hidedrop" id="tabs-nav-collection"> 
+      {% if block.settings.tab1title1 != blank %}     <li class="tgrt-click-wieless"   hit="collection_inner"><a href="#collection-tab{{forloop.index}}1"> {{block.settings.tab1title1}} </a></li>{% endif %}
+           {% if block.settings.tab1title2 != blank %}    <li  hit="collection_inner"><a href="#collection-tab{{forloop.index}}2" id="{{forloop.index}}wired">{{block.settings.tab1title2}}</a></li>{% endif %}
+          {% if block.settings.tab1title3 != blank %}     <li  hit="collection_inner"><a href="#collection-tab{{forloop.index}}3"  >{{block.settings.tab1title3}}</a></li>{% endif %}
+          {% if block.settings.tab1title4 != blank %}     <li  hit="collection_inner"><a href="#collection-tab{{forloop.index}}4"  >{{block.settings.tab1title4}}</a></li>{% endif %}
+        </ul>
         
-        <div id="collection-top-tab{{forloop.index}}" class="residential-commercial"> 
-          <div class="collectio--slecte-mobile"> Select type...  
-            </div>
-         <ul class="hidedrop" id="tabs-nav-collection"> 
-       {% if block.settings.tab1title1 != blank %}     <li class="tgrt-click-wieless"   hit="collection_inner"><a href="#collection-tab{{forloop.index}}1"> {{block.settings.tab1title1}} </a></li>{% endif %}
-            {% if block.settings.tab1title2 != blank %}    <li  hit="collection_inner"><a href="#collection-tab{{forloop.index}}2" id="{{forloop.index}}wired">{{block.settings.tab1title2}}</a></li>{% endif %}
-           {% if block.settings.tab1title3 != blank %}     <li  hit="collection_inner"><a href="#collection-tab{{forloop.index}}3"  >{{block.settings.tab1title3}}</a></li>{% endif %}
-           {% if block.settings.tab1title4 != blank %}     <li  hit="collection_inner"><a href="#collection-tab{{forloop.index}}4"  >{{block.settings.tab1title4}}</a></li>{% endif %}
-         </ul>
-         
-         <!-- END tabs-nav -->
-         <div id="tabs-content-collection" class="content_collection_main">
-            <div id="collection-tab{{forloop.index}}1" class="n tab-content-collection lp" {% if forloop.index == 1%} style="display:block;"{% endif %}>
-               <div class="collection_inner">
-                 {% if block.settings.col1.products_count == 0 %}
+        <!-- END tabs-nav -->
+        <div id="tabs-content-collection" class="content_collection_main">
+           <div id="collection-tab{{forloop.index}}1" class="n tab-content-collection lp" {% if forloop.index == 1%} style="display:block;"{% endif %}>
+              <div class="collection_inner">
+                {% if block.settings.col1.products_count == 0 %}
 
 <h2 class="empty--coll">Coming Soon</h2>
 {% else %}
-                  {% assign nmbrs= 1%}
+                 {% assign nmbrs= 1%}
 
-                  {% for product in block.settings.col1.products %}
+                 {% for product in block.settings.col1.products %}
 
-                  <div class="colr collection_sec{{nmbrs}} collection_same">
-                    <div class="collection_img_new">
-                        <img src ="{{product.featured_image  | img_url : 'master' }}
- " alt="" class="collec_wireless__image">
-                     </div>
-                     <div class="collection_text">
-                        <h2>{{product.title}}</h2>
-                        <div class="collection_text_price"> 
-                              <div class="product--price"><span class="money">{{product.price | money }}</span></div>   
-                          {% if product.compare_at_price_max > product.price %}  <div class="max--price"><span class="money">{{product.compare_at_price_max | money }}</span></div>  {% endif %}
-                                        
+                 <div class="colr collection_sec{{nmbrs}} collection_same">
+                   <div class="collection_img_new">
+ {% if product.metafields.custom.eventimage %}
+   <img src ="{{ product.metafields.custom.eventimage | img_url : 'master' }}
+     " alt="proudct" class="collec_wireless__image" loading="lazy">
+   {% else %}
+   <img src ="{{product.featured_image  | img_url : 'master' }}
+     " alt="proudct" class="collec_wireless__image" loading="lazy">
+ {% endif %}
+          
+             
+                    </div>
+                    <div class="collection_text">
+                       <h2>{{product.title}}</h2>
+                       <div class="collection_text_price"> 
+                             <div class="product--price"><span class="money">{{product.price | money }}</span></div>   
+                         {% if product.compare_at_price_max > product.price %}  <div class="max--price"><span class="money">{{product.compare_at_price_max | money }}</span></div>  {% endif %}
+                                       
+                      </div>
+                       <div class="star--rating">
+                          <a href="#looxReviews">
+                             <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
+                          </a>
                        </div>
-                        <div class="star--rating">
-                           <a href="#looxReviews">
-                              <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
-                           </a>
-                        </div>
-                       
-                        {% assign custom_colors = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
-                          
-                       {% if custom_colors != blank %}
-                       <ul>
-                         {% for list in custom_colors %}
-                          
-                     {% if list != blank %}     <li>{{list}}</li> {% endif %}
-                          {% endfor %}
+                      
+                       {% assign custom_colors = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
                          
-                        </ul>
-                       {% endif %}
-                     </div>
-                     <div class="collection_img">
-                        <img src ="{{product.featured_image  | img_url : 'master' }}
- " alt="" class="collec_wireless__image">
-                     </div>
-                     {% for variant in product.variants %}
+                      {% if custom_colors != blank %}
+                      <ul>
+                        {% for list in custom_colors %}
+                         
+                    {% if list != blank %}     <li>{{list}}</li> {% endif %}
+                         {% endfor %}
+                        
+                       </ul>
+                      {% endif %}
+                    </div>
+                    <div class="collection_img">
+                     {% if product.metafields.custom.eventimage %}
+                       <img src ="{{ product.metafields.custom.eventimage | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                       {% else %}
+                       <img src ="{{product.featured_image  | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                     {% endif %}
+                    </div>
+                    {% for variant in product.variants %}
 {% if forloop.first == true %}
-  {% if variant.available %}
+ {% if variant.available %}
 {% assign avble='yes' %}
 {% else%}
 {% assign avble='no' %}
@@ -86,67 +100,77 @@
 {%endif%}
 {% endif %}
 {% endfor %}
-                     <div class="collection_btn">
-                        <a role="link"  href="{{product.url}}" class="{% if avble == 'no'%}pointnone {% endif %} button_collection button button--primary">{% if avble == 'no'%}Sold out {%else %}Shop Now{%endif  %} </a>
-                     </div>
-                  </div>
+                    <div class="collection_btn">
+                       <a role="link"  href="{{product.url}}" class="{% if avble == 'no'%}pointnone {% endif %} button_collection button button--primary">{% if avble == 'no'%}Sold out {%else %}Shop Now{%endif  %} </a>
+                    </div>
+                 </div>
+                
+                 {% assign nmbrs= nmbrs | plus :1%}
+                {% endfor %}
                  
-                  {% assign nmbrs= nmbrs | plus :1%}
-                 {% endfor %}
-                  
-             {% assign nmbrs= 0%}      
-                  
+            {% assign nmbrs= 0%}      
+                 
 {% endif %}
 
-               </div>
-            </div>
-            <div id="collection-tab{{forloop.index}}2" class="tab-content-collection">
-              <div class="collection_inner">
+              </div>
+           </div>
+           <div id="collection-tab{{forloop.index}}2" class="tab-content-collection">
+             <div class="collection_inner">
 {% if block.settings.col2.products_count == 0 %}
 
 <h2 class="empty--coll">Coming Soon</h2>
 {% else %}
 
-                  {% assign nmbrs= 1%}
-                  {% for product in block.settings.col2.products %}
-                  <div class="collection_sec{{nmbrs}} collection_same">
-                    <div class="collection_img_new">
-                        <img src ="{{product.featured_image  | img_url : 'master' }}
- " alt="" class="collec_wireless__image">
-                     </div>
-                     <div class="collection_text">
-                        <h2>{{product.title}}</h2>
-                        <div class="collection_text_price"> 
-                           <div class="product--price"><span class="money">{{product.price | money }}</span></div>   
-                          {% if product.compare_at_price_max > product.price %}  <div class="max--price"><span class="money">{{product.compare_at_price_max | money }}</span></div>  {% endif %}
-                                           
+                 {% assign nmbrs= 1%}
+                 {% for product in block.settings.col2.products %}
+                 <div class="collection_sec{{nmbrs}} collection_same">
+                   <div class="collection_img_new">
+                     {% if product.metafields.custom.eventimage %}
+                       <img src ="{{ product.metafields.custom.eventimage | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                       {% else %}
+                       <img src ="{{product.featured_image  | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                     {% endif %}
+                    </div>
+                    <div class="collection_text">
+                       <h2>{{product.title}}</h2>
+                       <div class="collection_text_price"> 
+                          <div class="product--price"><span class="money">{{product.price | money }}</span></div>   
+                         {% if product.compare_at_price_max > product.price %}  <div class="max--price"><span class="money">{{product.compare_at_price_max | money }}</span></div>  {% endif %}
+                                          
+                      </div>
+                       <div class="star--rating">
+                          <a href="#looxReviews">
+                             <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
+                          </a>
                        </div>
-                        <div class="star--rating">
-                           <a href="#looxReviews">
-                              <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
-                           </a>
-                        </div>
-                      
-                        {% assign custom_colors = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
-                          
-                       {% if custom_colors != blank %}
-                       <ul>
-                         {% for list in custom_colors %}
-                          
-                     {% if list != blank %}     <li>{{list}}</li> {% endif %}
-                          {% endfor %}
+                     
+                       {% assign custom_colors = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
                          
-                        </ul>
-                       {% endif %}
-                     </div>
-                     <div class="collection_img">
-                        <img src ="{{product.featured_image  | img_url : 'master' }}
- " alt="" class="collec_wireless__image">
-                     </div>
+                      {% if custom_colors != blank %}
+                      <ul>
+                        {% for list in custom_colors %}
+                         
+                    {% if list != blank %}     <li>{{list}}</li> {% endif %}
+                         {% endfor %}
+                        
+                       </ul>
+                      {% endif %}
+                    </div>
+                    <div class="collection_img">
+                     {% if product.metafields.custom.eventimage %}
+                       <img src ="{{ product.metafields.custom.eventimage | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                       {% else %}
+                       <img src ="{{product.featured_image  | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                     {% endif %}
+                    </div>
 
-   {% for variant in product.variants %}
+  {% for variant in product.variants %}
 {% if forloop.first == true %}
-  {% if variant.available %}
+ {% if variant.available %}
 {% assign avble='yes' %}
 {% else%}
 {% assign avble='no' %}
@@ -154,64 +178,74 @@
 {%endif%}
 {% endif %}
 {% endfor %}
-                     <div class="collection_btn">
-                        <a role="link"  href="{{product.url}}" class="{% if avble == 'no'%}pointnone {% endif %} button_collection button button--primary">{% if avble == 'no'%}Sold out {%else %}Shop Now{%endif %} </a>
-                     </div>
-                  </div>
+                    <div class="collection_btn">
+                       <a role="link"  href="{{product.url}}" class="{% if avble == 'no'%}pointnone {% endif %} button_collection button button--primary">{% if avble == 'no'%}Sold out {%else %}Shop Now{%endif %} </a>
+                    </div>
+                 </div>
+                
+                 {% assign nmbrs= nmbrs | plus :1%}
+                {% endfor %}
                  
-                  {% assign nmbrs= nmbrs | plus :1%}
-                 {% endfor %}
-                  
-                   {% assign nmbrs= 0%}
-                 {% endif %}
-               </div>
-            </div>
-            <div id="collection-tab{{forloop.index}}3" class="tab-content-collection">
-              <div class="collection_inner">
+                  {% assign nmbrs= 0%}
+                {% endif %}
+              </div>
+           </div>
+           <div id="collection-tab{{forloop.index}}3" class="tab-content-collection">
+             <div class="collection_inner">
 {% if block.settings.col3.products_count == 0 %}
 
 <h2 class="empty--coll">Coming Soon</h2>
 {% else %}
 
-                {% assign nmbrs= 1%}
-                  {% for product in block.settings.col3.products %}
-                  <div class="collection_sec{{nmbrs}} collection_same">
-                    <div class="collection_img_new">
-                        <img src ="{{product.featured_image  | img_url : 'master' }}
- " alt="" class="collec_wireless__image">
-                     </div>
-                     <div class="collection_text">
-                        <h2>{{product.title}}</h2>
-                       <div class="collection_text_price"> 
-                                   <div class="product--price"><span class="money">{{product.price | money }}</span></div>   
-                         {% if product.compare_at_price_max > product.price %}  <div class="max--price"><span class="money">{{product.compare_at_price_max | money }}</span></div>  {% endif %}
-                                 
+               {% assign nmbrs= 1%}
+                 {% for product in block.settings.col3.products %}
+                 <div class="collection_sec{{nmbrs}} collection_same">
+                   <div class="collection_img_new">
+                     {% if product.metafields.custom.eventimage %}
+                       <img src ="{{ product.metafields.custom.eventimage | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                       {% else %}
+                       <img src ="{{product.featured_image  | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                     {% endif %}
+                    </div>
+                    <div class="collection_text">
+                       <h2>{{product.title}}</h2>
+                      <div class="collection_text_price"> 
+                                  <div class="product--price"><span class="money">{{product.price | money }}</span></div>   
+                        {% if product.compare_at_price_max > product.price %}  <div class="max--price"><span class="money">{{product.compare_at_price_max | money }}</span></div>  {% endif %}
+                                
+                      </div>
+                       <div class="star--rating">
+                          <a href="#looxReviews">
+                             <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
+                          </a>
                        </div>
-                        <div class="star--rating">
-                           <a href="#looxReviews">
-                              <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
-                           </a>
-                        </div>
-                       
-                        {% assign custom_colors = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
-                          
-                       {% if custom_colors != blank %}
-                       <ul>
-                         {% for list in custom_colors %}
-                          
-                     {% if list != blank %}     <li>{{list}}</li> {% endif %}
-                          {% endfor %}
+                      
+                       {% assign custom_colors = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
                          
-                        </ul>
-                       {% endif %}
-                     </div>
-                     <div class="collection_img">
-                        <img src ="{{product.featured_image  | img_url : 'master' }}
- " alt="" class="collec_wireless__image">
-                     </div>
-                    {% for variant in product.variants %}
+                      {% if custom_colors != blank %}
+                      <ul>
+                        {% for list in custom_colors %}
+                         
+                    {% if list != blank %}     <li>{{list}}</li> {% endif %}
+                         {% endfor %}
+                        
+                       </ul>
+                      {% endif %}
+                    </div>
+                    <div class="collection_img">
+                     {% if product.metafields.custom.eventimage %}
+                       <img src ="{{ product.metafields.custom.eventimage | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                       {% else %}
+                       <img src ="{{product.featured_image  | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                     {% endif %}
+                    </div>
+                   {% for variant in product.variants %}
 {% if forloop.first == true %}
-  {% if variant.available %}
+ {% if variant.available %}
 {% assign avble='yes' %}
 {% else%}
 {% assign avble='no' %}
@@ -219,65 +253,75 @@
 {%endif%}
 {% endif %}
 {% endfor %}
-                     <div class="collection_btn">
-                        <a role="link"  href="{{product.url}}" class="{% if avble == 'no'%}pointnone {% endif %} button_collection button button--primary">{% if avble == 'no'%}Sold out {%else %}Shop Now{%endif  %} </a>
-                     </div>
-                  </div>
+                    <div class="collection_btn">
+                       <a role="link"  href="{{product.url}}" class="{% if avble == 'no'%}pointnone {% endif %} button_collection button button--primary">{% if avble == 'no'%}Sold out {%else %}Shop Now{%endif  %} </a>
+                    </div>
+                 </div>
+                
+                 {% assign nmbrs= nmbrs | plus :1%}
+                {% endfor %}
                  
-                  {% assign nmbrs= nmbrs | plus :1%}
-                 {% endfor %}
-                  
-                   {% assign nmbrs= 0%}
+                  {% assign nmbrs= 0%}
 {% endif %}
-               </div>
-            </div>
+              </div>
+           </div>
 
-            <div id="collection-tab{{forloop.index}}4" class="tab-content-collection">
-              <div class="collection_inner">
+           <div id="collection-tab{{forloop.index}}4" class="tab-content-collection">
+             <div class="collection_inner">
 {% if block.settings.col4.products_count == 0 or block.settings.col4 == blank %}
 
 <h2 class="empty--coll">Coming Soon</h2>
 {% else %}
 
-                {% assign nmbrs= 1%}
-                  {% for product in block.settings.col4.products %}
-                  <div class="collection_sec{{nmbrs}} collection_same">
-                    <div class="collection_img_new">
-                        <img src ="{{product.featured_image  | img_url : 'master' }}
- " alt="" class="collec_wireless__image">
-                     </div>
-                     <div class="collection_text">
-                        <h2>{{product.title}}</h2>
-                       <div class="collection_text_price"> 
-                                           <div class="product--price"><span class="money">{{product.price | money }}</span></div>   
-                         {% if product.compare_at_price_max > product.price %}  <div class="max--price"><span class="money">{{product.compare_at_price_max | money }}</span></div>  {% endif %}
-                         
+               {% assign nmbrs= 1%}
+                 {% for product in block.settings.col4.products %}
+                 <div class="collection_sec{{nmbrs}} collection_same">
+                   <div class="collection_img_new">
+                     {% if product.metafields.custom.eventimage %}
+                       <img src ="{{ product.metafields.custom.eventimage | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                       {% else %}
+                       <img src ="{{product.featured_image  | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                     {% endif %}
+                    </div>
+                    <div class="collection_text">
+                       <h2>{{product.title}}</h2>
+                      <div class="collection_text_price"> 
+                                          <div class="product--price"><span class="money">{{product.price | money }}</span></div>   
+                        {% if product.compare_at_price_max > product.price %}  <div class="max--price"><span class="money">{{product.compare_at_price_max | money }}</span></div>  {% endif %}
+                        
+                      </div>
+                       <div class="star--rating">
+                          <a href="#looxReviews">
+                             <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
+                          </a>
                        </div>
-                        <div class="star--rating">
-                           <a href="#looxReviews">
-                              <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
-                           </a>
-                        </div>
-                       
-                        {% assign custom_colors = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
-                          
-                       {% if custom_colors != blank %}
-                       <ul>
-                         {% for list in custom_colors %}
-                          
-                     {% if list != blank %}     <li>{{list}}</li> {% endif %}
-                          {% endfor %}
+                      
+                       {% assign custom_colors = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
                          
-                        </ul>
-                       {% endif %}
-                     </div>
-                     <div class="collection_img">
-                        <img src ="{{product.featured_image  | img_url : 'master' }}
- " alt="" class="collec_wireless__image">
-                     </div>
-                    {% for variant in product.variants %}
+                      {% if custom_colors != blank %}
+                      <ul>
+                        {% for list in custom_colors %}
+                         
+                    {% if list != blank %}     <li>{{list}}</li> {% endif %}
+                         {% endfor %}
+                        
+                       </ul>
+                      {% endif %}
+                    </div>
+                    <div class="collection_img">
+                     {% if product.metafields.custom.eventimage %}
+                       <img src ="{{ product.metafields.custom.eventimage | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                       {% else %}
+                       <img src ="{{product.featured_image  | img_url : 'master' }}
+                         " alt="proudct" class="collec_wireless__image" loading="lazy">
+                     {% endif %}
+                    </div>
+                   {% for variant in product.variants %}
 {% if forloop.first == true %}
-  {% if variant.available %}
+ {% if variant.available %}
 {% assign avble='yes' %}
 {% else%}
 {% assign avble='no' %}
@@ -285,161 +329,161 @@
 {%endif%}
 {% endif %}
 {% endfor %}
-                     <div class="collection_btn">
-                        <a role="link"  href="{{product.url}}" class="{% if avble == 'no'%}pointnone {% endif %} button_collection button button--primary">{% if avble == 'no'%}Sold out {%else %}Shop Now{%endif  %} </a>
-                     </div>
-                  </div>
+                    <div class="collection_btn">
+                       <a role="link"  href="{{product.url}}" class="{% if avble == 'no'%}pointnone {% endif %} button_collection button button--primary">{% if avble == 'no'%}Sold out {%else %}Shop Now{%endif  %} </a>
+                    </div>
+                 </div>
+                
+                 {% assign nmbrs= nmbrs | plus :1%}
+                {% endfor %}
                  
-                  {% assign nmbrs= nmbrs | plus :1%}
-                 {% endfor %}
-                  
-                   {% assign nmbrs= 0%}
+                  {% assign nmbrs= 0%}
 {% endif %}
-               </div>
-            </div>
-           
-         </div>
+              </div>
+           </div>
           
-         <!-- END tabs-content -->
-       </div>
-        
-        
-        {% endfor %}
-        
-   <!--       resdential tab end  -->     
-        
+        </div>
+         
+        <!-- END tabs-content -->
+      </div>
+       
+       
+       {% endfor %}
+       
+  <!--       resdential tab end  -->     
+       
 <!--         commertail tab start -->
-        
-        
-     
-    </div>
-      <!-- END tabs -->
+       
+       
+    
    </div>
+     <!-- END tabs -->
+  </div>
 </div>
 
 {% schema %}
-   {
-    "name": "collection residential",
+  {
+   "name": "collection residential",
 "max_blocks":2,
-    "settings": [
+   "settings": [
 
 {
-          "type": "text",
-          "id": "extraclass",
-          "label": "extra class"
-        }
+         "type": "text",
+         "id": "extraclass",
+         "label": "extra class"
+       }
 
 
 ],"blocks": [
-    {
-      "type": "text",
-      "name": {
-        "en": "text"
-      }, 
-    "settings": [
-         
-            {
-          "type": "text",
-          "id": "tabtitle",
-          "label": "Tab title"
-        },{
-          "type": "html",
-          "id": "tabsvg",
-          "label": "Tab SVG"
-        },{
-        "type": "header",
-        "content": "tab 1 details"
-      },{
-          "type": "text",
-          "id": "tab1title1",
-          "label": "Tab title"
-        },{
-          "type": "collection",
-          "id": "col1",
-          "label": "collection"
-        }
-
-
-,{
-        "type": "header",
-        "content": "tab 2 details"
-      },{
-          "type": "text",
-          "id": "tab1title2",
-          "label": "Tab title"
-        },{
-          "type": "collection",
-          "id": "col2",
-          "label": "collection"
-        }
-
-
-,{
-        "type": "header",
-        "content": "tab 3 details"
-      },{
-          "type": "text",
-          "id": "tab1title3",
-          "label": "Tab title"
-        },{
-          "type": "collection",
-          "id": "col3",
-          "label": "collection"
-        }
-      ,
-      {
-        "type": "header",
-        "content": "tab 4 details"
-      },{
-          "type": "text",
-          "id": "tab1title4",
-          "label": "Tab title"
-        },{
-          "type": "collection",
-          "id": "col4",
-          "label": "collection"
-        }
-
-
-
-    ]
-    }
-      ],
-   "presets": [
-       {
-         "name": "collection residential"
-       
+   {
+     "type": "text",
+     "name": {
+       "en": "text"
+     }, 
+   "settings": [
+        
+           {
+         "type": "text",
+         "id": "tabtitle",
+         "label": "Tab title"
+       },{
+         "type": "html",
+         "id": "tabsvg",
+         "label": "Tab SVG"
+       },{
+       "type": "header",
+       "content": "tab 1 details"
+     },{
+         "type": "text",
+         "id": "tab1title1",
+         "label": "Tab title"
+       },{
+         "type": "collection",
+         "id": "col1",
+         "label": "collection"
        }
-      ]
+
+
+,{
+       "type": "header",
+       "content": "tab 2 details"
+     },{
+         "type": "text",
+         "id": "tab1title2",
+         "label": "Tab title"
+       },{
+         "type": "collection",
+         "id": "col2",
+         "label": "collection"
+       }
+
+
+,{
+       "type": "header",
+       "content": "tab 3 details"
+     },{
+         "type": "text",
+         "id": "tab1title3",
+         "label": "Tab title"
+       },{
+         "type": "collection",
+         "id": "col3",
+         "label": "collection"
+       }
+     ,
+     {
+       "type": "header",
+       "content": "tab 4 details"
+     },{
+         "type": "text",
+         "id": "tab1title4",
+         "label": "Tab title"
+       },{
+         "type": "collection",
+         "id": "col4",
+         "label": "collection"
+       }
+
+
+
+   ]
+   }
+     ],
+  "presets": [
+      {
+        "name": "collection residential"
+      
       }
+     ]
+     }
 {% endschema %}
- {{ 'collection-residential-commercial.css' | asset_url | stylesheet_tag }}
- <script>
-   var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = window.location.search.substring(1),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
 
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
+<script>
+  var getUrlParameter = function getUrlParameter(sParam) {
+   var sPageURL = window.location.search.substring(1),
+       sURLVariables = sPageURL.split('&'),
+       sParameterName,
+       i;
 
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-        }
-    }
-    return false;
+   for (i = 0; i < sURLVariables.length; i++) {
+       sParameterName = sURLVariables[i].split('=');
+
+       if (sParameterName[0] === sParam) {
+           return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+       }
+   }
+   return false;
 };
-   var tab = getUrlParameter('tab');
-   if(tab != ""){
+  var tab = getUrlParameter('tab');
+  if(tab != ""){
 jQuery('ul#tabs-nav-collection li').each(function(){
 var curremt_element = jQuery(this);
-  var tab_check = jQuery(this).text().toLowerCase();
-    if(tab == tab_check){
-  setTimeout(function () {
+ var tab_check = jQuery(this).text().toLowerCase();
+   if(tab == tab_check){
+ setTimeout(function () {
 curremt_element.trigger('click');
- }, 2500);
-    }
-});
+}, 2500);
    }
- </script>
+});
+  }
+</script>

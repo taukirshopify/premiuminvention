@@ -89,35 +89,22 @@
    
              
    {% for variant in prodsingle.variants %}
-                     {% if forloop.first == true  %}
-   
-   {% if request.host contains 'ca.' %}
-     <img  loading="lazy" src="{{ variant.metafields.custom.cad_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+              
+      {% if forloop.first == true  %}
+      {% if section.settings.img01  %}
+         
+         
+     <img  loading="lazy" src="{{ section.settings.img01 | img_url:'' }}"  alt="proudct iamge">
+    
+         {% else %}
+      <img  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300" alt="product image">
+      {% endif %}
+      {% endif %}
                     
    
-     {% elsif  request.host contains 'au.'%}
-     <img  loading="lazy"  src="{{  variant.metafields.custom.aud_image}}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-   
-   
-      {% elsif  request.host contains 'eu.'%}
-     <img  loading="lazy" src="{{  variant.metafields.custom.eur_image}}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-                 {% elsif  request.host contains 'nz.'%}
-     <img  loading="lazy" src="{{ variant.metafields.custom.nzd_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-   
-     {% elsif  request.host contains 'sa.'%}
-     <img  loading="lazy" src="{{ variant.metafields.custom.zar_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-      {% else %}
-     <img  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-      {%endif%}
       
    
            
-                   {% endif %}
                     {% endfor %}
                     
    <!--                  <p class="offer-mode">
@@ -163,7 +150,7 @@
            <div class="buynow-btn tab--selction">
               <div class="number">
                 <span class="minus">-</span>
-                <input name="quantity" type="text" id="Quantity-{{ section.settings.wireless1x }}" form="{{ product_form_id_two_01 }}" value="1"/>
+                <input aria-label="Quantity" name="quantity" type="text" id="Quantity-{{ section.settings.wireless1x }}" form="{{ product_form_id_two_01 }}" value="1"/>
                <span class="plus">+</span></div>
          <button class="2x" proid="{{ section.settings.wireless1x }}">PRE-ORDER</button>
        </div>
@@ -256,31 +243,28 @@
    {% for variant in prod.variants %}
                      {% if forloop.first == true  %}
    
-   {% if request.host contains 'ca.' %}
-     <img  loading="lazy" src="{{ variant.metafields.custom.cad_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-   
-     {% elsif  request.host contains 'au.'%}
-     <img  loading="lazy"  src="{{  variant.metafields.custom.aud_image}}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-   
-   
-      {% elsif  request.host contains 'eu.'%}
-     <img  loading="lazy" src="{{  variant.metafields.custom.eur_image}}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-                 {% elsif  request.host contains 'nz.'%}
-     <img  loading="lazy" src="{{ variant.metafields.custom.nzd_image }}" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-   
-     {% elsif  request.host contains 'sa.'%}
-     <img  loading="lazy" src="{{ variant.metafields.custom.zar_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-      {% else %}
-     <img  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-      {%endif%}
-      
-   
+             {% if section.settings.img02  %}
+       
+
+               {{ section.settings.img02 | image_url: width: 3840 | image_tag:
+                  loading: 'lazy',
+                  height: '50',
+                  sizes: "100vw",
+              class: 'css-class-1 css-class-2',
+              format: 'webp',
+                  widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                }}
+                {% else %}
+     {{ variant.metafields.custom.usa_image | image_url: width: 3840 | image_tag:
+      loading: 'lazy',
+      height: '50',
+      sizes: "100vw",
+  class: 'css-class-1 css-class-2',
+  format: 'webp',
+      widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+    }}
+             {% endif %}
+
            
                        {% endif %}
                     {% endfor %}
@@ -327,7 +311,7 @@
                                              <div class="buynow-btn tab--selction">
                                                 <div class="number">
                                                   <span class="minus">-</span>
-                                                  <input name="quantity" type="text" id="Quantity-{{ section.settings.wireless5x  }}" form="{{ product_form_id_one_two }}" value="1"/>
+                                                  <input aria-label="Quantity" name="quantity" type="text" id="Quantity-{{ section.settings.wireless5x  }}" form="{{ product_form_id_one_two }}" value="1"/>
                                                  <span class="plus">+</span></div>
                                            <button class="2x" proid="{{ section.settings.wireless5x  }}">PRE-ORDER</button>
                                          </div>
@@ -412,37 +396,26 @@
                <div class="tab--data  g4g">
                   <div class="data-settings">
                     
-   {% for variant in prodsingle.variants %}
-   {% if forloop.last == true  %}
-   
-   {% if request.host contains 'ca.' %}
-     <img  loading="lazy" src="{{ variant.metafields.custom.cad_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-   
-     {% elsif  request.host contains 'au.'%}
-     <img  loading="lazy"  src="{{  variant.metafields.custom.aud_image}}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-   
-   
-      {% elsif  request.host contains 'eu.'%}
-     <img  loading="lazy" src="{{  variant.metafields.custom.eur_image}}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-                 {% elsif  request.host contains 'nz.'%}
-     <img  loading="lazy" src="{{ variant.metafields.custom.nzd_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-   
-     {% elsif  request.host contains 'sa.'%}
-     <img  loading="lazy" src="{{ variant.metafields.custom.zar_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-      {% else %}
-     <img  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-      {%endif%}
-      
-   
-           
-                       {% endif %}
-                    {% endfor %}
+         
+                     {% for variant in prodsingle.variants %}
+              
+                        {% if forloop.first == true  %}
+                        {% if section.settings.img03  %}
+                           
+                           
+                       <img  loading="lazy" src="{{ section.settings.img03 | img_url:'' }}"  alt="proudct iamge">
+                      
+                           {% else %}
+                        <img  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300" alt="product image">
+                        {% endif %}
+                        {% endif %}
+                                      
+                     
+                        
+                     
+                             
+                                      {% endfor %}
+                                      
                     <p class="offer-mode 5">
                         Almost Sold Out
                      </p>
@@ -485,7 +458,7 @@
                              <div class="buynow-btn tab--selction">
                                 <div class="number">
                                   <span class="minus">-</span>
-                                  <input name="quantity" type="text" id="Quantity-{{ section.settings.fourg1x }}" form="{{ product_form_id_one }}" value="1"/>
+                                  <input aria-label="Quantity" name="quantity" type="text" id="Quantity-{{ section.settings.fourg1x }}" form="{{ product_form_id_one }}" value="1"/>
                                  <span class="plus">+</span></div>
                            <button class="2x" proid="{{ section.settings.fourg1x }}">PRE-ORDER</button>
 
@@ -584,29 +557,17 @@
    {% for variant in prod.variants %}
    {% if forloop.last == true  %}
    
-   {% if request.host contains 'ca.' %}
-     <img  loading="lazy" src="{{ variant.metafields.custom.cad_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-   
-     {% elsif  request.host contains 'au.'%}
-     <img  loading="lazy"  src="{{  variant.metafields.custom.aud_image}}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-   
-   
-      {% elsif  request.host contains 'eu.'%}
-     <img  loading="lazy" src="{{  variant.metafields.custom.eur_image}}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-                 {% elsif  request.host contains 'nz.'%}
-     <img  loading="lazy" src="{{ variant.metafields.custom.nzd_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-   
-     {% elsif  request.host contains 'sa.'%}
-     <img  loading="lazy" src="{{ variant.metafields.custom.zar_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
-                    
-      {% else %}
+
+
+
+      {% if section.settings.img04 %}
+         <img src="{{section.settings.img04 | img_url:'master' }}" alt="proudct" >
+          {% else %}
+          
      <img  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+       {% endif %}
                     
-      {%endif%}
+
       
    
            
@@ -649,7 +610,7 @@
            <div class="buynow-btn tab--selction">
               <div class="number">
                 <span class="minus">-</span>
-                <input name="quantity" type="text" id="Quantity-{{ section.settings.fourg5x }}" form="{{ product_form_id_two_05 }}" value="1"/>
+                <input aria-label="Quantity" name="quantity" type="text" id="Quantity-{{ section.settings.fourg5x }}" form="{{ product_form_id_two_05 }}" value="1"/>
                <span class="plus">+</span></div>
          <button class="2x" proid="{{ section.settings.fourg5x }}">PRE-ORDER</button>
        </div>
@@ -741,7 +702,29 @@
                "type": "text",
                "id": "wireless1x",
                "label": "Wirelss 1x"
-             },{
+             },
+               {
+                  "type": "image_picker",
+                  "id": "img01",
+                  "label": "Select your Image"
+               },
+               {
+                  "type": "image_picker",
+                  "id": "img02",
+                  "label": "Select your Image"
+               },
+               {
+                  "type": "image_picker",
+                  "id": "img03",
+                  "label": "Select your Image"
+               },
+               {
+                  "type": "image_picker",
+                  "id": "img04",
+                  "label": "Select your Image"
+               },
+       
+             {
                "type": "text",
                "id": "wireless5x",
                "label": "Wirelss 5x"

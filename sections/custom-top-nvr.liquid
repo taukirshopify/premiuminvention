@@ -32,7 +32,7 @@
             {% when 'product' %}
 <div class="data-settings wewe pro-new-tab">
       {% if block.settings.pro_img !=blank %}
-   <img src="{{ block.settings.pro_img | img_url: 'master'  }}">
+   <img src="{{ block.settings.pro_img | img_url: 'master'  }}" alt="img" loading="lazy">
     {% endif %}
       
   {% if block.settings.rating_number !=blank %}
@@ -97,7 +97,7 @@
       <div class="buynow-btn tab--selction">
          <div class="number">
            <span class="minus">-</span>
-           <input name="quantity" type="number" id="Quantity-desk-{{ block.id }}" form="{{ product_form_id }}" value="1"/>
+           <input aria-label="Quantity" name="quantity" type="number" id="Quantity-desk-{{ block.id }}" form="{{ product_form_id }}" value="1"/>
           <span class="plus">+</span></div>
     <button class="2x" proid="{{ block.settings.product_id }}">Buy Now</button>
   </div>
@@ -315,7 +315,7 @@
             {% when 'text' %}
             <li>
               <div class="icon">
-<img src="{{block.settings.image | img_url : 'master' }}">
+<img src="{{block.settings.image | img_url : 'master' }}" alt="product" loading="lazy">
               </div>
               <p>{{block.settings.des}}</p>
             </li>

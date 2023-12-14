@@ -141,6 +141,7 @@
         "033089f1-9371-44c5-9d8a-66e2f1cdd418",
         "e4545c68-d932-457d-bbbc-5e5eaf146cfc"
       ],
+      "disabled": true,
       "settings": {
         "heading_title_1": "Upgrade Your Security",
         "prehead": "A perfect upgrade from the V2 model with new enticing enhancements from the standard V3, the innovative V3S boasts unparalleled battery life and a suite of remarkable features.<br><br>Enjoy peace of mind knowing that your home, family and business are protected with the best outdoor security camera on the market.",
@@ -450,7 +451,7 @@
             "image": "shopify:\/\/shop_images\/Installation_Image_2.png",
             "alignment": "center",
             "link": "",
-            "cta_label": "Easy 3-5 minutes installation <br>without a technician",
+            "cta_label": "Easy 3-5 minutes installation without a technician",
             "txtclr": "#ffffff"
           }
         },
@@ -503,7 +504,7 @@
         "5d1915aa-9d2e-4277-b106-5bebbc446a72"
       ],
       "settings": {
-        "heading_title": "Get Your V3 Ready",
+        "heading_title": "Get Your V3S Ready",
         "section_height": "medium",
         "heading_title_2": "",
         "sub_info": ""
@@ -583,6 +584,10 @@
       "type": "product--tab-select",
       "settings": {
         "wireless1x": "40351558434877",
+        "img01": "shopify:\/\/shop_images\/V3S_7f620b4c-2883-49be-a352-9f9eae027a10.png",
+        "img02": "shopify:\/\/shop_images\/V3S_WiFi_-_5_Pack_f3909a0c-aeb6-4dd8-92ab-44354ee6c202.png",
+        "img03": "shopify:\/\/shop_images\/V3S_-_Single_3767ed28-ab63-4bad-a642-8abbfd0fc6ff.png",
+        "img04": "shopify:\/\/shop_images\/V3S_-_Bundle_197fc79a-e7c4-4083-a65b-aa8760de10c4.png",
         "wireless5x": "40366830747709",
         "fourg1x": "40351558467645",
         "fourg5x": "40366830780477",
@@ -917,6 +922,7 @@
         "20c9563b-5ce0-430f-a8a2-848405a2c105",
         "97d355cb-e2ae-4d2b-b265-87d480f9573c"
       ],
+      "disabled": true,
       "settings": {
         "heading_title_1": "Upgrade Your Security Today!",
         "heading_title_2": "USD $100 OFF",

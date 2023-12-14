@@ -210,7 +210,7 @@
                                                 <a href="{{ product.url }}" class=""menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                        
                     <div class="collection_img_header">
-                        <img src ="{{product.metafields.custom.proudct_svg  | img_url : 'master' }}" alt="{{ product.title }}" class="" loading="lazy" width="140" height="140" >
+                        <img src ="{{product.metafields.custom.proudct_svg  | img_url : 'master' }}" loading="lazy" width="140" height="140" alt="{{ product.title }}" class="">
                         <h2>{{product.title}}</h2>
                                     {% assign custom_des = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
                           
@@ -423,32 +423,7 @@
     {%- if request.page_type == 'index' -%}
       
     {%- endif -%}
-    <h1 class="header__heading ">
-      <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-        {%- if section.settings.logo != blank -%}
-          {%- assign image_size_2x = section.settings.logo_width | times: 2 | at_most: 5760 -%}
-          <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
-            src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
-            loading="lazy"
-            class="header__heading-logo desktop-header"
-            width="{{ section.settings.logo.width }}"
-            height="{{ section.settings.logo.height }}"
-            alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
-          >
-          <img srcset="{{ section.settings.logo_mobile | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
-            src="{{ section.settings.logo_mobile | image_url: width: section.settings.logo_width }}"
-            loading="lazy"
-            class="header__heading-logo mobile-header"
-            width="{{ section.settings.logo.width }}"
-            height="{{ section.settings.logo.height }}"
-            alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
-          >
-        {%- else -%}
-          <span class="h2">{{ shop.name }}</span>
-        {%- endif -%}
-      </a>
- 
-    </h1>
+
     {%- if section.settings.menu != blank -%}
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
         <nav class="header__inline-menu ">
@@ -516,7 +491,7 @@
                         {% render 'icon-caret' %}
                       </summary>
                       <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
-                        <ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
+                        <ul class="mega-menu__list p-0 page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
                           {%- for childlink in link.links -%}
                             <li>
                               <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
@@ -554,7 +529,7 @@
                         {% render 'icon-caret' %}
                       </summary>
                       <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
-                        <ul class="mega-menu__list page-width" role="list">
+                        <ul class="mega-menu__list page-width p-0" role="list">
                           {%- for block in section.blocks -%}
                           {% assign index_loop = forloop.index %}
                             <li{% if index_loop == 1 %} class="active"{% endif %}>
@@ -610,7 +585,24 @@
      
     {%- endif -%}
             
-
+   <h1 class="header__heading ">
+        <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+          {%- if section.settings.logo != blank -%}
+            {%- assign image_size_2x = section.settings.logo_width | times: 2 | at_most: 5760 -%}
+            <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
+              src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+              loading="lazy"
+              class="header__heading-logo"
+              width="{{ section.settings.logo.width }}"
+              height="{{ section.settings.logo.height }}"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
+          {%- else -%}
+            <span class="h2">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+   
+      </h1>
     
     <div class="header__icons l">
       
@@ -628,11 +620,6 @@
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 37 40"><path d="M35.6 36l-9.8-9.8c4.1-5.4 3.6-13.2-1.3-18.1-5.4-5.4-14.2-5.4-19.7 0-5.4 5.4-5.4 14.2 0 19.7 2.6 2.6 6.1 4.1 9.8 4.1 3 0 5.9-1 8.3-2.8l9.8 9.8c.4.4.9.6 1.4.6s1-.2 1.4-.6c.9-.9.9-2.1.1-2.9zm-20.9-8.2c-2.6 0-5.1-1-7-2.9-3.9-3.9-3.9-10.1 0-14C9.6 9 12.2 8 14.7 8s5.1 1 7 2.9c3.9 3.9 3.9 10.1 0 14-1.9 1.9-4.4 2.9-7 2.9z"></path></svg>
-
-
-
-
-              
               <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
                 <use href="#icon-close">
               </svg>
@@ -736,7 +723,7 @@
             
             <div class="currency-picker--wrapper hide">
 <div class="activelanguge">{% render 'icon-web' %}
-  <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/t/30/assets/cad.svg" loading="lazy" width="40" height="24"> </div>
+  <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/t/30/assets/cad.svg" loading="lazy" width="40" height="24" alt="country"> </div>
               <div class="language--picker-parent">
               <ul>
               {% comment %} {% assign codes = 'USD,EUR,GBP,CAD,ARS,AUD,BBD,BDT,BSD,BHD,BRL,BOB,BND,BGN,ILS,MMK,KYD,CLP,CNY,COP,CRC,HRK,CZK,DKK,DOP,XCD,EGP,XPF,FJD,GHS,GTQ,GYD,GEL,HKD,HUF,ISK,INR,IDR,NIS,JMD,JPY,JOD,KZT,KES,KWD,LVL,LTL,MXN,MYR,MUR,MDL,MAD,MNT,MZN,ANG,NZD,NGN,NOK,OMR,PKR,PYG,PEN,PHP,PLN,QAR,RON,RUB,SAR,RSD,SCR,SGD,SYP,ZAR,KRW,LKR,SEK,CHF,TWD,THB,TZS,TTD,TRY,UAH,AED,UYU,VEB,VND,ZMK' | split: ',' %}
@@ -916,7 +903,7 @@
                                                 <a href="{{ product.url }}" class=""menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                        
                     <div class="collection_img_header">
-                       <img src ="{{product.metafields.custom.proudct_svg  | img_url : 'master' }}" alt="{{ product.title }}" class="" loading="lazy" width="140" height="140">
+                       <img loading="lazy" width="140" height="140" src ="{{product.metafields.custom.proudct_svg  | img_url : 'master' }}" alt="{{ product.title }}" class="">
                         <h2>{{product.title}}</h2>
                                     {% assign custom_des = product.metafields.custom.product_list | newline_to_br  | split:'<br />'%}
                           
@@ -946,7 +933,7 @@
                     {%- endfor -%}
                     <li class="mobile_version"> <div class="shopNow--header">
       
-        <a href="/products/wireless-outdoor-camera-v3#product-scroll" id="scrolling-ancor">Shop Now</a>
+        <a href="https://premiuminvention.com/pages/collection" id="scrolling-ancor">Shop Now</a>
       
       </div></li>
                   </ul>
@@ -1347,11 +1334,6 @@
     {
       "type": "image_picker",
       "id": "logo",
-      "label": "t:sections.header.settings.logo.label"
-    },
-    {
-      "type": "image_picker",
-      "id": "logo_mobile",
       "label": "t:sections.header.settings.logo.label"
     },
     {

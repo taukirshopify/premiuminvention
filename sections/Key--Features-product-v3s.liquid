@@ -16,7 +16,7 @@
                            {% if block.settings.heading1 != blank %} 
               <li class="tgrt-click1">
                 <a href="#" class="data-tabs  first" data-target="tab-1">
-                                  <img  loading="lazy" src="{{block.settings.icon1 | img_url : 'master'}}"><span> {{block.settings.heading1}}</span>
+                                  <img alt="icon"  loading="lazy" src="{{block.settings.icon1 | img_url : 'master'}}"><span> {{block.settings.heading1}}</span>
             </a>
               </li>
                           {% endif %}
@@ -24,7 +24,7 @@
               {% if block.settings.heading2 != blank %} 
               <li  class="tgrt-click2">
                 <a href="#" class="data-tabs active   " data-target="tab-2">
-                                  <img  loading="lazy" src="{{block.settings.icon2 | img_url : 'master'}}"><span> {{block.settings.heading2}}</span>
+                                  <img  alt="icon"   loading="lazy" src="{{block.settings.icon2 | img_url : 'master'}}"><span> {{block.settings.heading2}}</span>
             </a>
               </li>
                           {% endif %}
@@ -32,7 +32,7 @@
                           {% if block.settings.heading3 != blank %} 
               <li  class="tgrt-click3">
                 <a href="#" class="data-tabs  " data-target="tab-3">
-                                  <img  loading="lazy" src="{{block.settings.icon3 | img_url : 'master'}}"><span> {{block.settings.heading3}}</span>
+                                  <img  alt="icon"   loading="lazy" src="{{block.settings.icon3 | img_url : 'master'}}"><span> {{block.settings.heading3}}</span>
             </a>
               </li>
                           {% endif %}
@@ -40,21 +40,21 @@
                           {% if block.settings.heading4 != blank %} 
               <li  class="tgrt-click4">
                 <a href="#" class="data-tabs  " data-target="tab-4">
-                                  <img  loading="lazy" src="{{block.settings.icon4 | img_url : 'master'}}"><span> {{block.settings.heading4}}</span>
+                                  <img  alt="icon"    loading="lazy" src="{{block.settings.icon4 | img_url : 'master'}}"><span> {{block.settings.heading4}}</span>
             </a>
               </li>
                           {% endif %}
                          {% if block.settings.heading5 != blank %} 
               <li class="tgrt-click5">
                 <a href="#" class="data-tabs  first" data-target="tab-5">
-                                  <img  loading="lazy" src="{{block.settings.icon5 | img_url : 'master'}}"><span> {{block.settings.heading5}}</span>
+                                  <img  alt="icon"   loading="lazy" src="{{block.settings.icon5 | img_url : 'master'}}"><span> {{block.settings.heading5}}</span>
             </a>
               </li>
                           {% endif %}
                            {% if block.settings.heading6 != blank %} 
               <li class="tgrt-click6">
                 <a href="#" class="data-tabs last " data-target="tab-6">
-                                  <img  loading="lazy" src="{{block.settings.icon6 | img_url : 'master'}}"><span> {{block.settings.heading6}}</span>
+                                  <img  alt="icon"   loading="lazy" src="{{block.settings.icon6 | img_url : 'master'}}"><span> {{block.settings.heading6}}</span>
             </a>
               </li>
                           {% endif %}
@@ -65,9 +65,9 @@
           <div class="timeline-area">
                      <div class="tab-content " uid="1" id="tab-1">
               <div>
-                            <img  loading="lazy" class="img1" src="{{block.settings.tabimg1 |img_url : 'master' }}" />
+                            <img  alt="icon"   loading="lazy" class="img1" src="{{block.settings.tabimg1 |img_url : 'master' }}" />
   {% if block.settings.opt11 != blank %}
- <img  loading="lazy" class="img2" src="{{block.settings.img1 |img_url : 'master' }}" style="display:none;"/>
+ <img  loading="lazy"  alt="icon"   class="img2" src="{{block.settings.img1 |img_url : 'master' }}" style="display:none;"/>
     {% endif %}
                 <div class="descr"  style="color:{{block.settings.clr1}}">{{block.settings.des1 | strip_html }}</div class="descr">
                 
@@ -89,7 +89,7 @@
               <div>
                             <img  loading="lazy" src="{{block.settings.tabimg2 |img_url : 'master' }}" />
     {% if block.settings.opt21 != blank %}
- <img  loading="lazy" class="img2" src="{{block.settings.img21 |img_url : 'master' }}" style="display:none;"/>
+ <img  loading="lazy"  alt="icon"   class="img2" src="{{block.settings.img21 |img_url : 'master' }}" style="display:none;"/>
     {% endif %}
   
                 <div class="descr"  style="color:{{block.settings.clr2}}">{{block.settings.des2 | strip_html }}</div class="descr">
@@ -112,7 +112,7 @@
         
             <div class="tab-content" uid="3" id="tab-3">
               <div>
-                            <img  loading="lazy" src="{{block.settings.tabimg3 |img_url : 'master' }}" />
+                            <img  alt="icon"    loading="lazy" src="{{block.settings.tabimg3 |img_url : 'master' }}" />
     {% if block.settings.opt31 != blank %}
  <img  loading="lazy" class="img2" src="{{block.settings.img31 |img_url : 'master' }}" style="display:none;"/>
     {% endif %}
@@ -142,7 +142,7 @@
               <div>
                             <img  loading="lazy" src="{{block.settings.tabimg4 |img_url : 'master' }}" />
     {% if block.settings.opt41 != blank %}
- <img  loading="lazy" class="img2" src="{{block.settings.img41 |img_url : 'master' }}" style="display:none;"/>
+ <img  loading="lazy"  alt="icon"   class="img2" src="{{block.settings.img41 |img_url : 'master' }}" style="display:none;"/>
     {% endif %}
                 <div class="descr" style="color:{{block.settings.clr4}}">{{block.settings.des4  | strip_html}}</div class="descr">
                 {% if block.settings.opt41 != blank %}
@@ -162,7 +162,7 @@
 
                   <div class="tab-content" uid="5" id="tab-5">
               <div>
-                            <img  loading="lazy" src="{{block.settings.tabimg5 |img_url : 'master' }}" />
+                            <img   alt="icon"   loading="lazy" src="{{block.settings.tabimg5 |img_url : 'master' }}" />
    {% if block.settings.opt51 != blank %}
  <img  loading="lazy" class="img2" src="{{block.settings.img51 |img_url : 'master' }}" style="display:none;"/>
     {% endif %}
@@ -187,7 +187,7 @@
 
                   <div class="tab-content" uid="6" id="tab-6">
               <div>
-                            <img  loading="lazy" src="{{block.settings.tabimg6 |img_url : 'master' }}" />
+                            <img  alt="icon"   loading="lazy" src="{{block.settings.tabimg6 |img_url : 'master' }}" />
     {% if block.settings.opt61 != blank %}
  <img  loading="lazy" class="img2" src="{{block.settings.img61 |img_url : 'master' }}" style="display:none;"/>
     {% endif %}

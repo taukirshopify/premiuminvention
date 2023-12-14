@@ -6,7 +6,7 @@
         "template--15281949114429__4c76894b-e688-45f4-b180-7a2a3a290403-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "About US",
+            "heading": "About Premium <br>  Invention",
             "heading_size": "h0"
           }
         }
@@ -15,89 +15,133 @@
         "template--15281949114429__4c76894b-e688-45f4-b180-7a2a3a290403-heading-1"
       ],
       "custom_css": [
-        "h2.banner__heading.h0 {color: #fff; font-family: Work Sans; font-size: 60px; font-style: normal; font-weight: 600; line-height: 30px;}",
-        "@media (max-width: 768px) {h2.banner__heading.h0 {font-size: 30px; } .banner__box {display: flex; align-items: center; justify-content: center; } #Banner-template--15281949114429__4c76894b-e688-45f4-b180-7a2a3a290403::after {opacity: 0.2; }}"
+        "h2.banner__heading.h0 {color: #006bb3; font-family: Work Sans; font-size: 60px; font-style: normal; font-weight: 500; line-height: 50px;}",
+        "@media (max-width: 768px) {h2.banner__heading.h0 {font-size: 30px; margin-top: 300px; line-height: 30px; } .banner__box {display: flex; align-items: center; justify-content: center; } #Banner-template--15281949114429__4c76894b-e688-45f4-b180-7a2a3a290403::after {opacity: 0.2; }}"
       ],
       "settings": {
         "custom_class": "",
         "extra-visitor_id": "",
         "narrow_sec": false,
-        "image": "shopify:\/\/shop_images\/Premium_Invention_Multiple_Products_1.png",
-        "image_mob": "shopify:\/\/shop_images\/Premium_Invention_Multiple_Products_MOBILE.jpg",
+        "image": "shopify:\/\/shop_images\/Untitled_700_x_375_px_1920_x_927_px_83d39e6a-8aa4-41da-8cae-82e99ec19649.png",
+        "image_mob": "shopify:\/\/shop_images\/Untitled_700_x_375_px_1920_x_927_px_1200_x_1700_px_-2_304657cb-f133-414d-9d3b-44aecd33bb15.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": true,
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "top-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
-    "165616207925a40763": {
-      "type": "Popup--premium",
-      "custom_css": [
-        ".Popup--premium ul li h2.popup_prm_heading {color: #fff;}",
-        ".Popup--premium {margin-top: -30px; position: relative; top: -35px; background: rgba(0, 0, 0, 0.25); padding: 9px 0; backdrop-filter: blur(2px); z-index: 3;}",
-        "@media (max-width: 768px) {.Popup--premium {padding: 0px 0; margin-top: -13px; }}"
-      ],
+    "32f459aa-888c-4342-998a-a6db9bd25835": {
+      "type": "about-us-txt",
       "settings": {
-        "extra-Popup--premium": "extra-home-popup-new"
       }
     },
-    "65b1085a-3541-4e5c-9142-31b996980aee": {
-      "type": "rich-text",
+    "95d50670-7b35-4680-8143-2a380d912a7b": {
+      "type": "featuredicontwo",
       "blocks": {
-        "template--15281949114429__65b1085a-3541-4e5c-9142-31b996980aee-heading-1": {
-          "type": "heading",
+        "036be95b-b35d-4eae-9388-6f621fd0eb17": {
+          "type": "Icon",
           "settings": {
-            "heading": "Step into Tomorrow with Us",
-            "heading_size": "h1"
+            "image": "shopify:\/\/shop_images\/CEG98R.svg",
+            "title": "PREMIUM QUALITY",
+            "p": "Our commitment to 'Premium Quality' ensures your home is fortified with the best in security."
           }
         },
-        "template--15281949114429__65b1085a-3541-4e5c-9142-31b996980aee-text-1": {
-          "type": "text",
+        "ce5e24a0-2691-41fa-b55b-6fae91c54403": {
+          "type": "Icon",
           "settings": {
-            "text": "<p>Born in the vibrant city of Vancouver, Canada in 2019, our mission is to propel you into the future with cutting-edge security solutions that redefine the way we safeguard our homes and businesses. We're not just a security company; we're architects of tomorrow's security landscape.<\/p>"
+            "image": "shopify:\/\/shop_images\/dzVh3i.svg",
+            "title": "EXPRESS SHIPPING",
+            "p": "Time is of the essence when it comes to your safety--because protection shouldn't wait."
           }
         },
-        "c0f60406-a837-4316-9801-cae16f5c6b11": {
-          "type": "text",
+        "a074974a-7309-4a5d-b7e3-e9415c40a66d": {
+          "type": "Icon",
           "settings": {
-            "text": "<p>Our core mission is to provide you with peace of mind by creating innovative security solutions that are as effective as they are easy to use. We understand that security is not just about protecting physical spaces; it's about safeguarding the people and things that matter most to you. We are dedicated to pushing the boundaries of what's possible in the realm of security technology to ensure your safety.<\/p>"
+            "image": "shopify:\/\/shop_images\/Group_3.svg",
+            "title": "EXCELLENT SUPPORT TEAM",
+            "p": "Our support team goes above and beyond to secure your satisfaction, ensuring you're protected 24\/7."
           }
         },
-        "5b61f799-8639-4bfb-b2f7-940a6e2eeb47": {
-          "type": "heading",
+        "70ab310c-5acb-4a21-9220-295417a987d5": {
+          "type": "Icon2",
           "settings": {
-            "heading": "Unleashing Connectivity",
-            "heading_size": "h1"
+            "image": "shopify:\/\/shop_images\/Group_1.svg",
+            "url": "",
+            "title": "ONE-YEAR WARRANTY",
+            "p": "Premium Invention redefines security with a full-year assurance. 365 days of warranty on all our products."
           }
         },
-        "afc5dbe4-e723-4fee-bbf0-69ade6f69823": {
-          "type": "text",
+        "c4b55499-65fc-447c-8d14-2ddf05cf621c": {
+          "type": "Icon2",
           "settings": {
-            "text": "<p>Experience a new era of security with our advanced camera technology. Our devices seamlessly harness the power of WiFi and 4G (via a SIM card), eliminating the need for messy cables and offering you complete wireless freedom.<\/p>"
+            "image": "shopify:\/\/shop_images\/mbsiHd_1.svg",
+            "url": "",
+            "title": "30-DAY MONEY-BACK GUARANTEE",
+            "p": "Our commitment to 'Premium Quality' ensures your home is fortified with the best in security."
           }
         }
       },
       "block_order": [
-        "template--15281949114429__65b1085a-3541-4e5c-9142-31b996980aee-heading-1",
-        "template--15281949114429__65b1085a-3541-4e5c-9142-31b996980aee-text-1",
-        "c0f60406-a837-4316-9801-cae16f5c6b11",
-        "5b61f799-8639-4bfb-b2f7-940a6e2eeb47",
-        "afc5dbe4-e723-4fee-bbf0-69ade6f69823"
-      ],
-      "custom_css": [
-        ".rich-text.content-container {margin-top: -35px; background-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0249\/8949\/9437\/files\/Group_3c6824f4-2aa2-46e3-b544-5441ade18de8.png?v=1697035881); background-size: cover; background-position: bottom; background-attachment: unset !important;}"
+        "036be95b-b35d-4eae-9388-6f621fd0eb17",
+        "ce5e24a0-2691-41fa-b55b-6fae91c54403",
+        "a074974a-7309-4a5d-b7e3-e9415c40a66d",
+        "70ab310c-5acb-4a21-9220-295417a987d5",
+        "c4b55499-65fc-447c-8d14-2ddf05cf621c"
       ],
       "settings": {
+        "title": "Our Core Values",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "8caaed33-9f88-4d82-9dba-c2fbfc476996": {
+      "type": "image-with-text-backup",
+      "blocks": {
+        "template--15307820040253__8caaed33-9f88-4d82-9dba-c2fbfc476996-heading-1": {
+          "type": "heading",
+          "settings": {
+            "prehead": "",
+            "heading": "Safety Redefined",
+            "heading_size": "h1"
+          }
+        },
+        "template--15307820040253__8caaed33-9f88-4d82-9dba-c2fbfc476996-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Experience a new era of security with our advanced camera technology. Our devices seamlessly integrate with its own ecosystem and harness the power of WiFi and 4G (via a SIM card), eliminating the need for messy cables and offering you complete wireless freedom.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--15307820040253__8caaed33-9f88-4d82-9dba-c2fbfc476996-heading-1",
+        "template--15307820040253__8caaed33-9f88-4d82-9dba-c2fbfc476996-text-1"
+      ],
+      "custom_css": [
+        "h2 {color: #262525; font-family: Work Sans; font-size: 48px; font-style: normal; font-weight: 700; line-height: 120%; \/* 57.6px *\/ letter-spacing: -1.92px;}",
+        ".visitor--video p {color: #000; font-family: Work Sans; font-size: 16px; font-style: normal; font-weight: 400; line-height: 160%;}"
+      ],
+      "settings": {
+        "extra-visitor": "",
+        "extra-visitor_id": "",
+        "image": "shopify:\/\/shop_images\/Home_Banner_v1_copy_1_c2552d1b-2a70-4022-8c06-5d33a3da726d.png",
+        "clr": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "3e6aec12-f61c-458a-9b0d-ff9d737dd3ba": {
@@ -181,145 +225,46 @@
         "heading3": ""
       }
     },
-    "04c03130-bc03-409e-b733-06dee5591eb6": {
-      "type": "rich-text",
+    "b7c7a5b4-d439-44b1-987b-ce6d2c9df17c": {
+      "type": "email-signup-banner",
       "blocks": {
-        "7e855baa-7224-4205-a778-da8bcab68c26": {
+        "b58f735c-f632-47b7-afa8-6b2313417551": {
           "type": "heading",
           "settings": {
-            "heading": "Discover Our Irresistible Product Lineup",
+            "heading": "Get the Inside Scoop",
             "heading_size": "h1"
           }
         },
-        "375f9832-0ca8-45b3-9335-41e67abf3023": {
-          "type": "text",
+        "8b7247c7-f292-4871-84c2-6b5e278656ff": {
+          "type": "paragraph",
           "settings": {
-            "text": "<p>Thank you for considering Premium Invention as your partner in security. We invite you to join us on this exciting journey into the future of security technology. Together, we can create a safer, more secure world for everyone.<\/p>"
+            "text": "<p>Sign up to our EXCLUSIVE NEWSLETTER for pre-launch offers and awesome discounts!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "9f92a687-d036-4e89-a7f2-c12345435f92": {
+          "type": "email_form",
+          "settings": {
           }
         }
       },
       "block_order": [
-        "7e855baa-7224-4205-a778-da8bcab68c26",
-        "375f9832-0ca8-45b3-9335-41e67abf3023"
-      ],
-      "custom_css": [
-
+        "b58f735c-f632-47b7-afa8-6b2313417551",
+        "8b7247c7-f292-4871-84c2-6b5e278656ff",
+        "9f92a687-d036-4e89-a7f2-c12345435f92"
       ],
       "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "image_overlay_opacity": 0,
+        "show_background_image": true,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
         "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "42cff5a5-9e8f-4396-ae88-15ad01bf9f4b": {
-      "type": "new-product-sections-nvr",
-      "blocks": {
-        "34f8aa4c-107b-4867-9edd-ee1f388bbde3": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40265_6685f021-42f0-45f4-afb8-83ea21a50e20.png",
-            "url": "shopify:\/\/products\/wired-camera-x3"
-          }
-        },
-        "7cb73156-ce0e-4ee0-96ad-3499c86e11c9": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40266_ef2d202d-ac18-4c4a-aaf8-8d44b85a6301.png",
-            "url": "shopify:\/\/products\/digieye-wireless-camera"
-          }
-        },
-        "a95acc9f-c86a-49e2-9da5-28e582e8870f": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40268.png",
-            "url": "shopify:\/\/products\/wireless-outdoor-camera-v3"
-          }
-        },
-        "dbe41442-3014-456c-8d1c-1264d5242c90": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40268.png",
-            "url": "shopify:\/\/products\/wireless-camera-v3s"
-          }
-        },
-        "18299d93-42cf-413c-ad32-d8a68d3380fb": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40269_b98a13f1-36a1-4edf-af2d-6a1f76a8dfcd.png",
-            "url": "#"
-          }
-        },
-        "ee355fcc-7599-4edd-a7de-d9da927e3208": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40270.png",
-            "url": "shopify:\/\/products\/4k-8-channel-smart-nvr"
-          }
-        },
-        "37acb39c-016a-4716-8d36-46a55cdfb868": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40265_6685f021-42f0-45f4-afb8-83ea21a50e20.png",
-            "url": "shopify:\/\/products\/wired-camera-x3"
-          }
-        },
-        "f9d2d71c-7f22-4552-9e29-fa0dc3ce4301": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40266_ef2d202d-ac18-4c4a-aaf8-8d44b85a6301.png",
-            "url": "shopify:\/\/products\/digieye-wireless-camera"
-          }
-        },
-        "f06d1927-8668-49ff-9592-862f49def82f": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40268.png",
-            "url": "shopify:\/\/products\/wireless-outdoor-camera-v3"
-          }
-        },
-        "528e7cdd-355c-4646-9f9c-f208f648226c": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40268.png",
-            "url": "shopify:\/\/products\/wireless-outdoor-camera-v3"
-          }
-        },
-        "8c8bde0a-9700-4593-9057-62c8b0d9cde0": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40269_b98a13f1-36a1-4edf-af2d-6a1f76a8dfcd.png",
-            "url": "#"
-          }
-        },
-        "271b13ed-f167-4660-9223-1011748d588e": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Group_40270.png",
-            "url": "shopify:\/\/products\/4k-8-channel-smart-nvr"
-          }
-        }
-      },
-      "block_order": [
-        "34f8aa4c-107b-4867-9edd-ee1f388bbde3",
-        "7cb73156-ce0e-4ee0-96ad-3499c86e11c9",
-        "a95acc9f-c86a-49e2-9da5-28e582e8870f",
-        "dbe41442-3014-456c-8d1c-1264d5242c90",
-        "18299d93-42cf-413c-ad32-d8a68d3380fb",
-        "ee355fcc-7599-4edd-a7de-d9da927e3208",
-        "37acb39c-016a-4716-8d36-46a55cdfb868",
-        "f9d2d71c-7f22-4552-9e29-fa0dc3ce4301",
-        "f06d1927-8668-49ff-9592-862f49def82f",
-        "528e7cdd-355c-4646-9f9c-f208f648226c",
-        "8c8bde0a-9700-4593-9057-62c8b0d9cde0",
-        "271b13ed-f167-4660-9223-1011748d588e"
-      ],
-      "custom_css": [
-        ".new-product-section {padding-top: 10px;}",
-        "@media (min-width: 768px) {.main-img img {min-height: 230px; object-fit: cover; }}"
-      ],
-      "settings": {
-        "heading": ""
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     },
     "main": {
@@ -330,15 +275,60 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "25ecc761-e05a-4085-ba58-35f5c07e6db1": {
+      "type": "about-us-product",
+      "blocks": {
+        "efb772ac-8e7e-4a13-8abb-717e1b4e7faf": {
+          "type": "product",
+          "settings": {
+            "product": "wireless-camera-v3s"
+          }
+        },
+        "02793d3e-a929-4355-a0c3-16175d8dded6": {
+          "type": "product",
+          "settings": {
+            "product": "wireless-outdoor-camera-v3"
+          }
+        },
+        "8d4ac8e0-1b98-4cd9-8bdf-733efe158cb0": {
+          "type": "product",
+          "settings": {
+            "product": "wired-camera-x3"
+          }
+        },
+        "954b2cbc-7af2-4a01-953e-e9b926404a8d": {
+          "type": "product",
+          "settings": {
+            "product": "wireless-camera-v4"
+          }
+        },
+        "d7d04bad-06c9-4560-b79e-9d19b3a2f69f": {
+          "type": "product",
+          "settings": {
+            "product": "4k-8-channel-smart-nvr"
+          }
+        }
+      },
+      "block_order": [
+        "efb772ac-8e7e-4a13-8abb-717e1b4e7faf",
+        "02793d3e-a929-4355-a0c3-16175d8dded6",
+        "8d4ac8e0-1b98-4cd9-8bdf-733efe158cb0",
+        "954b2cbc-7af2-4a01-953e-e9b926404a8d",
+        "d7d04bad-06c9-4560-b79e-9d19b3a2f69f"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "4c76894b-e688-45f4-b180-7a2a3a290403",
-    "165616207925a40763",
-    "65b1085a-3541-4e5c-9142-31b996980aee",
+    "32f459aa-888c-4342-998a-a6db9bd25835",
+    "95d50670-7b35-4680-8143-2a380d912a7b",
+    "8caaed33-9f88-4d82-9dba-c2fbfc476996",
     "3e6aec12-f61c-458a-9b0d-ff9d737dd3ba",
-    "04c03130-bc03-409e-b733-06dee5591eb6",
-    "42cff5a5-9e8f-4396-ae88-15ad01bf9f4b",
-    "main"
+    "b7c7a5b4-d439-44b1-987b-ce6d2c9df17c",
+    "main",
+    "25ecc761-e05a-4085-ba58-35f5c07e6db1"
   ]
 }

@@ -1,0 +1,28 @@
+sticky-header header.header h1.header__heading {
+
+    order: 1;
+    width: 15%;
+}
+
+sticky-header header.header .header__icons {
+
+    order: 3;
+}
+
+.header:not(.header--middle-left) .header__inline-menu {
+    width: 70%;
+    order: 2;
+}
+
+sticky-header header.header .header__icons {
+
+    width: 15%;
+
+}
+sticky-header header.header nav.header__inline-menu ul.list-menu.list-menu--inline {
+    -webkit-box-pack: right;
+    -ms-flex-pack: right;
+    justify-content: right;
+    width: 100%;
+    margin-top: -4px;
+}

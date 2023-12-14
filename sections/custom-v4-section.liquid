@@ -2,7 +2,7 @@
 <div class="page-width">
 <div class="v4-section_inner v4-section_inner2 desktop_version">
 <div class="v4-section-left"> 
-<img src="{{section.settings.image | img_url : 'master' }}"> 
+<img src="{{section.settings.image | img_url : 'master' }}" alt="proudct" loading="lazy"> 
 
 </div>
 <div class="v4-section_right">
@@ -12,7 +12,7 @@
 <p class="sub_head mb-60">
 {{ section.settings.sub_info }}
 </p> 
-<img src="{{section.settings.right_image | img_url : 'master' }}">
+<img src="{{section.settings.right_image | img_url : 'master' }}" alt="proudct" loading="lazy">
 </div>
 </div>
 <div class="v4-section_inner v4-section_inner1 desktop_version">
@@ -26,7 +26,7 @@
 <ul class="easy-list">  
 {% for block in section.blocks %}
   <li>
-     <span class="image_span"> <img src="{{block.settings.cta_image | img_url : 'master' }}"> </span>
+     <span class="image_span"> <img src="{{block.settings.cta_image | img_url : 'master' }}" alt="proudct" loading="lazy"> </span>
       {{ block.settings.cta_label }}  
   </li>
 {% endfor %}
@@ -36,7 +36,7 @@
 </p>
 </div>
 <div class="v4-section-left text-center"> 
-<img src="{{section.settings.left_image | img_url : 'master' }}"> 
+<img src="{{section.settings.left_image | img_url : 'master' }}" alt="product" loading="lazy"> 
 </div>
 </div>
 </div>

@@ -1793,7 +1793,7 @@ h2.Weather-proof_heading span {
   cursor: pointer;
 }
 h2.Weather-proof_heading span:after {
-  content: ">";
+  content: "https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Daco_1533595.png?v=1702555095";
   transform: rotate(90deg);
   display: inline-block;
   margin-left: 20px;
@@ -3492,7 +3492,7 @@ body.template_contact .contact-forminner-main .contact__button button.button {
   font-weight: 500;
   line-height: 30px;
   border-radius: 10px;
-  border: 1px solid #b9b9b9;
+
   background: #006bb3;
 }
 

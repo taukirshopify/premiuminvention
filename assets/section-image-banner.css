@@ -68,7 +68,7 @@
     flex-direction: row;
   }
 
-  .banner--small:not(.banner--adapt) {
+  /* .banner--small:not(.banner--adapt) {
     min-height: 42rem;
   }
 
@@ -78,12 +78,12 @@
 
   .banner--large:not(.banner--adapt) {
     min-height: 72rem;
-  }
+  } */
 
-  .banner__content.banner__content--top-left {
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
+  /* .banner__content.banner__content--top-left {
+    align-items: center;
+
+  } */
 
   .banner__content.banner__content--top-center {
     align-items: flex-start;
@@ -246,6 +246,7 @@
 @media screen and (min-width: 750px) {
   .banner__content {
     padding: 5rem;
+    height: 408px;
   }
 
   .banner__content--top-left {

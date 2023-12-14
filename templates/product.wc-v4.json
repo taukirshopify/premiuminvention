@@ -28,7 +28,7 @@
           }
         },
         "loox-rating": {
-          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "contentSize": 16,
             "pattern": "",
@@ -143,7 +143,7 @@
       "type": "apps",
       "blocks": {
         "loox-product-reviews": {
-          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "disabled": true,
           "settings": {
             "only_photos": false,
@@ -253,7 +253,7 @@
       "settings": {
         "prod_des_title_sub": "Wireless Outdoor Camera V4",
         "prod_des_title": "Effortless Installation, Powered by the Sun.",
-        "img": "shopify:\/\/shop_images\/V4_Product_Shot___NoBG_02_1.png",
+        "img": "shopify:\/\/shop_images\/V4_dbd92bc1-553e-4045-adbc-857dbaf0f6f9.png",
         "prod_des": "",
         "review_des": "The V4 camera is by far my favourite of the Premium Invention camera lineup.  It has a very long cord attached to the solar panel which allows for flexibility when mounting your camera and solar panel in the direction for maximum sunlight exposure for charging.  The picture quality is great and the ability to zoom is also an added bonus.  I will definitely be ordering more V4 cameras and I highly recommend it, you will not be disappointed.",
         "client_name": "John M.",
@@ -679,6 +679,8 @@
     "288cafa1-3e3b-46b8-aa8f-5a2d076ecaab": {
       "type": "product-tab-wcv4",
       "settings": {
+        "img01": "shopify:\/\/shop_images\/V4_-_Starter_Package_346fcb91-0b8b-4ce7-93e6-710bbccdcdbb.png",
+        "img02": "shopify:\/\/shop_images\/V4_-_Everyday_Bundle_675359c8-e490-47c5-9555-51f2e0c9cb81.png",
         "wireless1x": "40393456615485",
         "wireless5x": "40402921226301",
         "fourg1x": "40393458679869",

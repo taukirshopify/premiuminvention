@@ -23,7 +23,7 @@
           }
         },
         "loox-rating": {
-          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "contentSize": 16,
             "pattern": "",
@@ -634,12 +634,12 @@
         "9b470a19-f70c-4b07-8353-5fda3a5ebaf9": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/Premium_Invention_-_one_camera_1.png",
+            "pro_img": "shopify:\/\/shop_images\/X3_-_Single_c2a564a6-f38c-4fff-a7a3-472714bb92fa.png",
             "package_name": "Starter Package",
             "product_title": "1 x Wired Wifi Camera X3",
             "text": "<ul><li><strong>Cloud , SD and NVR storage<\/strong><\/li><li><strong>Remote access from everywhere<\/strong><\/li><li><strong>Free 1 year warranty<\/strong><\/li><\/ul>",
             "product_id": "40725321842749",
-            "saving_price": "$249.97",
+            "saving_price": "$199.97",
             "sale_price": "$149.97",
             "off_price": "40%",
             "shipday": "",
@@ -651,14 +651,14 @@
         "736f1191-6fbc-4644-b0a7-d1048d156464": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/Premium_Invention_-_Three_camera_2.png",
+            "pro_img": "shopify:\/\/shop_images\/X3_-_Core_Bundle_043df04f-5ac8-4b64-a901-ddccbec8a32c.png",
             "package_name": "Core Bundle",
             "product_title": "3 x Wired Wifi Camera X3",
             "text": "<ul><li><strong>Cloud , SD and NVR storage<\/strong><\/li><li><strong>Remote access from everywhere<\/strong><\/li><li><strong>Free 1 year warranty<\/strong><\/li><\/ul>",
             "product_id": "40725323907133",
-            "saving_price": "$749.91",
-            "sale_price": "$434.91",
-            "off_price": "42%",
+            "saving_price": "$599.82",
+            "sale_price": "$449.91",
+            "off_price": "40%",
             "shipday": "",
             "rating_number": "",
             "money_back": "",
@@ -668,14 +668,14 @@
         "f5dc964b-1038-4348-bb65-5921ef6be29b": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/Premium_Invention_-_five_camera_a29e4249-09f4-4324-bb1f-1659bcfa892a.png",
+            "pro_img": "shopify:\/\/shop_images\/X3_-_Everyday_Bundle_bf2796b7-20bd-4643-b9c4-d86d752c7f8f.png",
             "package_name": "Everyday Bundle",
             "product_title": "5 x Wired Wifi Camera X3",
             "text": "<ul><li><strong>Cloud , SD and NVR storage<\/strong><\/li><li><strong>Remote access from everywhere<\/strong><\/li><li><strong>Free 1 year warranty<\/strong><\/li><\/ul>",
             "product_id": "40725325054013",
-            "saving_price": "$1249.85",
-            "sale_price": "$649.85",
-            "off_price": "48%",
+            "saving_price": "$999.7",
+            "sale_price": "$749.85",
+            "off_price": "100%",
             "shipday": "",
             "rating_number": "",
             "money_back": "",
@@ -971,7 +971,7 @@
       "type": "apps",
       "blocks": {
         "loox-product-reviews": {
-          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "only_photos": false,
             "aggregated": false,

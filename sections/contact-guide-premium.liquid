@@ -23,7 +23,7 @@
               <p>{{block.settings.cta_label  }}</p>
                 </div>
             <div class="contact-guide_img">
-              <img src="{{block.settings.image | img_url : 'master' }}">  
+              <img src="{{block.settings.image | img_url : 'master' }}" loading="lazy">  
            </div>
             
            {%- if block.settings.button_label != blank -%}

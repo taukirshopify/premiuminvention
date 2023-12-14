@@ -4,10 +4,26 @@
      {% endif %}
   <div class="main-banner-image">
     {% if section.settings.deskimg != blank %}
-      <img class="deskimg" src="{{ section.settings.deskimg | img_url: "master" }}" alt="{{ section.settings.deskimg.alt }}" />
-    {% endif %}
-    {% if section.settings.mobimg != blank %}
-      <img class="mobimg" src="{{ section.settings.mobimg | img_url: "master" }}" alt="{{ section.settings.mobimg.alt }}" />
+   
+  {{ section.settings.deskimg | image_url: width: 3840 | image_tag:
+      loading: 'lazy',
+      height: '465',
+      sizes: "100vw",
+  class: 'deskimg',
+  format: 'webp',
+      widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 1903, 2000, 3000, 3840'
+    }} 
+  {% endif %}
+  {% if section.settings.mobimg != blank %}
+
+{{ section.settings.mobimg | image_url: width: 3840 | image_tag:
+      loading: 'lazy',
+      height: '125',
+      sizes: "100vw",
+  class: 'mobimg',
+  format: 'webp',
+      widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+    }}
     {% endif %}
   </div>
      {% if section.settings.btnurl != blank %}

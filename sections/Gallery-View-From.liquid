@@ -37,8 +37,10 @@
                style="background-position: {{ block.settings.alignment }}; background-image: url('{{ block.settings.image | img_url: 'master' }});">
       {% elsif block.settings.image != blank %}
         <div class="image-bar__item image-bar__item--{{ block.id }} box ratio-container lazyload"
-             data-bgset="{% include 'bgset', image: block.settings.image %}"
+             data-bgset="{% include 'bgset', 
+              image: block.settings.image %}"
              data-sizes="auto"
+             loading="lazy"
              data-parent-fit="cover"
              style="background-position: {{ block.settings.alignment }}; background-image: url('{{ block.settings.image | img_url: 'master' }});">
       {% else %}
@@ -67,7 +69,7 @@
     </div>
     <noscript>
       <div class="grid__item {{ column_size }}" {{ block.shopify_attributes }}>
-        <div class="image-bar__item image-bar__item--{{ block.id }}" style="background-image: url({{ block.settings.image | img_url: 'master' }});"></div>
+        <div class="image-bar__item image-bar__item--{{ block.id }}"  loading="lazy" style="background-image: url({{ block.settings.image | img_url: 'master' }});"></div>
       </div>
     </noscript>
   {% endfor %}

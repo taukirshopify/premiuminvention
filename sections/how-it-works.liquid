@@ -10,7 +10,7 @@
      {% for block in section.blocks %}
 <div class="how-work-inner">
        {% if block.settings.image !=blank %}
-<img src="{{block.settings.image | img_url : 'master' }}">
+<img src="{{block.settings.image | img_url : 'master' }}" alt="{{block.settings.des }}" loading="lazy">
  {% endif %}
         {% if block.settings.des !=blank %}
   <div class="step-des">
@@ -91,8 +91,8 @@ if(winWidth < 768){
   slidesToShow: 2,
   slidesToScroll: 1,
     arrows:true,
-    prevArrow:"<button type='button' class='slick-prev pull-left'><img src='https://cdn.shopify.com/s/files/1/0249/8949/9437/t/85/assets/left-arrow-new.png?v=1683211032'></button>",
-		nextArrow:"<button type='button' class='slick-next pull-right'><img src='https://cdn.shopify.com/s/files/1/0249/8949/9437/t/85/assets/right-arrow-new.png?v=1683211057'></button>",
+    prevArrow:"<button type='button' class='slick-prev pull-left'><img alt='arrow' src='https://cdn.shopify.com/s/files/1/0249/8949/9437/t/85/assets/left-arrow-new.png?v=1683211032'></button>",
+		nextArrow:"<button type='button' class='slick-next pull-right'><img alt='arrow' src='https://cdn.shopify.com/s/files/1/0249/8949/9437/t/85/assets/right-arrow-new.png?v=1683211057'></button>",
      responsive: [
     
     {

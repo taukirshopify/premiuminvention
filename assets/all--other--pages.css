@@ -39,7 +39,7 @@ div#shopify-section-faq.contact-us-faq
   height: 20px;
   border: 1px solid #d9d9d9;
   background: #f8f8f8;
-  margin-top: 10px;
+  margin-top: 14px;
 }
 .contact .contact-forminner-main .field {
   margin-bottom: 15px;
@@ -80,7 +80,6 @@ div#shopify-section-faq.contact-us-faq
   text-transform: capitalize;
   font-size: 16px;
   min-width: fit-content;
-  width: 230px;
   min-height: 50px;
   border: none;
   border-radius: 3px;
@@ -551,7 +550,6 @@ article.article-template.single-blog h4 {
     width: 94%;
   }
   .contact-forminner-main .contact__button button.button {
-    width: 230px;
     margin-top: 30px;
   }
   .about-Us-top p {
@@ -1192,4 +1190,78 @@ article.article-template.single-blog h4 {
   .multi--faq .child--tabs .child h3 {
     padding-right: 30px;
   }
+}
+
+
+
+input#ContactForm-name {
+  padding: 11px 17px;
+  height: 20px;
+  line-height: 1;
+  min-height: 40px;
+}
+
+.field__label p{
+  color: #A6A2A2;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 160%;
+
+  padding:0 !important;
+  margin:0 !important;
+  margin-left: 5px !important;
+
+}
+.form-margin-b{
+
+ margin-top: 1%;
+}
+
+
+
+
+body.template_contact .contact-forminner-main .contact__button button.button {
+  padding: 5px 0;
+  color: #fff;
+  line-height: 1 !important;
+  font-family: Work Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  border-radius: 10px;
+
+  background: #006bb3;
+  border-radius: 30px;
+}
+
+
+body.template_contact .contact-forminner-main .contact__button button.button svg{
+
+  margin-left: 20px;
+}
+
+
+body.template_contact .contact-forminner-main .contact__button button.button {
+  padding: 5px 0 7px 14px;
+  color: #fff;
+  line-height: 1 !important;
+  font-family: Work Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  border-radius: 10px;
+
+  background: #006bb3;
+  border-radius: 30px;
+}
+
+body.template_contact .contact-forminner-main .contact__button button.button svg {
+  margin-left: 40px;
+}
+body.template_contact .contact-forminner-main .contact__button {
+  text-align: center;
 }
