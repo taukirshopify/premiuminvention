@@ -1,41 +1,21 @@
 {
   "sections": {
-    "e639280e-58ff-4520-bbb9-eee144f2545f": {
-      "type": "blackfriday",
-      "blocks": {
-        "511611de-6b6b-468d-b811-e0247cf4994f": {
-          "type": "text",
-          "settings": {
-            "deskimg": "shopify:\/\/shop_images\/Xmas1_75e8b091-7002-4d2c-8410-539186b80353.jpg",
-            "mobimg": "shopify:\/\/shop_images\/Xmas1_mobile_e09c47e7-8af8-4208-b195-bd65a0a0d6e4.jpg",
-            "btn": "Shop now",
-            "url": "https:\/\/premiuminvention.com\/pages\/collection"
-          }
-        }
-      },
-      "block_order": [
-        "511611de-6b6b-468d-b811-e0247cf4994f"
-      ],
-      "settings": {
-        "heading": ""
-      }
-    },
     "1651690081c5ac47f0": {
       "type": "slideshow",
       "blocks": {
         "1f068617-73d5-48d0-96fc-8b91e905e694": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/V3S_and_V4_1.png",
-            "imagetwo": "shopify:\/\/shop_images\/V3S_and_V4_mobile_1.png",
+            "image": "shopify:\/\/shop_images\/Untitled_700_x_375_px_1920_x_927_px_b5f67481-d2b0-41dc-bb23-31174f3f3c5a.png",
+            "imagetwo": "shopify:\/\/shop_images\/Untitled_700_x_375_px_1920_x_927_px_1200_x_1700_px_-2_a82b7c8f-1079-428a-8cf9-3836022c8156.png",
             "page_width": true,
             "custome-width": true,
             "extra-space-banner": false,
             "modifiedbutton": true,
-            "heading": "Live in the  Future",
+            "heading": "Live in the <br>  Future",
             "heading_size": "h1",
-            "subheading": "Experience advanced security  technology at its peak",
-            "button_label": "BROWSE PRODUCTS",
+            "subheading": "Experience advanced security <br> technology at its peak",
+            "button_label": "Discover",
             "link": "https:\/\/premiuminvention.com\/pages\/collection",
             "button_style_secondary": false,
             "box_align": "top-left",
@@ -96,7 +76,6 @@
         "f8099739-fa18-488d-9d02-1b1349ce368d",
         "378886a4-4b11-4d49-8af2-b55e94ab6d15"
       ],
-      "disabled": true,
       "custom_css": [
 
       ],
@@ -109,6 +88,22 @@
         "change_slides_speed": 6,
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "165616207925a40763": {
+      "type": "Popup--premium",
+      "custom_css": [
+        ".Popup--premium ul li h2.popup_prm_heading {color: #fff;}",
+        ".Popup--premium {margin-top: -30px; position: relative; background: #000; padding: 9px 0; backdrop-filter: blur(2px); z-index: 3;}",
+        "@media (max-width: 768px) {.Popup--premium {padding: 0px 0; margin-top: -13px; }}"
+      ],
+      "settings": {
+        "extra-Popup--premium": "extra-home-popup-new",
+        "img01": "shopify:\/\/shop_images\/CEG98R.svg",
+        "img02": "shopify:\/\/shop_images\/dzVh3i.svg",
+        "img03": "shopify:\/\/shop_images\/Group_3.svg",
+        "img04": "shopify:\/\/shop_images\/Group_1.svg",
+        "img05": "shopify:\/\/shop_images\/mbsiHd_1.svg"
       }
     },
     "3e6aec12-f61c-458a-9b0d-ff9d737dd3ba": {
@@ -341,6 +336,7 @@
         "70ab310c-5acb-4a21-9220-295417a987d5",
         "c4b55499-65fc-447c-8d14-2ddf05cf621c"
       ],
+      "disabled": true,
       "settings": {
         "title": "Our Core Values",
         "padding_top": 36,
@@ -485,99 +481,42 @@
         "padding_bottom": 46
       }
     },
-    "33e11edd-9862-4bb6-a4eb-7e44756323d5": {
-      "type": "image-with-text",
+    "1704931577edbfec11": {
+      "type": "apps",
       "blocks": {
-        "template--15261717233725__33e11edd-9862-4bb6-a4eb-7e44756323d5-heading-1": {
-          "type": "heading",
+        "loox_reviews_loox_carousel_section_dFPUmU": {
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "prehead": "",
-            "heading": "Looking for a Custom Security Solution?",
-            "heading_size": "h0"
-          }
-        },
-        "template--15261717233725__33e11edd-9862-4bb6-a4eb-7e44756323d5-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We're gearing up to unveil a versatile range of security products that cater to diverse needs. Whether you're looking for round-the-clock wireless monitoring or robust wired solutions, we've got something that's just right for you.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "efe81ce1-697f-45b5-8646-71fff98dbb7c": {
-          "type": "text2",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        },
-        "077844e1-a5e3-45a4-8dfe-2f25f65971f0": {
-          "type": "fullbutton",
-          "settings": {
-            "button_label": "Wired Camera X3",
-            "button_link": "shopify:\/\/products\/wired-camera-x3"
-          }
-        },
-        "61e3b018-32c2-4a17-ae98-2e1bab2387f4": {
-          "type": "fullbutton",
-          "settings": {
-            "button_label": "Wireless Camera V3S",
-            "button_link": "https:\/\/premiuminvention.com\/products\/wireless-camera-v3s"
-          }
-        },
-        "8d35d648-16dc-4253-bf62-a3f1140b5193": {
-          "type": "fullbutton",
-          "settings": {
-            "button_label": "NVR",
-            "button_link": "https:\/\/premiuminvention.com\/products\/4k-8-channel-smart-nvr"
-          }
-        },
-        "9dc87349-9512-4b3e-82a2-147617e6a67f": {
-          "type": "fullbutton",
-          "settings": {
-            "button_label": "Accessories",
-            "button_link": "https:\/\/premiuminvention.com\/pages\/collection?tab=accessories"
+            "max_width": 1920,
+            "text_color": "#000000",
+            "background_color": "#ffffff",
+            "arrows_color": "#000000",
+            "dots_color": "#000000",
+            "button_color": "#000000",
+            "show_more": true,
+            "only_photos": false,
+            "use_widget_font": true,
+            "product_handle": "nvr-1x3"
           }
         }
       },
       "block_order": [
-        "template--15261717233725__33e11edd-9862-4bb6-a4eb-7e44756323d5-heading-1",
-        "template--15261717233725__33e11edd-9862-4bb6-a4eb-7e44756323d5-text-1",
-        "efe81ce1-697f-45b5-8646-71fff98dbb7c",
-        "077844e1-a5e3-45a4-8dfe-2f25f65971f0",
-        "61e3b018-32c2-4a17-ae98-2e1bab2387f4",
-        "8d35d648-16dc-4253-bf62-a3f1140b5193",
-        "9dc87349-9512-4b3e-82a2-147617e6a67f"
-      ],
-      "custom_css": [
-        "@media only screen and (max-width: 600px) {h2.image-with-text__heading.h0.text-center {margin-top: 28px; } span.customli {margin-top: 10px; display: inline-block; }}"
+        "loox_reviews_loox_carousel_section_dFPUmU"
       ],
       "settings": {
-        "extra-visitor": "custom_solution_home",
-        "extra-visitor_id": "",
-        "image": "shopify:\/\/shop_images\/Custom_Solution_1.png",
-        "clr": "#ffffff",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
-        "padding_top": 60,
-        "padding_bottom": 40
+        "include_margins": true
       }
     }
   },
   "order": [
-    "e639280e-58ff-4520-bbb9-eee144f2545f",
     "1651690081c5ac47f0",
+    "165616207925a40763",
     "3e6aec12-f61c-458a-9b0d-ff9d737dd3ba",
     "fcf5c962-9579-4399-b80a-fee4dc38c88f",
     "25b4f3f4-eb17-4f36-ba8a-3831d0446b30",
     "95d50670-7b35-4680-8143-2a380d912a7b",
     "b7c7a5b4-d439-44b1-987b-ce6d2c9df17c",
     "00ebbc2b-3112-4a11-9bfb-8195722893c2",
-    "33e11edd-9862-4bb6-a4eb-7e44756323d5"
+    "1704931577edbfec11"
   ]
 }

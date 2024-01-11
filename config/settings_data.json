@@ -173,8 +173,8 @@
         "settings": {
           "color_scheme": "background-1",
           "headerCta": "877-224-0705",
-          "logo": "shopify:\/\/shop_images\/Image20220525144757.png",
-          "logo2": "shopify:\/\/shop_images\/Mobile_Navbar_Logo_copy_2.png",
+          "logo": "shopify:\/\/shop_images\/PI_-_Main_Horizontal.png",
+          "logo2": "shopify:\/\/shop_images\/Mobile_Navbar.png",
           "logo_width": 230,
           "logo_position": "top-center",
           "menu": "new-menu",
@@ -192,7 +192,7 @@
             "type": "text",
             "settings": {
               "title": "",
-              "text": "<p><a href=\"mailto:support@premiuminvention.com\" title=\"mailto:support@premiuminvention.com\">support@premiuminvention.com<\/a><\/p><p> <a href=\"tel:(877) 224 0705\" title=\"tel:(877) 224 0705\">(877) 224 0705<\/a><\/p><p>Suite #506, 105-7655 Edmonds St, Burnaby, BC, V3N 0C3, Canada<\/p>",
+              "text": "<p><a href=\"mailto:support@premiuminvention.com\" title=\"mailto:support@premiuminvention.com\">support@premiuminvention.com<\/a><\/p><p>  <a href=\"tel:+18772240705\" title=\"tel:+18772240705\">+1 (877) 224 075<\/a><\/p><p>Suite #506, 105-7655 Edmonds St, Burnaby, BC, V3N 0C3, Canada<\/p>",
               "logo_custom": "https:\/\/cdn.shopify.com\/s\/files\/1\/0249\/8949\/9437\/files\/Premium_Invention_1.svg?v=1650142419"
             }
           },
@@ -221,7 +221,7 @@
             "type": "newsletter",
             "settings": {
               "title": "Sign Up to Our Newsletters",
-              "text": "<p><a href=\"mailto:support@premiuminvention.com\" title=\"mailto:support@premiuminvention.com\">support@premiuminvention.com<\/a><\/p><p> <a href=\"tel:(877) 224 0705\" title=\"tel:(877) 224 0705\">(877) 224 0705<\/a><\/p><p>Suite #506, 105-7655 Edmonds St, Burnaby, BC, V3N 0C3, Canada<\/p>"
+              "text": "<p><a href=\"mailto:support@premiuminvention.com\" title=\"mailto:support@premiuminvention.com\">support@premiuminvention.com<\/a><\/p><p> <a href=\"tel:+1(877) 224 0705\" title=\"tel:+1(877) 224 0705\">+1 (877) 224 0705<\/a><\/p><p>Suite #506, 105-7655 Edmonds St, Burnaby, BC, V3N 0C3, Canada<\/p>"
             }
           }
         },

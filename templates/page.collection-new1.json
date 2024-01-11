@@ -2,8 +2,14 @@
   "sections": {
     "165635834012846b4f": {
       "type": "Popup--premium",
+      "disabled": true,
       "settings": {
-        "extra-Popup--premium": "collection_popup"
+        "extra-Popup--premium": "collection_popup",
+        "img01": "shopify:\/\/shop_images\/CEG98R.svg",
+        "img02": "shopify:\/\/shop_images\/dzVh3i.svg",
+        "img03": "shopify:\/\/shop_images\/Group_3.svg",
+        "img04": "shopify:\/\/shop_images\/Group_1.svg",
+        "img05": "shopify:\/\/shop_images\/mbsiHd_1.svg"
       }
     },
     "1654535599bd271f28": {
@@ -152,90 +158,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "33e11edd-9862-4bb6-a4eb-7e44756323d5": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--15261717233725__33e11edd-9862-4bb6-a4eb-7e44756323d5-heading-1": {
-          "type": "heading",
-          "settings": {
-            "prehead": "",
-            "heading": "Looking for a Custom Security Solution?",
-            "heading_size": "h0"
-          }
-        },
-        "template--15261717233725__33e11edd-9862-4bb6-a4eb-7e44756323d5-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We're gearing up to unveil a versatile range of security products that cater to diverse needs. Whether you're looking for round-the-clock wireless monitoring or robust wired solutions, we've got something that's just right for you.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "7e493c04-6b52-4d08-8bff-439381ecb4bf": {
-          "type": "button2",
-          "disabled": true,
-          "settings": {
-            "button_label": "Contact Us !",
-            "button_link": "https:\/\/premiuminvention.com\/pages\/contact-us"
-          }
-        },
-        "077844e1-a5e3-45a4-8dfe-2f25f65971f0": {
-          "type": "fullbutton",
-          "settings": {
-            "button_label": "Wired Camera X3",
-            "button_link": "shopify:\/\/products\/wired-camera-x3"
-          }
-        },
-        "61e3b018-32c2-4a17-ae98-2e1bab2387f4": {
-          "type": "fullbutton",
-          "settings": {
-            "button_label": "Wireless Camera V3S",
-            "button_link": "https:\/\/premiuminvention.com\/products\/wireless-camera-v3s"
-          }
-        },
-        "8d35d648-16dc-4253-bf62-a3f1140b5193": {
-          "type": "fullbutton",
-          "settings": {
-            "button_label": "NVR",
-            "button_link": "https:\/\/premiuminvention.com\/products\/4k-8-channel-smart-nvr"
-          }
-        },
-        "9dc87349-9512-4b3e-82a2-147617e6a67f": {
-          "type": "fullbutton",
-          "settings": {
-            "button_label": "Accessories",
-            "button_link": "https:\/\/premiuminvention.com\/pages\/collection?tab=accessories"
-          }
-        }
-      },
-      "block_order": [
-        "template--15261717233725__33e11edd-9862-4bb6-a4eb-7e44756323d5-heading-1",
-        "template--15261717233725__33e11edd-9862-4bb6-a4eb-7e44756323d5-text-1",
-        "7e493c04-6b52-4d08-8bff-439381ecb4bf",
-        "077844e1-a5e3-45a4-8dfe-2f25f65971f0",
-        "61e3b018-32c2-4a17-ae98-2e1bab2387f4",
-        "8d35d648-16dc-4253-bf62-a3f1140b5193",
-        "9dc87349-9512-4b3e-82a2-147617e6a67f"
-      ],
-      "custom_css": [
-        "@media only screen and (max-width: 600px) {h2.image-with-text__heading.h0.text-center {margin-top: 28px; } span.customli {margin-top: 10px; display: inline-block; }}"
-      ],
-      "settings": {
-        "extra-visitor": "custom_solution_home",
-        "extra-visitor_id": "",
-        "image": "shopify:\/\/shop_images\/Custom_Solution_1.png",
-        "clr": "#ffffff",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
-        "padding_top": 60,
-        "padding_bottom": 40
-      }
     }
   },
   "order": [
@@ -244,7 +166,6 @@
     "1654634476f57e1d0f",
     "16545347376c5ed622",
     "1654534172db3d6a3b",
-    "main",
-    "33e11edd-9862-4bb6-a4eb-7e44756323d5"
+    "main"
   ]
 }

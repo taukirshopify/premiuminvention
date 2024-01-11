@@ -199,6 +199,10 @@ ul#myTab {
     <li class="nav-item" role="presentation">
       <button class="nav-link" id="contact-tab-01" data-toggle="tab" data-target="#contact01" type="button" role="tab" aria-controls="contact" aria-selected="false">Payment and Return Policies</button>
     </li>
+
+    {% comment %} <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab-02" data-toggle="tab" data-target="#contact-02" type="button" role="tab" aria-controls="contact-02" aria-selected="false">Shipping</button>
+    </li> {% endcomment %}
   </ul>
 </div>
       <div class="tab-content" id="myTabContent">
@@ -208,6 +212,9 @@ ul#myTab {
 
         <div class="tab-pane fade" id="contact01" role="tabpanel" aria-labelledby="contact-tab-01"> {% include 'inneraccordian04' %}</div>
       </div>
+      {% comment %} <div class="tab-pane fade" id="contact-02" role="tabpanel" aria-labelledby="contact-tab-02">
+       contact tab
+      </div> {% endcomment %}
 
 
 

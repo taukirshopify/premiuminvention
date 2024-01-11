@@ -130,7 +130,7 @@
                     <ul class="site-footer__linklist
                               {% if inline_list %}list--inline{% endif %}">
                       {%- for link in linklists[footer_linklist].links -%}
-                        <li class="{% if link.title contains '<img' %}img--menu  {% endif %}site-footer__linklist-item">
+                        <li class="{% if link.title contains '<img ' %}img--menu  {% endif %}site-footer__linklist-item">
                           <a href="{{ link.url }}"
                             {% if link.current %} aria-current="page"{% endif %}
                           >

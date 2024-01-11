@@ -72,7 +72,7 @@ body.Wireless.Camera.V3S .wirless_outer_v3.wirless_extra_v3s .star--rating span 
 }
 body.Wireless.Camera.V3S .wirless_outer_v3.wirless_extra_v3s .star--rating span.loox-rating-label {
     position: relative;
-    top: 1px;
+
     left: 2px;
 }
 body.Wireless.Camera.V3S .wirless_outer_v3.wirless_extra_v3s span.statyc--rating.rating-v3s {
@@ -141,7 +141,7 @@ body.Wireless.Camera.V3S .wirless_outer_v3 .wirless_v3_right img.wireless_media 
     left: 20px;
 }
 body.Wireless.Camera.V3S .wirless_outer_v3.wirless_extra_v3s .star--rating span.loox-rating-label {
-    top: 2px;
+    top: 0px;
 }
 body.Wireless.Camera.V3S .wirless_outer_v3.wirless_extra_v3s {
     padding-top: 25px;

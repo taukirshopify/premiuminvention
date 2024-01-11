@@ -284,17 +284,28 @@ div#wirless_top_v3v3s:before {
     font-size: 13px;
     font-weight: 600;
 }
+
 .wirless_outer_v3 .shipping--messages p:before {
     position: absolute;
     content: "";
     background: url(https://cdn.shopify.com/s/files/1/0249/8949/9437/files/carbon_delivery-parcel.png?v=1652207846);
     width: 23px;
     height: 23px;
+
+
     background-repeat: no-repeat;
     background-size: contain;
     left: -28px;
     top: 0px;
 }
+@media only screen and (max-width: 600px) {
+
+
+    .wirless_outer_v3 .shipping--messages p:before {
+        width: 18px;
+        height: 18px;
+    }
+    }
 .wirless_v3_right.mobile_version {
     display: none;
 }
@@ -505,7 +516,6 @@ body.zar--get .wirless_outer_v3 .star--rating {
     bottom: 0px;
 }
 .wirless_outer_v3.wirless_extra_v3s ul.custom--variations.style span {
-    color: #000;
     font-size: 14px;
 }
 .wirless_outer_v3 .star--rating {

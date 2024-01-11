@@ -1,3 +1,4 @@
+{{ 'Designed--for--Outdoors.css' | asset_url | stylesheet_tag }}
 <div id="shopify-section-feature-image-2" class=" {{ section.settings.extra-class-v3s }}" {% if section.settings.bg_image != blank %} style="background-image: url({{ section.settings.bg_image | img_url: 'original' }});" {% endif %}>
 <div class="page-width feature-row">
   {% capture image_layout %}
@@ -9,15 +10,25 @@
         {% include 'image-style' with image: section.settings.image, width: 545, height: 545, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
         <div id="{{ wrapper_id }}" class="feature-row__image-wrapper js">
           <div style="padding-top:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;">
-            <img id="{{ img_id }}"
+            {% comment %} <img id="{{ img_id }}"
               loading="lazy" 
-                 class="feature-row__image lazyload"
-                 src="{{ section.settings.image | img_url: 'master' }}"
+                 class=""
+                 src="{{  | img_url: 'master' }}"
                  data-src="{{ img_url }}"
-                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-widths="[]"
                  data-aspectratio="{{ section.settings.image.aspect_ratio }}"
                  data-sizes="auto"
-                 alt="{{ section.settings.image.alt | escape }}">
+                 alt="{{ section.settings.image.alt | escape }}"> {% endcomment %}
+
+                 {{ section.settings.image | image_url: width: 3840 | image_tag:
+                  loading: 'lazy',
+                  height: '420',
+                  sizes: "100vw",
+                  
+     class: 'feature-row__image lazyload',
+     format: 'webp',
+                  widths: '180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048'
+                }}
           </div>
         </div>
 
@@ -49,10 +60,10 @@
       {% endif %}
       
       <ul class="feature_list">
-        <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/dust_residence.svg?v=1649531227" loading="lazy"  alt="icon">Dust resistant</li>
-         <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/rain_lighting.svg?v=1649531227" loading="lazy" alt="icon">Withstand heavy <br>rain & lightning</li>
-        <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/hot_temp.svg?v=1649531227" alt="icon" loading="lazy">Hot temperatures <br>(50C/122F) </li>
-         <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/cold_resitance.svg?v=1649531226" loading="lazy"  alt="icon">Cold Resistance <br>(-30/-22F)</li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/dust_residence.svg?v=1649531227" loading="lazy"  height="50" width="50" alt="icon">Dust resistant</li>
+         <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/rain_lighting.svg?v=1649531227" loading="lazy" height="50" width="50" alt="icon">Withstand heavy <br>rain & lightning</li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/hot_temp.svg?v=1649531227" alt="icon" height="50" width="50" loading="lazy">Hot temperatures <br>(50C/122F) </li>
+         <li><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/cold_resitance.svg?v=1649531226" loading="lazy" height="50" width="50"  alt="icon">Cold Resistance <br>(-30/-22F)</li>
       </ul>
     </div>
 
@@ -275,4 +286,6 @@
   ]
 }
 {% endschema %}
-{{ 'Designed--for--Outdoors.css' | asset_url | stylesheet_tag }}
+
+
+

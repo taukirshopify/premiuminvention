@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
   <noscript>{{ 'component-mega-menu.css' | asset_url | stylesheet_tag }}</noscript>
 {%- endif -%}
-<link rel="preload" href="{{ section.settings.logo2 | img_url:'master'  }}" as="image">
-<link rel="preload" href="{{ section.settings.logo | img_url:'master'  }}" as="image">
 
 <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
@@ -594,7 +592,6 @@
             <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
               src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
               loading="lazy"
-              preload = ,
               class="header__heading-logo desktop-image"
               width="{{ section.settings.logo.width }}"
               height="{{ section.settings.logo.height }}"

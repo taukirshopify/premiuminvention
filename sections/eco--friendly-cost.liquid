@@ -1,3 +1,5 @@
+{{ 'eco--friendly--cost.css' | asset_url | stylesheet_tag }}
+
 <div id="shopify-section-feature-image-1" {% if section.settings.bg_image != blank %} style="background-image: url({{ section.settings.bg_image | img_url: 'master' }});" {% endif %}>
   <div class="page-width feature-row">
   {% capture image_layout %}
@@ -9,15 +11,18 @@
         {% include 'image-style' with image: section.settings.image, width: 545, height: 545, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
         <div id="{{ wrapper_id }}" class="feature-row__image-wrapper js">
           <div style="padding-top:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;">
-            <img id="{{ img_id }}"
-              loading="lazy" 
-                 class="feature-row__image lazyload"
-                 src="{{ section.settings.image | img_url: 'master' }}"
-                 data-src="{{ img_url }}"
-                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                 data-aspectratio="{{ section.settings.image.aspect_ratio }}"
-                 data-sizes="auto"
-                 alt="{{ section.settings.image.alt | escape }}">
+          
+
+
+                 {{ section.settings.image | image_url: width: 3840 | image_tag:
+                  loading: 'lazy',
+                  height: '440',
+                  sizes: "100vw",
+                  
+     class: 'feature-row__image lazyload',
+     format: 'webp',
+                  widths: '180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048'
+                }}
           </div>
         </div>
 
@@ -52,16 +57,26 @@
   <li>
   {% comment %} <img src="{{block.settings.image | img_url : 'master' }}"> {% endcomment %}
 
-  
-  {{ block.settings.image | image_url: width: 3840 | image_tag:
+  {%  if forloop.index == 1 %}
+      {{ block.settings.image | image_url: width: 56 | image_tag:
+        loading: 'lazy',
+
+        sizes: "100vw",
+    class: 'css-class-1 css-class-2',
+    format: 'webp',
+        width: '56'
+      }}
+  {%   else %}
+
+  {{ block.settings.image | image_url: width: 36 | image_tag:
     loading: 'lazy',
-    height: '50',
+
     sizes: "100vw",
 class: 'css-class-1 css-class-2',
 format: 'webp',
-    widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+    width: '36'
   }}
-
+{% endif %}
     <p>{{block.settings.cta_label  }}</p>
     </li>
     {% endfor %}
@@ -357,4 +372,4 @@ format: 'webp',
   ]
 }
 {% endschema %}
-{{ 'eco--friendly--cost.css' | asset_url | stylesheet_tag }}
+

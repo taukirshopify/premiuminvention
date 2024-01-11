@@ -5,6 +5,12 @@
 <link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
 <link rel='preconnect dns-prefetch' href='https://conf.config-security.com/' crossorigin />
 <link rel='preconnect dns-prefetch' href='https://whale.camera/' crossorigin />
+
+ {% comment %} improve seo  {% endcomment %}
+ <script>!function(e){"function"==typeof define&&define.amd?define(e):e()}(function(){var e,t=["scroll","wheel","touchstart","touchmove","touchenter","touchend","touchleave","mouseout","mouseleave","mouseup","mousedown","mousemove","mouseenter","mousewheel","mouseover"];if(function(){var e=!1;try{var t=Object.defineProperty({},"passive",{get:function(){e=!0}});window.addEventListener("test",null,t),window.removeEventListener("test",null,t)}catch(e){}return e}()){var n=EventTarget.prototype.addEventListener;e=n,EventTarget.prototype.addEventListener=function(n,o,r){var i,s="object"==typeof r&&null!==r,u=s?r.capture:r;(r=s?function(e){var t=Object.getOwnPropertyDescriptor(e,"passive");return t&&!0!==t.writable&&void 0===t.set?Object.assign({},e):e}(r):{}).passive=void 0!==(i=r.passive)?i:-1!==t.indexOf(n)&&!0,r.capture=void 0!==u&&u,e.call(this,n,o,r)},EventTarget.prototype.addEventListener._original=e}});</script>
+ {% comment %} improve seo End {% endcomment %}
+
+
 <script>
 /* >> TriplePixel :: start*/
 window.TriplePixelData={TripleName:"premium-invention.myshopify.com",ver:"2.11",plat:"SHOPIFY",isHeadless:false},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","application/json")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1,P))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1,L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)};try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push({u:location.href,r:document.referrer,t:Date.now(),id:L()}),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(E=A[H]=function(t,e,a){return void 0===a&&(a=[]),"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e].concat(a)),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("https://conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,plat:A.TriplePixelData.plat,url:window.location.href,ref:document.referrer,ver:A.TriplePixelData.ver},O("https://api.config-security.com/event",5,p),O("https://whale.camera/live/dot.txt",5)))}}("","TriplePixel",localStorage);
@@ -249,8 +255,8 @@ window.TriplePixelData={TripleName:"premium-invention.myshopify.com",ver:"2.11",
   {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
-  <link href="{{ 'jquery-ui.min.js' | shopify_asset_url }}" rel="preload" as="script"> 
-  <script  src="{{ 'jquery-ui.min.js' | shopify_asset_url }}" defer async ></script>
+  {% comment %} <link href="{{ 'jquery-ui.min.js' | shopify_asset_url }}" rel="preload" as="script"> 
+  <script  src="{{ 'jquery-ui.min.js' | shopify_asset_url }}" defer async ></script> {% endcomment %}
 
   <link href="{{ 'image-comparison.js' | asset_url }}" rel="preload" as="script">
   <script src="{{ 'image-comparison.js' | asset_url }}"></script>
@@ -379,7 +385,7 @@ window.TriplePixelData={TripleName:"premium-invention.myshopify.com",ver:"2.11",
   $('.shipping--messages').html('<p class="shipping--details show" >{{settings.txt_ca}}</p>')
   $('div#shopify-section-product--tab-select .tab--selction .data-settings p.shipday').text('{{settings.btxt_ca}}');
   $('.activelanguge img').attr('src','https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1200px-Flag_of_Canada_%28Pantone%29.svg.png')
-  {% elsif  request.host contains 'uk.'%}
+  {% elsif  request.host contains 'uk.'  or shop.money_format == '£' %}
   $('.shipping--messages').html('<p class="shipping--details show" >{{settings.txt_uk}}</p>')
   $('div#shopify-section-product--tab-select .tab--selction .data-settings p.shipday').text('{{settings.btxt_uk}}');
   
@@ -1158,6 +1164,7 @@ window.TriplePixelData={TripleName:"premium-invention.myshopify.com",ver:"2.11",
   {
   breakpoint: 767,
   settings: {
+    arrows: true,
   centerPadding: '0',
   }
   }
@@ -1590,6 +1597,7 @@ window.TriplePixelData={TripleName:"premium-invention.myshopify.com",ver:"2.11",
     }, function(){
     $(this).parents('details').removeAttr('open');
   });
+
   </script>
   
   <!-- CDN Bootstrap bundle js -->
@@ -1598,3 +1606,11 @@ window.TriplePixelData={TripleName:"premium-invention.myshopify.com",ver:"2.11",
   {% section 'sezzle-widget' %}
   
 {% section 'sezzle-widget' %}
+
+
+<style>
+
+  .text-white{
+   color:#fff !important;
+  }
+</style>

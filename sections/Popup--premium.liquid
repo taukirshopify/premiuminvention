@@ -3,31 +3,24 @@
   
   <div class="">
     <div class="popup-inner-premium">
-      <div class="popup" id="popup">
-          <h2 class="popup_prm_heading"> Premium Quality</h2>
-          <p>Full quality-inspection with care. 365days of warranty for all products.</p>
-          <a href="javascript:;" onclick="hide('popup')"><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/remove-iconpopup.png?v=1656171185" loading="lazy" loading="lazy"  alt="icon"></a>
-        </div>
+ 
       
-      <!-- This is what will be included inside the popup -->
-        <div class="popupk" id="popupk">
-          <h2 class="popup_prm_heading">Top-Tier Support Team</h2>
-          <p>All e-mails are responded to by real people (no bots) within 24hours.</p>
-          <a href="javascript:;" onclick="hide('popupk')"><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/remove-iconpopup.png?v=1656171185" loading="lazy" alt="icon"></a>
-        </div>
-      <!-- This is what will be included inside the popup -->
-        <div class="popupkp" id="popupkp">
-          <h2 class="popup_prm_heading">  Express Shipping</h2>
-          <p>Delivers in 2-5 days in the USA & 7-15 days in other countries. Easy tracking.</p>
-          <a href="javascript:;" onclick="hide('popupkp')"><img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/remove-iconpopup.png?v=1656171185" loading="lazy" alt="icon"></a>
-        </div>
-      
-  
       <ul class="popup-only-slider">
         <li>
-          <button class="button" href="javascript:;" onclick="show('popup')">
-  
-            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/Group_397a5af9-7d49-4073-a217-96b0f1eaa0e2.png?v=1696492454" loading="lazy" alt="icon">
+          <button class="button"  data-toggle="modal" data-target="#exampleModalCenter-00">
+
+
+            {{
+              section.settings.img01
+              | image_url: width: 35, height: 32
+              | image_tag:
+                loading: 'lazy',
+                sizes: sizes,
+                widths: '54, 74, 104, 162, 208, 324, 416',
+                id: thumbnail_id,
+                alt:   section.settings.img01.alt
+              | escape
+            }}
             <h2 class="popup_prm_heading"> Premium Quality</h2>
   
           </button>
@@ -37,9 +30,19 @@
   
         
         <li >
-          <button class="button" href="javascript:;" onclick="show('popupkp')">
+          <button class="button"  data-toggle="modal" data-target="#exampleModalCenter-01">
   
-            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__shipping_fast_solid.png?v=1696492455" loading="lazy" alt="icon">
+            {{
+              section.settings.img02
+              | image_url: width: 35, height: 32
+              | image_tag:
+                loading: 'lazy',
+                sizes: sizes,
+                widths: '54, 74, 104, 162, 208, 324, 416',
+                id: thumbnail_id,
+                alt:   section.settings.img02.alt
+              | escape
+            }}
             <h2 class="popup_prm_heading">  Express Shipping</h2>
   
           </button>
@@ -47,9 +50,18 @@
         
         </li>
         <li >
-          <button class="button" href="javascript:;" onclick="show('popupk')">
-  
-            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__help_customer_support_1.png?v=1696492454" loading="lazy" alt="icon">
+          <button class="button"  data-toggle="modal" data-target="#exampleModalCenter-02">
+            {{
+              section.settings.img03
+              | image_url: width: 35, height: 32
+              | image_tag:
+                loading: 'lazy',
+                sizes: sizes,
+                widths: '54, 74, 104, 162, 208, 324, 416',
+                id: thumbnail_id,
+                alt:   section.settings.img03.alt
+              | escape
+            }}
             <h2 class="popup_prm_heading">Top-Tier Support Team</h2>
   
           </button>
@@ -58,9 +70,20 @@
         </li>
   
         <li >
-          <button class="button" href="javascript:;" onclick="show('popupkwarranty')">
+          <button class="button" data-toggle="modal" data-target="#exampleModalCenter-03">
   
-            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__premium_content_user_credit.png?v=1696492454" loading="lazy" alt="icon">
+         
+            {{
+              section.settings.img04
+              | image_url: width: 35, height: 32
+              | image_tag:
+                loading: 'lazy',
+                sizes: sizes,
+                widths: '54, 74, 104, 162, 208, 324, 416',
+                id: thumbnail_id,
+                alt:   section.settings.img04.alt
+              | escape
+            }}
             <h2 class="popup_prm_heading">1 Year Warranty</h2>
   
           </button>
@@ -69,9 +92,19 @@
         </li>
         
         <li class="last-child-popup" >
-          <button class="button" href="javascript:;" onclick="show('popupkpn')">
+          <button class="button" data-toggle="modal" data-target="#exampleModalCenterfour">
   
-            <img src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/icon__money_refund_dollar.png?v=1696492454" loading="lazy" alt="icon">
+            {{
+              section.settings.img05
+              | image_url: width: 35, height: 32
+              | image_tag:
+                loading: 'lazy',
+                sizes: sizes,
+                widths: '54, 74, 104, 162, 208, 324, 416',
+                id: thumbnail_id,
+                alt:   section.settings.img05.alt
+              | escape
+            }}
             <h2 class="popup_prm_heading"> 30-Day Money-Back Guarantee</h2>
   
           </button>
@@ -100,7 +133,34 @@
             "type": "text",
             "id": "extra-Popup--premium",
             "label": "choose your class"
-     }],
+     },
+     {
+      "type": "image_picker",
+      "id": "img01",
+      "label": "Image 01"
+     },
+     {
+      "type": "image_picker",
+      "id": "img02",
+      "label": "Image 02"
+     },
+     {
+      "type": "image_picker",
+      "id": "img03",
+      "label": "Image 03"
+     },
+     {
+      "type": "image_picker",
+      "id": "img04",
+      "label": "Image 04"
+     },
+     {
+      "type": "image_picker",
+      "id": "img05",
+      "label": "Image 05"
+     }
+    
+    ],
          "presets": [
       {
         "name": {
@@ -112,13 +172,228 @@
     }
   {% endschema %}
   {{ 'Popup--premium.css' | asset_url | stylesheet_tag }}
-  
-  
-  
-  {% stylesheet %}
-  
-  
-  {% endstylesheet %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <!-- Button trigger modal -->
+
+
+
+<!-- Modal for four -->
+<div class="modal fade" id="exampleModalCenterfour" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter-03 title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+   
+      <div class="modal-body">
+              
+        <div class="singel-icon-wrapper-v2">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20px" height="20px"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
+          </button>
+          <img src="//premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=3840" alt="" srcset="//premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=100 100w, //premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=200 200w, //premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=375 375w, //premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=550 550w, //premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=750 750w, //premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=1100 1100w, //premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=1500 1500w, //premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=1780 1780w, //premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=2000 2000w, //premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=3000 3000w, //premiuminvention.com/cdn/shop/files/mbsiHd_1.svg?v=1701201373&amp;width=3840 3840w" height="58" loading="lazy" sizes="100vw" class="css-class-1 css-class-2" format="webp">
+         <h4>30-DAY MONEY-BACK GUARANTEE</h4>
+         <p>Our commitment to 'Premium Quality' ensures your home is fortified with the best in security.</p>
+       </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal for four -->
+<div class="modal fade" id="exampleModalCenter-00" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter-03 title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+   
+      <div class="modal-body">
+              
+        <div class="singel-icon-wrapper-v2 ">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20px" height="20px"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
+          </button>
+          <img src="//premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=3840" alt="" srcset="//premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=100 100w, //premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=200 200w, //premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=375 375w, //premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=550 550w, //premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=750 750w, //premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=1100 1100w, //premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=1500 1500w, //premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=1780 1780w, //premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=2000 2000w, //premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=3000 3000w, //premium-invention.myshopify.com/cdn/shop/files/CEG98R.svg?v=1700897042&amp;width=3840 3840w" height="62" loading="lazy" sizes="100vw" class="css-class-1 css-class-2" format="webp">
+         <h4>PREMIUM QUALITY</h4>
+         <p>Our commitment to 'Premium Quality' ensures your home is fortified with the best in security.</p>
+       </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal for four -->
+<div class="modal fade" id="exampleModalCenter-01" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter-03 title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+   
+      <div class="modal-body">
+              
+        <div class="singel-icon-wrapper-v2 ">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20px" height="20px"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
+          </button>
+          <img src="//premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=3840" alt="" srcset="//premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=100 100w, //premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=200 200w, //premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=375 375w, //premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=550 550w, //premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=750 750w, //premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=1100 1100w, //premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=1500 1500w, //premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=1780 1780w, //premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=2000 2000w, //premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=3000 3000w, //premiuminvention.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=3840 3840w" height="62" loading="lazy" sizes="100vw" class="css-class-1 css-class-2" format="webp">
+         <h4>EXPRESS SHIPPING</h4>
+         <p>Time is of the essence when it comes to your safety--because protection shouldn't wait.</p>
+       </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal for four -->
+<div class="modal fade" id="exampleModalCenter-02" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter-03 title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+   
+      <div class="modal-body">
+              
+
+
+        <div class="singel-icon-wrapper-v2 ">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20px" height="20px"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
+          </button>
+          <img src="//premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=3840" alt="" srcset="//premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=100 100w, //premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=200 200w, //premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=375 375w, //premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=550 550w, //premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=750 750w, //premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=1100 1100w, //premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=1500 1500w, //premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=1780 1780w, //premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=2000 2000w, //premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=3000 3000w, //premiuminvention.com/cdn/shop/files/Group_3.svg?v=1701285136&amp;width=3840 3840w" height="62" loading="lazy" sizes="100vw" class="css-class-1 css-class-2" format="webp">
+         <h4>EXCELLENT SUPPORT TEAM</h4>
+         <p>Our support team goes above and beyond to secure your satisfaction, ensuring you're protected 24/7.</p>
+       </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal for four -->
+<div class="modal fade" id="exampleModalCenter-03" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter-03 title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+   
+      <div class="modal-body">
+              
+        <div class="singel-icon-wrapper-v2">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20px" height="20px"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
+          </button>
+          <img src="//premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=3840" alt="" srcset="//premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=100 100w, //premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=200 200w, //premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=375 375w, //premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=550 550w, //premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=750 750w, //premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=1100 1100w, //premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=1500 1500w, //premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=1780 1780w, //premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=2000 2000w, //premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=3000 3000w, //premium-invention.myshopify.com/cdn/shop/files/Group_1.svg?v=1700897114&amp;width=3840 3840w" height="58" loading="lazy" sizes="100vw" class="css-class-1 css-class-2" format="webp">
+         <h4>ONE-YEAR WARRANTY</h4>
+         <p>Premium Invention redefines security with a full-year assurance. 365 days of warranty on all our products.</p>
+       </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal for four -->
+<div class="modal fade" id="exampleModalCenterfour" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+   
+      <div class="modal-body">
+              
+
+
+        <div class="singel-icon-wrapper-v2 ">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20px" height="20px"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
+          </button>
+          <img src="//premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=3840" alt="" srcset="//premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=100 100w, //premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=200 200w, //premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=375 375w, //premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=550 550w, //premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=750 750w, //premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=1100 1100w, //premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=1500 1500w, //premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=1780 1780w, //premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=2000 2000w, //premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=3000 3000w, //premium-invention.myshopify.com/cdn/shop/files/dzVh3i.svg?v=1701285073&amp;width=3840 3840w" height="62" loading="lazy" sizes="100vw" class="css-class-1 css-class-2" format="webp">
+         <h4>EXPRESS SHIPPING</h4>
+         <p>Time is of the essence when it comes to your safety--because protection shouldn't wait.</p>
+       </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<style>
+
+  button.close {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    margin-left: auto;
+}
+
+.modal .singel-icon-wrapper-v2{
+
+
+  padding: 13px 14px;
+ margin:0;
+}
+#shopify-section-Popup--premium img {
+  filter: invert(100%);
+}
+.Popup--premium ul li h2.popup_prm_heading {
+  color: #fff;
+}
+.Popup--premium {
+
+  position: relative;
+  background: #000;
+  padding: 9px 0;
+
+  z-index: 3;
+}
+@media (max-width: 768px) {
+  .Popup--premium {
+    padding: 0px 0;
+    margin-top: -13px;
+  }
+}
+ .singel-icon-wrapper-v2 {
+  border-radius: 24px;
+  border: 1px solid #000;
+  padding: 13px 29px;
+  background: #FFF;
+  margin: 6.9% 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+ .singel-icon-wrapper-v2 h4 {
+  color: #151414;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
+  letter-spacing: -0.32px;
+  margin-top: 6%;
+}
+#shopify-section-Popup--premium .singel-icon-wrapper-v2 p {
+  color: #151414;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: -0.32px;
+}
+#shopify-section-Popup--premium .modal-content {
+
+  background-color: transparent;
+
+}
+</style>
   
   {% javascript %}
   

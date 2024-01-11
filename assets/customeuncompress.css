@@ -217,7 +217,7 @@ sticky-header
 /*footer start*/
 footer.site-footer {
   position: relative;
-  z-index: 99;
+
   padding-bottom: 20px !important;
 }
 footer.site-footer .site-footer__item:nth-child(1) {

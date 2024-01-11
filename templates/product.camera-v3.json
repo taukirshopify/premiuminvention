@@ -21,6 +21,9 @@
     "1652302738ddabc68a": {
       "type": "product-logo-bar",
       "settings": {
+        "img": "shopify:\/\/shop_images\/Image20220316131001.png",
+        "img01": "shopify:\/\/shop_images\/Image20220316131004.png",
+        "img02": "shopify:\/\/shop_images\/Image20220316130956.png"
       }
     },
     "1652302130e8dab211": {
@@ -358,8 +361,8 @@
       "type": "product--tab-select",
       "settings": {
         "wireless1x": "39819136761917",
-        "img01": "shopify:\/\/shop_images\/V3_-_Single_50678832-cb4e-4b51-bf1c-f52b4b43dddb.png",
-        "img02": "shopify:\/\/shop_images\/V3_-_Bundle_c41c95ee-fb61-485b-9892-f2814eca8eb6.png",
+        "img01": "shopify:\/\/shop_images\/tabnew11.png",
+        "img02": "shopify:\/\/shop_images\/tabnew112.png",
         "wireless5x": "39895121756221",
         "fourg1x": "39819136794685",
         "fourg5x": "39895121788989",

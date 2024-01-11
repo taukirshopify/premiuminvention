@@ -62,7 +62,7 @@
          <div class="page-width">
            <div class="choose-from-main">
             <div class="choose--from">
-              <h2>Select your camera:</h2>
+              <h2>Choose Your Camera:</h2>
                <ul>
                   <li class="one active">
                      <span>Select</span>
@@ -74,7 +74,7 @@
                      </svg> 
                      WiFi Edition
                   </li>
-                  <li>
+                  <li class="secondsvg-icon">
                      <span>Select</span> 
                      <svg width="29" height="40" viewBox="0 0 29 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.857 24.2857C22.857 23.1491 22.4055 22.059 21.6018 21.2553C20.798 20.4515 19.7079 20 18.5713 20H9.99988C8.86323 20 7.77314 20.4515 6.96942 21.2553C6.16569 22.059 5.71416 23.1491 5.71416 24.2857V30C5.71416 31.1366 6.16569 32.2267 6.96942 33.0305C7.77314 33.8342 8.86323 34.2857 9.99988 34.2857H18.5713C19.7079 34.2857 20.798 33.8342 21.6018 33.0305C22.4055 32.2267 22.857 31.1366 22.857 30V24.2857ZM18.5713 22.8571C18.9502 22.8571 19.3135 23.0077 19.5815 23.2756C19.8494 23.5435 19.9999 23.9068 19.9999 24.2857V30C19.9999 30.3789 19.8494 30.7422 19.5815 31.0102C19.3135 31.2781 18.9502 31.4286 18.5713 31.4286H14.2856V22.8571H18.5713ZM11.4284 22.8571V31.4286H9.99988C9.62099 31.4286 9.25763 31.2781 8.98972 31.0102C8.72181 30.7422 8.5713 30.3789 8.5713 30V24.2857C8.5713 23.9068 8.72181 23.5435 8.98972 23.2756C9.25763 23.0077 9.62099 22.8571 9.99988 22.8571H11.4284ZM28.5713 7.14286C28.5713 5.24845 27.8188 3.43164 26.4792 2.09209C25.1397 0.752549 23.3229 0 21.4284 0H12.3656C10.472 0.000404411 8.65614 0.752664 7.31702 2.09143L2.0913 7.31714C0.752541 8.65626 0.00028038 10.4722 -0.000125885 12.3657V32.8571C-0.000125885 34.7515 0.752424 36.5684 2.09197 37.9079C3.43151 39.2475 5.24833 40 7.14273 40H21.4284C23.3229 40 25.1397 39.2475 26.4792 37.9079C27.8188 36.5684 28.5713 34.7515 28.5713 32.8571V7.14286ZM21.4284 2.85714C22.5651 2.85714 23.6552 3.30867 24.4589 4.1124C25.2626 4.91613 25.7142 6.00622 25.7142 7.14286V32.8571C25.7142 33.9938 25.2626 35.0839 24.4589 35.8876C23.6552 36.6913 22.5651 37.1429 21.4284 37.1429H7.14273C6.00609 37.1429 4.916 36.6913 4.11227 35.8876C3.30855 35.0839 2.85702 33.9938 2.85702 32.8571V12.3657C2.85802 11.2295 3.3102 10.1401 4.11416 9.33714L9.33416 4.11143C9.73232 3.71352 10.205 3.39795 10.7251 3.18274C11.2452 2.96753 11.8027 2.85689 12.3656 2.85714H21.4284Z" fill=""/>
@@ -94,10 +94,10 @@
       {% if section.settings.img01  %}
          
          
-     <img  loading="lazy" src="{{ section.settings.img01 | img_url:'' }}"  alt="proudct iamge">
+     <img width="360" height="337"  loading="lazy" src="{{ section.settings.img01 | img_url:'' }}"  alt="proudct iamge">
     
          {% else %}
-      <img  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300" alt="product image">
+      <img width="360" height="337"  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" src="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300" alt="product image">
       {% endif %}
       {% endif %}
                     
@@ -403,10 +403,10 @@
                         {% if section.settings.img03  %}
                            
                            
-                       <img  loading="lazy" src="{{ section.settings.img03 | img_url:'' }}"  alt="proudct iamge">
+                       <img width="360" height="337"  loading="lazy" src="{{ section.settings.img03 | img_url:'' }}"  alt="proudct iamge">
                       
                            {% else %}
-                        <img  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300" alt="product image">
+                        <img width="360" height="337"  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300" alt="product image">
                         {% endif %}
                         {% endif %}
                                       
@@ -561,10 +561,10 @@
 
 
       {% if section.settings.img04 %}
-         <img src="{{section.settings.img04 | img_url:'master' }}" alt="proudct" >
+         <img width="360" height="337"  loading="lazy" src="{{section.settings.img04 | img_url:'master' }}" alt="proudct" >
           {% else %}
           
-     <img  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
+     <img width="360" height="337"  loading="lazy" src="{{ variant.metafields.custom.usa_image }}" ssrc="https://cdn.shopify.com/s/files/1/0249/8949/9437/files/tabnew112.png?v=1652814300">
        {% endif %}
                     
 

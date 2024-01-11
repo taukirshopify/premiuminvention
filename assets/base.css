@@ -7,5 +7,68 @@ img.mobile-image {
     left: 0;
     right: 0;
     top: 0;
+    width: 20%;
     margin: 0 auto;
+}
+
+@media only screen and (min-width: 1450px) {
+.wirless_v3_right img {
+    width: 100%;
+    height: auto;
+}
+
+}
+@media only screen and (max-width: 750px) {
+.wirless_v3_right img {
+    width: 100%;
+    height: auto;
+}
+
+}
+@media only screen and (max-width: 750px) {
+
+.desktop{
+
+    display: none;
+}
+}
+
+
+@media only screen and (min-width: 751px) {
+
+    .mobile{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .grid.grid--no-gutters.small--text-center {
+        width: 1192px;
+    }
+
+}
+
+html.js.overflow-hidden {
+    max-width: 100vh;
+}
+
+
+body.template_.index.gradient.Premium.Invention.wnw_loaded.overflow-hidden-tablet {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.shopify-section-header-sticky {
+    position: sticky;
+    top: 0!important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.slick-next:before {
+    content: "\2192";
 }

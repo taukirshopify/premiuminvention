@@ -1,14 +1,44 @@
+{{ 'productv3-camera-logo-bar.css' | asset_url | stylesheet_tag }}
+
 <div class="product-logobar_main">
   <div class="page-width">
  <ul class="product-logo-bar">
    <li class="product-bar__item">
-      <img src="//cdn.shopify.com/s/files/1/0249/8949/9437/files/Image20220316131001_160x160@2x.png?v=1647547259" alt="" class="logo-bar__image">
+    
+
+
+        {{ section.settings.img | image_url: width: 3840 | image_tag:
+          loading: 'lazy',
+          height: '60',
+          sizes: "100vw",
+      class: 'css-class-1 css-class-2',
+      format: 'webp',
+          widths: ' 50,60 ,100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+        }}
    </li>
    <li class="product-bar__item">
-      <img src="//cdn.shopify.com/s/files/1/0249/8949/9437/files/Image20220316131004_160x160@2x.png?v=1647547274" alt="" class="logo-bar__image">
+
+      
+      {{ section.settings.img01 | image_url: width: 3840 | image_tag:
+        loading: 'lazy',
+        height: '60',
+        sizes: "100vw",
+    class: 'css-class-1 css-class-2',
+    format: 'webp',
+        widths: ' 50,60 ,100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+      }}
    </li>
    <li class="product-bar__item">
-      <img src="//cdn.shopify.com/s/files/1/0249/8949/9437/files/Image20220316130956_160x160@2x.png?v=1647547292" alt="" class="logo-bar__image">
+
+      
+      {{ section.settings.img02 | image_url: width: 3840 | image_tag:
+        loading: 'lazy',
+        height: '60',
+        sizes: "100vw",
+    class: 'css-class-1 css-class-2',
+    format: 'webp',
+        widths: ' 50,60 ,100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+      }}
    </li>
 </ul> 
      </div>
@@ -16,7 +46,26 @@
 {% schema %}
   {
     "name": "product logo bar",
-    "settings": [],
+    "settings": [
+
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "First logo"
+      },
+
+      {
+        "type": "image_picker",
+        "id": "img01",
+        "label": "Second logo"
+      },
+
+      {
+        "type": "image_picker",
+        "id": "img02",
+        "label": "Therd logo"
+      }
+    ],
   "presets": [
     {
       "name": "product logo bar"
@@ -24,4 +73,4 @@
   ]
   }
 {% endschema %}
- {{ 'productv3-camera-logo-bar.css' | asset_url | stylesheet_tag }}
+

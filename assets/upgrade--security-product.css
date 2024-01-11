@@ -91,7 +91,6 @@ div#shopify-section-shiipingncare ul p {
 div#shopify-section-shiipingncare .upgrade_security button.btn.claim_\$100off {
     font-family: Work Sans,sans-serif;
     text-transform: capitalize;
-    margin-top: 10px;
     margin-bottom: 40px;
     padding: 12px 65px;
     font-weight: 700;
@@ -178,5 +177,32 @@ div#shopify-section-shiipingncare .upgrade_security .upgrade_security-top h2.pre
     font-size: 27px!important;
     padding: 20px 20px;
     line-height: 32px;
+}
+}
+
+div#shopify-section-shiipingncare {
+    display: unset;
+    @media only screen and (min-width: 767px) {
+    display: grid;
+    }
+    padding-top: 70px;
+}
+.shiipingncare {
+    margin-bottom: 45px;
+}
+@media only screen and (max-width: 767px) {
+div#shopify-section-shiipingncare ul img {
+
+    margin: 0 auto !important;
+}
+div#shopify-section-shiipingncare .shiipingncare ul {
+
+    margin: 0;
+}
+div#shopify-section-shiipingncare
+    .upgrade_security
+    button.btn.claim_\$100off {
+
+    margin-top: 0;
 }
 }

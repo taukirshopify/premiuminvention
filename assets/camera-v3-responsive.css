@@ -1288,9 +1288,9 @@ video.advnce--video {
   div#shopify-section-shiipingncare
     .upgrade_security
     button.btn.claim_\$100off {
-    padding: 12px;
+    padding:  12px;
     width: 220px;
-    margin-top: 25px;
+
   }
   div#shopify-section-video-info
     .feature_video
@@ -1372,7 +1372,7 @@ video.advnce--video {
   div#shopify-section-table-data h2.section-header {
     text-align: center;
     font-size: 29px !important;
-    color: #747474;
+
     padding-top: 10px;
   }
   .shiipingncare {
@@ -1602,4 +1602,170 @@ div#shopify-section-product-tab-slider .chart-area.only-product-v3s .button-tabs
   div#shopify-section-wifior4g .wifi--grid h3 {
     font-size: 14px;
   }
+}
+
+
+@media only screen and (max-width: 750px)  {
+
+
+  .wirless_outer_v3 .star--rating {
+
+    justify-content: center;
+
+}
+h2.section-header {
+  text-align: center !important;
+}
+body.Wireless.Camera.V3S .wirless_outer_v3 .product__price_rating {
+  justify-content: center;
+  left: 0;
+}
+.l.feature-row__item.feature-row__text.feature-row__text--left {
+  text-align: center;
+}
+div#shopify-section-feature-image-1 ul li p {
+  font-weight: 500;
+}
+
+div#shopify-section-feature-image-1 .below--txt {
+
+  z-index: 100;
+  position: relative;
+
+}
+div#shopify-section-feature-image-2 {
+  background: transparent;
+
+}
+div#shopify-section-feature-image-2 ul.feature_list li img {
+  width: 38px;
+  min-height: auto;
+  margin-right: 0;
+}
+div#shopify-section-feature-image-2 ul.feature_list li {
+
+  font-weight: 500;
+}
+.section-info {
+  text-align: center;
+}
+.section-info {
+  text-align: center;
+}
+div#shopify-section-slider-gallery .image-bar__item .image-bar__caption {
+  text-align: center;
+  font-size: 14px;
+  left: 0;
+}
+  div#shopify-section-product--tab-select .choose--from ul li {
+    padding-bottom: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    display: flex;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+div#shopify-section-product--tab-select .choose--from ul li svg {
+  width: auto;
+  height: 30px;
+  margin-top: 0;
+  margin-right: 5px;
+}
+
+
+div#shopify-section-product--tab-select .choose--from ul li {
+  padding: 0 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  border-radius: 30px;
+  border-radius: 30px !important;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+li.secondsvg-icon svg {
+  height: 24px !important;
+}
+
+div#shopify-section-product--tab-select .choose--from ul {
+
+  padding: 6px !important;
+  border-radius: 58px;
+}
+.feature-row__item.feature-row__text.feature-row__text--left {
+  text-align: center;
+}
+td.blactoblue {
+  font-size: 16px !important;
+}
+td.blcktobrwn {
+  font-size: 16px !important;
+}
+.show_toggle {
+
+  font-size: 14px;
+  display: inline-block;
+}
+
+div#shopify-section-feature-image-2 ul.feature_list li {
+  justify-content: center;
+  align-items: center;
+  
+}
+div#shopify-section-feature-image-2 ul.feature_list li {
+  width: 50%;
+  font-size: 11px;
+  margin-bottom: 25px;
+}
+
+
+body.Wireless.Camera.V3S .wirless_outer_v3 .product__price.custom .sale--price span.money {
+  font-size: 26px;
+  font-weight: 400;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+}
+
+body.product-camera-v3s .product__price .sale--price span.money1 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #fff;
+  background: #c10a2b;
+  padding: 2px 9px;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
+
+body.product-camera-v3s div#shopify-section-product--tab-select .product--slct-tab h2 {
+  font-size: 34px;
+  line-height: 34px;
+  margin-bottom: 9px;
+}
+body.product-camera-v3s div#shopify-section-product--tab-select h3 {
+  font-size: 17px;
+  line-height: 22px;
+  padding: 0px 10%;
+  margin-bottom: 0;
+}
+.choose--from h2 {
+  font-size: 21px !important;
+  margin: 0;
+  text-transform: capitalize !important;
+  padding: 0;
+  margin-top: 2% !important;
+}
+.wirless_outer_v3 .product__price.custom .sale--price span.money1 {
+  position: unset;
+  white-space: nowrap;
+  padding-left: 6px;
+}
+div#shopify-section-feature-image-2 ul.feature_list {
+    padding-left: 0;
+}
 }

@@ -2,7 +2,6 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "extra-contact": "v--guide--main",
         "padding_top": 28,
@@ -39,6 +38,7 @@
         "template--15307820269629__acf5e23e-6ce4-416c-8397-dc6e59e217c7-text-1",
         "10cedae7-2d58-4e7f-baf5-d42a3f55a3ac"
       ],
+      "disabled": true,
       "settings": {
         "extra-visitor": "",
         "extra-visitor_id": "",

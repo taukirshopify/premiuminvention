@@ -1,0 +1,367 @@
+
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<div class="pro-new-tab common-product" id="pro-new-tab">
+<div class="page-width">
+
+<div class="title">
+<h2 class="section-header">{{ section.settings.heading }}</h2>
+<h6>{{ section.settings.subheading }}</h6>
+</div>
+ <div class="datss"> 
+  {%- for block in section.blocks -%} 
+<div class="data-settings wewe">
+    {% if block.settings.pro_img !=blank %}
+ <img src="{{ block.settings.pro_img | img_url: 'master'  }}">
+  {% endif %}
+    
+{% if block.settings.rating_number !=blank %}
+    <div class="star--rating">
+    <div class="star--s">
+       <div class="loox-rating" data-id="6763404460093" data-rating="4.9" data-raters="82" title="4.9 rating (82 votes)" aria-label="4.9 rating (82 votes)" data-rating-upgraded="1">
+          <div class="loox-rating-content">
+             <svg class="loox-icon" viewBox="0 0 24 24" data-lx-fill="full">
+                <title>4.9 rating ({{block.settings.rating_number}} votes)</title>
+                <use href="#looxicons-rating-icon"></use>
+             </svg>
+             <svg class="loox-icon" viewBox="0 0 24 24" data-lx-fill="full" aria-hidden="true">
+                <use href="#looxicons-rating-icon"></use>
+             </svg>
+             <svg class="loox-icon" viewBox="0 0 24 24" data-lx-fill="full" aria-hidden="true">
+                <use href="#looxicons-rating-icon"></use>
+             </svg>
+             <svg class="loox-icon" viewBox="0 0 24 24" data-lx-fill="full" aria-hidden="true">
+                <use href="#looxicons-rating-icon"></use>
+             </svg>
+             <svg class="loox-icon" viewBox="0 0 24 24" data-lx-fill="full" aria-hidden="true">
+                <use href="#looxicons-rating-icon"></use>
+             </svg>
+             <span class="loox-rating-label">&nbsp;({{ block.settings.rating_number }})</span>
+          </div>
+       </div>
+    </div>
+
+ </div>
+  {% else %}
+    <div class="star--rating">
+   <a href="#looxReviewsFrame"><div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div></a>
+    </div>
+  {% endif %}
+ {% if block.settings.package_name !=blank %}
+  <a href="{{ block.settings.product.url }}" class="text-decoration-none"> <h5>{{ block.settings.package_name }}</h5></a> 
+  {% endif %}
+ {% if block.settings.product_title !=blank %}
+ <h6>{{ block.settings.product_title }} </h6>
+      {% endif %}
+ {% if block.settings.text !=blank %}
+ <div class="rte product_text_custom">{{ block.settings.text }} </div>
+      {% endif %}
+    <div class="moneeys">
+    
+ {% if block.settings.sale_price !=blank %}
+<p class="sale---price ">
+   <span class="money">{{ block.settings.sale_price }}</span>
+
+  {% if block.settings.saving_price !=blank %}
+ <h2 class="money"><span class="money">{{ block.settings.saving_price }}</span></h2>
+ {% endif %}
+    <span class="money1">{{ block.settings.off_price}} Off</span>
+ </p>
+   {% endif %}
+ </div>
+{%- assign product_form_id = 'product-form-' | append: block.id -%}
+    <div class="buy_now_custom">
+        <div class="buynow-btn tab--selction">
+          <div class="number">
+            <span class="minus">-</span>
+            <input aria-label="Quantity" name="quantity" type="number" id="Quantity-{{ block.id }}" form="{{ product_form_id }}" value="1"/>
+            <span class="plus">+</span></div>
+      <button class="2x" proid="{{ block.settings.product_id }}">PRE-ORDER</button>
+    </div>
+    <product-form class="product-form">
+                  {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                    <input type="hidden" name="id" value="{{ block.settings.product_id }}" disabled>
+                    <div class="product-form__buttons">
+                      <button
+                        type="submit"
+                        name="add"
+                        class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                      {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                      >
+                          <span>
+                            {%- if product.selected_or_first_available_variant.available -%}
+                            BUY NOW
+                            {%- else -%}
+                              BUY NOW
+                            {%- endif -%}
+                          </span>
+                          <div class="loading-overlay__spinner hidden">
+                            <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                            </svg>
+                          </div>
+                      </button>
+                    </div>
+                  {%- endform -%}
+  </product-form>
+</div>
+
+
+
+<div class="d-flex align-items-center justify-content-center">
+  {% if block.settings.shipday !=blank %}
+    <p class="shipday">{{ block.settings.shipday }}</p>
+   {% else  %}
+       {% if request.host contains 'ca.' %}
+       <p class="shipday">{{ settings.txt_ca }}</p>
+        {% elsif  request.host contains 'au.' %}
+         <p class="shipday">{{ settings.txt_au }}</p>
+       {% elsif request.host contains 'eu.' %}
+       <p class="shipday">{{ settings.txt_eu }}</p>
+        {% elsif  request.host contains 'nz.'   %} 
+      <p class="shipday">{{ settings.txt_nz }}</p>
+     {% elsif request.host contains 'sa.'  %}
+   <p class="shipday">{{ settings.txt_sa }}</p>
+   
+       {% elsif request.host contains 'uk.'  %}
+     <p class="shipday">{{ settings.txt_uk }}</p>
+        {% else %}
+           <p class="shipday">{{ settings.txt_usa }}</p>
+   {% endif %}
+      {% endif %}
+      <div class="money_guarantee">
+        {% if block.settings.money_back !=blank %}
+        <div class="left_side">
+           <span class="icon">
+              <img src="{{ section.settings.img | img_url:'master' }}" alt="{{section.settings.img.alt }}" width="15" height="15">
+           </span>
+           <span class="text">{{ block.settings.money_back }}</span>
+        </div>
+       {% endif %}
+       {% if block.settings.warranty_text !=blank %}
+        <div class="right_side">
+           <span class="icon">
+              <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M10.6761 20.197L12.3461 19.029C14.4812 17.5344 16.1338 15.4493 17.1013 13.0293C18.0688 10.6093 18.3093 7.95961 17.7931 5.405C17.7676 5.27911 17.7135 5.16078 17.635 5.05916C17.5564 4.95755 17.4555 4.87537 17.3401 4.819L9.52913 1L1.71913 4.819C1.60354 4.87525 1.50245 4.95738 1.42372 5.059C1.34499 5.16062 1.29072 5.27902 1.26513 5.405C0.749111 7.9597 0.989703 10.6095 1.95741 13.0294C2.92512 15.4494 4.5779 17.5345 6.71313 19.029L8.38313 20.197C8.71921 20.4321 9.11946 20.5582 9.52963 20.5582C9.9398 20.5582 10.34 20.4321 10.6761 20.197V20.197Z" stroke="#086FB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                 <path d="M9.28573 14V10.2C9.28573 10.0267 9.28573 9.85 9.28573 9.67C9.2924 9.48333 9.29573 9.29333 9.29573 9.1C9.07573 9.3 8.8324 9.47667 8.56573 9.63C8.29907 9.77667 8.01907 9.87667 7.72573 9.93L7.56573 8.51C7.73907 8.49667 7.9224 8.45333 8.11573 8.38C8.31573 8.30667 8.5124 8.21667 8.70573 8.11C8.89907 8.00333 9.0724 7.89 9.22573 7.77C9.37907 7.64333 9.49573 7.52 9.57573 7.4H10.9457V14H9.28573Z" fill="#086FB5"></path>
+              </svg>
+           </span>
+           <span class="text">{{ block.settings.warranty_text }}</span>
+        </div>
+         {% endif %}
+     </div>
+</div>
+
+
+ 
+
+</div>
+  {% endfor %}
+ </div>
+</div>
+</div>
+
+{% schema %}
+{
+"name": "Common bottom proudct",
+"settings": [
+  {
+  "type": "text",
+  "id": "heading",
+  "label": "Top Heading"
+},
+{
+  "type": "image_picker",
+  "id": "img",
+  "label": "Mony image"
+},
+   {
+  "type": "text",
+  "id": "subheading",
+  "label": "Sub Heading"
+}
+],
+"blocks": [
+{
+  "type": "text",
+  "name": {
+    "en": "product"
+  },
+"settings": [
+        {
+      "type": "image_picker",
+      "id": "pro_img",
+      "label":"Product Image"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "select the product"
+    },
+     {
+      "type": "text",
+      "id": "package_name",
+      "label": "Package Name"
+    },
+  {
+      "type": "text",
+      "id": "product_title",
+      "label": "Product Name"
+    },
+     {
+      "type": "richtext",
+      "id": "text",
+      "label": "Product Text"
+    },
+  {
+      "type": "text",
+      "id": "product_id",
+      "label": "Product Id"
+    },
+  {
+      "type": "text",
+      "id": "saving_price",
+      "label": "Main Price"
+    },
+  {
+      "type": "text",
+      "id": "sale_price",
+      "label": "Sale Price"
+    },
+{
+      "type": "text",
+      "id": "off_price",
+      "label": "Off Price"
+    },
+ 
+  {
+      "type": "text",
+      "id": "shipday",
+      "label": "Ship Day"
+    },
+  {
+      "type": "text",
+      "id": "rating_number",
+      "label": "Rating Number"
+    },
+  {
+      "type": "text",
+      "id": "money_back",
+      "label": "Money Back Text"
+    },
+  {
+      "type": "text",
+      "id": "warranty_text",
+      "label": "Warranty Text"
+    }
+  
+]
+}
+  ],
+"presets": [
+{
+  "name": "new-product--tab-select"
+}
+]
+}
+{% endschema %}
+<style>
+
+.tab--selction .plus,
+.tab--selction .minus {
+width: 41px;
+height: 41px;
+font-size: 17px;
+  cursor: pointer;
+}
+.tab--selction .number {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buynow-btn.tab--selction {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 17px;
+}
+.tab--selction input {
+height: 41px;
+width: 51px;
+text-align: center;
+font-size: 19px;
+border-radius: 0;
+background: #f8f8f8;
+display: inline-block;
+vertical-align: middle;
+border-left: none;
+border-right: none;
+border: none;
+font-weight: 700;
+}
+.buynow-btn span.minus:after {
+position: absolute;
+content: "";
+width: 1px;
+height: 60%;
+right: 0;
+background: #ddd;
+margin: auto;
+}
+.tab--selction .minus, .tab--selction .plus {
+  background: #f2f2f2;
+  border-radius: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media (max-width:768px) {
+  .tab--selction .plus,
+.tab--selction .minus {
+width: 33px;
+height: 33px;
+font-size: 16px;
+}
+  .pro-new-tab button.\32x {
+  padding: 10px 30px;
+}
+}
+.common-product{
+ padding: 3% 0;
+}
+@media only screen and (min-width: 600px) {
+.common-product .data-settings.wewe img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+}
+
+}
+.common-product
+span.icon img {
+  width: 29px !important;
+  height: 18px !important;
+  display: inline-block;
+}
+</style>
+<script>
+jQuery('.tab--selction .minus').click(function(){
+ var quantity =  parseInt(jQuery(this).next().val());
+ var quantity =  quantity - 1;
+  if(quantity>0){
+  jQuery(this).next().val(quantity);
+}
+  
+});
+jQuery('.tab--selction .plus').click(function(){
+ var quantity =  parseInt(jQuery(this).prev().val());
+ var quantity =  quantity + 1;
+  jQuery(this).prev().val(quantity);
+  
+});
+</script>

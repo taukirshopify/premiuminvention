@@ -6,7 +6,17 @@
    <div class="page-width">
       <div class="wirless_v3_inner ">
         <div class="wirless_v3_right mobile_version"> 
-            <img alt="product image" src="{{ product.metafields.custom.mobile_top_section_image }}" class="wireless_media">
+          
+
+ 
+            {{ product.metafields.custom.eventimage | image_url: width: 491 | image_tag:
+              loading: 'lazy',
+              heights: '279',
+              sizes: "100vw",
+          class: 'css-class-1 css-class-2',
+          format: 'webp',
+              widths: '100 , 200 ,375,470, 480, 491, 550, 750, 1100 , 3840'
+            }}
          </div>
          <div class="wirless_v3-left ">
             <h2 class="section-header">{{section.settings.title}}</h2>
@@ -124,8 +134,8 @@
          </div>
 
        
-         <div class="wirless_v3_right" sc="{{ product.metafields.custom.desktop_top_section_image }}">
-            <img alt="product image" src="{{ product.metafields.custom.desktop_top_section_image }}" class="wireless_media">
+         <div class="wirless_v3_right" vtop src="{{ product.metafields.custom.eventimage | img_url:'' }}">
+            <img alt="product image" src="{{ product.metafields.custom.eventimage | img_url:'' }}" class="wireless_media">
          </div>
       
       </div>

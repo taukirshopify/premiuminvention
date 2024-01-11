@@ -29,6 +29,7 @@
             "pattern": "",
             "hideText": false,
             "alignment": "",
+            "layout": "",
             "textColor": "",
             "starColor": "",
             "showAllReviews": false,
@@ -634,7 +635,7 @@
         "9b470a19-f70c-4b07-8353-5fda3a5ebaf9": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/X3_-_Single_c2a564a6-f38c-4fff-a7a3-472714bb92fa.png",
+            "pro_img": "shopify:\/\/shop_images\/Premium_Invention_-_one_camera-removebg-preview.png",
             "package_name": "Starter Package",
             "product_title": "1 x Wired Wifi Camera X3",
             "text": "<ul><li><strong>Cloud , SD and NVR storage<\/strong><\/li><li><strong>Remote access from everywhere<\/strong><\/li><li><strong>Free 1 year warranty<\/strong><\/li><\/ul>",
@@ -651,7 +652,7 @@
         "736f1191-6fbc-4644-b0a7-d1048d156464": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/X3_-_Core_Bundle_043df04f-5ac8-4b64-a901-ddccbec8a32c.png",
+            "pro_img": "shopify:\/\/shop_images\/Premium_Invention_-_Three_camera_2_b410e24a-aecb-4f37-8b59-3a1606bd216b.png",
             "package_name": "Core Bundle",
             "product_title": "3 x Wired Wifi Camera X3",
             "text": "<ul><li><strong>Cloud , SD and NVR storage<\/strong><\/li><li><strong>Remote access from everywhere<\/strong><\/li><li><strong>Free 1 year warranty<\/strong><\/li><\/ul>",
@@ -668,7 +669,7 @@
         "f5dc964b-1038-4348-bb65-5921ef6be29b": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/X3_-_Everyday_Bundle_bf2796b7-20bd-4643-b9c4-d86d752c7f8f.png",
+            "pro_img": "shopify:\/\/shop_images\/Premium_Invention_-_five_camera_d31cc05b-6539-4cf0-8934-8e600ff58dc8.png",
             "package_name": "Everyday Bundle",
             "product_title": "5 x Wired Wifi Camera X3",
             "text": "<ul><li><strong>Cloud , SD and NVR storage<\/strong><\/li><li><strong>Remote access from everywhere<\/strong><\/li><li><strong>Free 1 year warranty<\/strong><\/li><\/ul>",
@@ -845,7 +846,7 @@
       }
     },
     "0d4f2233-dee2-4eab-b499-e9cf95e30335": {
-      "type": "new-product-sections",
+      "type": "proudctx3slider",
       "blocks": {
         "dcb61385-a77b-4624-b9b4-56bf6455f6ac": {
           "type": "text",

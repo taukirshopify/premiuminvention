@@ -34,6 +34,7 @@
             "pattern": "",
             "hideText": false,
             "alignment": "",
+            "layout": "",
             "textColor": "",
             "starColor": "",
             "showAllReviews": false,
@@ -203,7 +204,7 @@
         "96984ab5-6db8-443c-b7a7-9dbac49bfac4": {
           "type": "product",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/Starter_Package_d3422d51-2d80-4885-9af6-7ef57de8a86e.png",
+            "pro_img": "shopify:\/\/shop_images\/Group_40248.png",
             "package_name": "Starter Package",
             "product_title": "1 x X3 Wired Wifi Outdoor Camera + 1 x NVR",
             "text": "",
@@ -811,7 +812,7 @@
         "27a3dc3e-27e6-4e27-9a7b-aacde38f779d": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/NVR_c272748a-6382-4dd3-bbca-5bab007179f4.png",
+            "pro_img": "shopify:\/\/shop_images\/Groupnew_b1bc0695-6898-46ec-b946-d3f7a12818fe.png",
             "package_name": "Launchpad",
             "product_title": "",
             "text": "<ul><li>1 x 4K 8-Channel Smart NVR <\/li><\/ul>",
@@ -829,7 +830,7 @@
         "9b470a19-f70c-4b07-8353-5fda3a5ebaf9": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/Starter_Package_9ef7ff52-d3bf-4429-9536-8244f3740b0d.png",
+            "pro_img": "shopify:\/\/shop_images\/Adsiz_tasarim.png",
             "package_name": "Starter Package",
             "product_title": "",
             "text": "<ul><li>1 x X3 Wired Wifi Outdoor Camera <\/li><li>1 x 4K 8-Channel Smart NVR <\/li><\/ul>",
@@ -847,7 +848,7 @@
         "cccd3ad9-4a32-4e7b-920c-2c48f59ceaf2": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/Core_Bundle_d692529a-6fd3-41a4-a1c9-30a6441ebb65.png",
+            "pro_img": "shopify:\/\/shop_images\/Adsiz_tasarim-3.png",
             "package_name": "Core Bundle",
             "product_title": "",
             "text": "<ul><li>3 x X3 Wired Wifi Outdoor Camera <\/li><li>1 x 4K 8-Channel Smart NVR <\/li><\/ul>",
@@ -865,7 +866,7 @@
         "2e957cfc-dad2-4f14-8acc-6e690d98a114": {
           "type": "text",
           "settings": {
-            "pro_img": "shopify:\/\/shop_images\/NVR_Everyday_Bundle_d7ec55ad-f3f9-44a9-a6e0-7826712ae4f9.png",
+            "pro_img": "shopify:\/\/shop_images\/Adsiz_tasarim-4.png",
             "package_name": "Everyday Bundle",
             "product_title": "",
             "text": "<ul><li>5 x X3 Wired Wifi Outdoor Camera <\/li><li>1 x 4K 8-Channel Smart NVR <\/li><\/ul>",

@@ -1700,10 +1700,7 @@ div#shopify-section-product--tab-select
   }
 }
 @media only screen and (max-width: 575px) {
-  body.product-camera-v3s .product__price span {
-    font-size: 18px;
-    line-height: 28px;
-  }
+
   .save-money-sec .below--txt {
     width: 90%;
   }
